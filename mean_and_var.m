@@ -5,6 +5,7 @@
 
 function mean_and_var(data)
 
+figure
 means = mean(data(:,2:end));
 
 deviations = var(data(:,2:end));

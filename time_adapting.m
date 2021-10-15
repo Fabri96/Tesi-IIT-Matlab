@@ -16,6 +16,8 @@ function [stress_activity_adapted,neutral_activity_adapted, obs_activity_adapted
 
 % here neutral has biggest ending time
 
+
+
 maximum = max([obs_activity(1,1),neutral_activity(1,1),stress_activity(1,1)]); 
 
 k =find(neutral_activity(:,1)>maximum);

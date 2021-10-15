@@ -17,15 +17,20 @@ inactive = [];
 mu = mean(data(:,number));
 sigma = std(data(:,number));
 
+regions = find(detector(:,number)==1);
 
-plot(data(:,1), data(:,number), 'b-*','MarkerIndices',find(detector(:,number)==1),...
+figure
+
+plot(data(:,1), data(:,number), 'b-*','MarkerIndices',regions ,...
     'MarkerSize',2,'MarkerEdgeColor','k')
 
 hold on
-yline(mu + 2*sigma,'r')
+yline(mu + 2*sigma,'r--', 'Linewidth',4)
 
 xlabel('time (s)')
 ylabel('Calcium activity')
+
+
 
 
 

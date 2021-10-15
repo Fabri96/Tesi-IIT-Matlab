@@ -3,13 +3,13 @@
 % HISTOGRAMS
 
  
+figure
 
+min_max_obs_activity = min_max_normalization(obs_activity_test);
 
-min_max_obs_activity = min_max_normalization(obs_activity_adapted);
+min_max_stress_activity = min_max_normalization(stress_activity_test);
 
-min_max_stress_activity = min_max_normalization(stress_activity_adapted);
-
-min_max_neutral_activity = min_max_normalization(neutral_activity_adapted);
+min_max_neutral_activity = min_max_normalization(neutral_activity_test);
 
 distr1 = fitdist(min_max_obs_activity(:,2),'gamma');
 
