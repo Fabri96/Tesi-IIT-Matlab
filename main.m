@@ -6,6 +6,10 @@
 % 
 
 %%% Read data, exclude rejected neurons and split 
+
+
+
+addpath('zone analysis','normalizations','overall activity','statistics','activity detection');
 clear all
 close all
 
@@ -74,9 +78,9 @@ stress_activity_test = mice_activity(stress_test);
 % plot(stress_activity_test(:,1),stress_activity_test(:,2),'g-')
 
 
-immse(obs_activity_test(:,2),stress_activity_test(:,2));
-
-immse(obs_activity_test(:,2),neutral_activity_test(:,2));
+% immse(obs_activity_test(:,2),stress_activity_test(:,2));
+% 
+% immse(obs_activity_test(:,2),neutral_activity_test(:,2));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -91,23 +95,41 @@ ad_test_zone = adapt_zone(test_zone, obs_activity_test);
 
 zone_plot(ad_test_zone);
 
+xlabel('time')
+ylabel('Ca activity')
+title('Observer activity during test')
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Detection of active neurons
 
-detector = activity_detector(obs_test);
+% detector = activity_detector(obs_test);
+
 number = 6;
 
-detector_plot(obs_test, detector, number);
+figure
+
+subplot(1,2,1)
+
+detector_plot(obs_test, number)
+
+title('Standard treshold')
+
+subplot(1,2,2)
+
+plot_mad(obs_test, number)
+
+title('MAD algorithm treshold')
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Histograms
 
-histograms;
-
-
-mean_and_var(obs_test);
+% histograms;
+% 
+% 
+% mean_and_var(obs_test);
 
 
 

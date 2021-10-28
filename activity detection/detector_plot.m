@@ -8,26 +8,23 @@
 % OUTPUT --> plots 
 
 
-function detector_plot(data, detector, number)
+function detector_plot(data, number)
 
-active =[];
-
-inactive = [];
+detector = activity_detector(data);
 
 mu = mean(data(:,number));
 sigma = std(data(:,number));
 
 regions = find(detector(:,number)==1);
 
-figure
-
-plot(data(:,1), data(:,number), 'b-*','MarkerIndices',regions ,...
-    'MarkerSize',2,'MarkerEdgeColor','k')
+plot(data(:,1), data(:,number), 'b-')
+% plot(data(:,1), data(:,number), 'b-*','MarkerIndices',regions ,...
+%     'MarkerSize',2,'MarkerEdgeColor','k')
 
 hold on
 yline(mu + 2*sigma,'r--', 'Linewidth',4)
 
-xlabel('time (s)')
+xlabel('time(s)')
 ylabel('Calcium activity')
 
 
