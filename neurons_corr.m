@@ -56,8 +56,8 @@ figure
 
 heatmap(c_corr_matrix)
 
-xlabel('Neurons of neutral during test')
-ylabel('Neurons of observer during test')
+xlabel('Neurons of stressed during hab')
+ylabel('Neurons of observer during hab')
 title('Cross-correlation across neurons')
 
 % subplot(1,2,2)
@@ -74,7 +74,7 @@ figure
 
 a = double(c_corr_matrix > 0.6);
 
-sum(sum(a))/(size(a,1)*size(a,2));
+sum(sum(a))/(size(a,1)*size(a,2))
 heatmap(a)
 
 xlabel('Neurons of neutral during test')

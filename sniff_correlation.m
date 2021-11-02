@@ -32,7 +32,7 @@ title('Cross-correlations between observer and stressed during sniffing')
 
 subplot(1,2,2)
 
-[c2,lags2] = xcorr(obs_activity_test_neutral_sniff,neutral_activity_test2_sniff,'normalized');
+[c2,lags2] = xcorr(obs_activity_test_neutral_sniff(1:271),neutral_activity_test2_sniff(1:271),'normalized');
 
 
 

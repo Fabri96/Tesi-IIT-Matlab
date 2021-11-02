@@ -3,13 +3,17 @@
 % MAIN FILE: READ, SPLIT, NORMALIZE AND COMPUTE MEAN ACTIVITY FOR THE 3
 % MICE. ZONE ASSIGNMENT, ACTIVITY DETECTION
 %  
-% 
+% (FOR FIRST BATCH OF DATA)
 
 %%% Read data, exclude rejected neurons and split 
 
 
 
-addpath('zone analysis','normalizations','overall activity','statistics','activity detection');
+addpath('zone analysis','normalizations','overall activity','statistics',...
+    'activity detection');
+
+addpath('DATA_FIRST');
+
 clear all
 close all
 
@@ -57,11 +61,11 @@ neutral_activity_test = mice_activity(neutral_test);
 
 stress_activity_test = mice_activity(stress_test);
 
-% obs_activity_hab = mice_activity(obs_hab);
-% 
-% neutral_activity_hab = mice_activity(neutral_hab);
-% 
-% stress_activity_hab = mice_activity(stress_hab);
+obs_activity_hab = mice_activity(obs_hab);
+
+neutral_activity_hab = mice_activity(neutral_hab);
+
+stress_activity_hab = mice_activity(stress_hab);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

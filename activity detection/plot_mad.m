@@ -10,6 +10,6 @@ hold on
 
 plot (data(:,1),data(:,2),'b-')
 
-xlabel('Calcium activity')
+ylabel('Calcium activity')
 
-ylabel('times(s)')
+xlabel('times(s)')

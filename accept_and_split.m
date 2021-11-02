@@ -53,21 +53,35 @@ end
 obs = double(obs);
 
 
-sniff_adapting %adapt times based on A keybord references
+%  sniff_adapting %adapt times based on A keybord references
 
+  sniff_adapting2
  
- 
-k2_obs = 24173;
+% k2_obs = 24173;
+% 
+% k2_neutral = 24173;
+% 
+% k2_stress = 24096;
+% 
+% k1_obs = 6159;
+% 
+% k1_neutral = 6159;
+% 
+% k1_stress = 6081;
 
-k2_neutral = 24173;
+k2_obs = 24184;
 
-k2_stress = 24096;
+k2_neutral = 24152;
 
-k1_obs = 6159;
+k2_stress = 24190;
 
-k1_neutral = 6159;
+k1_obs = 6171;
 
-k1_stress = 6081;
+k1_neutral = 6138;
+
+k1_stress = 6176;
+
+
 
 stress_cage = stress(1:k1_stress-1,:);
 stress_hab  = stress(k1_stress:k2_stress-1,:);
