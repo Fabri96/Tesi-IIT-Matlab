@@ -19,7 +19,7 @@
 function [stress, stress_cage, stress_hab, stress_test, ...
     neutral, neutral_cage, neutral_hab, neutral_test,...
     obs, obs_cage, obs_hab, obs_test,sniff] = ...
-    accept_and_split(stress_data, neutral_data, obs_data,sniff) 
+    accept_and_split(stress_data, neutral_data, obs_data,sniff,dataset) 
 
 stress=stress_data(2:end,1); % first column (times)
 
@@ -52,22 +52,28 @@ end
 
 obs = double(obs);
 
+if(dataset == 1)
 
-%  sniff_adapting %adapt times based on A keybord references
+  sniff_adapting %adapt times based on A keybord references
+  
+  k2_obs = 24173;
 
-  sniff_adapting2
+k2_neutral = 24173;
+
+k2_stress = 24096;
+
+k1_obs = 6159;
+
+k1_neutral = 6159;
+
+k1_stress = 6081;
+
+end
+
+if(dataset==2)
+
+ sniff_adapting2
  
-% k2_obs = 24173;
-% 
-% k2_neutral = 24173;
-% 
-% k2_stress = 24096;
-% 
-% k1_obs = 6159;
-% 
-% k1_neutral = 6159;
-% 
-% k1_stress = 6081;
 
 k2_obs = 24184;
 
@@ -81,7 +87,7 @@ k1_neutral = 6138;
 
 k1_stress = 6176;
 
-
+end
 
 stress_cage = stress(1:k1_stress-1,:);
 stress_hab  = stress(k1_stress:k2_stress-1,:);
