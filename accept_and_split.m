@@ -72,7 +72,7 @@ end
 
 if(dataset==2)
 
- sniff_adapting2
+ sniff_adapting
  
 
 k2_obs = 24184;
@@ -86,6 +86,42 @@ k1_obs = 6171;
 k1_neutral = 6138;
 
 k1_stress = 6176;
+
+end
+
+if(dataset == 3)
+
+  sniff_adapting %adapt times based on A keybord references
+  
+  k2_obs = 24198;
+
+k2_neutral = 24170;
+
+k2_stress = 24110;
+
+k1_obs = 6181;
+
+k1_neutral = 6153;
+
+k1_stress = 6092;
+
+end
+
+if(dataset == 4)
+
+%   sniff_adapting %adapt times based on A keybord references
+  
+  k2_obs = 25104;
+
+k2_neutral = 25128;
+
+k2_stress = 25172;
+
+k1_obs = 6072;
+
+k1_neutral = 6077;
+
+k1_stress = 6096;
 
 end
 

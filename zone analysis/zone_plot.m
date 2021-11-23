@@ -44,7 +44,7 @@ end
 %     'r.',nostim(:,1),zeros(size(nostim(:,1)))+2,'g.')
 
 
-legend('near to neutral', 'near to stressed','intermediate zone','','','')
+legend('near to neutral', 'near to stressed','intermediate zone')
 
             
             

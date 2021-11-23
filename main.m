@@ -5,16 +5,15 @@
 %  
 % (FOR FIRST BATCH OF DATA)
 
-%%% Read data, exclude rejected neurons and split 
 
 
 
 addpath('zone analysis','normalizations','overall activity','statistics',...
-    'activity detection');
+    'activity detection','ROI analysis','correlation analysis');
 
-addpath('DATA_FIRST');
+addpath('SAVED DATA\DATA_FIRST\');
 
-clear all
+clearvars -except corr  L2_errors Inf_errors
 close all
 
 load('neutral_data.mat')
@@ -29,7 +28,8 @@ load('test_zone.mat')
 
 load('sniff.mat')
 
-
+dataset=1;
+%%% Read data, exclude rejected neurons and split 
 
 
 [stress, stress_cage, stress_hab, stress_test, ...
@@ -44,12 +44,12 @@ load('sniff.mat')
  t_adapting(stress_cage, stress_hab, stress_test, ...
     neutral_cage, neutral_hab, neutral_test, obs_cage, obs_hab, obs_test);
 
-%%% Normalize data (test part as example)
-obs_test_z = z_score_normalization(obs_test);
-
-stress_test_z = z_score_normalization(stress_test);
-
-neutral_test_z = z_score_normalization(neutral_test);
+% %%% Normalize data (test part as example)
+% obs_test_z = z_score_normalization(obs_test);
+% 
+% stress_test_z = z_score_normalization(stress_test);
+% 
+% neutral_test_z = z_score_normalization(neutral_test);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -88,13 +88,13 @@ stress_activity_hab = mice_activity(stress_hab);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% Enters the zone file: observer observer activity vs observer position
+%%% Enters the zone file: observer activity vs observer position
 
 ad_test_zone = adapt_zone(test_zone, obs_activity_test);
 
 % plot3(ad_test_zone(:,2), ad_test_zone(:,3),ad_test_zone(:,7))
 
-%ad_hab_zone = adapt_zone(hab_zone, obs_activity_hab);
+ad_hab_zone = adapt_zone(hab_zone, obs_activity_hab);
 
 
 zone_plot(ad_test_zone);
@@ -135,7 +135,9 @@ title('MAD algorithm treshold')
 % 
 % mean_and_var(obs_test);
 
+[ left, right ,intermediate] = detect_areas(ad_test_zone);
 
+[ left2, right2 ,intermediate2] = detect_areas(ad_hab_zone);
 
 
 

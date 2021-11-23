@@ -1,23 +1,16 @@
+% Developed by Fabrizio Bernardi  
 
-function change = sniff_activity_change(mouse,sniff);
-
-sniff_intervals = sniffing_intervals(mouse,sniff);
-
-starting_sniffs = sniff_intervals(:,1);
-
-for i = 1:size(starting_sniffs,1)-1
-
-k = find(obs_activity_test(:,1) > starting_sniffs(i));
-
-k = k(1);
-
-prev = sum(obs_activity_test((k-100):(k-1),2));
-
-next = sum(obs_activity_test((k+1):(k+100),2));
-
-change(i) = (next-prev)/prev;
-
-end
+% Average considerations on the 4 datasets
 
 
+main;
 
+L2_errors_.obs_stress_test.first = immse(obs_activity_test(right,2),stress_activity_test(right,2));
+
+L2_errors.obs_neut_test.first = immse(obs_activity_test(left,2),neutral_activity_test(left,2));
+
+L2_errors_.obs_stress_hab.first = immse(obs_activity_hab(right2,2),stress_activity_hab(right2,2));
+
+L2_errors.obs_neut_hab.first = immse(obs_activity_hab(left2,2),neutral_activity_hab(left2,2));
+
+corr_plots;

@@ -8,12 +8,13 @@
 %%% Read data, exclude rejected neurons and split 
 
 
+
 addpath('zone analysis','normalizations','overall activity','statistics',...
-    'activity detection');
+    'activity detection','ROI analysis','correlation analysis');
 
-addpath('DATA_SECOND');
+addpath('SAVED DATA\DATA_SECOND\');
 
-clear all
+clearvars -except corr  L2_errors Inf_errors
 close all
 
 
@@ -31,6 +32,7 @@ load('hab_zone2.mat')
 load('test_zone2.mat')
 
 load('sniff2.mat')
+dataset=2;
 
 pairings = neutral_data_cage2(1:2,20:35);
 
@@ -88,3 +90,8 @@ subplot(1,2,2)
 plot_mad(obs_test, number)
 
 title('MAD algorithm treshold')
+
+[ left, right ,intermediate] = detect_areas(ad_test_zone);
+
+[ left2, right2 ,intermediate2] = detect_areas(ad_hab_zone);
+
