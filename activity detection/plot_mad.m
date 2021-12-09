@@ -1,3 +1,11 @@
+% Developed by Fabrizio Bernardi 
+
+% PLOT FOR MAD DETECTOR
+%  
+% INPUT --> data matrix, neuron (number) you want to analyze
+% 
+% OUTPUT --> plots
+
 
 function plot_mad(data, number)
 

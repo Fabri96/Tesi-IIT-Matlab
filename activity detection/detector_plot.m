@@ -2,20 +2,20 @@
 
 % PLOT FOR ACTIVITY DETECTOR
 %  
-% INPUT --> data matrix, detector matrix computed using the
-% treshold and neuron you want to analyze
+% INPUT --> data matrix, neuron (number) you want to analyze (column of
+% data)
 % 
 % OUTPUT --> plots 
 
 
 function detector_plot(data, number)
 
-detector = activity_detector(data);
+% detector = activity_detector(data);
 
-mu = mean(data(:,number));
+ mu = mean(data(:,number)); 
 sigma = std(data(:,number));
 
-regions = find(detector(:,number)==1);
+% regions = find(detector(:,number)==1);
 
 plot(data(:,1), data(:,number), 'b-')
 % plot(data(:,1), data(:,number), 'b-*','MarkerIndices',regions ,...

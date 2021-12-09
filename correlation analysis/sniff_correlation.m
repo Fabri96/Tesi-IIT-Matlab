@@ -49,7 +49,7 @@ ylabel('cross-correlation')
 
 
 title('Cross-correlations between observer and stressed during sniffing')
-
+set(gca,'FontSize',11)
 subplot(1,2,2)
 
 [c2,lags2] = xcorr(obs_activity_test_neutral_sniff,neutral_activity_test2_sniff,'normalized');
@@ -64,4 +64,4 @@ ylabel('cross-correlation')
 
 
 title('Cross-correlations between observer and neutral during sniffing')
-
+set(gca,'FontSize',11)

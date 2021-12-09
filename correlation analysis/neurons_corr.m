@@ -83,7 +83,7 @@ heatmap(a)
 xlabel("Neurons of " + mouse + " during " +  phase)
 ylabel("Neurons of observer during " +  phase)
 title('Neuron pairs presenting cross correlation')
-
+set(gca,'FontSize',20)
 % subplot(1,2,2)
 % 
 % b = double(p_corr_matrix > 0.3);

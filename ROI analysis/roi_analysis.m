@@ -3,13 +3,71 @@
 % Analysis of position of neurons in the ROI for the 3 mice
 % 
 %
-    main 
+% addpath('zone analysis','normalizations','overall activity','statistics',...
+%     'activity detection','ROI analysis','correlation analysis');
+%    main
+
+clear stress_roi_data obs_roi_data neutral_roi_data A_obs A_stress A_neutral ...
+    neurons_activated_stress neurons_activated_obs neurons_activated_neutral list
+
+if (dataset == 1)
 
 load('stress_ROI.mat')
 
 load('obs_ROI.mat')
 
 load('neutral_ROI.mat')
+
+end
+
+if (dataset == 2)
+    
+load('stress_ROI2.mat')
+
+load('obs_ROI2.mat')
+
+load('neutral_ROI2.mat')
+
+stress_ROI = stress_ROI2;
+
+obs_ROI = obs_ROI2;
+
+neutral_ROI = neutral_ROI2;
+
+neutral_ROI(3,:)=[];
+end
+
+if (dataset == 3)
+    
+load('stress_ROI3.mat')
+
+load('obs_ROI3.mat')
+
+load('neutral_ROI3.mat')
+
+stress_ROI = stress_ROI3;
+
+obs_ROI = obs_ROI3;
+
+neutral_ROI = neutral_ROI3;
+
+end
+
+if (dataset == 4)
+    
+load('stress_ROI4.mat')
+
+load('obs_ROI4.mat')
+
+load('neutral_ROI4.mat')
+
+stress_ROI = stress_ROI4;
+
+obs_ROI = obs_ROI4;
+
+neutral_ROI = neutral_ROI4;
+
+end
 
 % stressed mouse data
 
@@ -70,7 +128,7 @@ neutral_roi(k,:) = [];
 neutral_roi_data = [];
 
  m_detector_neutral = mad_detector(neutral_test);
-
+% 
 % m_detector_neutral = activity_detector(neutral_test);
 
 
@@ -90,9 +148,9 @@ clear neutral_roi
 
 times = stress_roi_data(1).times;
 
-% list of  neurons of stressed active every 1/step seconds
+% list of  neurons of stressed active every 0.05*step seconds
 
-step = 4; 
+step = 5; 
 
 neurons_activated_stress.times = obs_test(1:step:end,1);
 
@@ -103,7 +161,7 @@ for j = 1:size(neurons_activated_stress.times,1)-1
         b = stress_roi_data(i).detector;
         k1 = find(times == neurons_activated_stress.times(j));
         k2 = find(times == neurons_activated_stress.times(j+1));
-        if(sum(stress_roi_data(i).detector(k1:k2))>(step -1))
+        if(sum(stress_roi_data(i).detector(k1:k2))>(step -2))
             list = [list stress_roi_data(i).name];
         end
         
@@ -112,34 +170,34 @@ for j = 1:size(neurons_activated_stress.times,1)-1
 end
 
 
-for i = 1:length(neurons_activated_stress.list)-1
-
-    for j = 1:length(neurons_activated_stress.list{i})
-
-        curr_elem = neurons_activated_stress.list{i}(j);
-
-        for k = i+1:length(neurons_activated_stress.list)
-
-            if(~isempty(neurons_activated_stress.list{k}))
-
-             if(ismember(curr_elem,neurons_activated_stress.list{k}))
-                 p = find(neurons_activated_stress.list{k} == curr_elem);
-                 neurons_activated_stress.list{k}(p)=[];
-             else
-                 break;
-
-             end
-            end
-        end
-    end
-    
-end
-
-
+% for i = 1:length(neurons_activated_stress.list)-1
+% 
+%     for j = 1:length(neurons_activated_stress.list{i})
+% 
+%         curr_elem = neurons_activated_stress.list{i}(j);
+% 
+%         for k = i+1:length(neurons_activated_stress.list)
+% 
+%             if(~isempty(neurons_activated_stress.list{k}))
+% 
+%              if(ismember(curr_elem,neurons_activated_stress.list{k}))
+%                  p = find(neurons_activated_stress.list{k} == curr_elem);
+%                  neurons_activated_stress.list{k}(p)=[];
+%              else
+%                  break;
+% 
+%              end
+%             end
+%         end
+%     end
+%     
+% end
 
 
 
-% list of  neurons of observer active every 1/step s
+
+
+% list of  neurons of observer active every 0.05*step s
 
 neurons_activated_obs.times = obs_test(1:step:end,1);
 
@@ -158,31 +216,31 @@ for j = 1:size(neurons_activated_obs.times,1)-1
     neurons_activated_obs.list{j} = list;
 end
 
-for i = 1:length(neurons_activated_obs.list)-1
+% for i = 1:length(neurons_activated_obs.list)-1
+% 
+%     for j = 1:length(neurons_activated_obs.list{i})
+% 
+%         curr_elem = neurons_activated_obs.list{i}(j);
+% 
+%         for k = i+1:length(neurons_activated_obs.list)
+% 
+%             if(~isempty(neurons_activated_obs.list{k}))
+% 
+%              if(ismember(curr_elem,neurons_activated_obs.list{k}))
+%                  p = find(neurons_activated_obs.list{k} == curr_elem);
+%                  neurons_activated_obs.list{k}(p)=[];
+%              else
+%                  break;
+% 
+%              end
+%             end
+%         end
+%     end
+%     
+% end
 
-    for j = 1:length(neurons_activated_obs.list{i})
 
-        curr_elem = neurons_activated_obs.list{i}(j);
-
-        for k = i+1:length(neurons_activated_obs.list)
-
-            if(~isempty(neurons_activated_obs.list{k}))
-
-             if(ismember(curr_elem,neurons_activated_obs.list{k}))
-                 p = find(neurons_activated_obs.list{k} == curr_elem);
-                 neurons_activated_obs.list{k}(p)=[];
-             else
-                 break;
-
-             end
-            end
-        end
-    end
-    
-end
-
-
-% list of  neurons of neutral active every 1/step s
+% list of  neurons of neutral active every 0.05*step s
 
 neurons_activated_neutral.times = obs_test(1:step:end,1);
 
@@ -201,28 +259,28 @@ for j = 1:size(neurons_activated_neutral.times,1)-1
     neurons_activated_neutral.list{j} = list;
 end
      
-for i = 1:length(neurons_activated_neutral.list)-1
-
-    for j = 1:length(neurons_activated_neutral.list{i})
-
-        curr_elem = neurons_activated_neutral.list{i}(j);
-
-        for k = i+1:length(neurons_activated_neutral.list)
-
-            if(~isempty(neurons_activated_neutral.list{k}))
-
-             if(ismember(curr_elem,neurons_activated_neutral.list{k}))
-                 p = find(neurons_activated_neutral.list{k} == curr_elem);
-                 neurons_activated_neutral.list{k}(p)=[];
-             else
-                 break;
-
-             end
-            end
-        end
-    end
+% for i = 1:length(neurons_activated_neutral.list)-1
+% 
+%     for j = 1:length(neurons_activated_neutral.list{i})
+% 
+%         curr_elem = neurons_activated_neutral.list{i}(j);
+% 
+%         for k = i+1:length(neurons_activated_neutral.list)
+% 
+%             if(~isempty(neurons_activated_neutral.list{k}))
+% 
+%              if(ismember(curr_elem,neurons_activated_neutral.list{k}))
+%                  p = find(neurons_activated_neutral.list{k} == curr_elem);
+%                  neurons_activated_neutral.list{k}(p)=[];
+%              else
+%                  break;
+% 
+%              end
+%             end
+%         end
+%     end
     
-end
+% end
 
 % Build matrices A for 3 mice: row i is neuron, column k is list number k
 % of activations. A(i,k) = 1 means that the neuron #i belongs to interval #k
@@ -305,7 +363,8 @@ for i=1:length(right)
     stress_t = [stress_t i_stress];
 end
 
- stress_t = unique(stress_t);   
+ stress_t = unique(stress_t);  
+ stress_t = stress_t(1:end-1);
 
 
 neutral_t = [];
@@ -317,94 +376,139 @@ for i=1:length(left)
 end
 
  neutral_t = unique(neutral_t);  
-    
+ neutral_t = neutral_t(1:end-1);
+%     
+% 
+%  for i = 1:size(A_obs,1)
+%     
+%     for j = 2:size(A_stress,1)-1
+%         indices = find(A_obs(i,:) == 1 );
+%         prova(i,j) = (sum(A_obs(i,indices) == A_stress(j,indices)) + ...
+%            sum(A_obs(i,indices) == A_stress(j-1,indices)) + ...
+%            sum(A_obs(i,indices) == A_stress(j+1,indices))) /(3*length(indices));
+%         
+%     end
+%     
+% end
+%             
+% % For every active neuron  of observer, let's count when the neurons of
+% % the stressed are active too in same or near intervals 
 
- for i = 1:size(A_obs,1)
-    
-    for j = 2:size(A_stress,1)-1
-        indices = find(A_obs(i,:) == 1 );
-        prova(i,j) = (sum(A_obs(i,indices) == A_stress(j,indices)) + ...
-           sum(A_obs(i,indices) == A_stress(j-1,indices)) + ...
-           sum(A_obs(i,indices) == A_stress(j+1,indices))) /(3*length(indices));
-        
-    end
-    
-end
-            
-% For every active neuron  of observer, let's count when the neurons of
-% the stressed are active too in same or near intervals 
+if(dataset==1 || dataset==3)
 A_obs_stress = A_obs(:,stress_t);
 A_stress = A_stress(:,stress_t);
-
-for i = 1:size(A_obs_stress,1)
-    
-    for j = 1:size(A_stress,1)
-        indices = find(A_obs_stress(i,:) == 1 );
-        if(isempty(indices))
-            Obs_stress_connections(i,j)=0;
-        else
-            if(j>3 && j < size(A_stress,1)-2)
-           Obs_stress_connections(i,j) = (sum(A_obs_stress(i,indices) == A_stress(j,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j-1,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j+1,indices)))+ ...
-           (sum(A_obs_stress(i,indices) == A_stress(j-2,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j+2,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j-3,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j+3,indices)));
-            
-
-        else 
-            if(j>2 && j < size(A_stress,1)-1)
-        Obs_stress_connections(i,j) = (sum(A_obs_stress(i,indices) == A_stress(j,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j-1,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j+1,indices)))+ ...
-           (sum(A_obs_stress(i,indices) == A_stress(j-2,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j+2,indices)));
-
-            else   
-                if(j>1 && j < size(A_stress,1))
-        Obs_stress_connections(i,j) = (sum(A_obs_stress(i,indices) == A_stress(j,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j-1,indices))) + ...
-           (sum(A_obs_stress(i,indices) == A_stress(j+1,indices)));
-
-                else
-                if(j==1 || j== size(A_stress,1))
-        Obs_stress_connections(i,j) = (sum(A_obs_stress(i,indices) == A_stress(j,indices)));
-
-                end
-                end
-            end
-            end
-
-
-        end
-
-
-
-
-        end
-        
-    end
-    
-
-
-% For every active neuron  of observer, let's count when the neurons of
-% the neutral are active too in same or near intervals    
-
+% 
+% total_peaks_obs_stress = (sum(sum(m_detector_stress(:,2:end)))) /(step);
+% 
+% for i = 1:size(A_obs_stress,1)
+%     
+%     for j = 1:size(A_stress,1)
+%         indices = find(A_obs_stress(i,:) == 1 );
+%         if(isempty(indices))
+%             Obs_stress_connections(i,j)=0;
+%         else
+% 
+%          
+%                 if(j>1 && j < size(A_stress,1))
+%         Obs_stress_connections(i,j) = ((sum(A_obs_stress(i,indices) == A_stress(j,indices))) + ...
+%            (sum(A_obs_stress(i,indices) == A_stress(j-1,indices))) + ...
+%            (sum(A_obs_stress(i,indices) == A_stress(j+1,indices))))/total_peaks_obs_stress;
+% 
+%                 else
+%                 if(j==1 || j== size(A_stress,1))
+%         Obs_stress_connections(i,j) = (sum(A_obs_stress(i,indices) == A_stress(j,indices)))/total_peaks_obs_stress;
+% 
+%                 end
+%                 end
+%             end
+%             end
+% 
+% 
+%         end
+% 
+% 
+% 
+% 
+%      
+%     
+% 
+% 
+% % For every active neuron  of observer, let's count when the neurons of
+% % the neutral are active too in same or near intervals    
+% 
 A_obs_neutral = A_obs(:,neutral_t);
 A_neutral = A_neutral(:,neutral_t);
-
-for i = 1:size(A_obs_neutral,1)
-    
-    for j = 2:size(A_neutral,1)-1
-        indices = find(A_obs_neutral(i,:) == 1 );
-        Obs_neutral_connections(i,j) = (sum(A_obs_neutral(i,indices) == A_neutral(j,indices)) + ...
-           sum(A_obs_neutral(i,indices) == A_neutral(j-1,indices)) + ...
-           sum(A_obs_neutral(i,indices) == A_neutral(j+1,indices)));
-        
-    end
-    
+else
+A_obs_stress = A_obs(:,neutral_t);
+A_stress = A_stress(:,neutral_t);
+A_obs_neutral = A_obs(:,stress_t);
+A_neutral = A_neutral(:,stress_t);
 end
+% total_peaks_obs_neut = (sum(sum(m_detector_neutral(:,2:end)))) /(step);
+% 
+% for i = 1:size(A_obs_neutral,1)
+%     
+%     for j = 1:size(A_neutral,1)
+%         indices = find(A_obs_neutral(i,:) == 1 );
+%         if(isempty(indices))
+%             Obs_neutral_connections(i,j)=0;
+%         else
+% 
+%          
+%                 if(j>1 && j < size(A_neutral,1))
+%         Obs_neutral_connections(i,j) = ((sum(A_obs_neutral(i,indices) == A_neutral(j,indices))) + ...
+%            (sum(A_obs_neutral(i,indices) == A_neutral(j-1,indices))) + ...
+%            (sum(A_obs_neutral(i,indices) == A_neutral(j+1,indices))))/total_peaks_obs_neut;
+% 
+%                 else
+%                 if(j==1 || j== size(A_neutral,1))
+%         Obs_neutral_connections(i,j) = ((sum(A_obs_neutral(i,indices) == A_neutral(j,indices))))/total_peaks_obs_neut;
+% 
+%                 end
+%                 end
+%             end
+%             end
+% 
+% 
+%         end
+% 
+% % for i = 1:size(A_obs_neutral,1)
+% %     
+% %     for j = 2:size(A_neutral,1)-1
+% %         indices = find(A_obs_neutral(i,:) == 1 );
+% %         Obs_neutral_connections(i,j) = (sum(A_obs_neutral(i,indices) == A_neutral(j,indices)) + ...
+% %            sum(A_obs_neutral(i,indices) == A_neutral(j-1,indices)) + ...
+% %            sum(A_obs_neutral(i,indices) == A_neutral(j+1,indices)));
+% %         
+% %     end
+% %     
+% % end
+% 
+% 
+% figure
+% 
+% heatmap(Obs_stress_connections)
+% 
+% xlabel ('Neurons of stressed mouse')
+% 
+% ylabel ('Neurons of observer mouse')
+% 
+% title('Simultaneous peaks between observer and stressed')
+% 
+% set(gca,'FontSize',20)
+% 
+% figure
+% 
+% heatmap(Obs_neutral_connections)
+% 
+% xlabel ('Neurons of neutral mouse')
+% 
+% ylabel ('Neurons of observer mouse')
+% 
+% title('Simultaneous peaks between observer and neutral')
+% 
+% set(gca,'FontSize',20)
+
 
 
 

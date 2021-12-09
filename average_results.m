@@ -211,7 +211,7 @@ bar(Y)
 
 legend('habituation','test')
 title('Infinity error between observer and stressed in different datasets')
-
+set(gca,'FontSize',20)
 figure
 
 Y = [Inf_errors.obs_neut_hab.first  Inf_errors.obs_neut_test.first ;
@@ -222,7 +222,7 @@ bar(Y)
 
 legend('habituation','test')
 title('Infinity error between observer and neutral in different datasets')
-
+set(gca,'FontSize',20)
 
 figure
 
@@ -234,7 +234,7 @@ bar(Y)
 
 legend('habituation','test')
 title('L2 error between observer and stressed in different datasets')
-
+set(gca,'FontSize',20)
 figure
 
 Y = [L2_errors.obs_neut_hab.first  L2_errors.obs_neut_test.first ;
@@ -245,61 +245,115 @@ bar(Y)
 
 legend('habituation','test')
 title('L2 error between observer and neutral in different datasets')
-
+set(gca,'FontSize',20)
 figure
 subplot(2,1,2)
 aa= categorical({'Habituation','Test'});
 
-bar(aa(1),mean([Inf_errors.obs_stress_hab.first,Inf_errors.obs_stress_hab.second,Inf_errors.obs_stress_hab.third,Inf_errors.obs_stress_hab.fourth]) ,'r')
+bar(aa(1),mean([Inf_errors.obs_stress_hab.first,Inf_errors.obs_stress_hab.second]) ,'r')
 
 hold on
 
-bar(aa(2),mean([Inf_errors.obs_stress_test.first,Inf_errors.obs_stress_test.second,Inf_errors.obs_stress_test.third,Inf_errors.obs_stress_test.fourth]) ,'b')
+bar(aa(2),mean([Inf_errors.obs_stress_test.first,Inf_errors.obs_stress_test.second]) ,'b')
 
 legend('habituation','test')
-title('Average Infinity error between observer and stressed')
+title('Average Infinity error between observer and stressed (neutral observer)')
+set(gca,'FontSize',20)
+subplot(2,1,1)
+
+aa= categorical({'Habituation','Test'});
+
+bar(aa(1),mean([Inf_errors.obs_neut_hab.first,Inf_errors.obs_neut_hab.second]) ,'r')
+
+hold on
+
+bar(aa(2),mean([Inf_errors.obs_neut_test.first,Inf_errors.obs_neut_test.second]) ,'b')
+
+legend('habituation','test')
+title('Average Infinity error between observer and neutral (neutral observer)')
+set(gca,'FontSize',20)
+figure
+subplot(2,1,2)
+aa= categorical({'Habituation','Test'});
+
+bar(aa(1),mean([Inf_errors.obs_stress_hab.third,Inf_errors.obs_stress_hab.fourth]) ,'r')
+
+hold on
+
+bar(aa(2),mean([Inf_errors.obs_stress_test.third,Inf_errors.obs_stress_test.fourth]) ,'b')
+
+legend('habituation','test')
+title('Average Infinity error between observer and stressed (stressed observer)')
+set(gca,'FontSize',20)
+subplot(2,1,1)
+
+aa= categorical({'Habituation','Test'});
+
+bar(aa(1),mean([Inf_errors.obs_neut_hab.third,Inf_errors.obs_neut_hab.fourth]) ,'r')
+
+hold on
+
+bar(aa(2),mean([Inf_errors.obs_neut_test.third,Inf_errors.obs_neut_test.fourth]) ,'b')
+
+legend('habituation','test')
+title('Average Infinity error between observer and neutral (stressed observer)')
+set(gca,'FontSize',20)
+figure
 
 subplot(2,1,1)
 
 aa= categorical({'Habituation','Test'});
 
-bar(aa(1),mean([Inf_errors.obs_neut_hab.first,Inf_errors.obs_neut_hab.second,Inf_errors.obs_neut_hab.third,Inf_errors.obs_neut_hab.fourth]) ,'r')
+bar(aa(1),mean([L2_errors.obs_neut_hab.first,L2_errors.obs_neut_hab.second]) ,'r')
 
 hold on
 
-bar(aa(2),mean([Inf_errors.obs_neut_test.first,Inf_errors.obs_neut_test.second,Inf_errors.obs_neut_test.third,Inf_errors.obs_neut_test.fourth]) ,'b')
+bar(aa(2),mean([L2_errors.obs_neut_test.first,L2_errors.obs_neut_test.second]) ,'b')
 
 legend('habituation','test')
-title('Average Infinity error between observer and neutral')
+title('Average L2 error between observer and neutral (neutral observer)')
+set(gca,'FontSize',20)
+subplot(2,1,2)
 
+aa= categorical({'Habituation','Test'});
+
+bar(aa(1),mean([L2_errors.obs_stress_hab.first,L2_errors.obs_stress_hab.second]) ,'r')
+
+hold on
+
+bar(aa(2),mean([L2_errors.obs_stress_test.first,L2_errors.obs_stress_test.second]) ,'b')
+
+legend('habituation','test')
+title('Average L2 error between observer and stressed (neutral observer)')
+set(gca,'FontSize',20)
 figure
 
 subplot(2,1,1)
 
 aa= categorical({'Habituation','Test'});
 
-bar(aa(1),mean([L2_errors.obs_neut_hab.first,L2_errors.obs_neut_hab.second,L2_errors.obs_neut_hab.third,L2_errors.obs_neut_hab.fourth]) ,'r')
+bar(aa(1),mean([L2_errors.obs_neut_hab.third,L2_errors.obs_neut_hab.fourth]) ,'r')
 
 hold on
 
-bar(aa(2),mean([L2_errors.obs_neut_test.first,L2_errors.obs_neut_test.second,L2_errors.obs_neut_test.third,L2_errors.obs_neut_test.fourth]) ,'b')
+bar(aa(2),mean([L2_errors.obs_neut_test.third,L2_errors.obs_neut_test.fourth]) ,'b')
 
 legend('habituation','test')
-title('Average L2 error between observer and neutral')
-
+title('Average L2 error between observer and neutral (stressed observer)')
+set(gca,'FontSize',20)
 subplot(2,1,2)
 
 aa= categorical({'Habituation','Test'});
 
-bar(aa(1),mean([L2_errors.obs_stress_hab.first,L2_errors.obs_stress_hab.second,L2_errors.obs_stress_hab.third,L2_errors.obs_stress_hab.fourth]) ,'r')
+bar(aa(1),mean([L2_errors.obs_stress_hab.third,L2_errors.obs_stress_hab.fourth]) ,'r')
 
 hold on
 
-bar(aa(2),mean([L2_errors.obs_stress_test.first,L2_errors.obs_stress_test.second,L2_errors.obs_stress_test.third,L2_errors.obs_stress_test.fourth]) ,'b')
+bar(aa(2),mean([L2_errors.obs_stress_test.third,L2_errors.obs_stress_test.fourth]) ,'b')
 
 legend('habituation','test')
-title('Average L2 error between observer and stressed')
-
+title('Average L2 error between observer and stressed (stressed observer)')
+set(gca,'FontSize',20)
 
 figure
 
@@ -311,7 +365,7 @@ bar(Y)
 
 legend('habituation','test')
 title('Correlation between observer and stressed in different datasets')
-
+set(gca,'FontSize',20)
 figure
 
 Y = [corr.obs_neut_hab.first  corr.obs_neut_test.first ;
@@ -322,7 +376,7 @@ bar(Y)
 
 legend('habituation','test')
 title('Correlation between observer and neutral in different datasets')
-
+set(gca,'FontSize',20)
 
 figure
 
@@ -334,7 +388,7 @@ bar(Y)
 
 legend('All test','First part of test')
 title('Correlation at first contacts between observer and stressed in different datasets')
-
+set(gca,'FontSize',20)
 figure
 
 Y = [ corr.obs_neut_test.first  corr.obs_neut_test_contact.first ;
@@ -345,41 +399,75 @@ bar(Y)
 
 legend('All test','First part of test')
 title('Correlation at first contacts between observer and neutral in different datasets')
-
+set(gca,'FontSize',20)
 figure
 
 aa= categorical({'Habituation','Test','beginning of test','sniffing'});
 
-bar(aa(1),mean([corr.obs_stress_hab.first,corr.obs_stress_hab.second,corr.obs_stress_hab.third,corr.obs_stress_hab.fourth]) ,'r')
+bar(aa(1),mean([corr.obs_stress_hab.first,corr.obs_stress_hab.second]) ,'r')
 
 hold on
 
-bar(aa(2),mean([corr.obs_stress_test.first,corr.obs_stress_test.second,corr.obs_stress_test.third,corr.obs_stress_test.fourth]) ,'b')
+bar(aa(2),mean([corr.obs_stress_test.first,corr.obs_stress_test.second]) ,'b')
 
-bar(aa(3),mean([corr.obs_stress_test_contact.first,corr.obs_stress_test_contact.second,corr.obs_stress_test_contact.third,corr.obs_stress_test_contact.fourth]) ,'green')
+bar(aa(3),mean([corr.obs_stress_test_contact.first,corr.obs_stress_test_contact.second]) ,'green')
 
-bar(aa(4),mean([corr.obs_stress_sniff.first,corr.obs_stress_sniff.second,corr.obs_stress_sniff.third]),'m')
+bar(aa(4),mean([corr.obs_stress_sniff.first,corr.obs_stress_sniff.second]),'m')
 
 legend('habituation','test','beginning of test','sniffing')
-title('Average correlation between observer and stressed')
-
+title('Average correlation between observer and stressed (neutral observer)')
+set(gca,'FontSize',20)
 figure
 
 aa= categorical({'Habituation','Test','beginning of test','sniffing'});
 
-bar(aa(1),mean([corr.obs_neut_hab.first,corr.obs_neut_hab.second,corr.obs_neut_hab.third,corr.obs_neut_hab.fourth]) ,'r')
+bar(aa(1),mean([corr.obs_neut_hab.first,corr.obs_neut_hab.second]) ,'r')
 
 hold on
 
-bar(aa(2),mean([corr.obs_neut_test.first,corr.obs_neut_test.second,corr.obs_neut_test.third,corr.obs_neut_test.fourth]) ,'b')
+bar(aa(2),mean([corr.obs_neut_test.first,corr.obs_neut_test.second]) ,'b')
 
-bar(aa(3),mean([corr.obs_neut_test_contact.first,corr.obs_neut_test_contact.second,corr.obs_neut_test_contact.third,corr.obs_neut_test_contact.fourth]) ,'green')
+bar(aa(3),mean([corr.obs_neut_test_contact.first,corr.obs_neut_test_contact.second]) ,'green')
 
-bar(aa(4),mean([corr.obs_neut_sniff.first,corr.obs_neut_sniff.second,corr.obs_neut_sniff.third]),'m')
+bar(aa(4),mean([corr.obs_neut_sniff.first,corr.obs_neut_sniff.second]),'m')
 
 legend('habituation','test','beginning of test','sniffing')
-title('Average correlation between observer and neutral')
+title('Average correlation between observer and neutral (neutral observer)')
+set(gca,'FontSize',20)
+figure
 
+aa= categorical({'Habituation','Test','beginning of test'});
+
+bar(aa(1),mean([corr.obs_stress_hab.third,corr.obs_stress_hab.fourth]) ,'r')
+
+hold on
+
+bar(aa(2),mean([corr.obs_stress_test.third,corr.obs_stress_test.fourth]) ,'b')
+
+bar(aa(3),mean([corr.obs_stress_test_contact.third,corr.obs_stress_test_contact.fourth]) ,'green')
+
+
+
+legend('habituation','test','beginning of test','sniffing')
+title('Average correlation between observer and stressed (stressed observer)')
+set(gca,'FontSize',20)
+figure
+
+aa= categorical({'Habituation','Test','beginning of test'});
+
+bar(aa(1),mean([corr.obs_neut_hab.third,corr.obs_neut_hab.fourth]) ,'r')
+
+hold on
+
+bar(aa(2),mean([corr.obs_neut_test.third,corr.obs_neut_test.fourth]) ,'b')
+
+bar(aa(3),mean([corr.obs_neut_test_contact.third,corr.obs_neut_test_contact.fourth]) ,'green')
+
+
+
+legend('habituation','test','beginning of test')
+title('Average correlation between observer and neutral (stressed observer)')
+set(gca,'FontSize',20)
 
 
 

@@ -12,7 +12,7 @@ addpath('zone analysis','normalizations','overall activity','statistics',...
 
 addpath('SAVED DATA\DATA_FOURTH\');
 
-clearvars -except corr  L2_errors Inf_errors
+clearvars -except corr  L2_errors Inf_errors hab_act1 test_act1 hab_act2 test_act2 hab_act3 test_act3 hab_act4 test_act4
 close all
 
 load('neutral_data.mat')
@@ -140,5 +140,24 @@ title('MAD algorithm treshold')
 
 [ left2, right2 ,intermediate2] = detect_areas(ad_hab_zone);
 
+% observer activity when he is close to stressed
+obs_activity_test_stress = interp1(obs_activity_test(:,1),obs_activity_test(:,2), left);
 
+% observer activity when he is close to neutral
+obs_activity_test_neutral = interp1(obs_activity_test(:,1),obs_activity_test(:,2), right);
+
+% stressed activity when he is close to observer
+stress_activity_test2 = interp1(stress_activity_test(:,1),stress_activity_test(:,2), left);
+
+% neutral activity when he is close to observer
+neutral_activity_test2 = interp1(neutral_activity_test(:,1),neutral_activity_test(:,2), right);
+
+
+obs_activity_hab_stress = interp1(obs_activity_hab(:,1),obs_activity_hab(:,2), left2);
+
+obs_activity_hab_neutral = interp1(obs_activity_hab(:,1),obs_activity_hab(:,2), right2);
+
+stress_activity_hab2 = interp1(stress_activity_hab(:,1),stress_activity_hab(:,2), left2);
+
+neutral_activity_hab2 = interp1(neutral_activity_hab(:,1),neutral_activity_hab(:,2), right2);
 
