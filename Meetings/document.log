@@ -1,0 +1,994 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.13)  29 NOV 2021 11:47
+entering extended mode
+**./document.tex
+(document.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-05-07>
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
+y
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphic
+x.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.
+sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphic
+s.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.st
+y
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\gra
+phics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdf
+tex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.
+sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.
+sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.s
+ty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen141
+))
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.s
+ty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.s
+ty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count187
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count188
+\leftroot@=\count189
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count190
+\DOTSCASE@=\count191
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count192
+\c@MaxMatrixCols=\count193
+\dotsspace@=\muskip16
+\c@parentequation=\count194
+\dspbrk@lvl=\count195
+\tag@help=\toks19
+\row@=\count196
+\column@=\count197
+\maxfields@=\count198
+\andhelp@=\toks20
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfont
+s.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count199
+\float@exts=\toks23
+\float@box=\box49
+\@float@everytoks=\toks24
+\@floatcapt=\box50
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblate
+x.sty
+Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdftexcmds\pdf
+texcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infw
+arerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.st
+y
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmd
+s.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbo
+x.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count266
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kvopti
+ons.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\kvse
+tkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.st
+y
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count267
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.de
+f
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count268
+\c@listtotal=\count269
+\c@listcount=\count270
+\c@liststart=\count271
+\c@liststop=\count272
+\c@citecount=\count273
+\c@citetotal=\count274
+\c@multicitecount=\count275
+\c@multicitetotal=\count276
+\c@instcount=\count277
+\c@maxnames=\count278
+\c@minnames=\count279
+\c@maxitems=\count280
+\c@minitems=\count281
+\c@citecounter=\count282
+\c@maxcitecounter=\count283
+\c@savedcitecounter=\count284
+\c@uniquelist=\count285
+\c@uniquename=\count286
+\c@refsection=\count287
+\c@refsegment=\count288
+\c@maxextratitle=\count289
+\c@maxextratitleyear=\count290
+\c@maxextraname=\count291
+\c@maxextradate=\count292
+\c@maxextraalpha=\count293
+\c@abbrvpenalty=\count294
+\c@highnamepenalty=\count295
+\c@lownamepenalty=\count296
+\c@maxparens=\count297
+\c@parenlevel=\count298
+\blx@tempcnta=\count299
+\blx@tempcntb=\count300
+\blx@tempcntc=\count301
+\blx@maxsection=\count302
+\blx@maxsegment@0=\count303
+\blx@notetype=\count304
+\blx@parenlevel@text=\count305
+\blx@parenlevel@foot=\count306
+\blx@sectionciteorder@0=\count307
+\blx@entrysetcounter=\count308
+\blx@biblioinstance=\count309
+\labelnumberwidth=\skip52
+\labelalphawidth=\skip53
+\biblabelsep=\skip54
+\bibitemsep=\skip55
+\bibnamesep=\skip56
+\bibinitsep=\skip57
+\bibparsep=\skip58
+\bibhang=\skip59
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language83
+\c@mincomprange=\count310
+\c@maxcomprange=\count311
+\c@mincompwidth=\count312
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-dm.
+def
+File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count313
+\c@savedafterword=\count314
+\c@annotator=\count315
+\c@savedannotator=\count316
+\c@author=\count317
+\c@savedauthor=\count318
+\c@bookauthor=\count319
+\c@savedbookauthor=\count320
+\c@commentator=\count321
+\c@savedcommentator=\count322
+\c@editor=\count323
+\c@savededitor=\count324
+\c@editora=\count325
+\c@savededitora=\count326
+\c@editorb=\count327
+\c@savededitorb=\count328
+\c@editorc=\count329
+\c@savededitorc=\count330
+\c@foreword=\count331
+\c@savedforeword=\count332
+\c@holder=\count333
+\c@savedholder=\count334
+\c@introduction=\count335
+\c@savedintroduction=\count336
+\c@namea=\count337
+\c@savednamea=\count338
+\c@nameb=\count339
+\c@savednameb=\count340
+\c@namec=\count341
+\c@savednamec=\count342
+\c@translator=\count343
+\c@savedtranslator=\count344
+\c@shortauthor=\count345
+\c@savedshortauthor=\count346
+\c@shorteditor=\count347
+\c@savedshorteditor=\count348
+\c@labelname=\count349
+\c@savedlabelname=\count350
+\c@institution=\count351
+\c@savedinstitution=\count352
+\c@lista=\count353
+\c@savedlista=\count354
+\c@listb=\count355
+\c@savedlistb=\count356
+\c@listc=\count357
+\c@savedlistc=\count358
+\c@listd=\count359
+\c@savedlistd=\count360
+\c@liste=\count361
+\c@savedliste=\count362
+\c@listf=\count363
+\c@savedlistf=\count364
+\c@location=\count365
+\c@savedlocation=\count366
+\c@organization=\count367
+\c@savedorganization=\count368
+\c@origlocation=\count369
+\c@savedoriglocation=\count370
+\c@origpublisher=\count371
+\c@savedorigpublisher=\count372
+\c@publisher=\count373
+\c@savedpublisher=\count374
+\c@language=\count375
+\c@savedlanguage=\count376
+\c@origlanguage=\count377
+\c@savedoriglanguage=\count378
+\c@pageref=\count379
+\c@savedpageref=\count380
+\shorthandwidth=\skip60
+\shortjournalwidth=\skip61
+\shortserieswidth=\skip62
+\shorttitlewidth=\skip63
+\shortauthorwidth=\skip64
+\shorteditorwidth=\skip65
+\locallabelnumberwidth=\skip66
+\locallabelalphawidth=\skip67
+\localshorthandwidth=\skip68
+\localshortjournalwidth=\skip69
+\localshortserieswidth=\skip70
+\localshorttitlewidth=\skip71
+\localshortauthorwidth=\skip72
+\localshorteditorwidth=\skip73
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-com
+pat.def
+File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblate
+x.def
+File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+\c@textcitecount=\count381
+\c@textcitetotal=\count382
+\c@textcitemaxnames=\count383
+\c@biburlbigbreakpenalty=\count384
+\c@biburlbreakpenalty=\count385
+\c@biburlnumpenalty=\count386
+\c@biburlucpenalty=\count387
+\c@biburllcpenalty=\count388
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count389
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\num
+eric.bbx
+File: numeric.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\sta
+ndard.bbx
+File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count390
+\c@bbx:relatedtotal=\count391
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\num
+eric.cbx
+File: numeric.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblate
+x.cfg
+File: biblatex.cfg 
+))
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
+s.sty
+\lst@mode=\count392
+\lst@gtempboxa=\box51
+\lst@token=\toks25
+\lst@length=\count393
+\lst@currlwidth=\dimen150
+\lst@column=\count394
+\lst@pos=\count395
+\lst@lostspace=\dimen151
+\lst@width=\dimen152
+\lst@newlines=\count396
+\lst@lineno=\count397
+\lst@maxwidth=\dimen153
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc
+.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count398
+\lst@skipnumbers=\count399
+\lst@framebox=\box52
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
+s.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+\c@theorem=\count400
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.s
+ty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\col
+or.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlepic\titlepi
+c.sty
+Package: titlepic 2017/03/14 1.2 Package to display a picture on the title page
+
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperre
+f.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefinekeys\k
+vdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\pdfe
+scape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\hycolor.
+sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmacro\letl
+txmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\auxhook.
+sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen154
+\Hy@linkcounter=\count401
+\Hy@pagecounter=\count402
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.
+def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperre
+f-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc\intcal
+c.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\etexc
+mds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count403
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc.d
+ef
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count404
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen155
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.
+sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\big
+intcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count405
+\Field@Width=\dimen156
+\Fld@charsize=\dimen157
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atbegshi-lt
+x.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count406
+\c@Item=\count407
+\c@Hfootnote=\count408
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex
+.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atveryend-l
+tx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count409
+\c@bookmark@seq@number=\count410
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\r
+erunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\
+uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip74
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 35.
+\@quotelevel=\count411
+\@quotereset=\count412
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3back
+end-pdftex.def
+File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count413
+\l__pdf_internal_box=\box53
+) (document.aux)
+\openout1 = `document.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
+-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count414
+\scratchdimen=\dimen158
+\scratchbox=\box54
+\nofMPsegments=\count415
+\nofMParguments=\count416
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count417
+\MPscratchDim=\dimen159
+\MPnumerator=\count418
+\makeMPintoPDFobject=\count419
+\everyMPtoPDFconversion=\toks27
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\eps
+topdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\epstopd
+f-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\eng
+lish.lbx
+File: english.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.s
+ty
+Package: expl3 2021-05-07 L3 programming layer (loader) 
+)
+Package biblatex Info: ... and expl3
+(biblatex)             2021-05-07 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-cas
+e-expl3.sty
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xpars
+e\xparse.sty
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xpars
+e\xparse-2020-10-01.sty
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xpars
+e\xparse-generic.tex)))
+Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
+)
+\openout3 = `document.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'document.bbl' found.
+ (document.bbl)
+Package biblatex Info: Reference section=0 on input line 46.
+Package biblatex Info: Reference segment=0 on input line 46.
+\c@lstlisting=\count420
+Package hyperref Info: Link coloring ON on input line 46.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
+.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcoun
+t.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring
+\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count421
+)
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
+ (document.out) (document.out)
+\@outlinefile=\write4
+\openout4 = `document.out'.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/Users/Fabrizio/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (0.25069pt too wide) in paragraph at lines 56--60
+\OT1/cmr/m/n/10 L'esperimento di in-ter-brain svolto sui topi si pone l'obietti
+vo di stu-di-are l'attivita
+ []
+
+<arena.png, id=99, 348.55219pt x 128.73094pt>
+File: arena.png Graphic file (type png)
+<use arena.png>
+Package pdftex.def Info: arena.png  used on input line 72.
+(pdftex.def)             Requested size: 278.8421pt x 102.98486pt.
+[2
+
+
+ <./arena.png>]
+Overfull \hbox (21.75069pt too wide) in paragraph at lines 85--86
+[]\OT1/cmr/m/n/10 Due file ten-gono trac-cia della po-sizione dell'observer (un
+o du-rante l'habituation,
+ []
+
+<inscopix.png, id=111, 679.78969pt x 369.63094pt>
+File: inscopix.png Graphic file (type png)
+<use inscopix.png>
+Package pdftex.def Info: inscopix.png  used on input line 93.
+(pdftex.def)             Requested size: 407.87695pt x 221.78026pt.
+
+Overfull \hbox (62.87695pt too wide) in paragraph at lines 93--94
+ [] 
+ []
+
+[3 <./inscopix.png>]
+Overfull \hbox (5.86166pt too wide) in paragraph at lines 107--108
+\OT1/cmr/m/n/10 pen-sarla come fun-zione che varia nello spazio, du-rante il te
+st in cui l'observer
+ []
+
+[4]
+<zone_plot.png, id=127, 657.2053pt x 303.38344pt>
+File: zone_plot.png Graphic file (type png)
+<use zone_plot.png>
+Package pdftex.def Info: zone_plot.png  used on input line 152.
+(pdftex.def)             Requested size: 394.32622pt x 182.03146pt.
+
+Overfull \hbox (49.32622pt too wide) in paragraph at lines 152--153
+ [] 
+ []
+
+[5]
+<detector_plot.png, id=132, 729.47531pt x 304.13625pt>
+File: detector_plot.png Graphic file (type png)
+<use detector_plot.png>
+Package pdftex.def Info: detector_plot.png  used on input line 161.
+(pdftex.def)             Requested size: 437.68855pt x 182.48315pt.
+
+Overfull \hbox (92.68855pt too wide) in paragraph at lines 161--162
+ [] 
+ []
+
+[6 <./zone_plot.png> <./detector_plot.png>]
+<mad_plot.png, id=141, 584.93532pt x 300.3722pt>
+File: mad_plot.png Graphic file (type png)
+<use mad_plot.png>
+Package pdftex.def Info: mad_plot.png  used on input line 170.
+(pdftex.def)             Requested size: 350.9639pt x 180.22469pt.
+
+Overfull \hbox (5.9639pt too wide) in paragraph at lines 170--171
+ [] 
+ []
+
+[7 <./mad_plot.png>] [8]
+<cross_corr.png, id=153, 280.79906pt x 335.75438pt>
+File: cross_corr.png Graphic file (type png)
+<use cross_corr.png>
+Package pdftex.def Info: cross_corr.png  used on input line 251.
+(pdftex.def)             Requested size: 252.71681pt x 302.17615pt.
+ [9]
+<cross_corr_sniff.png, id=160, 616.55344pt x 337.26pt>
+File: cross_corr_sniff.png Graphic file (type png)
+<use cross_corr_sniff.png>
+Package pdftex.def Info: cross_corr_sniff.png  used on input line 260.
+(pdftex.def)             Requested size: 431.58446pt x 236.08038pt.
+
+Overfull \hbox (86.58446pt too wide) in paragraph at lines 260--261
+ [] 
+ []
+
+[10 <./cross_corr.png>]
+<matrix_corr1.png, id=167, 594.72188pt x 336.50719pt>
+File: matrix_corr1.png Graphic file (type png)
+<use matrix_corr1.png>
+Package pdftex.def Info: matrix_corr1.png  used on input line 269.
+(pdftex.def)             Requested size: 356.83588pt x 201.90585pt.
+
+Overfull \hbox (11.83588pt too wide) in paragraph at lines 269--270
+ [] 
+ []
+
+<matrix_corr2.png, id=168, 587.94656pt x 335.75438pt>
+File: matrix_corr2.png Graphic file (type png)
+<use matrix_corr2.png>
+Package pdftex.def Info: matrix_corr2.png  used on input line 273.
+(pdftex.def)             Requested size: 352.77066pt x 201.45418pt.
+
+Overfull \hbox (7.77066pt too wide) in paragraph at lines 273--274
+ [] 
+ []
+
+[11 <./cross_corr_sniff.png>] [12 <./matrix_corr1.png> <./matrix_corr2.png>]
+<fiberphotometry.png, id=182, 716.6775pt x 289.83281pt>
+File: fiberphotometry.png Graphic file (type png)
+<use fiberphotometry.png>
+Package pdftex.def Info: fiberphotometry.png  used on input line 296.
+(pdftex.def)             Requested size: 430.00983pt x 173.90102pt.
+
+Overfull \hbox (85.00983pt too wide) in paragraph at lines 296--297
+ [] 
+ []
+
+
+Overfull \hbox (96.00084pt too wide) in paragraph at lines 313--316
+\OT1/cmr/m/n/10 by Barabasi - Al-bert may be use-ful: http://www.networkscience
+book.com/chapter/10#network-
+ []
+
+[13 <./fiberphotometry.png>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+<altruism.png, id=194, 231.11343pt x 146.04562pt>
+File: altruism.png Graphic file (type png)
+<use altruism.png>
+Package pdftex.def Info: altruism.png  used on input line 341.
+(pdftex.def)             Requested size: 208.00017pt x 131.43982pt.
+<raw_signal.png, id=195, 481.8pt x 384.6872pt>
+File: raw_signal.png Graphic file (type png)
+<use raw_signal.png>
+Package pdftex.def Info: raw_signal.png  used on input line 354.
+(pdftex.def)             Requested size: 289.08221pt x 230.81409pt.
+[15 <./altruism.png>]
+<psth.png, id=202, 252.945pt x 191.9672pt>
+File: psth.png Graphic file (type png)
+<use psth.png>
+Package pdftex.def Info: psth.png  used on input line 364.
+(pdftex.def)             Requested size: 250.41632pt x 190.0481pt.
+ [16 <./raw_signal.png> <./psth.png>]
+<cable.png, id=211, 826.58812pt x 220.57407pt>
+File: cable.png Graphic file (type png)
+<use cable.png>
+Package pdftex.def Info: cable.png  used on input line 397.
+(pdftex.def)             Requested size: 454.62486pt x 121.3161pt.
+
+Overfull \hbox (109.62486pt too wide) in paragraph at lines 397--398
+ [] 
+ []
+
+[17 <./cable.png>] [18]
+<obs_stress_neut.jpg, id=224, 1371.1225pt x 653.44125pt>
+File: obs_stress_neut.jpg Graphic file (type jpg)
+<use obs_stress_neut.jpg>
+Package pdftex.def Info: obs_stress_neut.jpg  used on input line 455.
+(pdftex.def)             Requested size: 493.60373pt x 235.23866pt.
+
+Overfull \hbox (122.3732pt too wide) in paragraph at lines 454--456
+ |  [] 
+ []
+
+<obs_stress_neut4.jpg, id=225, 1371.1225pt x 653.44125pt>
+File: obs_stress_neut4.jpg Graphic file (type jpg)
+<use obs_stress_neut4.jpg>
+Package pdftex.def Info: obs_stress_neut4.jpg  used on input line 464.
+(pdftex.def)             Requested size: 438.76816pt x 209.10547pt.
+
+Overfull \hbox (67.53763pt too wide) in paragraph at lines 463--465
+ |  [] 
+ []
+
+[19 <./obs_stress_neut.jpg>]
+<sniff3.jpg, id=232, 1371.1225pt x 653.44125pt>
+File: sniff3.jpg Graphic file (type jpg)
+<use sniff3.jpg>
+Package pdftex.def Info: sniff3.jpg  used on input line 477.
+(pdftex.def)             Requested size: 438.76816pt x 209.10547pt.
+
+Overfull \hbox (67.53763pt too wide) in paragraph at lines 476--478
+ |  [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+[20 <./obs_stress_neut4.jpg> <./sniff3.jpg>]
+<corr_time.jpg, id=239, 1371.1225pt x 653.44125pt>
+File: corr_time.jpg Graphic file (type jpg)
+<use corr_time.jpg>
+Package pdftex.def Info: corr_time.jpg  used on input line 493.
+(pdftex.def)             Requested size: 493.60373pt x 235.23866pt.
+
+Overfull \hbox (122.3732pt too wide) in paragraph at lines 492--494
+ |  [] 
+ []
+
+<corr_time3.jpg, id=240, 1371.1225pt x 653.44125pt>
+File: corr_time3.jpg Graphic file (type jpg)
+<use corr_time3.jpg>
+Package pdftex.def Info: corr_time3.jpg  used on input line 506.
+(pdftex.def)             Requested size: 493.60373pt x 235.23866pt.
+
+Overfull \hbox (122.3732pt too wide) in paragraph at lines 505--507
+ |  [] 
+ []
+
+[21 <./corr_time.jpg>]
+<avg_corr_stress.jpg, id=246, 1371.1225pt x 653.44125pt>
+File: avg_corr_stress.jpg Graphic file (type jpg)
+<use avg_corr_stress.jpg>
+Package pdftex.def Info: avg_corr_stress.jpg  used on input line 533.
+(pdftex.def)             Requested size: 493.60373pt x 235.23866pt.
+
+Overfull \hbox (122.3732pt too wide) in paragraph at lines 532--534
+ |  [] 
+ []
+
+[22 <./corr_time3.jpg>]
+<avg_corr_stress2.jpg, id=252, 1371.1225pt x 653.44125pt>
+File: avg_corr_stress2.jpg Graphic file (type jpg)
+<use avg_corr_stress2.jpg>
+Package pdftex.def Info: avg_corr_stress2.jpg  used on input line 543.
+(pdftex.def)             Requested size: 493.60373pt x 235.23866pt.
+
+Overfull \hbox (122.3732pt too wide) in paragraph at lines 542--544
+ |  [] 
+ []
+
+[23 <./avg_corr_stress.jpg> <./avg_corr_stress2.jpg>]
+Overfull \hbox (40.09795pt too wide) in paragraph at lines 571--572
+\OT1/cmr/m/n/10 ra-tory in Rome held by Gi-a-como Novem-bre (https://www.giacom
+onovembre.com/).
+ []
+
+[24] (document.aux)
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: 96D12BC010A1B97E0D9A90A3F3350CFE;3394.
+Package logreq Info: Writing requests to 'document.run.xml'.
+\openout1 = `document.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 17266 strings out of 479185
+ 292893 string characters out of 2850944
+ 1009579 words of memory out of 3000000
+ 34558 multiletter control sequences out of 15000+600000
+ 413919 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,9n,67p,784b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\Fabrizio\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
+00\tcrm1000.pk><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmbx10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Fabrizio/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Fabriz
+io/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fabrizio/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fabrizio
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr17.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Fabrizio/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Fabrizio/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/User
+s/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb>
+Output written on document.pdf (24 pages, 1748591 bytes).
+PDF statistics:
+ 332 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
+
