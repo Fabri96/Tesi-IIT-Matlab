@@ -23,56 +23,56 @@ ylabel('$t [\textrm{ms}]$','Interpreter','latex')
 zlabel('$\psi_m(x,t) [\textrm{mV}]$','Interpreter','latex')
 title('Membrane Potential')
 axis('square');
-% longitudinal current
-figure;
-s           = surf(X,Y,I_h'); 
-s.EdgeColor = 'none';
-colorbar
-xlabel('$x [\textrm{mm}]$','Interpreter','latex')
-ylabel('$t [\textrm{ms}]$','Interpreter','latex')
-zlabel('$I_{in}(x,t) [\textrm{A}]$','Interpreter','latex')
-title('Longitudinal Current')
-axis('square');
-% ion transmembrane current densities
-figure;
-s           = surf(X,Y,J_Na'); 
-s.EdgeColor = 'none';
-colorbar
-xlabel('$x [\textrm{mm}]$','Interpreter','latex')
-ylabel('$t [\textrm{ms}]$','Interpreter','latex')
-zlabel('$J_{Na}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
-title('Sodium Current Density')
-axis('square');
-%
-figure;
-s           = surf(X,Y,J_K'); 
-s.EdgeColor = 'none';
-colorbar
-xlabel('$x [\textrm{mm}]$','Interpreter','latex')
-ylabel('$t [\textrm{ms}]$','Interpreter','latex')
-zlabel('$J_{K}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
-title('Potassium Current Density')
-axis('square');
-%
-figure;
-s           = surf(X,Y,J_Cl'); 
-s.EdgeColor = 'none';
-colorbar
-xlabel('$x [\textrm{mm}]$','Interpreter','latex')
-ylabel('$t [\textrm{ms}]$','Interpreter','latex')
-zlabel('$J_{Cl}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
-title('Chlorine Current Density')
-axis('square');
-%
-figure;
-s           = surf(X,Y,J_cap'); 
-s.EdgeColor = 'none';
-colorbar
-xlabel('$x [\textrm{mm}]$','Interpreter','latex')
-ylabel('$t [\textrm{ms}]$','Interpreter','latex')
-zlabel('$J_{cap}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
-title('Capacitive Current Density')
-axis('square');
+% % longitudinal current
+% figure;
+% s           = surf(X,Y,I_h'); 
+% s.EdgeColor = 'none';
+% colorbar
+% xlabel('$x [\textrm{mm}]$','Interpreter','latex')
+% ylabel('$t [\textrm{ms}]$','Interpreter','latex')
+% zlabel('$I_{in}(x,t) [\textrm{A}]$','Interpreter','latex')
+% title('Longitudinal Current')
+% axis('square');
+% % ion transmembrane current densities
+% figure;
+% s           = surf(X,Y,J_Na'); 
+% s.EdgeColor = 'none';
+% colorbar
+% xlabel('$x [\textrm{mm}]$','Interpreter','latex')
+% ylabel('$t [\textrm{ms}]$','Interpreter','latex')
+% zlabel('$J_{Na}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
+% title('Sodium Current Density')
+% axis('square');
+% %
+% figure;
+% s           = surf(X,Y,J_K'); 
+% s.EdgeColor = 'none';
+% colorbar
+% xlabel('$x [\textrm{mm}]$','Interpreter','latex')
+% ylabel('$t [\textrm{ms}]$','Interpreter','latex')
+% zlabel('$J_{K}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
+% title('Potassium Current Density')
+% axis('square');
+% %
+% figure;
+% s           = surf(X,Y,J_Cl'); 
+% s.EdgeColor = 'none';
+% colorbar
+% xlabel('$x [\textrm{mm}]$','Interpreter','latex')
+% ylabel('$t [\textrm{ms}]$','Interpreter','latex')
+% zlabel('$J_{Cl}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
+% title('Chlorine Current Density')
+% axis('square');
+% %
+% figure;
+% s           = surf(X,Y,J_cap'); 
+% s.EdgeColor = 'none';
+% colorbar
+% xlabel('$x [\textrm{mm}]$','Interpreter','latex')
+% ylabel('$t [\textrm{ms}]$','Interpreter','latex')
+% zlabel('$J_{cap}(x,t) [\textrm{A} \, \textrm{m}^{2}]$','Interpreter','latex')
+% title('Capacitive Current Density')
+% axis('square');
 %
 
 

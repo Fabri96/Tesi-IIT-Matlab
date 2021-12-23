@@ -36,7 +36,7 @@ end
 
 for k = 1:size(pn,2)-1 
     
-    mad_treshold(k) = (m + d2(np(k)))/3; % /3 to have it smaller
+    mad_treshold(k) = (m + d2(np(k)))/2; % /3 to have it smaller
     
 end
 

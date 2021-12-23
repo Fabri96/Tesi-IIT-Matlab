@@ -15,17 +15,18 @@ AA_stress_hab = [zeros(size(A_stress_hab,2),1) A_stress_hab'];
 
 
 dt = 0.8;
-c_matrix= corr_matrix_single_mouse(AA_neutral_hab,dt);
+fs=0.25;
+c_matrix= corr_matrix_single_mouse(AA_neutral_hab,dt,fs);
 hab_max_neutral = max(abs(c_matrix(:)));
 
 hab_mean_neutral = mean(nonzeros(c_matrix(:)));
 
-c_matrix= corr_matrix_single_mouse(AA_obs_hab,dt);
+c_matrix= corr_matrix_single_mouse(AA_obs_hab,dt,fs);
 hab_max_obs = max(abs(c_matrix(:)));
 
 hab_mean_obs = mean(nonzeros(c_matrix(:)));
 
-c_matrix= corr_matrix_single_mouse(AA_stress_hab,dt);
+c_matrix= corr_matrix_single_mouse(AA_stress_hab,dt,fs);
 hab_max_stress = max(abs(c_matrix(:)));
 
 hab_mean_stress = mean(nonzeros(c_matrix(:)));
@@ -38,17 +39,17 @@ AA_stress_test = [zeros(size(A_stress,2),1) A_stress'];
 
 
 dt = 0.8;
-c_matrix= corr_matrix_single_mouse(AA_neutral_test,dt);
+c_matrix= corr_matrix_single_mouse(AA_neutral_test,dt,fs);
 test_max_neutral = max(abs(c_matrix(:)));
 
 test_mean_neutral = mean(nonzeros(c_matrix(:)));
 
-c_matrix= corr_matrix_single_mouse(AA_obs_test,dt);
+c_matrix= corr_matrix_single_mouse(AA_obs_test,dt,fs);
 test_max_obs = max(abs(c_matrix(:)));
 
 test_mean_obs = mean(nonzeros(c_matrix(:)));
 
-c_matrix= corr_matrix_single_mouse(AA_stress_test,dt);
+c_matrix= corr_matrix_single_mouse(AA_stress_test,dt,fs);
 test_max_stress = max(abs(c_matrix(:)));
 
 test_mean_stress = mean(nonzeros(c_matrix(:)));

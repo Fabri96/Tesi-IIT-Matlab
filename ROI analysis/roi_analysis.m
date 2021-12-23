@@ -396,7 +396,7 @@ end
 
 if(dataset==1 || dataset==3)
 A_obs_stress = A_obs(:,stress_t);
-A_stress = A_stress(:,stress_t);
+AA_stress = A_stress(:,stress_t);
 % 
 % total_peaks_obs_stress = (sum(sum(m_detector_stress(:,2:end)))) /(step);
 % 
@@ -437,12 +437,12 @@ A_stress = A_stress(:,stress_t);
 % % the neutral are active too in same or near intervals    
 % 
 A_obs_neutral = A_obs(:,neutral_t);
-A_neutral = A_neutral(:,neutral_t);
+AA_neutral = A_neutral(:,neutral_t);
 else
 A_obs_stress = A_obs(:,neutral_t);
-A_stress = A_stress(:,neutral_t);
+AA_stress = A_stress(:,neutral_t);
 A_obs_neutral = A_obs(:,stress_t);
-A_neutral = A_neutral(:,stress_t);
+AA_neutral = A_neutral(:,stress_t);
 end
 % total_peaks_obs_neut = (sum(sum(m_detector_neutral(:,2:end)))) /(step);
 % 

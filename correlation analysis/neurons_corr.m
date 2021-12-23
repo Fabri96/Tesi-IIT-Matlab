@@ -80,7 +80,8 @@ a = double(c_corr_matrix > 0.6);
  sum(sum(a))/(size(a,1)*size(a,2))
 heatmap(a)
 
-xlabel("Neurons of " + mouse + " during " +  phase)
+xlabel("Neurons of " + mouse + " during" + ...
+    " " +  phase)
 ylabel("Neurons of observer during " +  phase)
 title('Neuron pairs presenting cross correlation')
 set(gca,'FontSize',20)

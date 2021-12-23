@@ -7,9 +7,9 @@
 % 
 % OUTPUT --> Correlation index between two vectors obtained by formula
 
-function c_index= corr_index(N1,N2,dt)
+function c_index= corr_index(N1,N2,dt,fs)
 
-T=length(N1)*0.05;
+T=length(N1)*fs;
 N_AB =0;
 for i=1:length(N1)
     

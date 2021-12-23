@@ -8,7 +8,7 @@
 % 
 % OUTPUT --> Correlation matrix 
 
-function c_matrix= corr_matrix_two_mice(m1,m2,dt)
+function c_matrix= corr_matrix_two_mice(m1,m2,dt,fs)
 
 
 c_matrix = zeros(size(m1,1),size(m2,1));
@@ -19,7 +19,7 @@ for i = 1:size(m1,1)
         N1=m1(i,:);
         N2=m2(j,:);
 
-        c_matrix(i,j) = corr_index(N1,N2,dt);
+        c_matrix(i,j) = corr_index(N1,N2,dt,fs);
          
 
     end

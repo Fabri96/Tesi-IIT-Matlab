@@ -61,11 +61,12 @@ AA_stress_test = [zeros(size(A_stress,2),1) A_stress'];
 
 
 dt = 0.8;
-c_matrix_neutral= corr_matrix_single_mouse(AA_neutral_test,dt);
+fs=0.25;
+c_matrix_neutral= corr_matrix_single_mouse(AA_neutral_test,dt,fs);
 
-c_matrix_obs= corr_matrix_single_mouse(AA_obs_test,dt);
+c_matrix_obs= corr_matrix_single_mouse(AA_obs_test,dt,fs);
 
-c_matrix_stress= corr_matrix_single_mouse(AA_stress_test,dt);
+c_matrix_stress= corr_matrix_single_mouse(AA_stress_test,dt,fs);
 
 figure
 plot(D_obs(:),c_matrix_obs(:),'ko')

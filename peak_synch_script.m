@@ -9,35 +9,36 @@
 roi_analysis_hab;
 close all
 dt = 0.8;
-c_matrix= corr_matrix_two_mice(A_obs_stress_hab,A_stress_hab,dt);
-hab_max_obs_stress = max(abs(c_matrix(:)));
+fs=0.25;
+c_matrix_stress_hab= corr_matrix_two_mice(A_obs_stress_hab,A_stress_hab,dt,fs);
+hab_max_obs_stress = max(abs(c_matrix_stress_hab(:)));
 
-hab_mean_obs_stress = mean(nonzeros(c_matrix(:)));
+hab_mean_obs_stress = mean(nonzeros(c_matrix_stress_hab(:)));
 
 
 
-c_matrix= corr_matrix_two_mice(A_obs_neutral_hab,A_neutral_hab,dt);
-hab_max_obs_neutral = max(abs(c_matrix(:)));
+c_matrix_neutral_hab= corr_matrix_two_mice(A_obs_neutral_hab,A_neutral_hab,dt,fs);
+hab_max_obs_neutral = max(abs(c_matrix_neutral_hab(:)));
 
-hab_mean_obs_neutral = mean(nonzeros(c_matrix(:)));
+hab_mean_obs_neutral = mean(nonzeros(c_matrix_neutral_hab(:)));
 
 roi_analysis;
 close all
 dt = 0.8;
-c_matrix= corr_matrix_two_mice(A_obs_stress,A_stress,dt);
-obs_stress = sum(c_matrix');
-stress_obs = sum(c_matrix);
-test_max_obs_stress = max(abs(c_matrix(:)));
+c_matrix_stress_test= corr_matrix_two_mice(A_obs_stress,AA_stress,dt,fs);
+obs_stress = sum(c_matrix_stress_test');
+stress_obs = sum(c_matrix_stress_test);
+test_max_obs_stress = max(abs(c_matrix_stress_test(:)));
 
-test_mean_obs_stress = mean(nonzeros(c_matrix(:)));
+test_mean_obs_stress = mean(nonzeros(c_matrix_stress_test(:)));
 
 
 
-c_matrix= corr_matrix_two_mice(A_obs_neutral,A_neutral,dt);
-test_max_obs_neutral = max(abs(c_matrix(:)));
-obs_neut = sum(c_matrix');
-neut_obs = sum(c_matrix);
-test_mean_obs_neutral = mean(nonzeros(c_matrix(:)));
+c_matrix_neutral_test= corr_matrix_two_mice(A_obs_neutral,AA_neutral,dt,fs);
+test_max_obs_neutral = max(abs(c_matrix_neutral_test(:)));
+obs_neut = sum(c_matrix_neutral_test');
+neut_obs = sum(c_matrix_neutral_test);
+test_mean_obs_neutral = mean(nonzeros(c_matrix_neutral_test(:)));
 
 
 aa= categorical({'Habituation','Test'});

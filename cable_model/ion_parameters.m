@@ -2,7 +2,7 @@
 %imodel = 1 ------> LR
 %imodel = 2 ------> GHK
 %imodel = 3 ------> No transmembrane currents
-imodel = 2;
+imodel = 1;
 
 % ion valences
 z_K  = +1;
