@@ -1,0 +1,51 @@
+% ------------------------------------------------------------------------ %
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = pdflatex
+% !TEX root = ../Tesi.tex
+% !TEX spellcheck = it-IT
+% ------------------------------------------------------------------------ %
+%
+% ------------------------------------------------------------------------ %
+% 	NOME APPENDICE 1
+% ------------------------------------------------------------------------ %
+%
+\chapter{Primo Capitolo d'Appendice}
+%
+\label{cap:appendice1}
+%
+% ------------------------------------------------------------------------ %
+%
+\lipsum[1]
+%
+\section{Codici in Linea}
+Facendo copia--incolla da~\textcite{pantieri:2012:larte-di-scrivere-con-latex} si può affermare quanto segue: \omissis Un codice in linea è un frammento di codice appartenente al flusso del discorso, come per esempio \lstinline[language=Matlab]!set(0,'DefaultFigureWindowStyle','Docked');!\omissis
+%
+\section{Codici in Display e Codici Mobili}
+%
+\omissis Le prime righe del file pulisci\_TESI.m apparirebbero così:
+%
+\lstinputlisting[lastline=8,language=Matlab, caption={Inizializzazione di MatLab}]{Codici/pulisci_TESI.m}
+%
+Si può trasformare facilmente un codice in display in oggetto mobile: codice~\vref{lst:prova}.
+%
+\begin{lstinputlisting}[float=tb,
+		lastline=8,
+		language=Matlab,
+		caption={prova},
+		label=lst:prova]
+		{Codici/pulisci_TESI.m}
+\end{lstinputlisting}
+%
+\lipsum[1]
+%
+\begin{lstinputlisting}[%float=tb,
+		%lastline=8,
+		language=Matlab,
+		caption={prova codice intero},
+		label=lst:provaIntero]
+		{Codici/pulisci_TESI.m}
+\end{lstinputlisting}
+%
+\lipsum[1]
+%
+% -----------------------------END------------------------------------- %

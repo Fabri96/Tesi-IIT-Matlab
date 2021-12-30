@@ -1,0 +1,295 @@
+%
+% ------------------------------------------------------------------------ %
+% 	ESTRATTI DA ''L'ARTE DI SCRIVERE CON LATEX''
+%	DI LORENZO PANTIERI E TOMMASO GORDINI
+% ------------------------------------------------------------------------ %
+%
+%
+% ------------------------------------------------------------------------ %
+% 	BIBLIOGRAFIA
+% ------------------------------------------------------------------------ %
+%
+￼\cite{eco:tesi}
+\cite[5]{eco:tesi}
+\cite[5-9]{eco:tesi}
+\cite[vedi][]{eco:tesi}
+\cite[vedi][5]{eco:tesi}
+%
+Oltre ai due comandi appena visti, biblatex ne definisce altri per citazioni ancora diverse:
+\textcite se la citazione è parte integrante del discorso: Eco [1977];
+\parencite racchiude la citazione fra parentesi: [Eco, 1977];
+\footcite mette la citazione in una nota, come qui1;
+\supercite (solo per schemi numerici) mette la citazione in apice;
+\fullcite riporta nella citazione l’intero riferimento bibliografico nello stile impostato: Umberto Eco 1977 Come si fa una tesi di laurea. Le materie umanistiche, Bompiani, Milano.
+%
+Per citare singole parti di un riferimento ci sono \citeauthor e \citeyear:
+%
+%
+% ------------------------------------------------------------------------ %
+% 	RIMPICCIOLIRE TABELLE
+% ------------------------------------------------------------------------ %
+%
+\resizebox{0.95\textwidth}{!}{
+\begin{tabular}
+...
+\end{tabular}}
+%
+% ------------------------------------------------------------------------ %
+% 	RIFERIMENTI
+% ------------------------------------------------------------------------ %
+%
+si veda la fig.~\vref{f5}
+%
+Per quanto riguarda invece il riferimento ad equazioni, è consigliabile
+utilizzare il comando \eqref{...} al posto di \ref{...}
+%
+% ------------------------------------------------------------------------ %
+% 	HYPERREF
+% ------------------------------------------------------------------------ %
+%
+Si noti che se hyperref è caricato, subito prima di \addcontentsline va dato anche \phantomsection per evitare possibili errori nei collegamenti ipertestuali e nei segnalibri del documento finito
+% ------------------------------------------------------------------------ %
+Si possono avere tutti i collegamenti in nero e senza riquadri scrivendo semplicemente
+\hypersetup{hidelinks}
+% ------------------------------------------------------------------------ %
+\newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
+%
+% ------------------------------------------------------------------------ %
+% 	TITOLI LUNGHI
+% ------------------------------------------------------------------------ %
+%
+Se, però, un titolo è troppo lungo per starci agevolmente (si noti che un titolo non dovrebbe mai andare a capo) o si hanno particolari esigenze, lo si può sostituire con un titolo alternativo più breve, da inserire nell’argomento facoltativo degli stessi comandi:
+Si noti che il titolo breve comparirà anche nelle testatine, se previste dalla classe di documento in uso e che, ovviamente, non si può usare se il comando è asteriscato.
+%
+% ------------------------------------------------------------------------ %
+% 	[...]
+% ------------------------------------------------------------------------ %
+%
+\omissis
+%
+% ------------------------------------------------------------------------ %
+% 	MATEMATICA
+% ------------------------------------------------------------------------ %
+%
+L’unico modo corretto per scrivere queste formule è usare uno dei due ambienti matematici seguenti:
+equation per le formule numerate;
+equation* (di solito abbreviato in \[. . .\]) per quelle non numerate.
+% ------------------------------------------------------------------------ %
+NON DEVONO ESSERE PIÙ USATI:
+-I dollari doppi $$. . .$$, che potrebbero compromettere la corretta spaziatura verticale delle formule o il funzionamento dell’opzione di classe fleqn [Fairbairns, 2012].
+-Gli ambienti standard eqnarray e eqnarray* (per sistemi di formule numerate e non numerate rispettivamente), perché prima e dopo = inseriscono più spazio del dovuto
+% ------------------------------------------------------------------------ %
+Per inserire in una formula in display un (breve) testo in tondo e spaziato normalmente si usa il comando \text, esplicitando la spaziatura prima e dopo
+% ------------------------------------------------------------------------ %
+Le derivate si scrivono con il carattere ’, che produce il segno di primo.
+% ------------------------------------------------------------------------ %
+lo spazio sottile \, allontana dx da f(x).
+% ------------------------------------------------------------------------ %
+\overline{AB}
+\overrightarrow{AB}
+% ------------------------------------------------------------------------ %
+Frecce. pag.73
+% ------------------------------------------------------------------------ %
+graffe anche in modo matematico devono essere precedute da \ 
+% ------------------------------------------------------------------------ %
+determinare le dimensioni dei delimitatori anche automaticamente, premettendo \left a quello di apertura e \right al corrispondente delimitatore di chiusura (se si vuole aprire l’espressione e non chiuderla, si userà \left. con il punto finale, e \right. in caso contrario).
+% ------------------------------------------------------------------------ %
+I vettori si scrivono di solito in tondo nero (corsivo, secondo le norme iso-uni) oppure in semplice corsivo matematico; talvolta, soprattutto nei testi di fisica, sono sormontati da una freccia. Nel primo caso si può usare il comando \mathbf; nel secondo il comando \bm del pacchetto bm; nel terzo il comando \vec. Può essere conveniente ridefinire nel preambolo quest’ultimo comando (si veda il paragrafo 11.1 a pagina 173):
+\renewcommand{\vec}{\bm}
+oppure
+\renewcommand{\vec}{\mathbf}
+% ------------------------------------------------------------------------ %
+L’ambiente subequations produce sottonumerazioni
+% ------------------------------------------------------------------------ %
+spezzare e raggruppare formule pag.81
+% ------------------------------------------------------------------------ %
+Per evidenziare un’intera formula con uno sfondo colorato o con una cornice è utile il pacchetto empheq
+%
+% ------------------------------------------------------------------------ %
+% 	SI
+% ------------------------------------------------------------------------ %
+%
+￼\SI{23,4}{kg.m.s^{-2}} \\
+$r=\SI{0,8768(11)e-15}{m}$ \\
+\si{\joule\per\mole\per\kelvin}\\
+\si{j.mol^{-1}.K^{-1}}
+￼￼￼\SI{100}{\celsius} \\
+\ang{1;2;3}
+% ------------------------------------------------------------------------ %
+Spaziare le cifre
+La corretta scrittura dei numeri di cinque o più cifre prevede uno spazio sottile ogni tre cifre a partire da destra (come in 1 500 000). Per ottenerlo ci sono diverse possibilità: se i numeri da scrivere nel documento non sono molti, si può inserire a mano lo spazio sottile \, ; in caso contrario, risolve il problema il comando \num visto nel paragrafo precedente
+%
+% ------------------------------------------------------------------------ %
+% 	TABELLE
+% ------------------------------------------------------------------------ %
+%
+l’ambiente standard tabular, per tabelle che contengono prevalentemente testo;
+l’ambiente standard array, per tabelle che contengono prevalentemente matematica;
+il comando \includegraphics definito dal pacchetto graphicx, per includere nel documento le figure quando sono file esterni (come tutte quelle di questa guida).
+% ------------------------------------------------------------------------ %
+La tabella
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Alcaloide & Origine \\
+\midrule
+atropina  & belladonna \\
+morfina   & papavero \\
+nicotina  & tabacco \\
+\bottomrule
+\end{tabular}
+\end{center}
+mostra l’origine veg
+% ------------------------------------------------------------------------ %
+La tabella
+\[
+\begin{array}{ll}
+\toprule
+f(x)   & f’(x) \\
+\midrule
+x^n    & nx^{n-1} \\
+e^x    & e^x \\
+\sin x & \cos x \\
+\bottomrule
+\end{array}
+\]
+mostra le deriv
+% ------------------------------------------------------------------------ %
+i ambienti table e figure
+Per rendere mobile un oggetto basta inserirne il relativo codice nell’ambiente standard table
+
+\begin{table}[preferenze di collocazione]
+...
+\end{table}
+￼
+se è una tabella, oppure in quello figure
+se è una figura
+% ------------------------------------------------------------------------ %
+\caption[didascalia breve]{didascalia normale}
+
+Il comando \label, da dare sempre dopo il corrispondente \caption, assegna all’oggetto un’etichetta per i riferimenti incrociati
+% ------------------------------------------------------------------------ %
+Il modo migliore per introdurre un oggetto mobile nel sorgente è scriverne il relativo ambiente preceduto e seguito da una riga vuota.
+%------------------------------------------------
+\dots qui finisce un capoverso.
+
+\begin{table}
+\caption{h. . .i}
+\label{tab:esempio}
+\centering
+\begin{tabular}{h. . .i}
+...
+\end{tabular}
+\end{table}
+
+La tabella~\ref{tab:esempio} è un esempio di tabella mobile.
+% ------------------------------------------------------------------------ %
+\begin{tabular}{lcr}
+\begin{array}{cc}
+% ------------------------------------------------------------------------ %
+Colonne di larghezza prefissata
+
+Il codice seguente, che mostra all’opera il descrittore p{larghezza}, produce la tabella 34:
+\begin{tabular}{lp{0.5\textwidth}}
+\toprule
+\textbf{Forza} & Una forza è una grandezza fisica che si manifesta
+nell’interazione di due o più corpi materiali, che cambia lo stato
+di quiete o di moto dei corpi stessi. \\
+\midrule
+\textbf{Momento polare} & Il momento polare di una forza rispetto a
+una determinata origine è definito come il prodotto vettoriale tra
+il vettore posizione (rispetto alla stessa origine) e la forza. \\
+\bottomrule
+\end{tabular}
+% ------------------------------------------------------------------------ %
+nuovo tipo di colonna S specifica per dati numerici 
+dell’eventuale testo in una colonna S (di solito nell’intestazione) si scrive tra parentesi graffe per non “confondere” il pacchetto, che lì si aspetterebbe dei numeri
+
+\begin{tabular}%
+   {S[table-format=3.1]%
+    S[table-format=1.6]}
+
+%
+% ------------------------------------------------------------------------ %
+% 	IMMAGINI
+% ------------------------------------------------------------------------ %
+%Principali chiavi di graphicx. 
+width Larghezza
+height Altezza
+scale Larghezza e altezza
+angle Orientamento
+% ------------------------------------------------------------------------ %
+QUAD PER DISTANZIARE I SUBFIG
+%
+\subfloat[][\emph{Mano con sfera riflettente}.]
+   {\includegraphics[width=.45\textwidth]{Sfera}} \quad
+nel primo argomento facoltativo di \subfloat, se usato, si mette la didascalia breve da mandare nel relativo indice (\listoffigures o \listoftables )
+%
+per riferirsi a un sottooggetto in particolare da altre parti del documento, \label va dato dentro il secondo argomento facoltativo imme- diatamente dopo la sottodidascalia
+%
+% 
+% ------------------------------------------------------------------------ %
+% 	FIGURE
+% ------------------------------------------------------------------------ %
+%
+\begin{figure}
+%
+\centering
+%
+\includegraphics[width=.45\textwidth]{noimage}
+%
+\caption{image}
+%
+\label{fig:figure}
+%
+\end{figure}
+%
+% ------------------------------------------------------------------------ %
+%
+%
+% 
+% ------------------------------------------------------------------------ %
+% 	SUB-FIGURE
+% ------------------------------------------------------------------------ %
+%
+\begin{figure}
+%
+\centering
+%
+\subfloat[][subcaption]
+   {\includegraphics[width=.45\textwidth]{noimage}} \quad
+%
+\subfloat[][subcaption]
+   {\includegraphics[width=.45\textwidth]{noimage}}
+%
+\caption{image}
+%
+\label{fig:subfig}
+%
+\end{figure}
+%
+% ------------------------------------------------------------------------ %
+%
+%
+% ------------------------------------------------------------------------ %
+% 	LISTING
+% ------------------------------------------------------------------------ %
+%
+\lstinputlisting[opzioni]{nome del file con l’estensione}
+%
+\dots qui finisce un capoverso.
+\begin{lstlisting}[caption=%
+ {Un codice in display.},label=%
+ lst:display]
+for i:=maxint to 0 do
+begin
+   { non far nulla }
+end;
+write(’Benvenuto in Pascal.’);
+\end{lstlisting}
+% ------------------------------------------------------------------------ %
+Si può interrompere un codice e riprenderlo successivamente mantenendo la numerazione corretta
+% ------------------------------------------------------------------------ %
+Scrivendo nel preambolo (si noti l’argomento vuoto):
+\lstnewenvironment{pascal}{\lstset{language=pascal}}{} si potrà poi usare l’ambiente pascal nel modo seguente:
+% ------------------------------------------------------------------------ %

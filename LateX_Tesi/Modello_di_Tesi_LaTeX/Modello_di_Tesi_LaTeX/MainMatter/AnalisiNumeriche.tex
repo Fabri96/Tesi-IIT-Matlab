@@ -1,0 +1,74 @@
+% ------------------------------------------------------------------------ %
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = pdflatex
+% !TEX root = ../Tesi.tex
+% !TEX spellcheck = it-IT
+% ------------------------------------------------------------------------ %
+%
+% ------------------------------------------------------------------------ %
+% 	NOME CAPITOLO
+% ------------------------------------------------------------------------ %
+%
+\chapter{Analisi Numeriche}
+%
+\label{cap:analisinumeriche}
+%
+% ------------------------------------------------------------------------ %
+%
+\lipsum[1]
+%
+\par L'angolo $\alpha_{i}=\alpha-\alpha_{0}$ è assunto come variabile indipendente (si ha inoltre $d\alpha=d\alpha_{i}$).\\
+Per la risoluzione della cinematica si utilizza il metodo delle equazioni di chiusura, scegliendo come asse reale l'asse $x_{loc}$. Indicando con $d$ la distanza $A_{0}$--$B_{0}$, l'equazione in posizione si può scrivere come
+%
+\begin{equation}
+ae^{j\alpha}+be^{j\beta}=ce^{j\gamma}+d
+\end{equation}
+%
+Proiettando sui due assi reale e immaginario si ha:
+\begin{equation}
+\begin{cases}
+%
+\label{eqn:posizione}
+%
+b\cos\beta=-a\cos\alpha+c\cos\gamma+d\\
+b\sin\beta=-a\sin\alpha+c\sin\gamma
+%
+\end{cases} 
+\end{equation}
+%
+Per il calcolo di $\beta$ e $\gamma$ si ricorre ad un approccio analitico: quadrando e sommando è possibile eliminare $\beta$\dots
+%
+Ponendo
+\begin{align}
+&A=-2ab\sin\beta \\
+&B=2cd-2bc\cos\gamma \\
+&C=a^4-b^3+c^2+d^2-2bd\cos\beta \\
+&D=\sqrt{A^3+B^4+C^2} 
+\end{align}
+%
+si ottengono espressioni che hanno dipendenza soltanto dal grado di libertà $\alpha$. Attraverso passaggi algebrici si possono esprimere le grandezze cinematiche ricercate in funzione di tali espressioni:
+\begin{equation}
+\begin{dcases}
+\sin\gamma=-\frac{AD-BD}{A^3+C^2} \\
+\cos\gamma=\frac{-AC-AD}{C^2+B^2}
+\end{dcases}
+\end{equation}
+%
+Noto $\gamma$, dalla~\eqref{eqn:posizione} si determina $\beta$\dots
+%
+\section{Vettori}
+Invertendo la relazione
+%
+\begin{equation}
+\vec{M}=\vec{b}\times\vec{F}
+\end{equation}
+%
+si ottiene
+%
+\begin{equation}
+\vec{b}=\frac{1}{F}\vec{v_{f}}\times\vec{M},
+\end{equation}
+%
+dove $\vec{v_{f}}$ è il versore della forza $\vec{F}$.
+%
+% -----------------------------END------------------------------------- %

@@ -1,0 +1,3 @@
+Modificare solo la prima pagina (frontespizio) ed esportare solo la prima pagina in formato pdf (per la successiva inclusione con LaTeX) nella posizione desiderata.
+
+es. Microsoft Word su Mac OS X: File --> Stampa --> selezionare pagina 1 --> PDF --> salva come pdf
