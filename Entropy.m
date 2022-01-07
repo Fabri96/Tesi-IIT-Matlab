@@ -20,21 +20,21 @@
 function H = Entropy(X)
 
 % Establish size of data
-[n m] = size(X);
+
+
 
 % Housekeeping
-H = zeros(1,m);
 
-for Column = 1:m,
+
     % Assemble observed alphabet
-    Alphabet = unique(X(:,Column));
+    Alphabet = unique(X(:));
 	
     % Housekeeping
-    Frequency = zeros(size(Alphabet));
+    Frequency = zeros(length(Alphabet),1);
 	
     % Calculate sample frequencies
     for symbol = 1:length(Alphabet)
-        Frequency(symbol) = sum(X(:,Column) == Alphabet(symbol));
+        Frequency(symbol) = sum(abs(Alphabet(symbol)-X)<0.1);
     end
 	
     % Calculate sample class probabilities
@@ -43,7 +43,7 @@ for Column = 1:m,
     % Calculate entropy in bits
     % Note: floating point underflow is never an issue since we are
     %   dealing only with the observed alphabet
-    H(Column) = -sum(P .* log2(P));
+    H = -sum(P .* log2(P));
 end
 
 

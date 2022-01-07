@@ -28,7 +28,7 @@ icregmode = 'LWR';  % information criteria regression mode ('OLS', 'LWR' or empt
 morder    = 'BIC';  % model order to use ('actual', 'AIC', 'BIC' or supplied numerical value)
 % morder    = 'AIC';  % model order to use ('actual', 'AIC', 'BIC' or supplied numerical value)
 
-momax     = 20;     % maximum model order for model order estimation
+momax     = 30;     % maximum model order for model order estimation
 
 acmaxlags = [];   % maximum autocovariance lags (empty for automatic calculation)
 

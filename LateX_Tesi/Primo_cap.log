@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.21)  30 DEC 2021 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.21)  7 JAN 2022 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,12 +707,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Logo_IIT.png, id=23, 345.29pt x 147.55125pt>
+<Logo_IIT.png, id=31, 345.29pt x 147.55125pt>
 File: Logo_IIT.png Graphic file (type png)
 <use Logo_IIT.png>
 Package pdftex.def Info: Logo_IIT.png  used on input line 53.
 (pdftex.def)             Requested size: 155.24895pt x 66.34116pt.
-<Logo_Politecnico_Milano.jpg, id=24, 1303.87125pt x 1013.7875pt>
+<Logo_Politecnico_Milano.jpg, id=32, 1303.87125pt x 1013.7875pt>
 File: Logo_Politecnico_Milano.jpg Graphic file (type jpg)
 <use Logo_Politecnico_Milano.jpg>
 Package pdftex.def Info: Logo_Politecnico_Milano.jpg  used on input line 60.
@@ -725,134 +725,195 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 49--65
 [1
 
 {C:/Users/Fabrizio/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map} <./Log
-o_IIT.png> <./Logo_Politecnico_Milano.jpg>]
-<neuron.png, id=34, 954.56625pt x 591.20876pt>
+o_IIT.png> <./Logo_Politecnico_Milano.jpg>] (Primo_cap.toc)
+\tf@toc=\write5
+\openout5 = `Primo_cap.toc'.
+
+ [2
+
+]
+<neuron.png, id=56, 954.56625pt x 591.20876pt>
 File: neuron.png Graphic file (type png)
 <use neuron.png>
-Package pdftex.def Info: neuron.png  used on input line 80.
+Package pdftex.def Info: neuron.png  used on input line 85.
 (pdftex.def)             Requested size: 238.64098pt x 147.80182pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
 
  []
 
-[2
-
+[3
 
  <./neuron.png (PNG copy)>]
-<AP1.png, id=43, 2569.6pt x 1868.9825pt>
+<AP1.png, id=63, 2569.6pt x 1868.9825pt>
 File: AP1.png Graphic file (type png)
 <use AP1.png>
-Package pdftex.def Info: AP1.png  used on input line 101.
+Package pdftex.def Info: AP1.png  used on input line 106.
 (pdftex.def)             Requested size: 155.24895pt x 112.9041pt.
-<AP2.png, id=45, 853.1875pt x 685.56125pt>
+<AP2.png, id=65, 853.1875pt x 685.56125pt>
 File: AP2.png Graphic file (type png)
 <use AP2.png>
-Package pdftex.def Info: AP2.png  used on input line 108.
+Package pdftex.def Info: AP2.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 124.74513pt.
-<synapse.jpg, id=46, 82.38185pt x 88.92482pt>
+<synapse.jpg, id=66, 82.38185pt x 88.92482pt>
 File: synapse.jpg Graphic file (type jpg)
 <use synapse.jpg>
-Package pdftex.def Info: synapse.jpg  used on input line 122.
+Package pdftex.def Info: synapse.jpg  used on input line 127.
 (pdftex.def)             Requested size: 131.81111pt x 142.27988pt.
- [3 <./AP1.png> <./AP2.png>]
-<Ca_conc.png, id=57, 421.575pt x 316.18124pt>
+ [4 <./AP1.png> <./AP2.png>]
+<Ca_conc.png, id=77, 421.575pt x 316.18124pt>
 File: Ca_conc.png Graphic file (type png)
 <use Ca_conc.png>
-Package pdftex.def Info: Ca_conc.png  used on input line 135.
+Package pdftex.def Info: Ca_conc.png  used on input line 140.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
- [4 <./synapse.jpg> <./Ca_conc.png (PNG copy)>]
-<brain.png, id=64, 609.02531pt x 326.72063pt>
+ [5 <./synapse.jpg> <./Ca_conc.png (PNG copy)>]
+<brain.png, id=84, 609.02531pt x 326.72063pt>
 File: brain.png Graphic file (type png)
 <use brain.png>
-Package pdftex.def Info: brain.png  used on input line 159.
+Package pdftex.def Info: brain.png  used on input line 164.
 (pdftex.def)             Requested size: 334.96495pt x 179.69688pt.
- [5 <./brain.png>]
-<mice_task.png, id=72, 369.0588pt x 268.3626pt>
+ [6 <./brain.png>]
+<mice_task.png, id=92, 369.0588pt x 268.3626pt>
 File: mice_task.png Graphic file (type png)
 <use mice_task.png>
-Package pdftex.def Info: mice_task.png  used on input line 180.
+Package pdftex.def Info: mice_task.png  used on input line 185.
 (pdftex.def)             Requested size: 221.43698pt x 161.0188pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[6]
-<scheggia.png, id=81, 281.55188pt x 173.14688pt>
+[7]
+<scheggia.png, id=102, 281.55188pt x 173.14688pt>
 File: scheggia.png Graphic file (type png)
 <use scheggia.png>
-Package pdftex.def Info: scheggia.png  used on input line 210.
+Package pdftex.def Info: scheggia.png  used on input line 217.
 (pdftex.def)             Requested size: 278.7372pt x 171.41594pt.
- [7 <./mice_task.png>] [8 <./scheggia.png>]
-<Inscopix.jpg, id=94, 336.2964pt x 401.3394pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
+
+ []
+
+[8 <./mice_task.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 229--232
+
+ []
+
+[9 <./scheggia.png>]
+<Inscopix.jpg, id=114, 336.2964pt x 401.3394pt>
 File: Inscopix.jpg Graphic file (type jpg)
 <use Inscopix.jpg>
-Package pdftex.def Info: Inscopix.jpg  used on input line 227.
+Package pdftex.def Info: Inscopix.jpg  used on input line 243.
 (pdftex.def)             Requested size: 117.70549pt x 140.47089pt.
- [9 <./Inscopix.jpg>]
-<Inscopix2.png, id=105, 381.67593pt x 339.51843pt>
+<Inscopix2.png, id=115, 381.67593pt x 339.51843pt>
 File: Inscopix2.png Graphic file (type png)
 <use Inscopix2.png>
-Package pdftex.def Info: Inscopix2.png  used on input line 266.
+Package pdftex.def Info: Inscopix2.png  used on input line 256.
 (pdftex.def)             Requested size: 267.17133pt x 237.66127pt.
- [10]
-[11 <./Inscopix2.png>]
-<fiberphotometry.png, id=122, 733.99219pt x 165.61874pt>
+ [10 <./Inscopix.jpg>] [11 <./Inscopix2.png>] [12]
+<fiberphotometry.png, id=143, 733.99219pt x 165.61874pt>
 File: fiberphotometry.png Graphic file (type png)
 <use fiberphotometry.png>
-Package pdftex.def Info: fiberphotometry.png  used on input line 277.
+Package pdftex.def Info: fiberphotometry.png  used on input line 297.
 (pdftex.def)             Requested size: 366.9952pt x 82.80916pt.
 
-Overfull \hbox (21.9952pt too wide) in paragraph at lines 277--278
+Overfull \hbox (21.9952pt too wide) in paragraph at lines 297--298
  [] 
  []
 
-[12 <./fiberphotometry.png>] [13] (Primo_cap.aux)
+<synch.png, id=144, 292.84406pt x 99.37125pt>
+File: synch.png Graphic file (type png)
+<use synch.png>
+Package pdftex.def Info: synch.png  used on input line 333.
+(pdftex.def)             Requested size: 207.0021pt x 70.24475pt.
+<Intebrain.png, id=145, 261.22594pt x 157.33781pt>
+File: Intebrain.png Graphic file (type png)
+<use Intebrain.png>
+Package pdftex.def Info: Intebrain.png  used on input line 340.
+(pdftex.def)             Requested size: 207.0021pt x 124.67963pt.
+[13 <./fiberphotometry.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
 
-Package rerunfilecheck Warning: File `Primo_cap.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+ []
 
-Package rerunfilecheck Info: Checksums for `Primo_cap.out':
-(rerunfilecheck)             Before: 9AD80965DFCE67F24E09877D1F1ACEA0;1033
-(rerunfilecheck)             After:  187F13F185E3A3CFF4DA51C42C1F4FA8;1269.
+[14 <./synch.png> <./Intebrain.png>]
+<novembre.png, id=159, 536.0025pt x 216.81pt>
+File: novembre.png Graphic file (type png)
+<use novembre.png>
+Package pdftex.def Info: novembre.png  used on input line 367.
+(pdftex.def)             Requested size: 375.19919pt x 151.76596pt.
+
+Overfull \hbox (30.19919pt too wide) in paragraph at lines 367--368
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
+
+ []
+
+[15 <./novembre.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
+
+ []
+
+<kingsbury.png, id=165, 465.23813pt x 188.95593pt>
+File: kingsbury.png Graphic file (type png)
+<use kingsbury.png>
+Package pdftex.def Info: kingsbury.png  used on input line 379.
+(pdftex.def)             Requested size: 325.66446pt x 132.26823pt.
+[16 <./kingsbury.png>]
+<kingsbury2.png, id=171, 131.74219pt x 183.68625pt>
+File: kingsbury2.png Graphic file (type png)
+<use kingsbury2.png>
+Package pdftex.def Info: kingsbury2.png  used on input line 399.
+(pdftex.def)             Requested size: 137.9979pt x 192.41936pt.
+<kingsbury3.png, id=172, 188.20313pt x 178.41656pt>
+File: kingsbury3.png Graphic file (type png)
+<use kingsbury3.png>
+Package pdftex.def Info: kingsbury3.png  used on input line 406.
+(pdftex.def)             Requested size: 172.5pt x 163.54083pt.
+ [17 <./kingsbury2.png> <./kingsbury3.png>] [18]
+(Primo_cap.aux)
+Package rerunfilecheck Info: File `Primo_cap.out' has not changed.
+(rerunfilecheck)             Checksum: 4B3D39409EEAB5BDA78D2035FA78FF59;1524.
 Package logreq Info: Writing requests to 'Primo_cap.run.xml'.
 \openout1 = `Primo_cap.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17701 strings out of 478625
- 310048 string characters out of 2840929
+ 17765 strings out of 478625
+ 311019 string characters out of 2840929
  1011973 words of memory out of 3000000
- 35568 multiletter control sequences out of 15000+600000
- 411974 words of font info for 60 fonts, out of 8000000 for 9000
+ 35611 multiletter control sequences out of 15000+600000
+ 412275 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,63p,1197b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,63p,1392b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Fabrizio\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\tcrm1000.pk><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmbx10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Fabrizio/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Fabriz
-io/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Fabrizio/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Fabrizio/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Us
-ers/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Primo_cap.pdf (13 pages, 2001125 bytes).
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Fabri
+zio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi5.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fabrizio/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Fabrizio
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Fabrizio/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Primo_cap.pdf (18 pages, 2271920 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
