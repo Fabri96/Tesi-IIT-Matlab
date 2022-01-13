@@ -14,7 +14,7 @@
 
 
 
-function [c_corr_matrix , p_corr_matrix] = neurons_corr(data1,data2,times,mouse,phase)
+function [c_corr_matrix , a] = neurons_corr(data1,data2,times,mouse,phase)
 
 
 c_corr_matrix = zeros(size(data1,2)-1,size(data2,2)-1);
@@ -77,8 +77,8 @@ figure
 
 a = double(c_corr_matrix > 0.6);
 
- sum(sum(a))/(size(a,1)*size(a,2))
-heatmap(a)
+ sum(sum(a))/(size(a,1)*size(a,2));
+
 
 xlabel("Neurons of " + mouse + " during" + ...
     " " +  phase)

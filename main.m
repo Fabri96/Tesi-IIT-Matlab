@@ -54,8 +54,17 @@ dataset=1;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% compute mean activity on mice
+% obs_test(:,[2 8])=[];
+% neutral_test(:,[5 10])=[];
+
+
+% obs_test=obs_test(:,[3 6 7 8 9]);
+% neutral_test=neutral_test(:,[3 6 7 8 9]);
+
 
 obs_activity_test = mice_activity(obs_test);
+
+
 
 neutral_activity_test = mice_activity(neutral_test);
 

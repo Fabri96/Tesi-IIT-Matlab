@@ -60,8 +60,10 @@ neutral_activity_test = mice_activity(neutral_test);
 stress_activity_test = mice_activity(stress_test);
 
 
+stress_test(:,[10 21])=[];
 
 
+obs_test(:,[6 11 16 10])=[];
 obs_activity_hab = mice_activity(obs_hab);
 
 neutral_activity_hab = mice_activity(neutral_hab);

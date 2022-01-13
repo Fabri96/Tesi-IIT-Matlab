@@ -159,6 +159,7 @@ G = [];
 
 A1 = [reshape(A,n,p*n); eye(pn1) zeros(pn1,n)];
 
+
 % calculate spectral radius
 
 info.rho = max(abs(eig(A1)));
@@ -181,12 +182,13 @@ SIG1 = [SIG zeros(n,pn1); zeros(pn1,n) zeros(pn1)];
 
 % solve the Lyapunov equation for the 1-lag covariance matrix
 
+
 try
     if aitr
         [G1,info.iters] = dlyap_aitr(A1,SIG1,maxiters,maxrelerr); % experimental: fast, but needs more testing
     else
-%       G1 = dlyap(A1,SIG1);           % dlyap seems to work better here without balancing, which seems to break positive-definitiveness
-        G1 = lyapslv('D',A1,[],-SIG1); % sometimes. However lyapslv is not an official interface, so this could conceivably break in future.
+       G1 = dlyap(A1,SIG1);           % dlyap seems to work better here without balancing, which seems to break positive-definitiveness
+%         G1 = lyapslv('D',A1,[],-SIG1); % sometimes. However lyapslv is not an official interface, so this could conceivably break in future.
     end
 catch except
     info.error = 3;

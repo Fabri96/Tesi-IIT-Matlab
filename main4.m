@@ -56,6 +56,12 @@ dataset=4;
 sniff(1,:) = zeros(1,size(sniff,2));
 sniff(:,1) = sniff(:,1) + obs_test(1,1);
 
+stress_test(:,[9 39])=[];
+
+neutral_test(:,4)=[];
+
+obs_test(:,[6 7])=[];
+
 obs_activity_test = mice_activity(obs_test);
 
 neutral_activity_test = mice_activity(neutral_test);

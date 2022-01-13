@@ -16,13 +16,13 @@ if(dataset ==1 || dataset ==3)
 
     [ left2, right2 ,intermediate2] = detect_areas(ad_hab_zone);
 
-    [~,~]=neurons_corr(obs_test,stress_test,right,"stressed","test");
+    [~,a]=neurons_corr(obs_test,stress_test,right,"stressed","test");
 
-    [~,~]=neurons_corr(obs_test,neutral_test,left,"neutral","test");
+    [~,a1]=neurons_corr(obs_test,neutral_test,left,"neutral","test");
 
-    [~,~]=neurons_corr(obs_hab,stress_hab,right2,"stressed","habituation");
+    [~,a2]=neurons_corr(obs_hab,stress_hab,right2,"stressed","habituation");
 
-    [~,~]=neurons_corr(obs_hab,neutral_hab,left2,"neutral","habituation");
+    [~,a3]=neurons_corr(obs_hab,neutral_hab,left2,"neutral","habituation");
 
 end
 
@@ -36,13 +36,13 @@ if(dataset == 2)
 
     [ left2, right2 ,intermediate2] = detect_areas(ad_hab_zone);
 
-    [~,~]=neurons_corr(obs_test,neutral_test,right,"neutral","test");
+    [~,a]=neurons_corr(obs_test,neutral_test,right,"neutral","test");
 
-    [~,~]=neurons_corr(obs_test,stress_test,left,"stressed","test");
+    [~,a1]=neurons_corr(obs_test,stress_test,left,"stressed","test");
 
-    [~,~]=neurons_corr(obs_hab,neutral_hab,right2,"neutral","habituation");
+    [~,a2]=neurons_corr(obs_hab,neutral_hab,right2,"neutral","habituation");
 
-    [~,~]=neurons_corr(obs_hab,stress_hab,left2,"stressed","habituation");
+    [~,a3]=neurons_corr(obs_hab,stress_hab,left2,"stressed","habituation");
 
 end
 
@@ -57,13 +57,14 @@ if(dataset == 4)
 
     [ left2, right2 ,intermediate2] = detect_areas(ad_hab_zone);
 
-    [~,~]=neurons_corr(obs_test,neutral_test,right,"neutral","test");
+    [~,a]=neurons_corr(obs_test,neutral_test,right,"neutral","test");
 
-    [~,~]=neurons_corr(obs_test,stress_test,left,"stressed","test");
+    [~,a1]=neurons_corr(obs_test,stress_test,left,"stressed","test");
 
-    [~,~]=neurons_corr(obs_hab,neutral_hab,right2,"neutral","habituation");
+    [~,a2]=neurons_corr(obs_hab,neutral_hab,right2,"neutral","habituation");
 
-    [~,~]=neurons_corr(obs_hab,stress_hab,left2,"stressed","habituation");
+    [~,a3]=neurons_corr(obs_hab,stress_hab,left2,"stressed","habituation");
 
 end
 
+heatmap(a)

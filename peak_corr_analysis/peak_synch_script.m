@@ -8,8 +8,9 @@
 
 roi_analysis_hab;
 close all
-dt = 0.8;
-fs=0.25;
+fs=step*0.05;
+dt = 3*fs+0.05;
+
 c_matrix_stress_hab= corr_matrix_two_mice(A_obs_stress_hab,A_stress_hab,dt,fs);
 hab_max_obs_stress = max(abs(c_matrix_stress_hab(:)));
 

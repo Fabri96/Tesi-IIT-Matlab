@@ -205,7 +205,7 @@ times = stress_roi_data_hab(1).times;
 
 % list of  neurons of stressed active every 0.05*step seconds
 
-step = 5; 
+step = 15; 
 
 neurons_activated_stress_hab.times = obs_hab(1:step:end,1);
 

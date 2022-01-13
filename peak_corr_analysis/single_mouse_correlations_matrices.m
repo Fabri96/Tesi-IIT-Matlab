@@ -3,7 +3,7 @@
 % Compute and analyze correlation matrices for neurons in all  mice
 % 
 
- main3
+%  main3
  close all
 
 m_detector_stress = mad_detector(stress_test);

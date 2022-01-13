@@ -1,13 +1,17 @@
-%  X=[obs_activity_test_stress' ;stress_activity_test2'];
+%    X=[obs_activity_test_stress' ;stress_activity_test2'];
+% s1=smooth(obs_activity_hab_stress);
+% s2=smooth(stress_activity_hab2);
 % 
-%   X=[obs_activity_test_neutral' ;neutral_activity_test2'];
-% 
-%    X=[obs_activity_hab_stress' ;stress_activity_hab2'];
+% X=[s1' ;s2'];
 
-% X=[obs_activity_hab_neutral' ;neutral_activity_hab2'];
+%    X=[obs_activity_test_neutral' ;neutral_activity_test2'];
+
+%     X=[obs_activity_hab_stress' ;stress_activity_hab2'];
+
+%  X=[obs_activity_hab_neutral' ;neutral_activity_hab2'];
 
 
-
+X=obs_test(:,2:end)';
 
 %% MVGC demo: state-space method.
 %
@@ -67,45 +71,24 @@
 %
 %% Parameters
 
-
 nvars = size(X,1); % number of variables
 ntrials   = size(X,3);     % number of trial
-nobs      = size(X,2);
+nobs      = size(X,2);   % number of observations per trial
 
-regmode   = 'LWR';  % VAR model estimation regression mode ('OLS', 'LWR' or empty for default)
+regmode   = 'OLS';  % VAR model estimation regression mode ('OLS', 'LWR' or empty for default)
 icregmode = 'LWR';  % information criteria regression mode ('OLS', 'LWR' or empty for default)
 
-morder    = 'BIC';  % model order to use ('actual', 'AIC', 'BIC' or supplied numerical value)
+morder    = 'AIC';  % model order to use ('actual', 'AIC', 'BIC' or supplied numerical value)
 momax     = 20;     % maximum model order for model order estimation
 
 acmaxlags = 1000;   % maximum autocovariance lags (empty for automatic calculation)
 
 tstat     = 'F';    % statistical test for MVGC:  'F' for Granger's F-test (default) or 'chi2' for Geweke's chi2 test
 alpha     = 0.05;   % significance level for significance test
-mhtc      = 'FDR'; % multiple hypothesis test correction (see routine 'significance')
+mhtc      = 'FDRD'; % multiple hypothesis test correction (see routine 'significance')
 
 fs        = 20;    % sample rate (Hz)
 fres      = [];     % frequency resolution (empty for automatic calculation)
-
-seed      = 0;      % random seed (0 for unseeded)
-
-%% Generate VAR test data (<mvgc_schema.html#3 |A3|>)
-%
-% _*Note:*_ This is where you would read in your own time series data; it should
-% be assigned to the variable |X| (see below and <mvgchelp.html#4 Common
-% variable names and data structures>).
-
-% Seed random number generator.
-
-rng_seed(seed);
-
-
-
-% Residuals covariance matrix.
-
-SIGT = eye(nvars);
-
-
 
 
 %% Model order estimation (<mvgc_schema.html#3 |A2|>)
@@ -122,13 +105,18 @@ figure(1); clf;
 plot_tsdata([AIC BIC]',{'AIC','BIC'},1/fs);
 title('Model order estimation');
 
+amo = size(X,3); % actual model order
+
 fprintf('\nbest model order (AIC) = %d\n',moAIC);
 fprintf('best model order (BIC) = %d\n',moBIC);
-
+fprintf('actual model order     = %d\n',amo);
 
 % Select model order.
 
-if    strcmpi(morder,'AIC')
+if     strcmpi(morder,'actual')
+    morder = amo;
+    fprintf('\nusing actual model order = %d\n',morder);
+elseif strcmpi(morder,'AIC')
     morder = moAIC;
     fprintf('\nusing AIC best model order = %d\n',morder);
 elseif strcmpi(morder,'BIC')
@@ -194,3 +182,50 @@ subplot(1,3,3);
 plot_pw(sig);
 title(['Significant at \alpha = ' num2str(alpha)]);
 
+%% Granger causality calculation: frequency domain  (<mvgc_schema.html#3 |A14|>)
+
+% If not specified, we set the frequency resolution to something sensible. Warn if
+% resolution is very large, as this may lead to excessively long computation times,
+% and/or out-of-memory issues.
+
+if isempty(fres)
+    fres = 2^nextpow2(info.acdec); % based on autocorrelation decay; alternatively, you could try fres = 2^nextpow2(nobs);
+	fprintf('\nfrequency resolution auto-calculated as %d (increments ~ %.2gHz)\n',fres,fs/2/fres);
+end
+if fres > 20000 % adjust to taste
+	fprintf(2,'\nWARNING: large frequency resolution = %d - may cause computation time/memory usage problems\nAre you sure you wish to continue [y/n]? ',fres);
+	istr = input(' ','s'); if isempty(istr) || ~strcmpi(istr,'y'); fprintf(2,'Aborting...\n'); return; end
+end
+
+% Calculate spectral pairwise-conditional causalities at given frequency
+% resolution by state-space method.
+
+ptic('\n*** var_to_spwcgc... ');
+f = var_to_spwcgc(A,SIG,fres);
+assert(~isbad(f,false),'spectral GC calculation failed - bailing out');
+ptoc;
+
+% Plot spectral causal graph.
+
+figure(3); clf;
+sgtitlex('Pairwise-conditional Granger causality - frequency domain');
+plot_spw(f,fs);
+
+%% Granger causality calculation: frequency domain -> time-domain  (<mvgc_schema.html#3 |A15|>)
+
+% Check that spectral causalities average (integrate) to time-domain
+% causalities, as they should according to theory.
+
+fprintf('\nfrequency-domain GC integration check... ');
+Fint = smvgc_to_mvgc(f); % integrate spectral MVGCs
+amax = maxabs(F+Fint)/2;
+if amax < 1e-5; amax = 1; end % in case all GCs very small
+mre = maxabs(F-Fint)/amax;
+if mre < 1e-5
+    fprintf('OK (maximum relative error ~ %.0e)\n',mre);
+else
+    fprintf(2,'WARNING: high maximum relative error ~ %.0e\n',mre);
+end
+
+%%
+% <mvgc_demo_statespace.html back to top>

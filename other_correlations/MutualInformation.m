@@ -22,9 +22,6 @@ else
     I = Entropy(X) + Entropy(Y) - JointEntropy([X Y]);
    
 end
-Entropy(X)
-Entropy(Y)
-JointEntropy([X Y])
 
 I_max = min(Entropy(X),Entropy(Y));
 

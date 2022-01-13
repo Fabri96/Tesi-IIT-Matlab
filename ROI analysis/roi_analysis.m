@@ -18,6 +18,7 @@ load('obs_ROI.mat')
 
 load('neutral_ROI.mat')
 
+
 end
 
 if (dataset == 2)
@@ -74,6 +75,19 @@ end
 stress_roi = stress_ROI;
 k = find(stress_ROI(:,2) == "rejected");
 stress_roi(k,:) = [];
+ 
+if(dataset==2)
+    stress_roi([10 21],:)=[];
+end
+
+if(dataset==3)
+    stress_roi(33,:)=[];
+end
+
+if(dataset==4)
+    stress_roi([8 38],:)=[];
+end
+
 
 stress_roi_data = [];
  m_detector_stress = mad_detector(stress_test);
@@ -98,6 +112,22 @@ clear stress_roi
 obs_roi = obs_ROI;
 k = find(obs_ROI(:,2) == "rejected");
 obs_roi(k,:) = [];
+if(dataset==1)
+    obs_roi([1 2 7 end],:)=[];
+end
+
+if(dataset==2)
+    obs_roi([6 11 16 10],:)=[];
+end
+
+if(dataset==3)
+    obs_roi(11,:)=[];
+end
+
+if(dataset==4)
+    obs_roi([5 6],:)=[];
+end
+
 
 obs_roi_data = [];
 
@@ -125,6 +155,19 @@ neutral_roi = neutral_ROI;
 k = find(neutral_ROI(:,2) == "rejected");
 neutral_roi(k,:) = [];
 
+if(dataset==1)
+    neutral_roi([4 9],:)=[];
+end
+
+
+
+if(dataset==3)
+    neutral_roi([4 9],:)=[];
+end
+
+if(dataset==4)
+    neutral_roi(3,:)=[];
+end
 neutral_roi_data = [];
 
  m_detector_neutral = mad_detector(neutral_test);
@@ -150,7 +193,7 @@ times = stress_roi_data(1).times;
 
 % list of  neurons of stressed active every 0.05*step seconds
 
-step = 5; 
+step = 15; 
 
 neurons_activated_stress.times = obs_test(1:step:end,1);
 

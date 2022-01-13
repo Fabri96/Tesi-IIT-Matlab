@@ -14,9 +14,7 @@ info.observ = n;
 info.morder = p;
 
 % calculate spectral radius
-A
-n
-p
+
 
 reshape(A,n,p*n)
 info.rho = max(abs(eig([reshape(A,n,p*n); eye(pn1) zeros(pn1,n)],'nobalance'))); % v2.0 - don't balance!
