@@ -33,7 +33,7 @@ obs_ROI = obs_ROI2;
 
 neutral_ROI = neutral_ROI2;
 
-neutral_test = neutral_test(:,[1:3 7:end]);
+% neutral_test = neutral_test(:,[1:3 7:end]);
 end
 
 if (dataset == 3)
@@ -151,7 +151,7 @@ times = stress_roi_data_cage(1).times;
 
 % list of  neurons of stressed active every 0.05*step seconds
 
-step = 5; 
+% step = 5; 
 
 neurons_activated_stress_cage.times = obs_cage(1:step:end,1);
 
@@ -383,7 +383,7 @@ end
             
 % For every active neuron  of observer, let's count when the neurons of
 % the stressed are active too in same or near intervals 
-% A_obs_stress_cage = A_obs_cage;
+ A_obs_stress_cage = A_obs_cage;
 % 
 % total_peaks_obs_stress_cage = (sum(sum(m_detector_stress_cage(:,2:end)))) /(step);
 % 
@@ -421,7 +421,7 @@ end
 % % For every active neuron  of observer, let's count when the neurons of
 % % the neutral are active too in same or near intervals    
 % 
-% A_obs_neutral_cage = A_obs_cage;
+A_obs_neutral_cage = A_obs_cage;
 % 
 % 
 % total_peaks_obs_neut_cage =(sum(sum(m_detector_neutral_cage(:,2:end)))) /(step);

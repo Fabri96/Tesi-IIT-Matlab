@@ -8,7 +8,7 @@
 
 
 addpath('zone analysis','normalizations','overall activity','statistics',...
-    'activity detection','ROI analysis','correlation analysis');
+    'activity detection','ROI analysis','cross-correlation analysis');
 
 addpath('SAVED DATA\DATA_THIRD\');
 
@@ -57,6 +57,13 @@ dataset=3;
 obs_test(:,12)=[];
 neutral_test(:,[5 11])=[];
 stress_test(:,34)=[];
+
+%% NEURON SELECTION OPTION
+%  obs_test(:,[2 3 8 11:14])=[];
+% neutral_test(:,[5 8:10])=[];
+% stress_test(:,[2:4 8:13 17:24 26:28 30:32 35:end])=[];
+%%%
+
 obs_activity_test = mice_activity(obs_test);
 
 neutral_activity_test = mice_activity(neutral_test);

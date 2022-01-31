@@ -193,7 +193,7 @@ times = stress_roi_data(1).times;
 
 % list of  neurons of stressed active every 0.05*step seconds
 
-step = 15; 
+% step = 10; 
 
 neurons_activated_stress.times = obs_test(1:step:end,1);
 
@@ -251,6 +251,7 @@ for j = 1:size(neurons_activated_obs.times,1)-1
         b = obs_roi_data(i).detector;
         k1 = find(times == neurons_activated_obs.times(j));
         k2 = find(times == neurons_activated_obs.times(j+1));
+      
         if(sum(obs_roi_data(i).detector(k1:k2))>(step-1))
             list = [list obs_roi_data(i).name];
         end

@@ -4,8 +4,10 @@
 %  
 
 
-
-
+step=5;
+close all
+fs=step*0.05;
+dt = 3*fs;
 
 roi_analysis_hab;
 close all
@@ -14,8 +16,7 @@ AA_obs_hab = [zeros(size(A_obs_hab,2),1) A_obs_hab'];
 AA_stress_hab = [zeros(size(A_stress_hab,2),1) A_stress_hab'];
 
 
-dt = 0.8;
-fs=0.25;
+
 c_matrix= corr_matrix_single_mouse(AA_neutral_hab,dt,fs);
 hab_max_neutral = max(abs(c_matrix(:)));
 
@@ -38,7 +39,7 @@ AA_obs_test = [zeros(size(A_obs ,2),1) A_obs'];
 AA_stress_test = [zeros(size(A_stress,2),1) A_stress'];
 
 
-dt = 0.8;
+
 c_matrix= corr_matrix_single_mouse(AA_neutral_test,dt,fs);
 test_max_neutral = max(abs(c_matrix(:)));
 

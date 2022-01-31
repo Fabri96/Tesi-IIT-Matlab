@@ -63,7 +63,7 @@ n   = numel(p);        % number of p-values being tested
 
 switch upper(correction)
 
-    case 'NONE';
+    case 'NONE'
 
         signn = (p < alpha);
 
@@ -192,4 +192,5 @@ if isempty(max_id),
 else
     crit_p = p_sorted(max_id);
     h = pvals <= crit_p;
+    
 end

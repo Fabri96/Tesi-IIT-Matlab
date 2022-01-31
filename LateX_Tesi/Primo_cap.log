@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.21)  7 JAN 2022 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.21)  31 JAN 2022 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -59,87 +59,102 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
 )
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.
-sty
-Package: amsmath 2021/10/15 v2.17l AMS math features
-\@mathmargin=\skip49
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\algor
+ithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
 
-For additional information on amsmath, use the `?' option.
-
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.
-sty
-Package: amstext 2021/08/26 v2.01 AMS text
-
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.s
-ty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
-\ex@=\dimen141
-))
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.s
-ty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen142
-)
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.s
-ty
-Package: amsopn 2021/08/26 v2.02 operator names
-)
-\inf@bad=\count191
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count192
-\leftroot@=\count193
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count194
-\DOTSCASE@=\count195
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box50
-\strutbox@=\box51
-\big@size=\dimen143
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count196
-\c@MaxMatrixCols=\count197
-\dotsspace@=\muskip16
-\c@parentequation=\count198
-\dspbrk@lvl=\count199
-\tag@help=\toks20
-\row@=\count266
-\column@=\count267
-\maxfields@=\count268
-\andhelp@=\toks21
-\eqnshift@=\dimen144
-\alignsep@=\dimen145
-\tagshift@=\dimen146
-\tagwidth@=\dimen147
-\totwidth@=\dimen148
-\lineht@=\dimen149
-\@envbody=\toks22
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks23
-LaTeX Info: Redefining \[ on input line 2938.
-LaTeX Info: Redefining \] on input line 2939.
-)
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfont
-s.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count269
-\float@exts=\toks24
-\float@box=\box52
-\@float@everytoks=\toks25
-\@floatcapt=\box53
+\c@float@type=\count191
+\float@exts=\toks19
+\float@box=\box50
+\@float@everytoks=\toks20
+\@floatcapt=\box51
+) (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.st
+y
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
+\@float@every@algorithm=\toks21
+\c@algorithm=\count192
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\alg
+pseudocode.sty
+Package: algpseudocode 
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\alg
+orithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count193
+\c@ALG@rem=\count194
+\c@ALG@nested=\count195
+\ALG@tlm=\skip49
+\ALG@thistlm=\skip50
+\c@ALG@Lnr=\count196
+\c@ALG@blocknr=\count197
+\c@ALG@storecount=\count198
+\c@ALG@tmpcounter=\count199
+\ALG@tmplength=\skip51
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.st
+y
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/l3key
+s2e\l3keys2e.sty
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.s
+ty
+Package: expl3 2021-11-22 L3 programming layer (loader) 
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3back
+end-pdftex.def
+File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count266
+\l__pdf_internal_box=\box52
+))
+Package: l3keys2e 2021-11-12 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count267
+\l__lipsum_a_int=\count268
+\l__lipsum_b_int=\count269
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.lt
+d.tex))
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scre
+xtend.sty
+Package: scrextend 2021/11/13 v3.35 KOMA-Script package (extend other classes w
+ith features of KOMA-Script classes)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrk
+base.sty
+Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrb
+ase.sty
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrl
+file.sty
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrl
+file-hook.sty
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
+
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrl
+ogo.sty
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+)))
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblate
 x.sty
 Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
@@ -186,11 +201,8 @@ Package: logreq 2010/08/04 v1.0 xml request logger
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.de
 f
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-) (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
+)) (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 \c@tabx@nest=\count272
@@ -361,10 +373,10 @@ File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 \c@biburlnumpenalty=\count390
 \c@biburlucpenalty=\count391
 \c@biburllcpenalty=\count392
-\biburlbigskip=\muskip18
-\biburlnumskip=\muskip19
-\biburlucskip=\muskip20
-\biburllcskip=\muskip21
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
 \c@smartand=\count393
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
@@ -410,31 +422,105 @@ File: biblatex.cfg
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
 s.sty
 \lst@mode=\count396
-\lst@gtempboxa=\box54
-\lst@token=\toks26
+\lst@gtempboxa=\box53
+\lst@token=\toks22
 \lst@length=\count397
-\lst@currlwidth=\dimen150
+\lst@currlwidth=\dimen141
 \lst@column=\count398
 \lst@pos=\count399
-\lst@lostspace=\dimen151
-\lst@width=\dimen152
+\lst@lostspace=\dimen142
+\lst@width=\dimen143
 \lst@newlines=\count400
 \lst@lineno=\count401
-\lst@maxwidth=\dimen153
+\lst@maxwidth=\dimen144
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc
 .sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count402
 \lst@skipnumbers=\count403
-\lst@framebox=\box55
+\lst@framebox=\box54
 )
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
 s.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-\c@theorem=\count404
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.
+sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip74
+
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.
+sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.s
+ty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen145
+))
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.s
+ty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen146
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.s
+ty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count404
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count405
+\leftroot@=\count406
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count407
+\DOTSCASE@=\count408
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+\big@size=\dimen147
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count409
+\c@MaxMatrixCols=\count410
+\dotsspace@=\muskip21
+\c@parentequation=\count411
+\dspbrk@lvl=\count412
+\tag@help=\toks24
+\row@=\count413
+\column@=\count414
+\maxfields@=\count415
+\andhelp@=\toks25
+\eqnshift@=\dimen148
+\alignsep@=\dimen149
+\tagshift@=\dimen150
+\tagwidth@=\dimen151
+\totwidth@=\dimen152
+\lineht@=\dimen153
+\@envbody=\toks26
+\multlinegap=\skip75
+\multlinetaggap=\skip76
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfont
+s.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+\c@theorem=\count416
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.s
 ty
@@ -479,8 +565,8 @@ sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen154
-\Hy@linkcounter=\count405
-\Hy@pagecounter=\count406
+\Hy@linkcounter=\count417
+\Hy@pagecounter=\count418
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.
 def
@@ -501,7 +587,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 mds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count407
+\Hy@SavedSpaceFactor=\count419
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc.d
 ef
@@ -516,7 +602,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count408
+\c@Hy@tempcnt=\count420
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen155
 
@@ -529,7 +615,7 @@ intcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count409
+\Fld@menulength=\count421
 \Field@Width=\dimen156
 \Fld@charsize=\dimen157
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -547,9 +633,9 @@ x.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count410
-\c@Item=\count411
-\c@Hfootnote=\count412
+\Hy@abspage=\count422
+\c@Item=\count423
+\c@Hfootnote=\count424
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -563,8 +649,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count413
-\c@bookmark@seq@number=\count414
+\Fld@listcount=\count425
+\c@bookmark@seq@number=\count426
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\r
 erunfilecheck.sty
@@ -577,53 +663,47 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip74
+\Hy@SectionHShift=\skip77
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
-\@quotelevel=\count415
-\@quotereset=\count416
-
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3back
-end-pdftex.def
-File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count417
-\l__pdf_internal_box=\box56
-) (Primo_cap.aux)
+Package hyperref Info: Option `colorlinks' set `true' on input line 39.
+\@quotelevel=\count427
+\@quotereset=\count428
+ (Primo_cap.aux)
 \openout1 = `Primo_cap.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
 -pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count418
+\scratchcounter=\count429
 \scratchdimen=\dimen158
 \scratchbox=\box57
-\nofMPsegments=\count419
-\nofMParguments=\count420
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count421
+\nofMPsegments=\count430
+\nofMParguments=\count431
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count432
 \MPscratchDim=\dimen159
-\MPnumerator=\count422
-\makeMPintoPDFobject=\count423
-\everyMPtoPDFconversion=\toks28
+\MPnumerator=\count433
+\makeMPintoPDFobject=\count434
+\everyMPtoPDFconversion=\toks29
 )
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\eps
 topdf-base.sty
@@ -646,11 +726,6 @@ Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 Package biblatex Info: Document encoding is UTF8 ....
-
-(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.s
-ty
-Package: expl3 2021-11-22 L3 programming layer (loader) 
-)
 Package biblatex Info: ... and expl3
 (biblatex)             2021-11-22 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
@@ -669,10 +744,10 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Primo_cap.bbl' found.
  (Primo_cap.bbl)
-Package biblatex Info: Reference section=0 on input line 46.
-Package biblatex Info: Reference segment=0 on input line 46.
-\c@lstlisting=\count424
-Package hyperref Info: Link coloring ON on input line 46.
+Package biblatex Info: Reference section=0 on input line 61.
+Package biblatex Info: Reference segment=0 on input line 61.
+\c@lstlisting=\count435
+Package hyperref Info: Link coloring ON on input line 61.
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
 .sty
@@ -686,234 +761,364 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 \gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count425
+\c@section@level=\count436
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 61.
+LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \nameref on input line 61.
  (Primo_cap.out) (Primo_cap.out)
 \@outlinefile=\write4
 \openout4 = `Primo_cap.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+<Logo_IIT.png, id=59, 345.29pt x 147.55125pt>
+File: Logo_IIT.png Graphic file (type png)
+<use Logo_IIT.png>
+Package pdftex.def Info: Logo_IIT.png  used on input line 77.
+(pdftex.def)             Requested size: 155.24895pt x 66.34116pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Logo_IIT.png, id=31, 345.29pt x 147.55125pt>
-File: Logo_IIT.png Graphic file (type png)
-<use Logo_IIT.png>
-Package pdftex.def Info: Logo_IIT.png  used on input line 53.
-(pdftex.def)             Requested size: 155.24895pt x 66.34116pt.
-<Logo_Politecnico_Milano.jpg, id=32, 1303.87125pt x 1013.7875pt>
+<Logo_Politecnico_Milano.jpg, id=60, 1303.87125pt x 1013.7875pt>
 File: Logo_Politecnico_Milano.jpg Graphic file (type jpg)
 <use Logo_Politecnico_Milano.jpg>
-Package pdftex.def Info: Logo_Politecnico_Milano.jpg  used on input line 60.
+Package pdftex.def Info: Logo_Politecnico_Milano.jpg  used on input line 84.
 (pdftex.def)             Requested size: 155.24895pt x 120.70563pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 49--65
+Overfull \hbox (15.0pt too wide) in paragraph at lines 73--89
 []$[]$ 
  []
 
+
+Overfull \hbox (7.19101pt too wide) in paragraph at lines 94--95
+\OT1/cmr/bx/n/20.74 cal-cium ac-tiv-ity in so-mato-statin in-
+ []
+
 [1
+
 
 {C:/Users/Fabrizio/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map} <./Log
 o_IIT.png> <./Logo_Politecnico_Milano.jpg>] (Primo_cap.toc)
 \tf@toc=\write5
 \openout5 = `Primo_cap.toc'.
 
- [2
 
-]
-<neuron.png, id=56, 954.56625pt x 591.20876pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.128 	\newpage
+                [1]
+<neuron.png, id=93, 954.56625pt x 591.20876pt>
 File: neuron.png Graphic file (type png)
 <use neuron.png>
-Package pdftex.def Info: neuron.png  used on input line 85.
+Package pdftex.def Info: neuron.png  used on input line 141.
 (pdftex.def)             Requested size: 238.64098pt x 147.80182pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--96
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
 
  []
 
-[3
-
- <./neuron.png (PNG copy)>]
-<AP1.png, id=63, 2569.6pt x 1868.9825pt>
+[2 <./neuron.png (PNG copy)>]
+<AP1.png, id=100, 2569.6pt x 1868.9825pt>
 File: AP1.png Graphic file (type png)
 <use AP1.png>
-Package pdftex.def Info: AP1.png  used on input line 106.
+Package pdftex.def Info: AP1.png  used on input line 166.
 (pdftex.def)             Requested size: 155.24895pt x 112.9041pt.
-<AP2.png, id=65, 853.1875pt x 685.56125pt>
+<AP2.png, id=102, 853.1875pt x 685.56125pt>
 File: AP2.png Graphic file (type png)
 <use AP2.png>
-Package pdftex.def Info: AP2.png  used on input line 113.
+Package pdftex.def Info: AP2.png  used on input line 173.
 (pdftex.def)             Requested size: 155.24895pt x 124.74513pt.
-<synapse.jpg, id=66, 82.38185pt x 88.92482pt>
+<synapse.jpg, id=103, 82.38185pt x 88.92482pt>
 File: synapse.jpg Graphic file (type jpg)
 <use synapse.jpg>
-Package pdftex.def Info: synapse.jpg  used on input line 127.
+Package pdftex.def Info: synapse.jpg  used on input line 187.
 (pdftex.def)             Requested size: 131.81111pt x 142.27988pt.
- [4 <./AP1.png> <./AP2.png>]
-<Ca_conc.png, id=77, 421.575pt x 316.18124pt>
+ [3 <./AP1.png> <./AP2.png>]
+<Ca_conc.png, id=112, 421.575pt x 316.18124pt>
 File: Ca_conc.png Graphic file (type png)
 <use Ca_conc.png>
-Package pdftex.def Info: Ca_conc.png  used on input line 140.
+Package pdftex.def Info: Ca_conc.png  used on input line 200.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
- [5 <./synapse.jpg> <./Ca_conc.png (PNG copy)>]
-<brain.png, id=84, 609.02531pt x 326.72063pt>
+
+Overfull \hbox (2.69502pt too wide) in paragraph at lines 206--208
+[]\OT1/cmr/m/n/10 Having de-fined the mean-ing of neu-ronal ac-tiv-ity, we can 
+ask our-selves whether
+ []
+
+[4 <./synapse.jpg> <./Ca_conc.png (PNG copy)>]
+<brain.png, id=119, 609.02531pt x 326.72063pt>
 File: brain.png Graphic file (type png)
 <use brain.png>
-Package pdftex.def Info: brain.png  used on input line 164.
+Package pdftex.def Info: brain.png  used on input line 224.
 (pdftex.def)             Requested size: 334.96495pt x 179.69688pt.
- [6 <./brain.png>]
-<mice_task.png, id=92, 369.0588pt x 268.3626pt>
+ [5 <./brain.png>]
+<mice_task.png, id=127, 369.0588pt x 268.3626pt>
 File: mice_task.png Graphic file (type png)
 <use mice_task.png>
-Package pdftex.def Info: mice_task.png  used on input line 185.
+Package pdftex.def Info: mice_task.png  used on input line 245.
 (pdftex.def)             Requested size: 221.43698pt x 161.0188pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
-[7]
-<scheggia.png, id=102, 281.55188pt x 173.14688pt>
+[6] [7 <./mice_task.png>]
+<scheggia.png, id=143, 281.55188pt x 173.14688pt>
 File: scheggia.png Graphic file (type png)
 <use scheggia.png>
-Package pdftex.def Info: scheggia.png  used on input line 217.
+Package pdftex.def Info: scheggia.png  used on input line 281.
 (pdftex.def)             Requested size: 278.7372pt x 171.41594pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--228
+Underfull \hbox (badness 10000) in paragraph at lines 288--292
 
  []
 
-[8 <./mice_task.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 229--232
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--296
 
  []
 
-[9 <./scheggia.png>]
-<Inscopix.jpg, id=114, 336.2964pt x 401.3394pt>
+[8 <./scheggia.png>]
+<Inscopix.jpg, id=149, 336.2964pt x 401.3394pt>
 File: Inscopix.jpg Graphic file (type jpg)
 <use Inscopix.jpg>
-Package pdftex.def Info: Inscopix.jpg  used on input line 243.
+Package pdftex.def Info: Inscopix.jpg  used on input line 307.
 (pdftex.def)             Requested size: 117.70549pt x 140.47089pt.
-<Inscopix2.png, id=115, 381.67593pt x 339.51843pt>
+ [9 <./Inscopix.jpg>]
+<Inscopix2.png, id=155, 381.67593pt x 339.51843pt>
 File: Inscopix2.png Graphic file (type png)
 <use Inscopix2.png>
-Package pdftex.def Info: Inscopix2.png  used on input line 256.
+Package pdftex.def Info: Inscopix2.png  used on input line 320.
 (pdftex.def)             Requested size: 267.17133pt x 237.66127pt.
- [10 <./Inscopix.jpg>] [11 <./Inscopix2.png>] [12]
-<fiberphotometry.png, id=143, 733.99219pt x 165.61874pt>
+ [10 <./Inscopix2.png>] [11]
+<fiberphotometry.png, id=178, 733.99219pt x 165.61874pt>
 File: fiberphotometry.png Graphic file (type png)
 <use fiberphotometry.png>
-Package pdftex.def Info: fiberphotometry.png  used on input line 297.
+Package pdftex.def Info: fiberphotometry.png  used on input line 361.
 (pdftex.def)             Requested size: 366.9952pt x 82.80916pt.
 
-Overfull \hbox (21.9952pt too wide) in paragraph at lines 297--298
+Overfull \hbox (21.9952pt too wide) in paragraph at lines 361--362
  [] 
  []
 
-<synch.png, id=144, 292.84406pt x 99.37125pt>
+<synch.png, id=179, 292.84406pt x 99.37125pt>
 File: synch.png Graphic file (type png)
 <use synch.png>
-Package pdftex.def Info: synch.png  used on input line 333.
+Package pdftex.def Info: synch.png  used on input line 397.
 (pdftex.def)             Requested size: 207.0021pt x 70.24475pt.
-<Intebrain.png, id=145, 261.22594pt x 157.33781pt>
+<Intebrain.png, id=180, 261.22594pt x 157.33781pt>
 File: Intebrain.png Graphic file (type png)
 <use Intebrain.png>
-Package pdftex.def Info: Intebrain.png  used on input line 340.
+Package pdftex.def Info: Intebrain.png  used on input line 404.
 (pdftex.def)             Requested size: 207.0021pt x 124.67963pt.
-[13 <./fiberphotometry.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 361--364
+[12 <./fiberphotometry.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
 
  []
 
-[14 <./synch.png> <./Intebrain.png>]
-<novembre.png, id=159, 536.0025pt x 216.81pt>
+[13 <./synch.png> <./Intebrain.png>]
+<novembre.png, id=194, 536.0025pt x 216.81pt>
 File: novembre.png Graphic file (type png)
 <use novembre.png>
-Package pdftex.def Info: novembre.png  used on input line 367.
+Package pdftex.def Info: novembre.png  used on input line 431.
 (pdftex.def)             Requested size: 375.19919pt x 151.76596pt.
 
-Overfull \hbox (30.19919pt too wide) in paragraph at lines 367--368
+Overfull \hbox (30.19919pt too wide) in paragraph at lines 431--432
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 
  []
 
-[15 <./novembre.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+[14 <./novembre.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
-<kingsbury.png, id=165, 465.23813pt x 188.95593pt>
+<kingsbury.png, id=200, 465.23813pt x 188.95593pt>
 File: kingsbury.png Graphic file (type png)
 <use kingsbury.png>
-Package pdftex.def Info: kingsbury.png  used on input line 379.
+Package pdftex.def Info: kingsbury.png  used on input line 443.
 (pdftex.def)             Requested size: 325.66446pt x 132.26823pt.
-[16 <./kingsbury.png>]
-<kingsbury2.png, id=171, 131.74219pt x 183.68625pt>
+[15 <./kingsbury.png>]
+<kingsbury2.png, id=206, 131.74219pt x 183.68625pt>
 File: kingsbury2.png Graphic file (type png)
 <use kingsbury2.png>
-Package pdftex.def Info: kingsbury2.png  used on input line 399.
+Package pdftex.def Info: kingsbury2.png  used on input line 463.
 (pdftex.def)             Requested size: 137.9979pt x 192.41936pt.
-<kingsbury3.png, id=172, 188.20313pt x 178.41656pt>
+<kingsbury3.png, id=207, 188.20313pt x 178.41656pt>
 File: kingsbury3.png Graphic file (type png)
 <use kingsbury3.png>
-Package pdftex.def Info: kingsbury3.png  used on input line 406.
+Package pdftex.def Info: kingsbury3.png  used on input line 470.
 (pdftex.def)             Requested size: 172.5pt x 163.54083pt.
- [17 <./kingsbury2.png> <./kingsbury3.png>] [18]
-(Primo_cap.aux)
+ [16 <./kingsbury2.png> <./kingsbury3.png>]
+<pearson.png, id=214, 465.23813pt x 187.45032pt>
+File: pearson.png Graphic file (type png)
+<use pearson.png>
+Package pdftex.def Info: pearson.png  used on input line 494.
+(pdftex.def)             Requested size: 348.92773pt x 140.58737pt.
+
+Overfull \hbox (3.92773pt too wide) in paragraph at lines 494--495
+ [] 
+ []
+
+[17 <./pearson.png>] [18]
+<autocorr.png, id=230, 421.575pt x 316.18124pt>
+File: autocorr.png Graphic file (type png)
+<use autocorr.png>
+Package pdftex.def Info: autocorr.png  used on input line 551.
+(pdftex.def)             Requested size: 316.18047pt x 237.13535pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 558--560
+
+ []
+
+[19 <./autocorr.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 572--575
+
+ []
+
+<thresholds.png, id=238, 1028.34187pt x 490.08093pt>
+File: thresholds.png Graphic file (type png)
+<use thresholds.png>
+Package pdftex.def Info: thresholds.png  used on input line 581.
+(pdftex.def)             Requested size: 514.16968pt x 245.03987pt.
+
+Overfull \hbox (86.03363pt too wide) in paragraph at lines 580--582
+ |  [] 
+ []
+
+[20 <./thresholds.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
+
+ []
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 610.
+[21]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 661.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 661.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 661.
+
+<cos_sim.jpg, id=255, 1204.5pt x 632.3625pt>
+File: cos_sim.jpg Graphic file (type jpg)
+<use cos_sim.jpg>
+Package pdftex.def Info: cos_sim.jpg  used on input line 666.
+(pdftex.def)             Requested size: 240.89574pt x 126.47026pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 672--674
+
+ []
+
+[22 <./cos_sim.jpg>]
+<GC.png, id=264, 542.025pt x 275.52937pt>
+File: GC.png Graphic file (type png)
+<use GC.png>
+Package pdftex.def Info: GC.png  used on input line 707.
+(pdftex.def)             Requested size: 325.2175pt x 165.3189pt.
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 713--718
+
+ []
+
+[24 <./GC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 755--758
+
+ []
+
+[25]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
+79.
+
+(C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 779.
+
+Overfull \hbox (60.0966pt too wide) in paragraph at lines 779--780
+[]\OT1/cmr/m/n/10 Therefore, a statis-tic test check-ing on the null hy-poth-e-
+sis \OMS/cmsy/m/n/10 f$\OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 
+Y [] X$\OMS/cmsy/m/n/10 g
+ []
+
+[26]
+<arena.png, id=302, 347.79938pt x 128.73094pt>
+File: arena.png Graphic file (type png)
+<use arena.png>
+Package pdftex.def Info: arena.png  used on input line 823.
+(pdftex.def)             Requested size: 313.01654pt x 115.85675pt.
+ [27 <./arena.png>] [28] (Primo_cap.aux)
 Package rerunfilecheck Info: File `Primo_cap.out' has not changed.
-(rerunfilecheck)             Checksum: 4B3D39409EEAB5BDA78D2035FA78FF59;1524.
+(rerunfilecheck)             Checksum: 3638A695934C81721EF2C3FDB43923B3;3016.
 Package logreq Info: Writing requests to 'Primo_cap.run.xml'.
 \openout1 = `Primo_cap.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17765 strings out of 478625
- 311019 string characters out of 2840929
- 1011973 words of memory out of 3000000
- 35611 multiletter control sequences out of 15000+600000
- 412275 words of font info for 61 fonts, out of 8000000 for 9000
+ 19730 strings out of 478625
+ 349873 string characters out of 2840929
+ 1157118 words of memory out of 3000000
+ 37466 multiletter control sequences out of 15000+600000
+ 414154 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,63p,1392b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,13n,106p,1395b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Fabrizio\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\tcrm1000.pk><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmbx10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Fabrizio/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Fabri
-zio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+zio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi5.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fabrizio/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Fabrizio
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
-/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Fabrizio/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Primo_cap.pdf (18 pages, 2271920 bytes).
+ts/cm/cmmi10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Fabrizio/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fabriz
+io/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Fabrizio/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Fabrizio/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
+rs/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmti10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Fabrizio/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Primo_cap.pdf (29 pages, 2830039 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 238 words of extra memory for PDF output out of 10000 (max. 10000000)
 

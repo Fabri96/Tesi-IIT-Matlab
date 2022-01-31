@@ -24,8 +24,8 @@ plot(data(:,1), data(:,number), 'b-')
 hold on
 yline(mu + 2*sigma,'r--', 'Linewidth',4)
 
-xlabel('time(s)')
-ylabel('Calcium activity')
+xlabel('time (s)')
+ylabel('\DeltaF/F')
 
 
 

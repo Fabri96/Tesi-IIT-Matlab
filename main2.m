@@ -10,7 +10,7 @@
 
 
 addpath('zone analysis','normalizations','overall activity','statistics',...
-    'activity detection','ROI analysis','correlation analysis');
+    'activity detection','ROI analysis','cross-correlation analysis');
 
 addpath('SAVED DATA\DATA_SECOND\');
 
@@ -49,9 +49,18 @@ pairings = neutral_data_cage2(1:2,20:35);
  t_adapting(stress_cage, stress_hab, stress_test, ...
     neutral_cage, neutral_hab, neutral_test, obs_cage, obs_hab, obs_test);
 
-neutral_test = neutral_test(:,[1:3 7:end]);
+%  neutral_test = neutral_test(:,[1:3 7:end]);
 
 neutral_hab = neutral_hab(:,[1:3 7:end]);
+
+stress_test(:,[10 21])=[];
+
+obs_test(:,[6 11 16 10])=[];
+%% NEURON SELECTION OPTION
+%  obs_test(:,[5 13 ])=[];
+% neutral_test(:,[2:9 13])=[];
+% stress_test(:,[ 6 9 10 11 12 13 15 16 20 21 22 23 25 27 28 30 31 32 33])=[];
+%%%
 
 obs_activity_test = mice_activity(obs_test);
 
@@ -59,11 +68,6 @@ neutral_activity_test = mice_activity(neutral_test);
 
 stress_activity_test = mice_activity(stress_test);
 
-
-stress_test(:,[10 21])=[];
-
-
-obs_test(:,[6 11 16 10])=[];
 obs_activity_hab = mice_activity(obs_hab);
 
 neutral_activity_hab = mice_activity(neutral_hab);

@@ -312,6 +312,7 @@ ylabel('cross-correlation')
 
 title('Cross-correlations between observer and stressed')
 set(gca,'FontSize',15)
+ylim([-inf 1])
 subplot(1,2,2)
 
 stem(lags3,c3,'b')
@@ -325,7 +326,7 @@ ylabel('cross-correlation')
 
 title('Cross-correlations between observer and neutral')
 set(gca,'FontSize',15)
-
+ylim([-inf 1])
 
 % y = [abs(corr(obs_activity_hab_neutral,neutral_activity_hab2)) 
 %     abs(corr(obs_activity_test_neutral ,neutral_activity_test2))];
@@ -377,6 +378,8 @@ ylabel('cross-correlation')
 
 title('Cross-correlations between observer and stressed when in intermediate zones')
 set(gca,'FontSize',15)
+ylim([-inf 1])
+
 subplot(1,2,2)
 
 [c7,lags7] = xcorr(obs_stress_opposite_test,stress_opposite_test,'normalized');
@@ -396,7 +399,7 @@ ylabel('cross-correlation')
 
 title('Cross-correlations between observer and stressed when in opposite zones')
 set(gca,'FontSize',15)
-
+ylim([-inf 1])
 
 
 figure
@@ -420,6 +423,8 @@ ylabel('cross-correlation')
 
 title('Cross-correlations between observer and neutral when in intermediate zones')
 set(gca,'FontSize',15)
+ylim([-inf 1])
+
 subplot(1,2,2)
 
 [c11,lags11] = xcorr(obs_neutral_opposite_test,neutral_opposite_test,'normalized');
@@ -439,7 +444,7 @@ ylabel('cross-correlation')
 
 title('Cross-correlations between observer and neutral when in opposite zones')
 set(gca,'FontSize',15)
-
+ylim([-inf 1])
 
 
 % figure

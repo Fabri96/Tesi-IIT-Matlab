@@ -18,6 +18,5 @@ hold on
 
 plot (data(:,1),data(:,2),'b-')
 
-ylabel('Calcium activity')
-
-xlabel('times(s)')
+xlabel('time (s)')
+ylabel('\DeltaF/F')

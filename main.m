@@ -9,11 +9,16 @@
 
 
 addpath('zone analysis','normalizations','overall activity','statistics',...
-    'activity detection','ROI analysis','correlation analysis');
+    'activity detection','ROI analysis','cross-correlation analysis');
 
 addpath('SAVED DATA\DATA_FIRST\');
 
-clearvars -except corr  L2_errors Inf_errors hab_act1 test_act1 hab_act2 test_act2 hab_act3 test_act3 hab_act4 test_act4
+clearvars -except corr  L2_errors Inf_errors hab_act1 ...
+    test_act1 hab_act2 test_act2 hab_act3 test_act3 hab_act4 test_act4 ...
+    hab_mean_obs_neutral  hab_max_obs_neutral ...
+c_matrix_neutral_hab hab_mean_obs_stress hab_max_obs_stress ...
+c_matrix_stress_hab fs dt step
+
 close all
 
 load('neutral_data.mat')
@@ -28,8 +33,11 @@ load('test_zone.mat')
 
 load('sniff.mat')
 
+mm_norm = 0; % 1 for using min-max normalization
 dataset=1;
-%%% Read data, exclude rejected neurons and split 
+selection=0; % 1 for neuron selection option
+
+%% Read data, exclude rejected neurons and split 
 
 
 [stress, stress_cage, stress_hab, stress_test, ...
@@ -53,18 +61,41 @@ dataset=1;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% compute mean activity on mice
-% obs_test(:,[2 8])=[];
-% neutral_test(:,[5 10])=[];
+%% REMOVE BAD NEURONS
+obs_test(:,[2 8 end])=[];
+neutral_test(:,[5 10])=[];
 
+%% NEURON SELECTION OPTION
+if(selection==1)
+ obs_test(:,[3 5 6])=[];
+neutral_test(:,[4 6 7])=[];
+stress_test(:,[5 7 8 10 12 22:24 28:32 34:end])=[];
+end
 
-% obs_test=obs_test(:,[3 6 7 8 9]);
-% neutral_test=neutral_test(:,[3 6 7 8 9]);
+%% MIN-MAX NORMALIZATION
 
+if(mm_norm == 1)
+obs_test = min_max_normalization(obs_test);
+stress_test = min_max_normalization(stress_test);
+neutral_test = min_max_normalization(neutral_test);
 
+obs_hab = min_max_normalization(obs_hab);
+stress_hab = min_max_normalization(stress_hab);
+neutral_hab = min_max_normalization(neutral_hab);
+end
+
+% obs_test = z_score_normalization(obs_test);
+% stress_test = z_score_normalization(stress_test);
+% neutral_test = z_score_normalization(neutral_test);
+% 
+% obs_hab = z_score_normalization(obs_hab);
+% stress_hab = z_score_normalization(stress_hab);
+% neutral_hab = z_score_normalization(neutral_hab);
+
+% obs_test=obs_test(:,[1 3 5 6]);
+
+%% MEAN ACTIVITIES
 obs_activity_test = mice_activity(obs_test);
-
-
 
 neutral_activity_test = mice_activity(neutral_test);
 
@@ -78,7 +109,7 @@ stress_activity_hab = mice_activity(stress_hab);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% plot of activities and errors
+%% plot of activities and errors
 
 % figure
 % 
@@ -114,9 +145,9 @@ title('Observer activity during test')
 set(gca,'FontSize',15)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% Detection of active neurons
+%% Detection of active neurons
 
-% detector = activity_detector(obs_test);
+detector = activity_detector(obs_test);
 
 number = 6;
 
@@ -126,14 +157,14 @@ subplot(1,2,1)
 
 detector_plot(obs_test, number)
 
-title('Standard treshold')
-set(gca,'FontSize',15)
+title('Standard threshold')
+set(gca,'FontSize',20)
 subplot(1,2,2)
 
 plot_mad(obs_test, number)
 
-title('MAD algorithm treshold')
-set(gca,'FontSize',15)
+title('MAD threshold')
+set(gca,'FontSize',20)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

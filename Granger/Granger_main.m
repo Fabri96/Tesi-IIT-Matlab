@@ -1,4 +1,38 @@
-%    X=[obs_activity_test_stress' ;stress_activity_test2'];
+addpath(genpath('Granger\'))
+%  startup
+if(dataset==1)
+    fs = 0.129;
+end
+
+if(dataset==2)
+    fs=0.05;
+end
+
+if(dataset==3)
+    fs=0.1273;
+end
+
+if(dataset==4)
+    fs=0.1264;
+end
+if(dataset==1 || dataset==3)
+[~,lengths]= segment_id(left);
+n2 = compute_num_seg(120,lengths,fs)-1;
+
+[~,lengths]= segment_id(right);
+n = compute_num_seg(120,lengths,fs)-1;
+else
+[~,lengths]= segment_id(right);
+n2 = compute_num_seg(100,lengths,fs)-1;
+
+[~,lengths]= segment_id(left);
+n = compute_num_seg(120,lengths,fs)-1; 
+end
+
+%     X=[obs_activity_test_stress(1:sum(lengths(1:n)))' ;stress_activity_test2(1:sum(lengths(1:n)))'];
+
+   X=[obs_activity_test_neutral(1:sum(lengths(1:n2)))' ;neutral_activity_test2(1:sum(lengths(1:n2)))'];
+
 % s1=smooth(obs_activity_hab_stress);
 % s2=smooth(stress_activity_hab2);
 % 
@@ -11,7 +45,7 @@
 %  X=[obs_activity_hab_neutral' ;neutral_activity_hab2'];
 
 
-X=obs_test(:,2:end)';
+% X=obs_test(:,2:end)';
 
 %% MVGC demo: state-space method.
 %
@@ -75,7 +109,7 @@ nvars = size(X,1); % number of variables
 ntrials   = size(X,3);     % number of trial
 nobs      = size(X,2);   % number of observations per trial
 
-regmode   = 'OLS';  % VAR model estimation regression mode ('OLS', 'LWR' or empty for default)
+regmode   = 'LWR';  % VAR model estimation regression mode ('OLS', 'LWR' or empty for default)
 icregmode = 'LWR';  % information criteria regression mode ('OLS', 'LWR' or empty for default)
 
 morder    = 'AIC';  % model order to use ('actual', 'AIC', 'BIC' or supplied numerical value)
@@ -85,7 +119,7 @@ acmaxlags = 1000;   % maximum autocovariance lags (empty for automatic calculati
 
 tstat     = 'F';    % statistical test for MVGC:  'F' for Granger's F-test (default) or 'chi2' for Geweke's chi2 test
 alpha     = 0.05;   % significance level for significance test
-mhtc      = 'FDRD'; % multiple hypothesis test correction (see routine 'significance')
+mhtc      = 'NONE'; % multiple hypothesis test correction (see routine 'significance')
 
 fs        = 20;    % sample rate (Hz)
 fres      = [];     % frequency resolution (empty for automatic calculation)

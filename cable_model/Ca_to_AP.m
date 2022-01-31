@@ -1,10 +1,9 @@
-
 % Developed by Fabrizio Bernardi 
 
-% Find the  amplitude of the action potential wave signal given the calcium
-% one
+% INPUT --> amplitude of calcium A_Ca
 % 
+% OUTPUT --> amplitude of action potential A_AP
 
-function A_AP = Ca_to_AP(A_Ca)
+function A_AP = Ca_to_AP(A_Ca,net_Ca_to_AP)
 
-tau= 0.15;
+A_AP= net_Ca_to_AP(A_Ca);

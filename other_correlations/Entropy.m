@@ -25,7 +25,7 @@ function H = Entropy(X)
 % Housekeeping
 H = zeros(1,m);
 
-for Column = 1:m,
+for Column = 1:m
     % Assemble observed alphabet
     Alphabet = unique(X(:,Column));
 	
