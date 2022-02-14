@@ -20,10 +20,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Peak-synchronization}{20}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Angular distance and $L^2$ error}{22}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Angular distance and $L^2$ distance}{22}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Granger causality}{24}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Granger causality}{23}{subsection.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Interbrain data analysis: emotion discrimination task}{27}{section.3}%
+\contentsline {section}{\numberline {3}Interbrain data analysis: one-to-one task}{27}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Emotion discrimination task}{27}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Interbrain data analysis: emotion discrimination task}{28}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Emotion discrimination task}{28}{subsection.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Activity of Amygdala in altruistic decision making}{29}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Social decision making in mammals}{29}{subsection.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Description of the altruism task}{30}{subsection.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Behavioural results in the altruism task}{31}{subsection.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}The role of social hierarchy in altruism display}{33}{subsection.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5}The role of BLA neurons in empathism}{35}{subsection.5.5}%

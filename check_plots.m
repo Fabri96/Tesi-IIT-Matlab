@@ -15,9 +15,16 @@
 % 
 % end
 
-for i=2:size(obs_test,2)
-    subplot(4,5,i)
-    plot(obs_test(:,1),obs_test(:,i))
+% for i=2:size(obs_test,2)
+%     subplot(4,5,i)
+%     plot(obs_test(:,1),obs_test(:,i))
+%     title('Neuron', num2str(i))
+% 
+% end
+
+for i=2:size(m1_test,2)
+    subplot(6,6,i)
+    plot(m1_test(:,1),m1_test(:,i))
     title('Neuron', num2str(i))
 
 end

@@ -480,13 +480,14 @@ The second task performed in the experiment was the \textit{tube test}, in which
 \newpage
 
 
+
 \section{Main tools for synchronization analysis}
 
-In this chapter, the main tools for the analysis of synchronization between signals will be presented, with a focus on their mathematical definitions and their role in the application of \textit{Intebrain synchronization}.\\
+In this chapter, the main tools for the analysis of synchronization between signals will be presented, with a focus on their mathematical definition and their role in the application of \textit{Intebrain synchronization}.\\
 After dealing with the problem of \textit{what} synchronization actually means in this context and which measures \textit{should not} be considered, several valid tools will be proposed:\textbf{ cross-correlation}, \textbf{peak-synchronization}, \textbf{angular similarity}, \textbf{$L^2$ error analysis}. Each one of these tools has a specific purpose and meaning, and they will all be considered in the analysis of this work, in order to give different shapes to the concept of synchronization and to try to study it under the largest possible perspective.\\
-Finally, when observing the presence of correlation between two signals, a different (although strongly connected) question may arise: "which is the \textit{relationship} of such connection?", or, in other words, "is one signal dictating the behaviour of the other?". To answer such questions, a sophisticated tool will be object of study: the \textbf{Granger causality}.
+Finally, when observing the presence of correlation between two signals, a different (although strongly connected) question may arise: "which is the \textit{relationship} of such connection?", or, in other words, "is one signal determining the behaviour of the other?". To answer such questions, a sophisticated tool will be object of study: the \textbf{Granger causality}.
 
- 
+
 \subsection{Understanding synchronization}
 
 \begin{figure}[H]
@@ -498,13 +499,13 @@ Finally, when observing the presence of correlation between two signals, a diffe
 \end{figure}
 
 One of the main goals of this work will be to perform a data analysis on the Interbrain synchronization of neural signals, recorded in behavioural tasks. In order to do so, first one has to clarify the meaning of the term  \textit{synchronization}.\\
- In a statistical sense, the synchronization between two time series can be seen as a measure of the \textbf{correlation} between them: the more two series are correlated, the more similar and connected they will be. This leads inevitably to the fact that, when talking about synchronization, the definition can't be unique, since the similarity between two series can be assumed in different ways, depending on the particular aspect of interest. \\
-However, one first hint about what to look for or not can be found in the type of signal which is under analysis. In the case of this work, dealing with single neuron measurements of the intracellular concentration of $[Ca^{2+}]$ means dealing with \textit{strongly nonlinear and unstable signals}, which present sudden peaks and an often chaotic and difficult to predict behaviour .\\
-For this reason, the measure of correlation which is probably the most famous and used, namely the \textbf{Pearson correlation}, is not suited to describe such signals. Given two random samples $ \textbf{x} = \{x_i\}_{i=1}^N$ and  $ \textbf{y} = \{y_i\}_{i=1}^N$, the Pearson correlation (PC) between them is defined as
+In a statistical sense, the synchronization between two time series can be seen as a measure of the \textbf{correlation} between them: the more two series are correlated, the more similar and connected they will be. This leads inevitably to the fact that, when talking about synchronization, the definition can't be unique, since the similarity between two series can be assumed in different ways, depending on the particular aspect of interest. \\
+However, a first hint about what to look for or not can be found in the type of signal which is under analysis. In the present case, dealing with single neuron measurements of the intracellular concentration of $[Ca^{2+}]$ means dealing with \textit{strongly nonlinear and unstable signals}, which exhibit sudden peaks and anre often chaotic and difficult to predict.\\
+For this reason, the most commonly adopted measure of correlation, namely the \textbf{Pearson correlation}, is not suited to describe such signals. Given two random samples $ \textbf{x} = \{x_i\}_{i=1}^N$ and  $ \textbf{y} = \{y_i\}_{i=1}^N$, the Pearson correlation (PC) between  $ \textbf{x}$ and  $ \textbf{y}$ is defined as
 
 $$ \rho(x,y) = \frac{Cov(x,y)}{\sigma_x \sigma_y} = \frac{\sum_{i=1}^{N}(x_i-\bar{x}) (y_i-\bar{y})} {\sum_{i=1}^{N}(x_i-\bar{x})^2 \sum_{i=1}^{N} (y_i-\bar{y})^2} $$
 
-Where:
+where:
 \begin{itemize}
 	\item $ \bar{x} = \frac{1}{N}\sum_{i=1}^{N}x_i$ is the sample mean
 	
@@ -513,38 +514,38 @@ Where:
 	\item $\sigma_x = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i-\bar{x})^2}$ is the sample standard deviation
 \end{itemize}
 
-The PC measures the \textit{linear correlation} between two variables. This implies that this type of correlation should be used to inspect a linear relationship between two variables, which have a distribution close to the Gaussian one, and which presents uniform variance (i.e. reduced presence of outliers) [Applied multivariate statistics book by Johnson]. Unfortunately, with the type of data incoming from the neural recordings, all these hypoteses fail, and it follows that other correlation measures should be inspected instead.
+The PC measures the \textit{linear correlation} between two variables. This implies that this type of correlation should be used to inspect a linear relationship between two variables, which have a distribution close to the Gaussian one, and a uniform variance (i.e. reduced presence of outliers) [Applied multivariate statistics book by Johnson]. Unfortunately, with the type of data incoming from the neural recordings, all these hypoteses fail, and it follows that other correlation measures should be inspected instead.
 
 
 \subsection{Cross-correlation}
 
-When investigating the similarity between two signals depending on time, the first tool to be considered probably has to be the \textbf{cross-correlation}.\\
-Formally, given two functions $ f = f(t)$ and $ g = g(t)$ , we define the cross-correlation between them as
+When investigating the similarity between two time-dependent signals, the first tool to be considered is the \textbf{cross-correlation}.\\
+Formally, given two functions $ f = f(t)$ and $ g = g(t)$, we define the cross-correlation between them as
 
 \begin{equation}
-	[f(t) \star g(t)] (\tau) = \int_{-\infty}^{+\infty} f(\tau)g(t+\tau) dt 
+[f(t) \star g(t)] (\tau) = \int_{-\infty}^{+\infty} f(\tau)g(t+\tau) dt 
 \end{equation}
 
 
 Given that the \textbf{convolution} between such functions is defined as 
 \begin{equation}
-	 [f(t) * g (t)](t) = \int_{-\infty}^{+\infty} f(t) g (t-\tau) d\tau
+[f(t) * g (t)](t) = \int_{-\infty}^{+\infty} f(t) g (t-\tau) d\tau
 \end{equation}
 
- it follows that
+it follows that
 \begin{equation}
 [f(t) \star g(t)](t) = [f(-t) * g (t)](t) 
 \end{equation}
 
-This means that the cross-correlation coincides with a convolution in which one function is considered backward in time. Moreover, in the common form of cross-correlation, as shown in (eq.1), the resulting quantity is not expressed as function of the time variable $t$, but as function of $\tau$, i.e. the \textit{lag} or \textit{delay} between the signals. The interpretation is straightforward: when, for a given value of the delay $\tau$, simultaneous peaks of the two signals are both present, the contribution of their product in the integral will be more relevant for the computed value of cross-correlation correspondent to  that specific lag.\\
-As a consequence of this, once computing the cross-correlation between two time functions, one can identify its maximum value and retrieve the correspondent lag-value, from which it is possible to obtain an estimation of the delay between the two functions. To summarize, a cross-correlation analysis allows to:
+This means that the cross-correlation coincides with a convolution in which one function is considered backward in time. Moreover, in the common form of cross-correlation, as shown in (eq.1), the resulting quantity is not expressed as a function of the time variable $t$, but as a function of $\tau$, i.e. the \textit{lag} or \textit{delay} between the signals. The interpretation is straightforward: when, for a given value of the delay $\tau$, simultaneous peaks of the two signals are both present, the contribution of their product in the integral will be more relevant for the computed value of cross-correlation correspondent to  that specific lag.\\
+As a consequence of this, once computing the cross-correlation between two time-dependent functions, one can identify its maximum value and retrieve the corresponding value of the lag $\tau$, from which it is possible to obtain an estimation of the delay between the two functions. To summarize, a cross-correlation analysis allows to:
 \begin{enumerate}
 	\item Compute the cross-correlation between the two signals as a function of the lag value  $\tau$
 	
-	\item Estimate the real delay between such signals, observing when the peak of cross-correlation happens
+	\item Estimate the real delay between such signals, observing when the peak of cross-correlation occurs
 \end{enumerate}
 
-When the cross-correlation is computed between the same function, it takes the name of \textbf{autocorrelation}. Confronting two identical signals, there will always be a peak of correlation (equal to $1$ using \textit{normalized} cross-correlation) correspondent to the lag $\tau = 0$. Moreover, the shape of the cross-correlation will be always symmetrical (see Figure).
+When the cross-correlation is computed between the same function, it takes the name of \textbf{autocorrelation}. Confronting two identical signals, there will always be a peak of correlation (equal to $1$ using \textit{normalized} cross-correlation) corresponding to the lag $\tau = 0$. Moreover, the shape of the cross-correlation will be always symmetrical (see Figure).
 
 \begin{figure}[H]
 	\begin{center}
@@ -555,7 +556,7 @@ When the cross-correlation is computed between the same function, it takes the n
 \end{figure}
 
 
-While the autocorrelation represents an ideal case, when dealing with two different functions $f(t)$ and $g(t)$, the goodness of their cross-correlation will be given by the amount of shared properties to the case of autocorrelation; however, depending on the application in study, it could be normal to expect a peak value in correspondent to a nonzero value of the lag, as a representation of an actual physical delay.
+While the autocorrelation represents an ideal case, when dealing with two different functions $f(t)$ and $g(t)$, the significance of their cross-correlation will be given by the amount of shared properties to the case of autocorrelation; however, depending on the current application, it can be reasonable to expect a peak value in correspondence to a nonzero value of the lag, as a representation of an actual physical delay.
 \\
 
 Given two time series $ \textbf{x} = \{x_i\}_{i=1}^N$ and  $\textbf{y} = \{y_i\}_{i=1}^N$, the discrete approximation of (eq.1) reads:
@@ -563,14 +564,14 @@ Given two time series $ \textbf{x} = \{x_i\}_{i=1}^N$ and  $\textbf{y} = \{y_i\}
 
 $$ [\textbf{x} \star \textbf{y}] (m) =  \sum_{n=1}^{N-1} x_n y_{n+m} \hspace{2cm} m_{min} < m < m_{max} $$
 
-Where $m$ is the lag value, chosen in an appropriate interval.
+where $m$ is the approximate lag value, chosen in an appropriate interval.
 
 
 
 \subsection{Peak-synchronization}
 
-Cross-correlation is a general and widely used tool to quantify the similarity between two signals evolving in time, probably the most used and valid. With the following concept, the \textbf{peak-synchronization}, the focus of the analysis narrows to the specific type of signal characterizing this work: recording of intracellular calcium activity.\\
-As it has been shown in Chapter 1, a typical recording of the activity of a single neuron is characterized by the presence of rapid and intense \textit{peaks}, which will define the neuron as \textit{active}. It follows that a way to intend synchronization between neurons could be related to the presence of \textit{close} or \textit{simultaneous} peaks observed at the same time. In other words, two signals (hence, neurons) will be synchronized, under the peak-synchronization point of view, if a \textit{pattern} of simultaneous firing emerges. 
+Cross-correlation is a general and widely used tool to quantify the similarity between two signals evolving in time. With the following concept of \textbf{peak-synchronization}, the focus of the analysis is restricted to the characteristic type of signal of this work: recording of intracellular calcium activity.\\
+As shown in Chapter 1, a typical recording of the activity of a single neuron is characterized by the presence of rapid and intense \textit{peaks}, which define the neuron as \textit{active}. It follows that a way to intend synchronization between neurons could be related to the presence of \textit{close} or \textit{simultaneous} peaks observed at the same time. In other words, two signals (hence, neurons) are synchronized, under the peak-synchronization point of view, if a \textit{pattern} of simultaneous firing occurs. 
 \\
 
 In order to quantify the peak-synchronization between two signals, the following steps have to be faced:
@@ -580,7 +581,7 @@ In order to quantify the peak-synchronization between two signals, the following
 		\hspace*{-3cm}
 		\includegraphics[scale=.50]{thresholds.png} 
 	\end{center} 
-	\caption{\textit{Example of a calcium signal (blu). The red curves are the thresholds built from the two algorithms: standard threshold (left) and MAD threshold (right)}}
+	\caption{\textit{Example of a calcium signal (blue). The red curves are the thresholds built from the two algorithms: standard threshold (left panel) and MAD threshold (right panel)}}
 	
 \end{figure}
 
@@ -588,53 +589,53 @@ In order to quantify the peak-synchronization between two signals, the following
 	
 	\item Identify when a neuron is \textit{active}, i.e. when we are in presence of a peak
 	
-	\item Choose an appropriate time-interval in which two neurons firing simultaneously can be considered as synchronized
+	\item Choose an appropriate time interval in which two neurons firing simultaneously can be considered as synchronized
 	
-	\item Determine a way to quantify such correlation
+	\item Quantify the correlation between the two neurons
 	
 \end{enumerate}
 
 
 
-The way to solve all of these three steps is not unique, but it is strictly dependent on the current biological application under study and by the choice of appropriate algorithms and formulas for the activity detection and for the synchronization quantification. As for this work, the following considerations and choices have been made:
+The way to solve all of these three steps is not unique, but it is strictly depending on the current biological application under study and by the choice of appropriate algorithms for the activity detection and  synchronization quantification. In this work, the following considerations and choices have been made:
 
 
 
 
 \begin{enumerate}
 	
-	\item Several algorithms are available or could be designed to detect, given a discrete time series, when a peak is happening. A straightforward idea is to establish a threshold for the activity, defining active all the points above it and non-active  all the ones below. Therefore, the output of such algorithm is of binary type ($1$ for activity, $0$ for non-activity).\\
+	\item  Given a discrete time series, several algorithms are available or could be designed to detect, when a peak is occurring. A straightforward idea is to establish a threshold for the activity, in such a way that all the points above the treshold are active and all the ones below non active. Therefore, the output of such algorithm is of binary type ($1$ for activity, $0$ for non-activity).\\
 	
-	A naive way to create such threshold could be to consider a horizontal line, for example given by the equation $ y = \mu + 2\sigma $,	where $\mu$ and $\sigma$ are the mean and the standard deviation of the signal. In this way. All the values higher than this fixed quantity will be considered active and vice versa. This approach is good enough when dealing with "well-behaving" signals, presenting a baseline low activity alternated with huge peaks, however it seems to fail when dealing with more complex and noisy signals.\\
-		\begin{algorithm}
+	A naive way to define the threshold could be to consider a horizontal line, for example given by the equation $ y = \mu + 2\sigma $,	where $\mu$ and $\sigma$ are the mean and the standard deviation of the signal. In this way, all the values higher than $y$ will be considered active and vice versa. This approach is good enough when dealing with "well-behaving" signals, presenting a baseline low activity alternated by huge peaks, however it seems to fail when dealing with more complex and noisy signals.\\
+	\begin{algorithm}
 		\caption{Standard threshold algorithm}\label{tresh}
 		\begin{algorithmic}[1]
 			
 			
 			\State Consider a horizontal threshold given by $ y = \mu + 2\sigma $
 			
-			\State Confront every point of the signal with their correspondent point of the threshold
+			\State Confront every point of the signal with each corresponding point of the threshold
 			
 			\State Every point above the threshold is labeled as $1$, all the points below as $0$
 		\end{algorithmic}
 	\end{algorithm}
-
-
-		For this reason, a different algorithm can be considered as well [Inscopix manual]: the \textbf{MAD threshold} algorithm. The threshold established by this algorithm is not constant, but it "follows" the signal, in order to better capture its dynamism. 
+	
+	
+	For this reason, a different algorithm can be considered as well [Inscopix manual]: the \textbf{MAD threshold} algorithm. The threshold established by this algorithm is not constant, but it "follows" the signal, in order to better capture its dynamics. 
 	
 	
 	
-
 	
-
-
+	
+	
+	
 	\begin{algorithm}
 		\caption{MAD threshold algorithm}\label{mad}
 		\begin{algorithmic}[1]
 			
 			
 			\State Start from a baseline threshold given by $ MAD = median(X_i - median(X))$
-		
+			
 			\State Identify the points where the slope changes from positive to negative (PN) and from negative to positive (NP)
 			
 			
@@ -646,55 +647,55 @@ The way to solve all of these three steps is not unique, but it is strictly depe
 		\end{algorithmic}
 	\end{algorithm}
 	
-	\item A typical time interval in which a firing happens usually strongly depends on the specific case. However, in general it is safe to say that the peak of a neuron usually last at least $250-500$ ms. Such value will define the reference time window. 
+	\item A typical time interval in which neuronal firing occurs usually strongly depends on the specific case. However, in general it is safe to say that the peak of a neuron usually has a duration of $250-750$ ms. Such value will define the reference time window. 
 	
-	\item Finally, once the binary vectors of activations are available, as well as a reference time window, to quantify the simultaneous synchronization, a common tool in literature is the \textbf{Peak-correlation index} [Cutts and Eglen], defined as 
+	\item Finally, once the binary vectors of activations are available, as well as a reference time window, to quantify their synchronization, a common tool adopted is the \textbf{Peak-correlation index} [Cutts and Eglen], defined as 
 	
 	$$ i_{AB} = \frac{N_{AB} T}{2 N_A N_B dT} $$ 
-	Here $T $ is the overall signal time window, $dT$ is the synchronization time window, $N_A$ is the number of peaks in signal A, $N_B $ is the number of peaks in signal B and finally $N_{AB} = \sum_{i=1}^{N_A} \sum_{j=1}^{N_B} I_{[-dT,dT]}(|a_i - b_j|) $ is the sum of simultaneous peaks along every synchronization window.
+	Here $T $ is the overall signal time window, $dT$ is the synchronization time window, $N_A$ is the number of peaks in signal A, $N_B $ is the number of peaks in signal B and finally $N_{AB} = \sum_{i=1}^{N_A} \sum_{j=1}^{N_B} I_{[-dT,dT]}(|a_i - b_j|) $ is the sum of simultaneous peaks within each synchronization window.
 	
 \end{enumerate}
 
-The peak correlation index gives a representation of how well two signals (neurons) are peak-synchronized. However, it is necessary to notice that such measure is not normalized, meaning that the value of one index considered by itself has no real meaning, and this measure should be used only to compare different pairs.
+The peak correlation index gives a representation of how well two signals (neurons) are peak-synchronized. However, it should be noticed that such measure is not normalized, meaning that the value of one index considered by itself has no real meaning, and this measure should be used only as tool to compare the same pair of signals through different phases.
 
 
-\subsection{Angular distance and $L^2$ error}
+\subsection{Angular distance and $L^2$ distance}
 
 \begin{figure}[H]
 	\begin{center}
 		\hspace*{-3.5cm}
 		\includegraphics[scale=.20]{cos_sim.jpg} 
 	\end{center} 
-	\caption{\textit{Angle between two vectors in Euclidean space (2D case)}}
+	\caption{\textit{Angle between two vectors in the euclidean space (2D case)}}
 	
 \end{figure}
 
-After considering the two main tools for the synchronization analysis, cross-correlation and peak-synchronization, other concepts of correlation and similarity can be investigated as well. Here, two supplementary measures have been chosen: the \textbf{angular distance} and the \textbf{$L^2$ error}.
+Besides the two main tools for the synchronization analysis, cross-correlation and peak-synchronization, other concepts of correlation and similarity can be investigated as well. Here, two supplementary measures are considered: the \textbf{angular distance} and the \textbf{$L^2$ distance}.
 \\
 
-The purpose of the angular distance analysis is to determine the similarity between two signals in a \textit{geometric sense}. The idea is indeed rather simple: project the signals on a Euclidean space and observe the angle between them. The two signals will be closer, and thus more similar, if the angle between them will be small.
-A way to obtain the angle $\theta$ between two vectors is to compute first the \textbf{cosine similarity}
+The purpose of the angular distance analysis is to determine the similarity between two signals in a \textit{geometric sense}. The idea is indeed rather simple: project the signals on a euclidean space and determine the angle between them. The two signals are closer, and thus more similar, if the angle between them is small.
+A way to determine the angle $\theta$ between two vectors is to compute first the \textbf{cosine similarity}
 
-	$$ Sim_C(\textbf{x},\textbf{y}) = \cos \theta =  \frac{\textbf{x} \cdot \textbf{y}}{||\textbf{x}||_E ||\textbf{y}||_E} $$
-	
-	where $\textbf{x} \cdot \textbf{y}$ denotes the scalar product between $\textbf{x}$ and $\textbf{y}$ and $ ||\cdot||_E$ denotes the Euclidean norm.
-	
-	Once computed the cosine of the angle, the angular distance can be retrieved as
-	
-		$$ d_\theta (\textbf{x},\textbf{y}) = \frac{\arccos(Sim_C(\textbf{x},\textbf{y}))}{\pi} $$
-		
- Where the actual angle is divided by a reference $\pi$ angle.
+$$ Sim_C(\textbf{x},\textbf{y}) = \cos \theta =  \frac{\textbf{x} \cdot \textbf{y}}{||\textbf{x}||_E ||\textbf{y}||_E} $$
+
+where $\textbf{x} \cdot \textbf{y}$ denotes the scalar product between $\textbf{x}$ and $\textbf{y}$ and $ ||\cdot||_E$ denotes the euclidean norm.
+
+Then, the cosine of the angle, the angular distance can be retrieved as
+
+$$ d_\theta (\textbf{x},\textbf{y}) = \frac{\arccos(Sim_C(\textbf{x},\textbf{y}))}{\pi} $$
+
+Where the actual angle is divided by a reference $\pi$ angle.
 \\
-As for the $L^2$ error, between two continuous functions $f$ and $g$ defined on an interval $[t_1,t_2]$, the $L^2$ error between them is defined as 
+As for the $L^2$ error, between two continuous in time signals $f = f(t)$ and $g = g(t)$ defined on an interval $[t_1,t_2]$, the $L^2$ distance between them is defined as 
 
 $$ ||f-g||_2 = \int_{t_1}^{t_2}|f(t) - g(t)|^2 dt $$
 
-When dealing with a discrete approximation, it actually coincides with the \textbf{mean squared error (MSE)}
+When dealing with time discrete signals $ \textbf{x} = \{x_i\}_{i=1}^N$ and  $\textbf{y} = \{y_i\}_{i=1}^N$, this quantity it actually coincides with the \textbf{mean squared error (MSE)}
 
 $$ MSE(\textbf{x},\textbf{y}) = \frac{1}{N}\sum_{i=1}^{N}|x_i-y_i|^2 $$
 
 
-The MSE analysis performs a point-by-point comparison of the two signals, penalizing quadratically the differences between the two. It follows that in order to have a realistic estimate of this error, it is necessary to confront well-aligned signals. For this purpose, a previous analysis of cross-correlation can be helpful, since, as described in section (2.2), such analysis can also identify the \textit{delay} between two time series, detected in correspondence to the cross-correlation peak. In conclusion, an alignment based on such value of lag between the two time signals should be performed before this $L^2$ error analysis.
+The MSE analysis performs a point-by-point comparison of the two signals, penalizing quadratically the differences between the two. It follows that in order to have a realistic estimate of this quantity, it is necessary to confront well-aligned signals. To this purpose, as described in Section 2.2, a cross-correlation analysis can be helpful, since it allows to identify the \textit{delay} between two time series, detected in correspondence of the cross-correlation peak. In conclusion, an alignment based on such value of lag between the two time signals should be performed before computing the $L^2$ distance.
 
 
 
@@ -710,31 +711,31 @@ The MSE analysis performs a point-by-point comparison of the two signals, penali
 	
 \end{figure}
 
-As already mentioned in section (1.5), observing a correlation between two time series 
-is not enough to establish a \textit{relationship} between them. Indeed, a parallel issue to the synchronization between signals is the presence of a \textit{cause-effect} mechanism underlying it all. If such relationship is found, besides observing a synchronization, one can find as well which signal (and, in this case, mouse) is responsible for causing the opponent's one.\\
-In situations like the EEG experiment in [Novembre et al.] discussed in the previous chapter, such relationship had been investigated through a manipulation on an experimental level. In the case of the current work, once dealing with data already measured, a different and sophisticated approach is adopted, relying on straightforward statistical principles: the \textbf{Granger causality}.\\
-The Granger causality (\textbf{G-causality}) is a method aimed to identify causal relationship between time series data. The adjective "casual" is mainly due to historical reasons, since many debates about its correctness are still ongoing, and it would be probably more precise to refer to it as "Granger \textit{prediction}".
+As already mentioned in Section 1.5, observing a correlation between two time series 
+is not enough to establish a \textit{relationship} between them. Indeed,a further indicator of  the synchronization between signals is the presence of an underlying \textit{cause-effect} mechanism underlying it all. If such relationship is found, besides observing a synchronization, one can determine also which signal (and, in this case, mouse) is responsible for causing the opponent's one.\\
+In situations like the EEG experiment in [Novembre et al.] discussed in Chapter 1, such relationshipis investigated through a manipulations on the experimental level (via \textit{Multi-brain stimulation}). In  the current work, once dealing with data already measured, a different and sophisticated approach is adopted,based on statistical principles: the \textbf{Granger causality}.\\
+The Granger causality (\textbf{G-causality}) is a method aimed to identify causal relationship between time series data. The word "casuality" is mainly due to historical reasons, since many debates about its correctness are still ongoing, and it would be probably more precise to refer to it as "Granger \textit{prediction}".
 \\
 
-Given two time series $ \textbf{x} = \{x_i\}_{i=1}^N$ and  $\textbf{y} = \{y_i\}_{i=1}^N$, the main ideas of the G-causality method rely on the following scheme:
+Given two time series $ \textbf{x} = \{x_i\}_{i=1}^N$ and  $\textbf{y} = \{y_i\}_{i=1}^N$, the G-causality method is based on the following scheme:
 
 \begin{enumerate}
 	
-	\item Creation of a \textbf{vector autoregression model (VAR)} of order $p$, integer to be determined, for one of the two time series, considering its previous values
+	\item Generation of a \textbf{vector autoregression model (VAR)} of order $p$, where $p\ge 1$ is an integer to be determined, for one of the two time series, considering its previous values
 	
 	\begin{equation}
-		\hat{x}_t = a_0 + a_1 x_{t-1} + a_2 x_{t-2} + \dots + a_p x_{t-p}
+	\hat{x}_t = a_0 + a_1 x_{t-1} + a_2 x_{t-2} + \dots + a_p x_{t-p}
 	\end{equation}
 	
 	
-	\item Creation of a second model, in which the values of the second series are added  to the previous model 
+	\item Generation of a second model, in which the values of the second series are added  to  model (4)
 	\begin{equation}
-		\hat{x}_t = a_0 + a_1 x_{t-1} + a_2 x_{t-2} + \dots + a_p x_{t-p} + b_1 y_{t-1} + \dots + b_p y_{t-p}
+	\hat{x}_t = a_0 + a_1 x_{t-1} + a_2 x_{t-2} + \dots + a_p x_{t-p} + b_1 y_{t-1} + \dots + b_p y_{t-p}
 	\end{equation}
-
 	
-	\item Comparison of the two models: if model 2 is more significant (in a way which will be clarified in the following) than model 1, then signal $\textbf{y}$ \textit{Granger-predicts} signal \textbf{x} 
-
+	
+	\item Comparison between the two models: if model 2 is more significant  than model 1 (in a way to be clarified in the following), then signal $\textbf{y}$ \textit{Granger-predicts} signal \textbf{x} 
+	
 \end{enumerate}
 
 More formally [Barnett-Seth], given two stochastic processes $ \textbf{X} = {X}_{i=1}^N $ and $ \textbf{Y} = {Y}_{i=1}^N $, process Y \textit{does not} G-cause process X if X, conditional its past, is independent by the past of Y. A vector autoregressive model for a process $U$ takes the form
@@ -745,14 +746,14 @@ More formally [Barnett-Seth], given two stochastic processes $ \textbf{X} = {X}_
 
 
 
-Where $p$ is the \textbf{order} of the model, $\{ A_k\}$ are the \textbf{regression coefficients} and $\varepsilon$ the \textbf{residuals}, assumed normally and independently distributed. The \textbf{ residual covariance matrix} of the model is defined as $ \Sigma = Cov(\varepsilon_t) $ and it is assumed to be stationary. The process $U$ can then be identified both as $X$ and $Y$. Given a VAR model of the form (6), the \textbf{autocovariance sequence} $ \{\Gamma_k\} $ is defined as $ \Gamma_k = Cov(\textbf{U}_t,\textbf{U}_{t-k})$, and it is possible to relate this quantity to the autoregression coefficients $\{ A_k\}$ thanks to the \textbf{Yule-Walker} equations [Anderson,1971]
+where $p$ is the \textbf{order} of the model, $\{ A_k\}{k=1}^p$ are the \textbf{regression coefficients} and $\varepsilon_t$ the \textbf{residuals}, assumed normally and independently distributed. The \textbf{ residual covariance matrix} of the model is defined as $ \Sigma = Cov(\varepsilon_t) $ and it is assumed to be stationary. The process $U$ can then be identified both as $X$ and $Y$. Given a VAR model of the form (6), the \textbf{autocovariance sequence} $ \{\Gamma_k\}_{k=1}^p $ is defined as $ \Gamma_k = Cov(\textbf{U}_t,\textbf{U}_{t-k})$, and it is possible to relate this quantity to the autoregression coefficients $\{ A_k\}$ thanks to the \textbf{Yule-Walker} equations [Anderson,1971]
 
 \begin{equation}
-	\Gamma_k = \sum_{i=1}^{p} A_i \Gamma_{k-i} + \delta \Sigma \hspace{1 cm }  \delta \in \mathbb{R}
+\Gamma_k = \sum_{i=1}^{p} A_i \Gamma_{k-i} + \delta \Sigma \hspace{1 cm }  k = 1, \cdots, p
 \end{equation}\\
 
-Standard VAR theory [Hamilton-Lutkephol], requires, for the validity of this analysis, the condition $ \sum_{k=1}^{N}||A_k||^2 < \infty $. Moreover, defining the \textbf{characteristic polynomial} as 
-$$ \phi_A(z)= \left| I - \sum_{k=1}^{p} A_k z^k \right| $$
+Standard VAR theory [Hamilton-Lutkephol] requires the condition $ \sum_{k=1}^{N}||A_k||^2 < \infty $. Moreover, defining the \textbf{characteristic polynomial} as 
+$$ \phi_A(z)= \det \left( I - \sum_{k=1}^{p} A_k z^k \right) $$
 it must be that the \textbf{spectral radius} $\rho(A) := \max_{\phi_A(z)=0}|z|^{-1}$ is strictly less than $1$, as a \textit{stability} condition.
 \\
 
@@ -763,20 +764,20 @@ Considering now a process in which $ \textbf{U}_t = \begin{bmatrix} \textbf{X}_t
 \end{equation}
 
 
-And its residual covariance is $ \Sigma = Cov\left(\begin{bmatrix} \varepsilon_{x,t}  \\  \varepsilon_{y,t} \end{bmatrix}\right) = \begin{bmatrix} \Sigma_{xx}  &  \Sigma_{xy} \\  \Sigma_{yx}  & \Sigma_{yy} \end{bmatrix} $.\\
+and its residual covariance is $ \Sigma = Cov\left(\begin{bmatrix} \varepsilon_{x,t}  \\  \varepsilon_{y,t} \end{bmatrix}\right) = \begin{bmatrix} \Sigma_{xx}  &  \Sigma_{xy} \\  \Sigma_{yx}  & \Sigma_{yy} \end{bmatrix} $.\\
 This augmented formulation contains both the regression models for process $X$ and $Y$. For example, its first component reads
 
 \begin{equation}
 \textbf{X}_t = \sum_{k=1}^{p} A_{xx,k} \textbf{X}_{t-k} + \sum_{k=1}^{p} A_{xy,k}  \textbf{Y}_{t-k} + \varepsilon_{x,t}
 \end{equation}
 
-If the process $Y$ does not G-cause the process $X$, it will follow that the coefficients $\{A_{xy,k}\}_{k=1}^p $ will be all null, and the model will take a form
+If the process $Y$ does not G-cause the process $X$, it follows that the coefficients $\{A_{xy,k}\}_{k=1}^p $ are all equal to $0$, and the model becomes
 
 \begin{equation}
 \textbf{X}_t = \sum_{k=1}^{p} A'_{xx,k} \textbf{X}_{t-k} + \varepsilon'_{x,t}
 \end{equation}
 
- Therefore, a statistic test checking on the null hypothesis \{$ H_0:  Y \hspace{0.2cm} \text{does not G-predicts} \hspace{0.2 cm} X $\} has the form
+Therefore, a statistic test checking  the null hypothesis \{$ H_0:  Y \hspace{0.2cm} \text{does not G-predicts} \hspace{0.2 cm} X $\} has the form
 
 \begin{equation}
 H_0: A_{xy,1} = A_{xy,2} = \cdots = A_{xy,p} = 0
@@ -786,25 +787,27 @@ H_0: A_{xy,1} = A_{xy,2} = \cdots = A_{xy,p} = 0
 If  $\Sigma'_{xx} = Cov(\varepsilon'_{x,t}) $ is the residual covariance matrix of model (10), standard theory [Edwards, 1992] suggests the use of the \textbf{(log-)likelihood statistics} to obtain a \textit{maximum-likelihood} estimator of the G-causality between $Y$ and $X$ (here referred as $ \mathcal{F}_{Y \rightarrow X} $):
 
 \begin{equation}
-	\mathcal{F}_{Y \rightarrow X}  = \ln \frac{|\Sigma'_{xx}|}{|\Sigma_{xx}|}
+\mathcal{F}_{Y \rightarrow X}  = \ln \frac{det(\Sigma'_{xx})}{det(\Sigma_{xx})}
 \end{equation}
 
 
-Since the determinant of a covariance matrix (i.e. the \textit{generalized variance}) quantifies the \textit{prediction error} of its regression model, the interpretation of (11) is that the G-causality statistics  $ \mathcal{F}_{Y \rightarrow X} $ is a measure of how much the prediction error is reduced when the process $Y$ is included in the regression model as well. Clearly, this same procedure applies as well for the statistics  $ \mathcal{F}_{X \rightarrow Y} $, in which the directionality of the relationship is inverted. It can be proven [Wilks \& Wald] that, under the null hypothesis, $ (N-p)\mathcal{F}_{Y \rightarrow X} \sim \chi^2(d)$, where $ d = pN^2$.
+Since the determinant of a covariance matrix (i.e. the \textit{generalized variance}) quantifies the \textit{prediction error} of its regression model, the interpretation of (11) is that the G-causality statistics  $ \mathcal{F}_{Y \rightarrow X} $ is a measure of how much the prediction error is reduced when also the process $Y$ is included in the regression model. Clearly, this same procedure applies to the statistics  $ \mathcal{F}_{X \rightarrow Y} $, in which the directionality of the relationship is inverted. It can be proven [Wilks \& Wald] that, under the null hypothesis, $ (N-p)\mathcal{F}_{Y \rightarrow X} \sim \chi^2(d)$, where $ d = pN^2$.
 \\
 To summarize, the typical workflow for G-causality estimation, consists in the following steps:
 
 \begin{enumerate}
-	\item Estimation of the model order $p$ via appropriate criterion (such as AIC and BIC)
+	\item Estimate the model order $p$ via appropriate criterion (such as AIC and BIC)
 	
-	\item Estimation of the autocovariance sequence $\Gamma_k$ and the VAR coefficients $(A_k, \Sigma)$ through the Yule-Walker equations (7), both for reduced and augmented models. Check for the satisfaction of the validity hypotheses
+	\item Estimate the autocovariance sequence $\Gamma_k$ and the VAR coefficients $(A_k, \Sigma)$ through the Yule-Walker equations (7), both for reduced and augmented models. Verify that $ \sum_{k=1}^{N}||A_k||^2 < \infty $ and  $\rho(A) < 1$
 	
 	\item Computation of the G-statistics $ \mathcal{F}_{Y \rightarrow X} $ and $ \mathcal{F}_{X \rightarrow Y} $ through (12)
 	
-	\item Testing of the significance of the statistical tests against the null hypotesis, computing the p-values of the two tests 
+	\item Test the significance of the statistical tests against the null hypotesis, computing the $p$ -values of the two tests 
 	
 \end{enumerate}
 
+\newpage
+\section{Interbrain data analysis: one-to-one task}
 
 
 
@@ -845,8 +848,205 @@ The goals of the data analysis work on this experiment are severals and will cov
 \begin{itemize}
 	\item To compute the activities of the three mice (average or from single neurons) and look for differences in their values between the different phases of the experiment. Is it possible to explain the results based on the simultaneous protocol in action?
 	
-	\item 
 \end{itemize}
+
+
+
+
+\newpage
+\section{Activity of Amygdala in altruistic decision making}
+
+In this chapter, a new aspect of the behavioural analysis from in vivo tasks on mice will be investigated: the ability of mice to display empathic-like behaviours, such as \textbf{altruistic} choices.\\
+Through the \textit{altruism task}, two mice are put in a situation in which they can choose whether to perform an altruistic or selfish choice, while having their neural activity recorded. In this context, however, the employed technique for calcium imaging is not microendoscopic calcium imaging, but \textit{Fiberphotometry} (discussed in 1.4), from which an overall signal containing the calcium activity is obtained.\\
+As for the area of the brain under investigation, in this case the choice went back on the \textbf{basolateral amygdala (BLA)}, which has been shown to be connected with prosocial choices in rodents (1.1).\\
+After describing the results of the altruism task in terms of behaviour, the focus will regard the analysis on the calcium tracks from fiberphotometry, and in particular their relative change with respcet to a baseline activity, such as the effect that neuronal silencing provokes on empathic behaviours.
+
+ 
+\subsection{Social decision making in mammals}
+
+In order to live as a group, mammals have to perform decisions based on their \textit{social interactions}. Often, such decisions are strictly egoistic and selfish, in order to survive as single individual and obtain the best for itself. However, evolution taught us that \textbf{altruistic} decisions, engaged with the purpose of creating a benefit for the entire coomunity, are present as well, and are actually necessary to the surviving in social groups [Batson, C. D.].\\
+The reasons behind whether a social choice may be of altruistic rather than selfish type are often non trivial and may depend by several factors, such as the presence of a \textit{dominance} relation inside a group, the degree of closeness between two individuals, or biological factors like age and gender.\\
+In the first years of study of social interactions and decision making, the term \textit{altruism} was used only for humans, but, through years, the increase of discoveries of similar attributes in other animals changed the situation. For example, frequent habits of sharing food has been observed in parrots [Brucks, D. \& von Bayern] and monkeys [Krupenye, C., Tan, J. \& Hare]. Mice do not differ: rodents have been shown to display altruistic decision making such as consolatory and collaborative behaviours, such as offering help to conspecific in need [Bartal, I. B.-A., Decety, J. \& Mason]. \\
+ Moreover, a dysfunctional behaviour in social decision making, such as a lack of empathy, could be strictly related to many pshyco-pathologic conditions such as Alzheimer's disease or dementia. \\
+Through the years, the interest in social decision making observed in group of mammals has been growing. However, very often the focus of such studies stops at the \textit{expressed} behaviour, rather than inspecting the neural causes behind it. Recently, studies on primates [Dal Monte, O., Chu, C. C. J., Fagan] seem to have identified the neural circuits responible for social interactions and decision making in the basolateral amygdala (BLA), and following studies on mice confirmed it as well [Felix-Ortiz, A. C., Burgos-Robles, A., Bhagat].
+
+\subsection{Description of the altruism task}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=1.1]{altruism.png} 
+	\end{center} 
+	\caption{\textit{Main setting of the altruism task: a dictator mouse (left) can choose between two pokes, one of which will deliver a food pellet to a recipient mouse (right) as well}}
+	
+\end{figure}
+
+The \textit{Altruism task} is a task in which two mice are tested in their social decision making. It consists in two mice located in adjacent compartments, separated by a metal mesh which allows them to see and sniff each other, but not enter in direct contact. One mouse, called the \textit{recipient}, assumes only a passive role: it stays in its space and, when a food delivery happens from an apposite box (called \textit{magazine}) it can eat the delivered food pellet. 
+In contrast, the other mouse, called \textit{dictator}, has to perform a social choice. Indeed, in any case a deliver of food to its own magazine will happen by poking one of two buttons available, but even if both types of pokes will provoke a pellet delivery for the dictator, only one of them will give food to the recipient as well. It follows that the two choices of the dictator can be classified in \textit{selfish} and \textit{altruistic} decisions.\\
+In order to stimulate the seeking of food, mice have been kept at $ 90 \%$ of their standard body weight before the test. The setting of the test has been the following:
+
+\begin{itemize}
+	
+	\item The tasks were performed considering both mice kept together in same sex pairs, for two weeks before the test
+	
+	\item The animals were tested for $5$ days. The first day involves a \textit{learning} process for the dictator to understand the food delivery mechanism. The main test is considered happening during the following $3$ days, and finally the process is considered well assimilated by the dictator during the final day	
+	
+	\item The position of the altruistic and selfish pokes (i.e. of the two buttons providing or not the food delivery to the recipient) has been randomized through the different days, in order to rule out spatial causes for the results
+	
+	\item A control test has been performed in parallel. Here, the recipient mice were replaced by inanimate objects, in order to determine the effective relevance of their presence in the task
+	
+	\item During the performance of the $5$ days of test, the calcium activity in the basolateral amygdala of the dictator has been recorded using the Fiberphotometry technique, giving as result a collective signal (as discussed in 1.4)
+	
+\end{itemize}
+
+
+
+\subsection{Behavioural results in the altruism task}
+
+
+\begin{figure}[H]
+	\begin{minipage}{\linewidth}
+		\centering
+		\begin{minipage}{0.46\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{altr_self.png}
+				
+			\end{figure}
+		\end{minipage}
+		\hspace{0.05\linewidth}
+		\begin{minipage}{0.46\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{norecip.png}
+				
+			\end{figure}
+		\end{minipage}
+		
+	\end{minipage}
+\caption{\textit{Left: Percentage of change in altruistic response ( i.e in the number of altruistic pokes) for altruistic and selfish mice. Right: difference in number of altruistic and selfish pokes by the dictator when the recipient is present or not}}
+\end{figure}
+
+
+
+The first evident result of the altruism task is that, when a recipient mouse was present and same sex pairs adopted, the dictator mice showed an increase in the number of altruistic pokes during the test days. In contrast, when recipient mice were replaced by inanimated objects, no appreciable difference between altruistic and selfish preferences have been detected. Such difference started to emerge from the second day of test, as confirm of the overcoming of a learning period in the first day. \\
+An important difference has been observed between male and female mice:  only male dictators showed altruism preference, while female ones did not show an appreciable difference between selfish and altruistic pokes.\\
+Next, the spatial exploration of the mice has been under study. It came out that altruistic dictators (i.e.dictators which showed preference for altruistic pokes) tend to explore more the area in proximity to the recipient, in contrast with selfish dictators which didn't show particular interest in their partners.\\
+To test whether the visual interaction is relevant to determine the altruistic preferences, the task has been repeated replacing the metal mesh with an opaque screen, which still allowed olfactory and auditory stimuli, but not visual ones. In this situation, mice showed a marked decrease in the altruistic responses, with respect to the previous case in which metal mesh was used. This implies that the dictator mouse needs to be able to see the recipient partner getting the food delivery, in order to be able to decide for the altruistic alternative.\\
+Finally, to further determine the ability of dictator mice to \textit{learn} from experience and change their habits in light of an altruistic choice, dictators were tested with no partner in adjacent cages, to trigger one nose poke over the other. Subsequently, the recipient mouse was put in the near cage, and the location of the altruistic poke, delivering food to it as well, has been assigned to the poke less pressed by the dictator. Despite this, the dictator showed through days a change in his preference towards the altruistic poke. Changing the recipient with an inanimate object, such preference decreased once again. The conclusion is straightforward: the presence of the recipient is the determining factor for the altruistic preference by the dictator.
+\\
+
+Once, in normal conditions, the altruitic preference has been established, one may ask until which conditions such preference is mantained. At this purpose, the task was repeated changing the rules of food delivering. Now, two nose pokes were necessary for the food delivery in the altruistic poke, while only one in the seflish one. Even with this additional effort, males and females mice which previously showed altruistic preferences, increased the number of altruistic over selfish preferences also in this case. Increasing the necessary number of pokes to $4$, male dictators kept their altruistic preferences, while female ones did not show anymore a significative difference. Finally, requiring $6$ nose-pokes for altruistic delivery still kept male mice in their altruistic preference, while made female ones prefer the selfish one, and only from $8$ pokes, also males stopped to be altruistic. Overall, these results showed that \textit{male mice tend to share food with their cagemates partners, even at costly conditions}.\\
+Finally, mice were tested in two more conditions: absence of rewards for both dictator and absence of reward for dicyator, but not recipient mouse. While, in the first case, no preference between the two pokes were expressed by the dictator, in the second one there was an altruistic preference. This means that the dictator can choose an altruistic decision even if there is no direct benefit for itself.
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.6]{number_pokes.png} 
+	\end{center} 
+	\caption{\textit{Number of nose pokes of male and female mice, with and without recipients.}}
+	
+\end{figure}
+
+\subsection{The role of social hierarchy in altruism display}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.6]{familiar.png} 
+	\end{center} 
+	\caption{\textit{Left: decision preference score with familiar and unfamiliar recipients. Right: Number of responses by seflish and altruistic dictators, with familiar and unfamiliar recipients}}
+	
+\end{figure}
+
+By today, it is known that familiarity between individuals plays a key role in social relationships [De Waal, F. B. M. \& Preston]. In the case of the altruism task, it is to be expected that the shown altruism by the dictator is strictly dependent on the period preceding the test, in which dictator and recipient have been cagemates for two weeks. To test this hypothesis, the task has been repeated using unfamiliar recipients, and this implied a strong abolishment of altruistic choices, where most of dictator mice actually showed preferences for the seflish pokes. This has been measured through the \textbf{decision preference score} 
+
+\begin{equation}
+	DPS = \frac{A -S}{A+S}
+\end{equation}
+
+Where $A$ and $S$ are the number of altruistic and selfish responses.\\
+Next, a \textit{dominant/follower} relationship has been established through the \textbf{tube test}, in which two mice have been paired in a tube allowing the passage of just one individual. This test helped to figure in the pair who was the \textit{dominant} individual, i.e. the one pushing the other, and the \textit{follower} individual, i.e. the one retreating. The dominance was quantified thorugh the \textbf{Normalized David's score} [De Vries, H., Stevens, J. M. G. \& Vervaecke]
+
+\begin{equation}
+	NDS = \frac{1}{N}\left(DS + \frac{N(N-1)}{2}\right)
+\end{equation}
+
+Where $N$ is the number of tested subjects and $DS$ is the David's score, i.e. the ratio of wins.\\
+ Analyzing 9 pairs of mice used in the altruism task, the main results obtained were the followings:
+
+\begin{enumerate}
+	\item The dominance relationship is \textit{transitive}: if mouse A is dominant with respect to mouse B, and mouse B is dominant with respect to mouse C, then mouse A dominates mouse C as well
+	
+	\item Dictator mice showing selfish preferences in the altruism task displayed low scores in the $NDS$ compatred to their recipients, which means they tend to be less dominant
+	
+	\item No significant differences have been detected between the dominace scores of altruistic dictators and their recipients
+	
+	\item The more a dictator has a higher dominance value $NDS$, the more he is willing to perform altruistic preferences in the altruism task
+	
+\end{enumerate}
+
+Next, the study tested the hypothesis that \textit{an increase in altruism is related to an increase in affective state matching between individuals}. To do so, the recipient has been subjected to a manipulation of its emotional state, in this case a fear conditioning paradigm through little shocks. In the meantime, the dictator mouse (here assuming the role of \textit{observer}) was allowed to see the recipient through a transparent partition.\\
+The main result was that altruistic mice displayed an increased freezing behaviour during this phase, compared to selfish ones. And being these mice the dominant ones, this lead to the conclusion that \textit{dominant mice tend to show more empathic like behaviours}, from altruism to emotional contagion.
+
+\subsection{The role of BLA neurons in empathism}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.77]{psth.png} 
+	\end{center} 
+	\caption{\textit{Top: PSTH of selfish and altruistic mice during nose pokes in altruistic pokes. Bottom:  PSTH of selfish and altruistic mice during nose pokes in selfish pokes. Results have been averaged on all nose pokes}}
+	
+\end{figure}
+
+The fiberphotometry analysis of the calcium activity in the BLA allowed to establish a connection between the type of choice adopted by dictator mice and their corresponding neural activity. In order to analyze the relative change of such activities during altruistic or selfish pokes, the raw data from the photometry have been subjected to a \textbf{peristimulus time histogram (PSTH)} analysis. Such analysis goes through the following steps:
+
+\begin{enumerate}
+	
+	\item Set a START and STOP time for the analysis, i.e. set the time window in wich considering the variation of the neural activity (in this case START = STOP = $5 s$ for a window of $10 s$)
+	
+	\item For every time point $x_t$ of the overall activity given by Fiberphotometry, consider the interval $[x_{t}-START , x_{t}+STOP]$
+	
+	\item Compute the mean $ \mu_t$ and standard deviaton $\sigma_t$ of the activity in such interval
+	
+	\item The value of the PSTH for the selected time point is then
+	$$ P_t = \frac{x_t - \mu_t}{\sigma_t}$$
+\end{enumerate}
+Next, in order to quantify the intensity of the activity, \textbf{areas under the curve (AUC)} were estimated numerically via trapezoid method [Quarteroni-Sacco].\\
+
+ The overall analysis on raw photometry data, PSTH tracks and AUC showed some remarkable results:
+ 
+ \begin{itemize}
+ 	
+ 	\item Dictator mice showed an increase activity in the BLA when a recipient mouse was present, compared to when an inanimate object was placed in the near cage
+ 	
+ 	\item During the first day, in all cases no signficiant differences emerged in the activation of BLA, such as in the last day
+ 	
+ 	\item In the intermediate days of learning, however, altruistic mice showed a strong activation during the nose poking in the altruistic pokes, but not in the selfish ones. Selfish mice, in contrast, did not show any particular activation of their neural activity during both pokes. 
+ 	
+ 	\item The AUC analysis suggested that the levels of activity were higher during the learning phase, rather than first and last day
+ \end{itemize}
+
+
+To further inspect the role of BLA neurons in empathy display, such neurons have been silenced via a \textbf{chemogenetic procedure} [Qi-Gang Zhou, Ashley D Nemes]. In this approach, a viral vector, carrying specific receptors, is injected in the area of interest. Such receptors, called  \textbf{hM4D receptors}, belong to the group of \textit{inhibitory designer receptors exclusively activated by designer drugs (DREADD)}, which activate themselves only when in contact with a particular drug, the \textbf{Clozapine N-oxide (CNO)}. In this way, mice injected with hM4D-CNO will exhibit an \textit{inhibition} of BLA-neurons. In contrast a control group of mice was injected with CNO only, without hM4D receptors.\\
+   The obtained results after these injections showed a significant reduction of freezing behaviour in the dictators, while their recipient partners were subjected to emotion conditioning as previously described. This confirms what previous studied [Allsop, S. A. et al] showed, namely a \textit{critical role of the amygdala in emotional matching}. Silencing BLA neurons revealed to be correlated as well with the amount of altruism preferences. Indeed, mice with silenced BLA neurons failed to show a marked preference for altruistic choices, in contrast with the standard case. Indeed, while approximately $3$ out of $4$ mice showed altruistic preferences in standard conditions, a similar percentage of BLA-silenced mice showed preference for selfish pokes.\\
+BLA silencing did not affect the number of responses or the latency of choices, rather it affected the type of the social decision. This is a further evidence of the primary role of BLA in altruism display.
+\\
+Finally, the silencing of BLA neurons appeared to reduce the dominance as well: a higher number of BLA-silenced mice assumed a subordinate role with respect to control mice. In particular, if transitive relationships of dominance are distribuited in levels $ \alpha \rightarrow \beta \rightarrow \gamma \rightarrow \delta $, silenced mice belong only to levels $ \gamma $ and $ \delta $.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.77]{silencing.png} 
+	\end{center} 
+	\caption{\textit{Left: Decision preference score in BLA-silenced mice (hM4D CNO) and non silenced mice (control CNO). Right: number of selfish and altruistic pokes in BLA-silenced mice (hM4D CNO) and non silenced mice (control CNO) }}
+	
+\end{figure}
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.77]{sil_dom.png} 
+	\end{center} 
+	\caption{\textit{Left: Normalized David's score in BLA-silenced mice (hM4D CNO) and non silenced mice (control CNO). Right: number of dominant and subordinate mice in BLA-silenced mice (hM4D CNO) and non silenced mice (control CNO) }}
+	
+\end{figure}
+
 
 
 \end{document}

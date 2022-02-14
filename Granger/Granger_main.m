@@ -1,38 +1,39 @@
 addpath(genpath('Granger\'))
 %  startup
-if(dataset==1)
-    fs = 0.129;
-end
-
-if(dataset==2)
-    fs=0.05;
-end
-
-if(dataset==3)
-    fs=0.1273;
-end
-
-if(dataset==4)
-    fs=0.1264;
-end
-if(dataset==1 || dataset==3)
-[~,lengths]= segment_id(left);
-n2 = compute_num_seg(120,lengths,fs)-1;
-
-[~,lengths]= segment_id(right);
-n = compute_num_seg(120,lengths,fs)-1;
-else
-[~,lengths]= segment_id(right);
-n2 = compute_num_seg(100,lengths,fs)-1;
-
-[~,lengths]= segment_id(left);
-n = compute_num_seg(120,lengths,fs)-1; 
-end
+% if(dataset==1)
+%     fs = 0.129;
+% end
+% 
+% if(dataset==2)
+%     fs=0.05;
+% end
+% 
+% if(dataset==3)
+%     fs=0.1273;
+% end
+% 
+% if(dataset==4)
+%     fs=0.1264;
+% end
+% if(dataset==1 || dataset==3)
+% [~,lengths]= segment_id(left);
+% n2 = compute_num_seg(120,lengths,fs)-1;
+% 
+% [~,lengths]= segment_id(right);
+% n = compute_num_seg(120,lengths,fs)-1;
+% else
+% [~,lengths]= segment_id(right);
+% n2 = compute_num_seg(100,lengths,fs)-1;
+% 
+% [~,lengths]= segment_id(left);
+% n = compute_num_seg(120,lengths,fs)-1; 
+% end
 
 %     X=[obs_activity_test_stress(1:sum(lengths(1:n)))' ;stress_activity_test2(1:sum(lengths(1:n)))'];
 
-   X=[obs_activity_test_neutral(1:sum(lengths(1:n2)))' ;neutral_activity_test2(1:sum(lengths(1:n2)))'];
+%    X=[obs_activity_test_neutral(1:sum(lengths(1:n2)))' ;neutral_activity_test2(1:sum(lengths(1:n2)))'];
 
+% X=[m1_activity_post(:,2)'; m2_activity_post(:,2)'];
 % s1=smooth(obs_activity_hab_stress);
 % s2=smooth(stress_activity_hab2);
 % 

@@ -28,7 +28,7 @@ load('test_zone.mat')
 load('sniff.mat')
 
 dataset=3;
-
+z_norm=1;
 %%% Read data, exclude rejected neurons and split 
 
 
@@ -63,7 +63,16 @@ stress_test(:,34)=[];
 % neutral_test(:,[5 8:10])=[];
 % stress_test(:,[2:4 8:13 17:24 26:28 30:32 35:end])=[];
 %%%
+%% Z NORMALIZATION
+if(z_norm ==1)
+obs_test = z_score_normalization(obs_test);
+stress_test = z_score_normalization(stress_test);
+neutral_test = z_score_normalization(neutral_test);
 
+obs_hab = z_score_normalization(obs_hab);
+stress_hab = z_score_normalization(stress_hab);
+neutral_hab = z_score_normalization(neutral_hab);
+end
 obs_activity_test = mice_activity(obs_test);
 
 neutral_activity_test = mice_activity(neutral_test);

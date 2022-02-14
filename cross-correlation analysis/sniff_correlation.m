@@ -46,7 +46,7 @@ stem(lags,c,'b')
 legend('CC during test')
 xlabel('lags')
 ylabel('cross-correlation')
-
+ylim([-0.3 1])
 
 title('Cross-correlations between observer and stressed during sniffing')
 set(gca,'FontSize',11)
@@ -65,3 +65,4 @@ ylabel('cross-correlation')
 
 title('Cross-correlations between observer and neutral during sniffing')
 set(gca,'FontSize',11)
+ylim([-0.3 1])

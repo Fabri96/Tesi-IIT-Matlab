@@ -10,7 +10,7 @@ aa = categorical({'Habituation','Test'});
 plot(aa,[ang_dist_hab_stress ang_dist_test_stress], 'r-o',LineWidth=2,MarkerSize=15)
 hold on
 plot(aa,[ang_dist_hab_neut ang_dist_test_neut], 'b-o',LineWidth=2,MarkerSize=15)
-title("Angular distance in experiment " + num2str(dataset))
+title("Angular distance in triplet " + num2str(dataset))
 legend('obs vs stressed','with neutral')
 ylim([0.1,0.55])
 set(gca,'FontSize',20)

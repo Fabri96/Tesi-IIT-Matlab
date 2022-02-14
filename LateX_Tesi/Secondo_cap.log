@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.21)  31 JAN 2022 12:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.21)  3 FEB 2022 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -841,7 +841,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 238.
 
-<cos_sim.jpg, id=80, 1204.5pt x 632.3625pt>
+<cos_sim.jpg, id=81, 1204.5pt x 632.3625pt>
 File: cos_sim.jpg Graphic file (type jpg)
 <use cos_sim.jpg>
 Package pdftex.def Info: cos_sim.jpg  used on input line 243.
@@ -857,14 +857,21 @@ File: GC.png Graphic file (type png)
 <use GC.png>
 Package pdftex.def Info: GC.png  used on input line 284.
 (pdftex.def)             Requested size: 325.2175pt x 165.3189pt.
- [7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 290--295
 
  []
 
-[8 <./GC.png>]
+[7 <./GC.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
+ []
+
+[8]
+Overfull \hbox (23.22874pt too wide) in paragraph at lines 331--332
+[]\OT1/cmr/m/n/10 Standard VAR the-ory [Hamilton-Lutkephol] re-quires the con-d
+i-tion $[][] \OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 A[]\OMS/cmsy/m/n/10 jj[] \OML/
+cmm/m/it/10 <
  []
 
 
@@ -872,25 +879,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--335
 
  []
 
-[9]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
 56.
-
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 356.
 
-Overfull \hbox (60.0966pt too wide) in paragraph at lines 356--357
-[]\OT1/cmr/m/n/10 Therefore, a statis-tic test check-ing on the null hy-poth-e-
-sis \OMS/cmsy/m/n/10 f$\OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 
-Y [] X$\OMS/cmsy/m/n/10 g
+Overfull \hbox (47.3188pt too wide) in paragraph at lines 356--357
+[]\OT1/cmr/m/n/10 Therefore, a statis-tic test check-ing the null hy-poth-e-sis
+ \OMS/cmsy/m/n/10 f$\OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 Y [
+] X$\OMS/cmsy/m/n/10 g
  []
 
-[10] (Secondo_cap.aux)
+[9] [10] (Secondo_cap.aux)
 Package rerunfilecheck Info: File `Secondo_cap.out' has not changed.
-(rerunfilecheck)             Checksum: F8FF53F581C16AA1264082F71A26FFCF;1120.
+(rerunfilecheck)             Checksum: 9C67C2D08B0D2D32AF5B911B0F39F601;1135.
 Package logreq Info: Writing requests to 'Secondo_cap.run.xml'.
 \openout1 = `Secondo_cap.run.xml'.
 
@@ -898,11 +903,11 @@ Package logreq Info: Writing requests to 'Secondo_cap.run.xml'.
 Here is how much of TeX's memory you used:
  19507 strings out of 478625
  346722 string characters out of 2840929
- 1157122 words of memory out of 3000000
+ 1158122 words of memory out of 3000000
  37326 multiletter control sequences out of 15000+600000
  412294 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,10n,106p,746b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,10n,106p,751b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Fabrizio\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\tcrm1000.pk><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmbx10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
@@ -920,12 +925,10 @@ Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 ic/amsfonts/cm/cmr8.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Fabrizio/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Fabrizio/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
-s/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on Secondo_cap.pdf (10 pages, 639560 bytes).
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Secondo_cap.pdf (10 pages, 636945 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
+ 203 PDF objects out of 1000 (max. 8388607)
  52 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -33,7 +33,7 @@ load('test_zone2.mat')
 
 load('sniff2.mat')
 dataset=2;
-
+z_norm=0;
 pairings = neutral_data_cage2(1:2,20:35);
 
 [neutral_data2] = neutral_fixing(neutral_data_cage2, neutral_data_habtest2,pairings);
@@ -61,18 +61,34 @@ obs_test(:,[6 11 16 10])=[];
 % neutral_test(:,[2:9 13])=[];
 % stress_test(:,[ 6 9 10 11 12 13 15 16 20 21 22 23 25 27 28 30 31 32 33])=[];
 %%%
+%% Z NORMALIZATION
+if(z_norm ==1)
+obs_test = z_score_normalization(obs_test);
+stress_test = z_score_normalization(stress_test);
+neutral_test = z_score_normalization(neutral_test);
 
+obs_hab = z_score_normalization(obs_hab);
+stress_hab = z_score_normalization(stress_hab);
+neutral_hab = z_score_normalization(neutral_hab);
+end
 obs_activity_test = mice_activity(obs_test);
+% obs_activity_test=z_score_normalization(obs_activity_test);
 
 neutral_activity_test = mice_activity(neutral_test);
+% neutral_activity_test=z_score_normalization(neutral_activity_test);
 
 stress_activity_test = mice_activity(stress_test);
+% stress_activity_test=z_score_normalization(stress_activity_test);
 
 obs_activity_hab = mice_activity(obs_hab);
+% obs_activity_hab=z_score_normalization(obs_activity_hab);
 
 neutral_activity_hab = mice_activity(neutral_hab);
+% neutral_activity_hab=z_score_normalization(neutral_activity_hab);
+
 
 stress_activity_hab = mice_activity(stress_hab);
+% stress_activity_hab=z_score_normalization(stress_activity_hab);
 
 ad_test_zone = adapt_zone(test_zone2, obs_activity_test);
 

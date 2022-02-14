@@ -21,22 +21,25 @@ P_Cl = 1.99e-8;             % membrane permeability [m/s]
 %
 P_ions = [P_K, P_Na, P_Cl];
 % intracellular/extracellular ion number densities (m^-3) (squid axon, Ermentrout-Terman Table 1.1)
-Kin   = 400*Nav;
-Kout  = 20*Nav;
-Nain  = 50*Nav;
-Naout = 440*Nav;
-Clin  = 40*Nav;
-Clout = 560*Nav;
+% Kin   = 400*Nav;
+% Kout  = 20*Nav;
+% Nain  = 50*Nav;
+% Naout = 440*Nav;
+% Clin  = 40*Nav;
+% Clout = 560*Nav;
 %
+
+% ion number densities (m^-3) (mammalian cell, Ermentrout-Terman Table 1.1)
+Kin   = 140*Nav;
+Kout  = 5*Nav;
+Nain  = 10*Nav;
+Naout = 145*Nav;
+Clin  = 4*Nav;
+Clout = 110*Nav;
+
+
 vec_n_out = [Kout, Naout, Clout];
 vec_n_in  = [Kin,  Nain,  Clin];
-% ion number densities (m^-3) (mammalian cell, Ermentrout-Terman Table 1.1)
-% Kin   = 140*Nav;
-% Kout  = 5*Nav;
-% Nain  = 10*Nav;
-% Naout = 145*Nav;
-% Clin  = 4*Nav;
-% Clout = 110*Nav;
 
 % Nernst potential for each ion species
 E_K      = Vth/z_K*log(Kout/Kin); 

@@ -415,8 +415,9 @@ bar(aa(3),mean([corr.obs_stress_test_contact.first,corr.obs_stress_test_contact.
 bar(aa(4),mean([corr.obs_stress_sniff.first,corr.obs_stress_sniff.second]),'m')
 
 legend('habituation','test','beginning of test','sniffing')
-title('Average correlation between observer and stressed (neutral observer)')
+title('Average correlation between observer and stressed ')
 set(gca,'FontSize',20)
+ylim([0,1])
 figure
 
 aa= categorical({'Habituation','Test','beginning of test','sniffing'});
@@ -432,8 +433,9 @@ bar(aa(3),mean([corr.obs_neut_test_contact.first,corr.obs_neut_test_contact.seco
 bar(aa(4),mean([corr.obs_neut_sniff.first,corr.obs_neut_sniff.second]),'m')
 
 legend('habituation','test','beginning of test','sniffing')
-title('Average correlation between observer and neutral (neutral observer)')
+title('Average correlation between observer and neutral ')
 set(gca,'FontSize',20)
+ylim([0,1])
 figure
 
 aa= categorical({'Habituation','Test','beginning of test'});
@@ -449,8 +451,9 @@ bar(aa(3),mean([corr.obs_stress_test_contact.third,corr.obs_stress_test_contact.
 
 
 legend('habituation','test','beginning of test','sniffing')
-title('Average correlation between observer and stressed (stressed observer)')
+title('Average correlation between observer and stressed (self-exp)')
 set(gca,'FontSize',20)
+ylim([0,1])
 figure
 
 aa= categorical({'Habituation','Test','beginning of test'});
@@ -466,8 +469,9 @@ bar(aa(3),mean([corr.obs_neut_test_contact.third,corr.obs_neut_test_contact.four
 
 
 legend('habituation','test','beginning of test')
-title('Average correlation between observer and neutral (stressed observer)')
+title('Average correlation between observer and neutral (self-exp)')
 set(gca,'FontSize',20)
+ylim([0,1])
 
 
 

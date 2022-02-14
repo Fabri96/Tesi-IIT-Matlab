@@ -16,6 +16,9 @@ my_pair;
 
 %% Compute distance between neurons and time interval
 L=compute_distance("C30", "C31",stress_roi_data);
+first = stress_test(:,28);
+second = stress_test(:,29);
+
 L=L*1e-6;
 tend = my_pair1{1}.interval(2)-my_pair1{1}.interval(1);
 

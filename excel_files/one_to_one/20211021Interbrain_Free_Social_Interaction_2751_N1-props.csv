@@ -1,0 +1,11 @@
+Name,Status,ColorR,ColorG,ColorB,CentroidX,CentroidY,NumComponents,Size,ActiveSegment0,ActiveSegment1,ActiveSegment2
+C0,accepted,244,44,82,51,57,1,9.84886,1,1,1
+C1,accepted,221,168,36,60,122,1,14.3178,1,1,1
+C2,accepted,0,188,165,144,92,1,13.0384,1,1,1
+C3,accepted,174,149,249,246,30,1,10.4403,1,1,1
+C4,accepted,249,67,158,301,202,1,8.94427,1,1,1
+C5,accepted,135,198,53,293,154,1,11.1803,1,1,1
+C6,accepted,156,173,255,25,207,1,9.05539,1,1,1
+C7,rejected,234,104,209,157,145,1,23.0868,1,1,1
+C8,rejected,249,237,50,171,104,1,17.4642,1,1,1
+C9,accepted,38,170,225,240,74,1,10.198,1,1,1
