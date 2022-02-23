@@ -1,6 +1,6 @@
 % Developed by Fabrizio Bernardi  
 
-% Plots of Pearson correlations and cross correlations between observer and
+% Plots of cross correlations between observer and
 
 % stressed and observer and neutral. The correlation is computed on the
 % 
@@ -10,19 +10,9 @@
 
 close all
 
-% dataset = 4; %select the dataset you are working on
 
-% obs_activity_hab = mice_activity(obs_hab);
-% 
-%  neutral_activity_hab = mice_activity(neutral_hab);
-% 
-%  stress_activity_hab = mice_activity(stress_hab);
-
+initial = 0; % Consider onl first part 
  
-% right = right(20:end);
-% 
-% left = left(7:end);
-% [ left, right ,intermediate] = detect_areas_test(ad_test_zone);
 
 
 
@@ -278,24 +268,25 @@ end
 % title('Pearson correlation between observer and stressed')
 
 
- [c,lags] = xcorr(obs_activity_test_stress,stress_activity_test2,'normalized');
-%   [c,lags] = xcorr(obs_activity_test_stress(1:round(length(obs_activity_test_stress)/5)),...
-%       stress_activity_test2(1:round(length(stress_activity_test2)/5)),'normalized');
+[c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,'normalized');
 
- [c2,lags2] = xcorr(obs_activity_hab_stress,stress_activity_hab2,'normalized');
+[c2,lags2] = xcov(obs_activity_hab_stress,stress_activity_hab2,'normalized');
 
-%   [c2,lags2] = xcorr(obs_activity_hab_stress(1:round(length(obs_activity_hab_stress)/5)),...
-%      stress_activity_hab2(1:round(length(obs_activity_hab_stress)/5)),'normalized');
+[c3,lags3] = xcov(obs_activity_test_neutral,neutral_activity_test2,'normalized');
 
-  [c3,lags3] = xcorr(obs_activity_test_neutral,neutral_activity_test2,'normalized');
+[c4,lags4] = xcov(obs_activity_hab_neutral,neutral_activity_hab2,'normalized');
 
-% [c3,lags3] = xcorr(obs_activity_test_neutral(1:round(length(obs_activity_test_neutral)/5)),...
-%      neutral_activity_test2(1:round(length(neutral_activity_test2)/5)),'normalized');
+if(initial==1)
 
-[c4,lags4] = xcorr(obs_activity_hab_neutral,neutral_activity_hab2,'normalized');
+    [c,lags] = xcov(obs_activity_test_stress(1:round(end/nn)),stress_activity_test2(1:round(end/nn)),'normalized');
 
-%  [c4,lags4] = xcorr(obs_activity_hab_neutral(1:round(length(obs_activity_hab_neutral)/5)),...
-%      neutral_activity_hab2(1:round(length(obs_activity_hab_neutral)/5)),'normalized');
+    [c2,lags2] = xcov(obs_activity_hab_stress(1:round(end/nn)),stress_activity_hab2(1:round(end/nn)),'normalized');
+
+    [c3,lags3] = xcov(obs_activity_test_neutral(1:round(end/nn2)),neutral_activity_test2(1:round(end/nn2)),'normalized');
+
+    [c4,lags4] = xcov(obs_activity_hab_neutral(1:round(end/nn2)),neutral_activity_hab2(1:round(end/nn2)),'normalized');
+
+end
 
 
  subplot(1,2,1)
@@ -303,9 +294,11 @@ end
 % rand_test2 = phaseRandomize(stress_activity_test2');
 % [c_r ,lags_r]=xcorr(rand_test1,rand_test2,'normalized');
 
- stem(lags,c,'b')
+%  stem(lags,c,'b')
+plot(lags,c,'b-o',MarkerSize=2)
  hold on
- stem(lags2,c2,'r')
+%  stem(lags2,c2,'r')
+plot(lags2,c2,'r-o',MarkerSize=2)
  legend('CC during test','CC during habituation')
 xlabel('lags')
 ylabel('cross-correlation')
@@ -316,9 +309,11 @@ set(gca,'FontSize',15)
 ylim([-0.3 1])
 subplot(1,2,2)
 
-stem(lags3,c3,'b')
+% stem(lags3,c3,'b')
+plot(lags3,c3,'b-o',MarkerSize=2)
 hold on
-stem(lags4,c4,'r')
+% stem(lags4,c4,'r')
+plot(lags4,c4,'r-o',MarkerSize=2)
 
 legend('CC during test','CC during habituation')
 xlabel('lags')

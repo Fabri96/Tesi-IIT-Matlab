@@ -45,7 +45,7 @@ end
 for i = 1:size(c_corr_matrix,1)
     for j = 1:size(c_corr_matrix,2)
         
-        [c,~] = xcorr(obs_test_stress(:,i+1),stress_test2(:,j+1),'normalized');
+        [c,~] = xcov(obs_test_stress(:,i+1),stress_test2(:,j+1),'normalized');
         c_corr_matrix(i,j) = max(abs(c));
         p_corr_matrix(i,j) = corr(obs_test_stress(:,i+1),stress_test2(:,j+1));
         
@@ -75,7 +75,7 @@ figure
 
 
 
-a = double(c_corr_matrix > 0.6);
+a = double(c_corr_matrix > 0.5);
 
 heatmap(a)
 

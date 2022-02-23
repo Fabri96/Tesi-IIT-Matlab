@@ -3,6 +3,7 @@
 % Plots of the correlation during sniffing
 
 
+initial = 0;
 
 if(dataset==1 || dataset ==3)
 
@@ -35,10 +36,17 @@ stress_activity_test2_sniff = interp1(stress_activity_test(:,1),stress_activity_
 neutral_activity_test2_sniff = interp1(neutral_activity_test(:,1),neutral_activity_test(:,2), s2);
 
 
+[c,lags] = xcov(obs_activity_test_stress_sniff,stress_activity_test2_sniff,'normalized');
+
+[c2,lags2] = xcov(obs_activity_test_neutral_sniff,neutral_activity_test2_sniff,'normalized');
+
+if(initial==1)
+    [c,lags] = xcov(obs_activity_test_stress_sniff(1:end/4),stress_activity_test2_sniff(1:end/4),'normalized');
+
+    [c2,lags2] = xcov(obs_activity_test_neutral_sniff(1:end/4),neutral_activity_test2_sniff(1:end/4),'normalized');
+end
 
 subplot(1,2,1)
-
-[c,lags] = xcorr(obs_activity_test_stress_sniff,stress_activity_test2_sniff,'normalized');
 
 
 stem(lags,c,'b')
@@ -50,10 +58,8 @@ ylim([-0.3 1])
 
 title('Cross-correlations between observer and stressed during sniffing')
 set(gca,'FontSize',11)
+
 subplot(1,2,2)
-
-[c2,lags2] = xcorr(obs_activity_test_neutral_sniff,neutral_activity_test2_sniff,'normalized');
-
 
 
 stem(lags2,c2,'b')

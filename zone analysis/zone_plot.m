@@ -6,7 +6,7 @@
 % 
 % Plot of observer's activity, different colors for each case
 
-function zone_plot(zone_adapted)
+function zone_plot(zone_adapted,dataset)
 
 left = [];
 
@@ -43,8 +43,14 @@ end
 % plot(left(:,1),zeros(size(left(:,1)))+2,'b.',right(:,1),zeros(size(right(:,1)))+2,...
 %     'r.',nostim(:,1),zeros(size(nostim(:,1)))+2,'g.')
 
+if(dataset==1 || dataset ==3)
 
 legend('near to neutral', 'near to stressed','intermediate zone')
+
+else
+
+    legend('near to stressed', 'near to neutral','intermediate zone')
+end
 
             
             

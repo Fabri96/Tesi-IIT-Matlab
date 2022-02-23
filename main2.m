@@ -33,7 +33,7 @@ load('test_zone2.mat')
 
 load('sniff2.mat')
 dataset=2;
-z_norm=0;
+z_norm=1;
 pairings = neutral_data_cage2(1:2,20:35);
 
 [neutral_data2] = neutral_fixing(neutral_data_cage2, neutral_data_habtest2,pairings);
@@ -49,13 +49,17 @@ pairings = neutral_data_cage2(1:2,20:35);
  t_adapting(stress_cage, stress_hab, stress_test, ...
     neutral_cage, neutral_hab, neutral_test, obs_cage, obs_hab, obs_test);
 
-%  neutral_test = neutral_test(:,[1:3 7:end]);
+  neutral_test = neutral_test(:,[1:3 7:end]);
 
 neutral_hab = neutral_hab(:,[1:3 7:end]);
 
 stress_test(:,[10 21])=[];
 
 obs_test(:,[6 11 16 10])=[];
+
+stress_hab(:,[10 21])=[];
+
+obs_hab(:,[6 11 16 10])=[];
 %% NEURON SELECTION OPTION
 %  obs_test(:,[5 13 ])=[];
 % neutral_test(:,[2:9 13])=[];
@@ -94,7 +98,7 @@ ad_test_zone = adapt_zone(test_zone2, obs_activity_test);
 
 ad_hab_zone = adapt_zone(hab_zone2, obs_activity_hab);
 
-zone_plot(ad_test_zone);
+zone_plot(ad_test_zone,dataset);
 
 xlabel('time')
 ylabel('Ca activity')

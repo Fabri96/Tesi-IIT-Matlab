@@ -1,3 +1,6 @@
+
+initial=0; % switch to consider only first part of times
+
 [c1,lags1]=xcorr(m1_activity_test(:,2),m2_activity_test(:,2),'normalized');
 % rand_test1 = phaseRandomize(m1_activity_test(:,2)');
 % rand_test2 = phaseRandomize(m2_activity_test(:,2)');
@@ -22,10 +25,25 @@
 % 
 % [c6,lags6]=xcorr(m1_post_far,m2_post_far,'normalized');
 
-[c5,lags5]=xcorr(m1_post_near,m2_post_near,'none');
+[c5,lags5]=xcov(m1_post_near,m2_post_near,'none');
 
-[c6,lags6]=xcorr(m1_post_far,m2_post_far,'none');
+[c6,lags6]=xcov(m1_post_far,m2_post_far,'none');
 
+
+if(initial==1)
+
+    [c1,lags1]=xcov(m1_activity_test(1:round(end/7),2),m2_activity_test(1:round(end/7),2),'normalized');
+
+
+    [c2,lags2]=xcov(m1_activity_pre(1:round(end/5),2),m2_activity_pre(1:round(end/5),2),'normalized');
+
+
+    [c3,lags3]=xcov(m1_activity_post(1:round(end/5),2),m2_activity_post(1:round(end/5),2),'normalized');
+
+
+    [c4,lags4]=xcov(m1_sniff,m2_sniff,'normalized');
+
+end
 figure
 subplot(2,2,1)
 stem(lags1,c1)

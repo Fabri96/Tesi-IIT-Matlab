@@ -29,11 +29,11 @@ obs_hab_stress{i} = interp1(obs_activity_hab(:,1),obs_activity_hab(:,2),...
 stress_hab2{i} = interp1(stress_activity_hab(:,1),stress_activity_hab(:,2), ...
     right2(1:round(i*length(right2)/num)));
 
-[c,lags] = xcorr(obs_test_stress{i},stress_test2{i},'normalized');
+[c,lags] = xcov(obs_test_stress{i},stress_test2{i},'normalized');
 
-[c2,lags] = xcorr(obs_test_neutr{i},neutr_test2{i},'normalized');
+[c2,lags] = xcov(obs_test_neutr{i},neutr_test2{i},'normalized');
 
-[c3,lags] = xcorr(obs_hab_stress{i},stress_hab2{i},'normalized');
+[c3,lags] = xcov(obs_hab_stress{i},stress_hab2{i},'normalized');
 
 res(i) = max(abs(c));
 
@@ -46,24 +46,24 @@ figure
 
 subplot(1,2,1)
 
-plot([1:1:num],res,'b-o','LineWidth',3)
+plot([1:1:num],res,'b--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 xlabel('Phases of the test')
 ylabel('cross correlation')
 title('Cross correlation evolution between observer and stressed during the test')
 
 subplot(1,2,2)
-plot([1:1:num],res2,'r-o','LineWidth',3)
+plot([1:1:num],res2,'r--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 xlabel('Phases of the test')
 ylabel('cross correlation')
 title('Cross correlation evolution between observer and neutral during the test')
 
 figure
 
-plot([1:1:num],res3,'r-o','LineWidth',3)
+plot([1:1:num],res3,'r--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 
 hold on
 
-plot([num+1:1:2*num],res,'b-o','LineWidth',3)
+plot([num+1:1:2*num],res,'b--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 
 xlim([0,7])
 
@@ -97,11 +97,11 @@ obs_hab_stress{i} = interp1(obs_activity_hab(:,1),obs_activity_hab(:,2),...
 stress_hab2{i} = interp1(stress_activity_hab(:,1),stress_activity_hab(:,2), ...
     left2(1:round(i*length(left2)/num)));
 
-[c,lags] = xcorr(obs_test_stress{i},stress_test2{i},'normalized');
+[c,lags] = xcov(obs_test_stress{i},stress_test2{i},'normalized');
 
-[c2,lags] = xcorr(obs_test_neutr{i},neutr_test2{i},'normalized');
+[c2,lags] = xcov(obs_test_neutr{i},neutr_test2{i},'normalized');
 
-[c3,lags] = xcorr(obs_hab_stress{i},stress_hab2{i},'normalized');
+[c3,lags] = xcov(obs_hab_stress{i},stress_hab2{i},'normalized');
 
 res(i) = max(abs(c));
 
@@ -112,25 +112,25 @@ end
 
 figure
 subplot(1,2,1)
-plot([1:1:num],res,'b-o','LineWidth',3)
+plot([1:1:num],res,'b--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 xlabel('Phases of the test')
 ylabel('cross correlation')
 title('Cross correlation evolution between observer and stressed during the test')
 
 subplot(1,2,2)
 
-plot([1:1:num],res2,'r-o','LineWidth',3)
+plot([1:1:num],res2,'r--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 xlabel('Phases of the test')
 ylabel('cross correlation')
 title('Cross correlation evolution between observer and neutral during the test')
 
 figure
 
-plot([1:1:num],res3,'r-o','LineWidth',3)
+plot([1:1:num],res3,'r--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 
 hold on
 
-plot([num+1:1:2*num],res,'b-o','LineWidth',3)
+plot([num+1:1:2*num],res,'b--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 
 xlim([0,7])
 
@@ -161,11 +161,11 @@ obs_hab_stress{i} = interp1(obs_activity_hab(:,1),obs_activity_hab(:,2),...
 stress_hab2{i} = interp1(stress_activity_hab(:,1),stress_activity_hab(:,2), ...
     left2(1:round(i*length(left2)/num)));
 
-[c,lags] = xcorr(obs_test_stress{i},stress_test2{i},'normalized');
+[c,lags] = xcov(obs_test_stress{i},stress_test2{i},'normalized');
 
-[c2,lags] = xcorr(obs_test_neutr{i},neutr_test2{i},'normalized');
+[c2,lags] = xcov(obs_test_neutr{i},neutr_test2{i},'normalized');
 
-[c3,lags] = xcorr(obs_hab_stress{i},stress_hab2{i},'normalized');
+[c3,lags] = xcov(obs_hab_stress{i},stress_hab2{i},'normalized');
 
 res(i) = max(abs(c));
 
@@ -177,25 +177,25 @@ end
 figure
 subplot(1,2,1)
 
-plot([1:1:num],res,'b-o','LineWidth',3)
+plot([1:1:num],res,'b--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 xlabel('Phases of the test')
 ylabel('cross correlation')
 title('Cross correlation evolution between observer and stressed during the test')
 
 subplot(1,2,2)
 
-plot([1:1:num],res2,'r-o','LineWidth',3)
+plot([1:1:num],res2,'r--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 xlabel('Phases of the test')
 ylabel('cross correlation')
 title('Cross correlation evolution between observer and neutral during the test')
 
 figure
 
-plot([1:1:num],res3,'r-o','LineWidth',3)
+plot([1:1:num],res3,'r--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 
 hold on
 
-plot([num+1:1:2*num],res,'b-o','LineWidth',3)
+plot([num+1:1:2*num],res,'b--o','LineWidth',3,LineWidth=2,MarkerSize=15)
 
 xlim([0,7])
 

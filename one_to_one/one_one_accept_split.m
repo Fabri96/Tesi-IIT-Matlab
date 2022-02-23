@@ -34,7 +34,7 @@ m2_test=double(m2_test);
 
 m2_post=mouse2(30028:end,1:15);
 m2_post=double(m2_post);
-m2_post(1,:)=[];
+m2_post(1,:)=[]; % looking at data
 
 end
 

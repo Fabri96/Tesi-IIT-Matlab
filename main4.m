@@ -29,6 +29,7 @@ load('sniff.mat')
 
 %%% Read data, exclude rejected neurons and split 
 dataset=4;
+z_norm=1;
 
 
 [stress, stress_cage, stress_hab, stress_test, ...
@@ -62,11 +63,27 @@ neutral_test(:,4)=[];
 
 obs_test(:,[6 7])=[];
 
+stress_hab(:,[9 39])=[];
+
+neutral_hab(:,4)=[];
+
+obs_hab(:,[6 7])=[];
+
 %% NEURON SELECTION OPTION
 %  obs_test(:,[5 9 11])=[];
 % neutral_test(:,[8 10])=[];
 % stress_test(:,[3 5 6 8 11 14:16 20 21 24 25 27 29 35:38 40 42 44:48 50])=[];
 %%%
+%% Z NORMALIZATION
+if(z_norm ==1)
+obs_test = z_score_normalization(obs_test);
+stress_test = z_score_normalization(stress_test);
+neutral_test = z_score_normalization(neutral_test);
+
+obs_hab = z_score_normalization(obs_hab);
+stress_hab = z_score_normalization(stress_hab);
+neutral_hab = z_score_normalization(neutral_hab);
+end
 
 obs_activity_test = mice_activity(obs_test);
 
@@ -110,11 +127,11 @@ ad_test_zone = adapt_zone(test_zone, obs_activity_test);
 ad_hab_zone = adapt_zone(hab_zone, obs_activity_hab);
 
 
-% zone_plot(ad_test_zone);
-% 
-% xlabel('time')
-% ylabel('Ca activity')
-% title('Observer activity during test')
+zone_plot(ad_test_zone,dataset);
+
+xlabel('time')
+ylabel('Ca activity')
+title('Observer activity during test')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

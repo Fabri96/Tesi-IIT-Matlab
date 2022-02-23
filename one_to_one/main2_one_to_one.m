@@ -7,7 +7,7 @@
 
 clear all
 % addpath('C:\Users\Fabrizio\Desktop\data_analysis_MATLAB\')
-% addpath('SAVED DATA\ONE_ONE_SECOND\');
+addpath('SAVED DATA\ONE_ONE_SECOND\');
 
 
 load('mouse318.mat')
@@ -24,6 +24,8 @@ load('interaction.mat')
 d=2; % SECOND DATASET
 
 z=1; % z-score norm
+
+%% ATTENZIONE MANCA PRE-TEST DEL TOPO 318
 
 %% SPLIT DATA
 

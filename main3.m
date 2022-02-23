@@ -55,8 +55,11 @@ z_norm=1;
 
 %%% compute mean activity on mice
 obs_test(:,12)=[];
+obs_hab(:,12)=[];
 neutral_test(:,[5 11])=[];
 stress_test(:,34)=[];
+neutral_hab(:,[5 11])=[];
+stress_hab(:,34)=[];
 
 %% NEURON SELECTION OPTION
 %  obs_test(:,[2 3 8 11:14])=[];
@@ -73,6 +76,8 @@ obs_hab = z_score_normalization(obs_hab);
 stress_hab = z_score_normalization(stress_hab);
 neutral_hab = z_score_normalization(neutral_hab);
 end
+
+
 obs_activity_test = mice_activity(obs_test);
 
 neutral_activity_test = mice_activity(neutral_test);
@@ -115,7 +120,7 @@ ad_test_zone = adapt_zone(test_zone, obs_activity_test);
  ad_hab_zone = adapt_zone(hab_zone, obs_activity_hab);
 
 
-zone_plot(ad_test_zone);
+zone_plot(ad_test_zone,dataset);
 
 xlabel('time')
 ylabel('Ca activity')

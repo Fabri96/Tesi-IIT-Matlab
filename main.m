@@ -34,7 +34,7 @@ load('test_zone.mat')
 load('sniff.mat')
 
 mm_norm = 0; % 1 for using min-max normalization
-z_norm =0;
+z_norm =1;
 dataset=1;
 selection=0; % 1 for neuron selection option
 
@@ -154,7 +154,7 @@ ad_test_zone = adapt_zone(test_zone, obs_activity_test);
 ad_hab_zone = adapt_zone(hab_zone, obs_activity_hab);
 
 
-zone_plot(ad_test_zone);
+zone_plot(ad_test_zone,dataset);
 
 xlabel('time')
 ylabel('Ca activity')
