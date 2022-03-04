@@ -2,7 +2,7 @@
 
 % Plots of the correlation during sniffing
 
-
+lag_selection=0;
 initial = 0;
 
 if(dataset==1 || dataset ==3)
@@ -35,21 +35,28 @@ stress_activity_test2_sniff = interp1(stress_activity_test(:,1),stress_activity_
 
 neutral_activity_test2_sniff = interp1(neutral_activity_test(:,1),neutral_activity_test(:,2), s2);
 
+if(lag_selection==1)
+[c,lags] = xcov(obs_activity_test_stress_sniff,stress_activity_test2_sniff,maxlag,'normalized');
 
-[c,lags] = xcov(obs_activity_test_stress_sniff,stress_activity_test2_sniff,'normalized');
+[c2,lags2] = xcov(obs_activity_test_neutral_sniff,neutral_activity_test2_sniff,maxlag,'normalized');
+
+else
+
+    [c,lags] = xcov(obs_activity_test_stress_sniff,stress_activity_test2_sniff,'normalized');
 
 [c2,lags2] = xcov(obs_activity_test_neutral_sniff,neutral_activity_test2_sniff,'normalized');
 
+end
 if(initial==1)
-    [c,lags] = xcov(obs_activity_test_stress_sniff(1:end/4),stress_activity_test2_sniff(1:end/4),'normalized');
+    [c,lags] = xcov(obs_activity_test_stress_sniff(1:end/4),stress_activity_test2_sniff(1:end/4),maxlag,'normalized');
 
-    [c2,lags2] = xcov(obs_activity_test_neutral_sniff(1:end/4),neutral_activity_test2_sniff(1:end/4),'normalized');
+    [c2,lags2] = xcov(obs_activity_test_neutral_sniff(1:end/4),neutral_activity_test2_sniff(1:end/4),maxlag,'normalized');
 end
 
 subplot(1,2,1)
 
 
-stem(lags,c,'b')
+plot(lags,c,'b-o',MarkerSize=2)
 
 legend('CC during test')
 xlabel('lags')
@@ -62,7 +69,7 @@ set(gca,'FontSize',11)
 subplot(1,2,2)
 
 
-stem(lags2,c2,'b')
+plot(lags2,c2,'b-o',MarkerSize=2)
 
 legend('CC during test')
 xlabel('lags')

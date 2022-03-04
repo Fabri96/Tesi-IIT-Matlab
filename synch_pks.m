@@ -10,4 +10,4 @@ for i=1:length(loc1)
     end
 end
 
-number_pks=number_pks/length(loc1);
+number_pks=number_pks/(length(loc1)*length(loc1));

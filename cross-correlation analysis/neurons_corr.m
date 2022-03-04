@@ -21,11 +21,13 @@ c_corr_matrix = zeros(size(data1,2)-1,size(data2,2)-1);
 
 p_corr_matrix = zeros(size(data1,2)-1,size(data2,2)-1);
 
-
+maxlag=40;
 
 obs_test_stress(:,1) = times;
 
 stress_test2(:,1) = times;
+
+
 
 for j = 2:size(data1,2)
 
@@ -45,7 +47,7 @@ end
 for i = 1:size(c_corr_matrix,1)
     for j = 1:size(c_corr_matrix,2)
         
-        [c,~] = xcov(obs_test_stress(:,i+1),stress_test2(:,j+1),'normalized');
+        [c,~] = xcov(obs_test_stress(:,i+1),stress_test2(:,j+1),maxlag,'normalized');
         c_corr_matrix(i,j) = max(abs(c));
         p_corr_matrix(i,j) = corr(obs_test_stress(:,i+1),stress_test2(:,j+1));
         

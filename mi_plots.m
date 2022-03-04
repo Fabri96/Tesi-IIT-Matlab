@@ -1,4 +1,4 @@
-k=10;
+k=50;
 % 
 % [~,lengths]= segment_id(left);
 % n2 = compute_num_seg(120,lengths) -1;
@@ -6,13 +6,13 @@ k=10;
 % [~,lengths]= segment_id(right);
 % n = compute_num_seg(120,lengths)-1;
 
-x = obs_activity_test_stress(1:end/3);
+x = obs_activity_test_stress;
 
-y = stress_activity_test2(1:end/3);
+y = stress_activity_test2;
 
-x2 = obs_activity_hab_stress(1:end/3);
+x2 = obs_activity_hab_stress;
 
-y2 = stress_activity_hab2(1:end/3);
+y2 = stress_activity_hab2;
 
 % x = obs_activity_test_stress(1:sum(lengths(1:n)));
 % 
@@ -22,13 +22,13 @@ y2 = stress_activity_hab2(1:end/3);
 % 
 % y2 = stress_activity_hab2(1:sum(lengths(1:n)));
 
-x3 = obs_activity_test_neutral(1:end/3);
+x3 = obs_activity_test_neutral;
 
-y3 = neutral_activity_test2(1:end/3);
+y3 = neutral_activity_test2;
 
-x4 = obs_activity_hab_neutral(1:end/3);
+x4 = obs_activity_hab_neutral;
 
-y4 = neutral_activity_hab2(1:end/3);
+y4 = neutral_activity_hab2;
 
 % x3 = obs_activity_test_neutral(1:sum(lengths(1:n2)));
 % 

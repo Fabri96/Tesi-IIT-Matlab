@@ -29,6 +29,8 @@ load('sniff.mat')
 
 dataset=3;
 z_norm=1;
+mm_norm = 0;
+fs=0.125;
 %%% Read data, exclude rejected neurons and split 
 
 
@@ -77,6 +79,19 @@ stress_hab = z_score_normalization(stress_hab);
 neutral_hab = z_score_normalization(neutral_hab);
 end
 
+%% MIN-MAX NORMALIZATION
+
+if(mm_norm == 1)
+    
+obs_test = min_max_normalization(obs_test);
+stress_test = min_max_normalization(stress_test);
+neutral_test = min_max_normalization(neutral_test);
+
+
+obs_hab = min_max_normalization(obs_hab);
+stress_hab = min_max_normalization(stress_hab);
+neutral_hab = min_max_normalization(neutral_hab);
+end
 
 obs_activity_test = mice_activity(obs_test);
 

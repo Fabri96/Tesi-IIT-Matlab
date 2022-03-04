@@ -38,10 +38,10 @@ addpath(genpath('Granger\'))
 % s2=smooth(stress_activity_hab2);
 % 
 % X=[s1' ;s2'];
+% 
+%    X=[obs_activity_test_neutral' ;neutral_activity_test2'];
 
-   X=[obs_activity_test_neutral' ;neutral_activity_test2'];
-
-% X=[obs_activity_test_stress' ;stress_activity_test2'];
+  X=[obs_activity_test_stress' ;stress_activity_test2'];
 
 %     X=[obs_activity_hab_stress' ;stress_activity_hab2'];
 

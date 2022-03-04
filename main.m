@@ -34,12 +34,12 @@ load('test_zone.mat')
 load('sniff.mat')
 
 mm_norm = 0; % 1 for using min-max normalization
-z_norm =1;
+z_norm =0;
 dataset=1;
 selection=0; % 1 for neuron selection option
 
 %% Read data, exclude rejected neurons and split 
-
+fs=0.125; % sampling in zone file
 
 [stress, stress_cage, stress_hab, stress_test, ...
     neutral, neutral_cage, neutral_hab, neutral_test,...
@@ -72,9 +72,7 @@ end
 %% MIN-MAX NORMALIZATION
 
 if(mm_norm == 1)
-    for j=2:size(stress_test,2)
-        stress_test(:,j)= stress_test(:,j) - mean(stress_test(:,j));
-    end
+    
 obs_test = min_max_normalization(obs_test);
 stress_test = min_max_normalization(stress_test);
 neutral_test = min_max_normalization(neutral_test);

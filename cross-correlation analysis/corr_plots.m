@@ -12,9 +12,11 @@ close all
 
 
 initial = 0; % Consider onl first part 
- 
+lag_selection =0;
 
-
+ maxlag= 4/fs;
+nn=4;
+nn2=4;
 
 if(dataset == 1 || dataset == 3)
 
@@ -267,15 +269,24 @@ end
 % ylabel('Pearson correlation')
 % title('Pearson correlation between observer and stressed')
 
+if(lag_selection ==1)
+[c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,maxlag,'coeff');
 
-[c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,'normalized');
+[c2,lags2] = xcov(obs_activity_hab_stress,stress_activity_hab2,maxlag,'coeff');
 
-[c2,lags2] = xcov(obs_activity_hab_stress,stress_activity_hab2,'normalized');
+[c3,lags3] = xcov(obs_activity_test_neutral,neutral_activity_test2,maxlag,'normalized');
+
+[c4,lags4] = xcov(obs_activity_hab_neutral,neutral_activity_hab2,maxlag,'normalized');
+
+else
+    [c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,'coeff');
+
+[c2,lags2] = xcov(obs_activity_hab_stress,stress_activity_hab2,'coeff');
 
 [c3,lags3] = xcov(obs_activity_test_neutral,neutral_activity_test2,'normalized');
 
 [c4,lags4] = xcov(obs_activity_hab_neutral,neutral_activity_hab2,'normalized');
-
+end
 if(initial==1)
 
     [c,lags] = xcov(obs_activity_test_stress(1:round(end/nn)),stress_activity_test2(1:round(end/nn)),'normalized');

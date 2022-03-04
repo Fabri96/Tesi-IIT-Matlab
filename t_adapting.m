@@ -15,6 +15,7 @@ function [stress_cage, stress_hab, stress_test, ...
 
 %cage data
 
+neutral_cage(end,:) = [];
 cage_min = min([stress_cage(end,1),neutral_cage(end,1),obs_cage(end,1)]); 
 
 k_stress_cage = find(stress_cage(:,1)< cage_min);

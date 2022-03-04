@@ -36,60 +36,6 @@ neutral_ROI = neutral_ROI2;
 neutral_ROI(3,:)=[];
 
 
-% v = neutral_ROI(1,:);
-% neutral_ROI(1,:) = neutral_ROI(5,:);
-% neutral_ROI(5,:) = v;
-% 
-% v = neutral_ROI(2,:);
-% neutral_ROI(2,:) = neutral_ROI(8,:);
-% neutral_ROI(8,:) = v;
-% 
-% v = neutral_ROI(3,:);
-% neutral_ROI(3,:) = neutral_ROI(11,:);
-% neutral_ROI(11,:) = v;
-% 
-% v = neutral_ROI(4,:);
-% neutral_ROI(4,:) = neutral_ROI( 6,:);
-% neutral_ROI(6,:) = v;
-% 
-% v = neutral_ROI(5,:);
-% neutral_ROI(5,:) = neutral_ROI( 7,:);
-% neutral_ROI(7,:) = v;
-% 
-% v = neutral_ROI(6,:);
-% neutral_ROI(6,:) = neutral_ROI(14,:);
-% neutral_ROI(14,:) = v;
-% 
-% v = neutral_ROI(7,:);
-% neutral_ROI(7,:) = neutral_ROI(2,:);
-% neutral_ROI(2,:) = v;
-% 
-% v = neutral_ROI(8,:);
-% neutral_ROI(8,:) = neutral_ROI(1,: );
-% neutral_ROI(1,:) = v;
-% 
-% 
-% v = neutral_ROI(9,:);
-% neutral_ROI(9,:) = neutral_ROI(10,:);
-% neutral_ROI(10,:) = v;
-% 
-% v = neutral_ROI(10,:);
-% neutral_ROI(10,:) = neutral_ROI(13,:);
-% neutral_ROI(13,:) = v;
-% 
-% v = neutral_ROI(11,:);
-% neutral_ROI(11,:) = neutral_ROI(4,:);
-% neutral_ROI(4,:) = v;
-% 
-% v = neutral_ROI(12,:);
-% neutral_ROI(12,:) = neutral_ROI(9,:);
-% neutral_ROI(9,:) = v;
-% 
-% v = neutral_ROI(13,:);
-% neutral_ROI(13,:) = neutral_ROI(12,:);
-% neutral_ROI(12,:) = v;
-
-
 end
 
 if (dataset == 3)
@@ -123,13 +69,37 @@ obs_ROI = obs_ROI4;
 neutral_ROI = neutral_ROI4;
 
 end
+stress_roi = stress_ROI;
+k = find(stress_ROI(:,2) == "rejected");
+stress_roi(k,:) = [];
+ 
+if(dataset==2)
+    stress_roi([10 21],:)=[];
+end
 
+if(dataset==3)
+    stress_roi(33,:)=[];
+end
+
+if(dataset==4)
+    stress_roi([8 38],:)=[];
+end
 % stressed mouse data
 
 stress_roi = stress_ROI;
 k = find(stress_ROI(:,2) == "rejected");
 stress_roi(k,:) = [];
+if(dataset==2)
+    stress_roi([10 21],:)=[];
+end
 
+if(dataset==3)
+    stress_roi(33,:)=[];
+end
+
+if(dataset==4)
+    stress_roi([8 38],:)=[];
+end
 stress_roi_data_hab = [];
  m_detector_stress_hab = mad_detector(stress_hab);
 
@@ -153,7 +123,21 @@ clear stress_roi
 obs_roi = obs_ROI;
 k = find(obs_ROI(:,2) == "rejected");
 obs_roi(k,:) = [];
+if(dataset==1)
+    obs_roi([1 2 7 end],:)=[];
+end
 
+if(dataset==2)
+    obs_roi([6 11 16 10],:)=[];
+end
+
+if(dataset==3)
+    obs_roi(11,:)=[];
+end
+
+if(dataset==4)
+    obs_roi([5 6],:)=[];
+end
 obs_roi_data_hab = [];
 
  m_detector_obs_hab = mad_detector(obs_hab);
@@ -179,7 +163,18 @@ clear obs_roi
 neutral_roi = neutral_ROI;
 k = find(neutral_ROI(:,2) == "rejected");
 neutral_roi(k,:) = [];
+if(dataset==1)
+    neutral_roi([4 9],:)=[];
+end
 
+
+if(dataset==3)
+    neutral_roi([4 9],:)=[];
+end
+
+if(dataset==4)
+    neutral_roi(3,:)=[];
+end
 neutral_roi_data = [];
 
  m_detector_neutral_hab = mad_detector(neutral_hab);

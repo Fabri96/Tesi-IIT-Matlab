@@ -38,6 +38,23 @@ if(dataset ==1 || dataset ==3)
 anov_stress = anova1([aa(:) aa2(:)]);
 anov_neut = anova1([aa1(:) aa3(:)]);
 
+stress_sniff = find(sniff(:,5)==1);
+neutral_sniff = find(sniff(:,6)==1);
+s = sniff(stress_sniff,1);
+
+s2 = sniff(neutral_sniff,1);
+
+[sss,s]=neurons_corr(obs_test,stress_test,s,"stressed_sniff","test");
+
+[sss1,ss1]=neurons_corr(obs_test,neutral_test,s2,"neutral_sniff","test");
+
+avg_sniff_stress = mean (sss(:));
+
+avg_sniff_neut = mean (sss1(:));
+
+anov_sniff_stress = anova1([aa(:) sss(:)]);
+anov_sniff_neut = anova1([aa1(:) sss1(:)]);
+
 end
 
 if(dataset == 2)
@@ -71,6 +88,24 @@ if(dataset == 2)
 
 anov_stress = anova1([aa(:) aa3(:)]);
 anov_neut = anova1([aa1(:) aa2(:)]);
+
+stress_sniff = find(sniff(:,6)==1);
+
+neutral_sniff = find(sniff(:,5)==1);
+s = sniff(stress_sniff,1);
+
+s2 = sniff(neutral_sniff,1);
+
+[sss,s]=neurons_corr(obs_test,stress_test,s,"stressed_sniff","test");
+
+[sss1,ss1]=neurons_corr(obs_test,neutral_test,s2,"neutral_sniff","test");
+
+avg_sniff_stress = mean (sss(:));
+
+avg_sniff_neut = mean (sss1(:));
+
+anov_sniff_stress = anova1([aa(:) sss(:)]);
+anov_sniff_neut = anova1([aa1(:) sss1(:)]);
 
 end
 
@@ -107,10 +142,27 @@ if(dataset == 4)
 anov_stress = anova1([aa(:) aa3(:)]);
 anov_neut = anova1([aa1(:) aa2(:)]);
 
+stress_sniff = find(sniff(:,6)==1);
+
+neutral_sniff = find(sniff(:,5)==1);
+s = sniff(stress_sniff,1);
+
+s2 = sniff(neutral_sniff,1);
+
+[sss,s]=neurons_corr(obs_test,stress_test,s,"stressed_sniff","test");
+
+[sss1,ss1]=neurons_corr(obs_test,neutral_test,s2,"neutral_sniff","test");
+
+avg_sniff_stress = mean (sss(:));
+
+avg_sniff_neut = mean (sss1(:));
+anov_sniff_stress = anova1([aa(:) sss(:)]);
+anov_sniff_neut = anova1([aa1(:) sss1(:)]);
+
 end
-
+close all
 aaa= categorical({'Habituation','Test'});
-
+aaas= categorical({'Test','Sniff'});
 figure
 
 plot(aaa, [avg_neut_hab avg_neut_test],'b--o',LineWidth=2,MarkerSize=15)
@@ -119,7 +171,11 @@ hold on
 
 plot(aaa, [avg_stress_hab avg_stress_test],'r--o',LineWidth=2,MarkerSize=15)
 
-legend('obs vs neutral', 'obs vs stress')
+plot(aaas, [avg_stress_test avg_sniff_stress],'k--o',LineWidth=2,MarkerSize=15)
+
+plot(aaas, [avg_neut_test avg_sniff_neut],'g--o',LineWidth=2,MarkerSize=15)
+
+legend('obs vs neutral', 'obs vs stress','sniff vs stress', 'sniff vs neut')
 
 title('Average cc between neuronal pairs')
 
@@ -128,3 +184,5 @@ set(gca,'FontSize',20)
 
 anov_stress 
 anov_neut
+anov_sniff_stress 
+anov_sniff_neut 

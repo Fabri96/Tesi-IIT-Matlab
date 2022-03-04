@@ -70,7 +70,23 @@ aa= categorical({'Habituation','Test'});
 figure
 plot(aa,[m1 m2],'r--o',LineWidth=2,MarkerSize=15)
 
-title('Average peak synch between neurons')
+title('Average peak synch between neurons in obs vs stress')
 
 figure
+
+p3=pks_mat_obs_neutral_hab(:);
+p3=p3(p3~=0);
+p4=pks_mat_obs_neutral(:);
+p4=p4(p4~=0);
+
+m3=mean(p3);
+
+m4=mean(p4);
+
+aa= categorical({'Habituation','Test'});
+
+figure
+plot(aa,[m3 m4],'r--o',LineWidth=2,MarkerSize=15)
+
+title('Average peak synch between neurons in obs vs neutral')
 
