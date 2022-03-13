@@ -44,7 +44,7 @@
 %\protect\\ 
 
 \newcommand{\myName}{Fabrizio Bernardi}
-\newcommand{\myTitle}{Modeling and data analysis of the calcium activity in somatostatin interneurons from in vivo imaging on mice }
+\newcommand{\myTitle}{Data analysis and modeling of calcium activity in   mice somatostatin neurons}
 \newcommand{\myDegree}{Programme: \protect\\ \textit{Mathematical Engineering}}
 \newcommand{\myCycle}{XXXI cycle}
 \newcommand{\myDepartment}{Department of Mathematics}
@@ -107,8 +107,9 @@
 			\vspace{0.5cm}
 			
 			\large
-			Co-supervisor:\\[0.125cm]
-			{\Large Dr. Francesco Papaleo}
+			Co-supervisors:\\[0.125cm]
+			{\Large Dr. Francesco Papaleo \\
+			Dr. Greta Chiaravalli}
 			
 			\vspace{2cm}
 			
@@ -816,20 +817,20 @@ To summarize, the typical workflow for G-causality estimation, consists in the f
 \newpage
 \section{Interbrain data analysis: emotion discrimination task}
 
-In this second chapter, the main results on the data analysis are presented.
+In this second chapter, the main results on the data analysis on the emotion discrimination task are presented. After describing the phases of the task and trying to understand whcih an be an appropriate way  to represent the data, through normalizations, first results on the neural activity of mice in relation to their behaviour are presented. Then, the focus goes on the main part of the analysis: the interbrain synchrony between such activities. The different concepts of synchrony introduced in Chapter 2 habe been investigated, such as the study of causality between signal via Granger prediction. 
 
 
 \subsection{Emotion discrimination task}
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=.90]{arena.png} 
+		\includegraphics[scale=.90]{emotion_discrimination.png} 
 	\end{center} 
-	\caption{\textit{Open arena of the test, along with positions of demonstrators and movement's trajectories of the observer}}
+	\caption{\textit{Scheme of the emotion discrimination task}}
 	
 \end{figure}
 
-The first task which has been analyzed is the \textit{emotion discrimination task} described in chapter 1. Here, an observer mouse faces two demonstrators in an open arena. One demonstrator is in a \textit{neutral} state, the other in a \textit{stressed} state. In particular, all three mice are subjected to the following protocol:
+The \textit{emotion discrimination task} consists of an observer mouse facing two demonstrators in an open arena. One demonstrator is in a \textit{neutral} state, the other in a \textit{stressed} state, i.e. it has been subjected to a \textit{stress protocol} (forced restrainment) before the test. The task consists of three main parts:
 
 \begin{enumerate}
 	
@@ -839,16 +840,185 @@ The first task which has been analyzed is the \textit{emotion discrimination tas
 	\item \textbf{Habituation}: the observer mouse is free to move in an empty open arena; in the meantime the neutral demonstrator is kept in the cage, while the stressed demonstrator is being subjected to the stressing procedure \\
 	$\longrightarrow$  \textit{Duration}: 15 minutes
 	
-	\item \textbf{Test}: the demonstrators join the observer in the arena and the test phase can begin \\
+	\item \textbf{Test}: the demonstrators join the observer in the arena. Only the observer is free to move, since the two demonstrators are kept behind a cage allowing sight, sniffing but no passage \\
 	$\longrightarrow$  \textit{Duration}: 15 minutes
 \end{enumerate}
 
-During all the three phases, neural recording are performing thorugh in vivo endoscopic calcium imaging as described in (1.3). Moreover, the position of the observer mouse along time is recorded as well. Finally, TTL signals of the reciprocal \textit{sniffing} between one observer and a demonstrators have been measured as well.\\
-The goals of the data analysis work on this experiment are severals and will cover the next sections:
+During all the three phases, the neural activities of the three mice are recorded via microendoscopic calcium imaging as described in Section 1.3, in which the target are \textit{somatostating-expressing} interneurons in the anterior cingulate cortex (Section 1.1). Moreover, the position of the observer mouse along time is recorded during habituation and test phases, such as TTL signals (binary recording of events) of the reciprocal sniffing between one observer and a demonstrators have been measured during the test. Finally, spatial data of the neurons in the \textit{region of interest (ROI)} captured by the miniscope, are present as well, such as their position and size.\\
+These type of data can lead to several analyses:
 \begin{itemize}
-	\item To compute the activities of the three mice (average or from single neurons) and look for differences in their values between the different phases of the experiment. Is it possible to explain the results based on the simultaneous protocol in action?
+	
+	\item Inspecting if there are correlations between the neural activity levels of one mouse and what is happening during the task, such as the stressing procedure or the proximity of two mice
+	
+	\item Testing the presence of \textit{activity synchronization}, as described in Section 2.1-2.4, between the neural signals of two mice, in relation to what is happening in the test (proximity of two subjects, sniffing...)
+	
+	\item Investigating whether the activity in one mice is \textit{predicting} the activity in another, for example via a Granger causality analysis introduced in Section 2.5
+	
+	\item Wondering wether the neuronal firing in single mice seems to follow \textit{patterns}, or if it is possible to predict mathematically such chain of events (problem dealt in Chapter 7)
+\end{itemize}
+
+
+The analyses have been conducted on 3 different datasets, meaning that 3 triplets of mice tested with the same procedure. Moreover two more experiments have been performed in the so called \textbf{self-experience} setting, in which, before the test, also the observer is subjected to a stress protocol.\\
+It is worth to stress the fact that the phases of homecage and habituation play the role of a \textit{control} in the data analysis: given a quantity measured from the data of calcium concentrations, we can assume that a result is significant, and thus related to the interactions between mice, if it is present in the test phase but not in the control phases of homecage and habituation, in which the mice cannot interact and are located in different places.
+
+\subsection{Normalizing the dataset}
+
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\hspace*{-2.1cm}
+		\includegraphics[scale=.45]{normalizations.png} 
+	\end{center} 
+	\caption{\textit{Left: min-max normalization, with signal in $[0,1]$. Right: z-score normalization, with no constrain on the scale. }}
+	
+\end{figure}
+The main objects of the analysis are the calcium tracks recorded in every single neurons, expressed in terms of relative fluorescence $\frac{\Delta F}{F}$. Such signals will be subjected to operations (such as mean) and comparisons, both between neurons of a single mouse, and between activities of different mice. It necesessarely follows that it is fundamental to determine a priori a \textit{normalization} of the data which can allow such processes. The literature proposes several ways to threat data, for example: (see Figure):
+
+\begin{enumerate}
+	
+	\item \textbf{Raw approach}. The raw data, coming from the Inscopix pre-processing described in Section 1.4, are usually not ready to be analyzed yet. Although normalizations on the videos, filtering, nose detection process have been already performed, the single information of a fluorescence value $\frac{\Delta F}{F}$ needs to be threated carefully. Every single neuron is characterized by a baseline activity, alternated with rapid and huge calcium spikes. Such baseline value, even if biiologically represents in any case a non active neuron, can have difference values across neurons. Moreover, the value reached by every spike can be quite different across different neurons, but this not necessarely reflects the same difference in what is really happening in the neuron: a spike can be less marked for the simple fact that less GCaMP protein was present at that moment, and consequently the spiking of that neuron happened at a smaller scale, preserving however its shape. 
+	
+	\item \textbf{min-max normalization}. With the min-max normalization, every value $x_t$ of the signal $ x = \left\{ x_t\right\}_{t=1}^N$ at time $t$ is normalized through
+	
+	\begin{equation}
+	x_t^{mm} = \frac{x_t -  \min(x)}{\max(x) - \min(x)}
+	\end{equation}
+	
+	With the min-max normalization, all the signals are bounded in the iterval $[0,1]$, in which the limit values are assumed by the highest and lowest values, respectively. Therefore, using this normalization, all the signals are threated in the same way, since they are all uniformed in the same interval, whatever it was their original value.
+	
+	\item \textbf{z-score normalization}. For a value  $x_t$ of the signal $ x = \left\{ x_t\right\}_{t=1}^N$, the z-score normalization reads
+	
+	\begin{equation}
+	x_t^{z} = \frac{x_t -  \mu}{\sigma}
+	\end{equation}
+	
+	where $\mu$ and $\sigma$ are the mean and standard deviation of the signal, respecitively. The goal of this normalization is to bring every signal at mean $0$ and standard deviation $1$, making them more comparable without directly putting constrains on their values, as it was in the case of the min-max normalization
+	
+	
+\end{enumerate}
+
+
+All the different normalization does not modify the shape, but they modify the \textit{scale} of the values. As for this work, the choice went on a normalization \textbf{z-score on baseline}, in which signals are aligned and then divided by their dìstandard deviations such as in the z-score case, but the alignment is not performed on their mean. The reason for this is that two signals of this type may have the same mean, but different baseline activities. Therefore, the alignment is done on such baselines, which are set to $0$ for every neuron.
+
+
+
+\subsection{Behavioural analyses of the task}
+
+
+\begin{figure}[H]
+	
+	%\begin{center}
+	\centering
+	
+	\hspace*{-1.4 cm}
+	\includegraphics[scale=.42]{times.png} 
+	%\end{center} 
+	\caption{\textit{Average time spent by the observer near the demonstrator cages, or in the intermediate area. Left: results during the test. Right: results during the habituation. }}
+	
+\end{figure}
+
+In the work of [Scheggia-Managò], the same neuronal population, namely the somatostin interneurons, had been observed during a task following a similar protocol of the current emotion discrimination task. In that case, however, the area of interest was the medial prefrontal cortex, and the main focus on the activity was in electrophyisiology. As results, it was evident that the observer mouse spent more time near the stressed demonstrators, and its neural activity (in terms of action potentials) showed higher values in those periods.\\
+As for the current work, similar analyses produced the following results:
+
+\begin{itemize}
+	\item The observer spent a significantly higher time near the stressed demonstrators, rather than near the neutral one or in an intermediate zone (see Figure). Moreover, in order to rule rule that this effect was due to spatial factors present in the area in which the stressed mouse was located, a comparison with the habituation has been performed. During the habituation, the observer is free to move in the arena for the same time of the test, but in the arena the two cages for the demonstrators are empty. The results show clearly that in this situation the observer doesn't show a particular tendency for proximity, and in particular spend considerably less time near the cage of the stressed mouse.
+	
+	\item As for the calcium activity, no evidence of correlation seemed to emerge: from the recorded neurons, the observer mantains an overall similar average activity through the different areas of the arena. As for the demonstrators, only the neutral appears to show an increase activity during the sniffing with the observer.
+	\\
+	
+	Next, a comparison on the average activity of mice during the phases of the task have been taken into account (see Figure). The results showed that, in general, the mean activity seems to be higher during the habituation. This happens in particular for the stressed mouse, coherently with the fact that during the habituation, it is being subjected to the stress protocol (forced restrainment), for which it is expected to show higher activity. Overall, the neutral mouse shows smaller values of calcium activity, both during habituation and test, compared to the observer and the stressed conspecifics.
 	
 \end{itemize}
+
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\hspace*{-1.6cm}
+		\includegraphics[scale=.42]{activity_barplot.png} 
+	\end{center} 
+	\caption{\textit{Average activity showed by the mice. Left: observer. No tendencies seem to emerge when it is in intermediate area, close to demonstrators or sniffing with demonstrators. Center: stressed. No tendencies seem to emerge comparing the periods when the observer is far, near or sniffing the stressed Right:neutral. During the sniffing with the observer, its activity shows higher values}}
+	
+\end{figure}
+
+
+\begin{figure}[H]
+	
+	\begin{center}
+		
+		\includegraphics[scale=.4]{activities.png} 
+	\end{center} 
+	\caption{\textit{Evolution of the average activity of the three mice from the habituation to the test}}
+	
+\end{figure}
+
+
+\subsection{Cross-correlation analysis for the mean activity}
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\hspace*{-1.4cm}
+		\includegraphics[scale=.4]{average_cc.png} 
+	\end{center} 
+	\caption{\textit{Left: average cross-correlation between observer and stressed. Right: average cross-correlation between observer and neutral}}
+	
+\end{figure}
+
+With the \textit{Interbrain analysis}, we wonder whether the interactions of two mice are followed by a synchronization of their neural signals. As explained in Section 2.2, one of the main tool for the synchronization analysis is the \textbf{cross-correlation}.\\
+As first step, following the approach of [Kingsbury], every mice has been gifted with its \textit{overall activity}, consisting in a mean of the activities of all its recorded neurons. Such activities can be considered in several parts:
+
+\begin{enumerate}
+	\item Restriction to the times of proximity between the observer and the stressed
+	\item Restriction to the times of proximity between the observer and the neutral
+	\item Restriction to the times of reciprocal sniffing between two mice
+\end{enumerate}
+
+so that we can analyze the correlation between the activities of two mice when they are actually close to each other. In this context, a cross-correlation analysis on the mean activity has been performed, comparing what happens during the homecage, habituation and test (see Figure). During homecage and habituation phases, the three mice are kept separate. Therefore, inspecting the correlation between the activites during these phases is a useful \textit{control}, i.e. a case of comparison in order to see what to expect when correlation should not be present.
+\\
+
+As first analysis, an overall activity of the inspected ROI has been considered. A mean of all the $\frac{\Delta F}{F}$ signals in each neurons has been computed for every mice, and subdivided in the parts defined by 1-3. Next, the cross correlation between observer and stressed and observer and neutral mean activies has been computed as described in (ref chap 2). As shown in Figure, analyzing the average cross correlation between the two experiments one can notice the presence of a peak around $ lag=0 $ for the pair observer-neutral in the test phase. This tendency is not present in the control cases of habituation and homecage, making it proper of the test. On the other side,the cross correlation between observer and stressed does not show any particular difference with respect to the homecage and habituation ones. A further control has been given by observing the cross correlation between the observer and one demonstrator considering the periods when the observer was visiting the other demonstrator. As result, the cross correlation between observer and neutral is abolished considering the instants when the observ was visiting the stressed, and the cross correlation between observer and stressed remains non signficative when the observer is visiting the neutral. Overall, these results may show the presence of a synchronization between neural activities between the observer and the neutral mouse, but not between the observer and the stressed, and this effect is present only during the test and during the proximity of the two mice.\\
+Next, two particulr cases have been considered: the sniffing interactions and the first part (2 minutes of the test). The sniffing is known to be one of the most direct interactions that two mice can display between each other, and therefore is of a particular interest for what could happen at synchronization level. The restriction to the first two minutes of the test is of interest based on previous results [Kingsbury], which show that the first periods of interactions between mice is the one which determine the most some relevant neural tendency, such as synchronization. The results obtained showed the following (Figure):
+
+\begin{itemize}
+	\item The result during the sniffing interactions are coherent with the ones obtained during the whole test: a peak around $lag=0$ is present only in the cross corelation computed between observer and neutral, but not oberver and stressed
+	
+	\item In consistence with previous results, the peak of cross correlation between observer and neutral is higher if we restrict the analysis to the first two minutes of interaction. A visual confirmation of the improve in synchronization in the test rather than habituation in this case is given by Figure
+	
+\end{itemize}
+
+A summary of the cross-correlation results can be see in Figure. For every case, the values refer to the cross-correlation peak recorded around $lag=0$. While for the observer-stressed case no particular difference arise, between observer and neutral the test phases show higher correlations, in particcular thr sniffing and the beginning of the test.
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\hspace*{-1.4cm}
+		\includegraphics[scale=.4]{cc_distant.png} 
+	\end{center} 
+	\caption{\textit{Left: average cross-correlation peaks between observer and stressed when observer is visiting neutral. Right: average cross-correlation peaks between observer and and neutral when observer is visiting stressed.}}
+	
+\end{figure}
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\hspace*{-1.4cm}
+		\includegraphics[scale=.4]{average_cc_initial.png} 
+	\end{center} 
+	\caption{\textit{Left: average cross-correlation between observer and stressed, during the first two minutes of test. Right: average cross-correlation between observer and neutral, during the first two minutes of test.}}
+	
+\end{figure}
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\hspace*{-1.4cm}
+		\includegraphics[scale=.4]{cc_average.png} 
+	\end{center} 
+	\caption{\textit{Left: average cross-correlation peaks between observer and stressed. Right: average cross-correlation peaks between observer and and neutral.}}
+	
+\end{figure}
 
 
 
@@ -1047,9 +1217,491 @@ Finally,  silencing of BLA neurons appeared to reduce also the dominance: a high
 	
 \end{figure}
 
+\section{Mathematical modeling for electrophysiology}
 
+In Section 1.1, the concept of \textit{excitability} of neurons has been introduced: neurons are able to generate and transmit \textbf{electrical impulses} as reaction to external stimuli. These impulses are a direct consequence of rapid changes in intracellular end extracellular \textit{ionic concentrations} of main elements such as $Na^+, Cl^-, K^+, Ca^{2+}$. The change in such concentrations determines a change in the potential crossed across the cell's membrane, and the formation of an \textbf{action potential}. \\
+In this chapter, mathematical models to describe the behaviour of such quantities are presented. After having introduced the main assumptions of the model, the equivalent circuit formulation for cellular electryphyioslogy will be presented, along with different models to describe its electrical components. Finally, the main model to describe the propagation of the action potential between different neurons will be under study, namely the \textbf{cable equation model}. These models consist \textbf{ordinary differential equations (ODEs)} or \textbf{partial differential equations (PDEs)}, to be numerically solved through appropriate technqiues.
+
+\subsection{Electrical activity in neurons}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.77]{intra.png} 
+	\end{center} 
+	\caption{\textit{Schematic model of a cellular membrane}}
+	
+\end{figure}
+
+From a biological point of view, the different ionic concentrations, assumed inside and outisde the neuron, give rise to a \textit{passive transport} of ions, which moves accordingly to the \textit{electrochemical gradient} (i.e. movement of positive charges from high to low potentials). The passage of ion species across the membrane can be allowed or denied by \textbf{ionic channels}, each of one designed  for a specific ion. The passive trasnport is not the only mechanism of ionic transport. Indeed, thanks to special \textbf{ionic pumps}, the cell is able to perform an \textit{active} transport, moving ions against the electrochemical gradient. In order to do this, the cell needs to consume energy, in form of \textit{ATP}.\\
+Let us consider a geometrical setting representing the relevant components of a neuron for its electrical activity: an intracellular region $ \Omega_{in}$ and an extracellular region $\Omega_{out}$. The two regions are separated by the cell's membrane, presenting internal and external surfaces $\Sigma_{in}$ and $\Sigma_{out}$. Finally, define the normal versors to  $\Sigma_{in}$ and $\Sigma_{out}$ as  $\textbf{n}_{in}$  and  $\textbf{n}_{out} = - \textbf{n}_{in}$.\\
+
+Under this setting, we define the \textbf{total ionic current density} of ion $\alpha$ as
+
+\begin{equation}
+J_{\alpha,i}^{TOT} =	\textbf{J}_{\alpha,i}^{TOT} \cdot \textbf{n}_{i} = J^{cond}_{\alpha,i} + J^{cap}_{\alpha,i} \hspace{2cm} i= in,out
+\end{equation}
+
+
+The total current density is formed by two contributions:
+
+\begin{itemize}
+	
+	\item \textbf{Conduction current} $J^{cond}_{\alpha}$: the current formed by the conudction of ions along the ionic channels. We assume no loss of current inside the channel, so that $J^{cond}_{\alpha, in} = J^{cond}_{\alpha, out}$
+	
+	\item \textbf{Capacitive current} $J^{cap}_{\alpha}$: the current formed by the charge accumulation in $\Sigma_{in}$ and $\Sigma_{out}$. The charge accumulation makes the membrane behave like a \textit{capacitor}. Thus, we assume 
+	\begin{equation}
+	J^{cap}_{\alpha,i} = \frac{\partial \sigma_{\alpha,i}}{\partial t}  \hspace{2cm} i= in,out
+	\end{equation}
+	
+	where $\sigma_{\alpha,i}$ is the \textbf{surface charge density}. Also in this case we require \textit{wall's neutrality}
+	
+	\begin{equation}
+	\sigma_{\alpha,in} = \sigma_{\alpha,out}
+	\end{equation}
+\end{itemize}	
+
+The neutrality conditions on conduction and capacitive current implies current conservation 
+
+\begin{equation}
+J_{\alpha,in}^{TOT} = J_{\alpha,out}^{TOT}
+\end{equation}
+
+Considering two points $ \textbf{x}' \in \Omega_{in}$ and $ \textbf{x}'' \in \Omega_{out}$ and a time interval $ [0,T]$, we can consider the electric potentials $ \psi^{in} (t) = \psi(\textbf{x}',t) $ and  $ \psi^{out} (t) = \psi(\textbf{x}'',t) $, assuming the potentials constant respectively in $\Omega_{in}$ and $\Omega_{out}$. The \textbf{membrane potential} is then defined as
+
+\begin{equation}
+\psi_m (t) = \psi^{in} (t) -  \psi^{out} (t) \hspace{1 cm}  t \in [0,T]
+\end{equation}
+
+
+The existence of the membrane potential is consequence of the Faraday's equation (known as well as Maxwell's third equation)
+
+\begin{equation}
+\nabla \wedge \textbf{E} = -\frac{\partial \textbf{B}}{\partial t}
+\end{equation}
+
+where $\textbf{E}$ and $\textbf{B}$ are the elctric and magnetic field, respectively. In the microscopic cellular environment, it happens in practice that $ \left| \frac{\partial \textbf{B}}{\partial t} \right| << \left| \nabla \wedge \textbf{E}\right|$, being the magnetic contribution negligible qith respect tot he electric one. This implies from (2) that $\nabla \wedge \textbf{E} = 0 \implies \exists \psi s.t. \textbf{E} = -\nabla \psi$.\\
+If $R_c$ and $t_m$ are, respectively, the cell's radius and the membrane's thickness, in practice we have that their ratio $ \eta_c := \frac{t_m}{R_c} << 1$. This implies that from a modeling point of view we can assume $t_m \sim 0 $, i.e. we can neglect the thickness of the membrane and assume $\Sigma_{in} \sim \Sigma_{out} \sim \Sigma$. In practice, for example, realistic values of such quantities can be $ R_c \sim 10^{-6} m$, $ t_m \sim 10^{-9} m$ and thus $\eta_c \sim 10^{-3}$.\\
+If $\epsilon_m$ is the membrane's \textit{dielectric constant}, we can define the \textbf{specific capacitance} of the membrane as $ c_m = \frac{\epsilon_m}{t_m}$. Assuming then that the surface charge densities have the form $\sigma_{in}(\textbf{x}',t) = c_m \psi_m (\textbf{x},t)) $ and  $\sigma_{out}(\textbf{x}'',t) = -c_m \psi_m (\textbf{x},t) $, where $\textbf{x} \in \Sigma$. The capacitive current density (2) assumes the form
+
+\begin{equation}
+J^{cap}_{\alpha,i}(\textbf{x},t) = c_m \frac{\partial \psi_m(\textbf{x},t)}{\partial t}  \hspace{1cm} t \in [0,T], \textbf{x} \in \Sigma
+\end{equation}
+
+
+\subsection{ODE local and global models}
+
+\begin{figure}[H]
+	\begin{minipage}{\linewidth}
+		\centering
+		\begin{minipage}{0.45\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{ode_circuit.png}
+				
+			\end{figure}
+		\end{minipage}
+		\hspace{0.05\linewidth}
+		\begin{minipage}{0.48\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{global_circuit.png}
+				
+			\end{figure}
+		\end{minipage}
+		
+	\end{minipage}
+	\caption{\textit{Left: equivalent circuit for a fixed point $\textbf{x} \in \Sigma$ (local model)  \\
+			Right: equivalent circuit for the all membrane  $\Sigma$ (global model)}}
+\end{figure}
+
+
+Let us now consider a specific $\textbf{x} \in \Sigma$. Then, equation (1) expresses a balance law for the current densities $J_{\alpha,i}^{TOT}, i= in,out$, which can be divided in two contributed (capactive and conductive), where the capacitive current assumes the form $J^{cap}_{\alpha,i}(t) = c_m \frac{\partial \psi_m(t)}{\partial t}$.\\
+As for the conductive current, we consider a general form 
+
+\begin{equation}
+J^{cond}_{\alpha,i} = g_m(\textbf{x},t,\psi_m) [\psi_m - E_{eq}]
+\end{equation}
+
+where $g_m$ plays the role of a \textbf{specific conductance}, a priori nonlinear in $\psi_m$, and $E_{eq}$ is the equilibrium ptoential assumed across the cell, both to be modeled.\\
+Therefore, equation (1), expressed for the unknwonn $\psi_m$, can be seen  in an equivalent \textit{circuital form}, in which the two contribution of the current densities are model respectively through a specific capacitance and a specific conductance. Then, the conservation of current will be a consequence of Kirchhooff laws (Figure 2).
+\\
+
+
+If instead of a specific $\textbf{x} \in \Sigma$, the aim is to write equation (1) as a current balance in all the cell's membrane $\Sigma$, the resulting differential equation, which in this case is a \textit{global} whole cell model, is obtained by integration of (1) over the surface $\Sigma$, in which the conservation becomes for a current $$ I_{\alpha}^{TOT} = \int_{\Sigma} \textbf{J}_{\alpha}^{TOT} \cdot \textbf{n}_{out} dS $$
+The spoecific conductance and capacitance will become global conductance and  capacitance $ G_m [\Omega^{-1}]$ and $ C_m [F] $. Finally, the current balance takes the form
+
+\begin{equation}
+I_{\alpha}^{TOT} = I_{\alpha,in}^{TOT} =I_{\alpha,out}^{TOT} = I_{\alpha}^{cap} + I_{\alpha}^{cond}
+\end{equation}
+
+where $  I_{\alpha}^{cap} = C_m \frac{\partial \psi_m(\textbf{x},t)}{\partial t}$ and $ I_{\alpha}^{cond} = G_m(\textbf{x},t,\psi_m) [\psi_m - E_{eq}]$.\\
+While the (specific) capacitance is an itnrinsic value of the cell, the conduction current, and  in particular the (specific) conductance $G_m$ needs to be modeled. In the next sections, three main model used in literature will be presented: the \textbf{linear resistor model (LRM)}, the \textbf{Goldman-Hodgkin-Katz (GHK)} model and finally the \textbf{Hodgkin-Huxley (HH)} model.
+
+
+
+\subsection{LRM and GHK models}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.77]{LRM.png} 
+	\end{center} 
+	\caption{\textit{Characteristic curve in the $(\psi_m,J)$ plane for the linear resistor model}}
+	
+\end{figure}
+
+The \textbf{linear resistor model (LRM)} makes the simplest assumptions of
+
+\begin{equation}
+G_{m,\alpha} = G_{m,\alpha}^0 = const \hspace{1.5 cm} E_{eq} := E_{m,\alpha}^0 = const \hspace{1cm} \forall \alpha
+\end{equation}
+
+Therefore, the conductance is assumed constant, as well as the equilibrium value of the potential $E_m^0 $, called the \textbf{Nernst potential}.
+The resulting expression for the conduction current is
+\begin{equation}
+I_G(t) = G_{m,\alpha}^0 [\psi_m -  E_{m,\alpha}^0]
+\end{equation}
+
+This law defines a straight line in the plane $I_G$ vs $\psi_m$, such that there exists a unique value of potential in which $I_G=0$. This value is exactly the Nernst potential $E_m^0$ and thus it represents a \textit{thermodynamic equilibrium} in which the ion flow from outisde to inside of the cell is balanced with the ion flow from inside to outside and the net current is null.\\
+Considering local ODE models, the procedure is the same applied to the specific electrical quantities:
+
+\begin{equation}
+g_{m,\alpha} = g_{m,\alpha}^0 = const \hspace{1.5 cm} E_{eq} := E_{m,\alpha}^0 =const 
+\end{equation}
+
+resulting in a current density
+\begin{equation}
+J_G(t) = g_{m,\alpha}^0 [\psi_m -  E_{m,\alpha}^0]
+\end{equation}
+
+
+In order to determine an expression for the Nernst potential $E_{m,\alpha}^0$, in which thermodynamic equilibrium is achieved, we should investigate the causes of equiloibrium at a deeper level, namely in the process of ion flow in the channels of the membrane. From standard theory [REF?] it is known that ion particles in the channel are subjected to two different contributions: diffusion process caused by the electrochemical gradient, and a transport caused by the presence of an \textit{electrical field} $\textbf{E}(\textbf{x},t)$. This originates the well known \textbf{drift-diffusion (DD)} model for the ionic current density [REF?], which reads
+
+\begin{equation}
+\textbf{J}_{\alpha}^{TOT} = \textbf{J}_{\alpha}^{DIFF} + \textbf{J}_{\alpha}^{DRIFT} = -Fz_{\alpha}D_{\alpha}\nabla C_{\alpha} + F|z_{\alpha}| C_{\alpha}\mu_{\alpha}\textbf{E}
+\end{equation}
+where the following quantities have been defined:
+\begin{itemize}
+	
+	\item $F$: the \textbf{Faraday constant}, such that $F = q N_{av}$
+	
+	\item $z_{\alpha}$ is the \textbf{ion number}
+	
+	\item $\mu_{\alpha}$ is the \textbf{ion electrical mobility}
+	
+	\item $C_{\alpha}$ is the concentration of ion $\alpha$
+	
+	\item $D_{\alpha}$ is the \textbf{ion diffusivity}. this value can be retrieved from the \textit{Einstein-Smoluchowki} relation [REF?] $D_{\alpha} = V_{TH}\frac{\mu_{\alpha}}{|z_{\alpha}|}$, where $ V_{TH} \sim 26 mV$ is the \textit{thermal voltage}
+\end{itemize}
+
+Assuming one dimensionality, being that $ E -\frac{\partial \psi}{\partial x}$ and using the Einstein-Smoluchowki relationship, we can prove that the thermodynamic equilibrium, for which $\textbf{J}_{\alpha}^{TOT} = 0$ and thus the drift component balances the diffusion one, is obtained at the value of potential
+
+\begin{equation}
+E_{m,\alpha}^0 = \frac{V_{TH}}{z_{\alpha}}\ln\left(\frac{C_{\alpha}^{OUT}}{C_{\alpha}^{IN}}\right)
+\end{equation}
+
+which provides the seeked expression for the Nernst potential.
+\\
+
+With the \textbf{Goldman-Hodgkin-Katz (GHK)} model, the modeling of the conduction current becomes nonlinear. Here, the following assumptions are adopted: 
+
+\begin{itemize}
+	
+	\item The electric field in the ionic channels assumes a constant value of $ E = \frac{\psi_m}{t_m}$, i.e. the ratio between the membrane potential and the membrane's thickness
+	
+	\item The geometrical setting is one dimensional
+	
+	\item The conduction current $\textbf{J}_{\alpha}^{cond}$ varies only in time, i.e. is constant in space and $ \frac{\partial J_{\alpha}^{cond} }{\partial x} = 0$. This means that there is no production or consumtpions of ions along the channel
+	
+\end{itemize}
+
+Applying these hypothesis to the current density in (DD) form 
+$$ J_{\alpha}^{cond} =  -Fz_{\alpha}D_{\alpha}\nabla C_{\alpha} + F|z_{\alpha}| C_{\alpha}\mu_{\alpha}\textbf{E} $$
+it can be seen that the in order to have $ \frac{\partial J_{\alpha}^{cond} }{\partial x} = 0$, the current density must assume the form
+
+\begin{equation}
+J_{\alpha}^{GHK}(\psi_m,t) = -qz_{\alpha}P_{\alpha}\left[n_{\alpha}^{out} \mathcal{B}(\beta_m) - n_{\alpha}^{in} \mathcal{B}(-\beta_m) \right]
+\end{equation}
+
+where $P_{\alpha} = \frac{D_{\alpha}}{t_m}$ is the \textbf{membrane's permeability}, $ \beta_m := \frac{z_{\alpha} \psi_m}{V_th}$ and $ \mathcal{B}(x) = \frac{x}{e^x -1}$ is the \textbf{Bernouilli function}.\\
+It can be proven [Sacco-Guidoboni] that this expression can be written in a nonlinear resistor form in which
+
+\begin{equation}
+g_{\alpha}(\psi_m,t) = P_{\alpha}\frac{q z_{\alpha}^2N_{av}C_{\alpha}^{in}}{V_{TH}} 
+\end{equation}
+
+\begin{equation}
+E_eq(\psi_m,t) = P_{\alpha}\frac{V_{TH}}{z_{\alpha}} \left(\frac{C_{\alpha}^{out}}{C_{\alpha}^{in}} - 1\right)\mathcal{B}(\beta_m)
+\end{equation}
+
+
+
+\subsection{Hodgkin-Huxley model}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.9]{HH.png} 
+	\end{center} 
+	\caption{\textit{Equivalent circuit for the Hodgkin-Huxley model}}
+	
+\end{figure}
+
+
+In 1963, Hodgkin and Huxley pusblished in a paper a revolutionary work, which will be worth the Nobel prize, on mathematical modeling for the electrophyisiogical activity, with the focus on the neurons of the giant squid [Hodgkin-Huxley]. The main structure of the model follows the principle discussed so far, in which an equivalent circuit represents the ion flow between the cell's membrane. The main assumptionns and particularities of the model can be resumed as follows:
+
+\begin{itemize}
+	
+	\item The total current density $J^{tot}$ can be split in two contributions: a capacitive transmembrane current $J_{cap}^{tm} = c_m \frac{\partial \psi_m}{\partial t}$, where the capacitance is assumed linear, and, for every ion considered, a conduction current to be modeled. The main ions considered are \textit{potassium} ($K^+$) and \textit{siodium} ($Na^+$). The remainant contribution is mostly due to \textit{chlorine} ($Cl^-$) and it is summarized in a \textit{leakage} current $J_L^{tm}$
+	
+	\item For every ion $\alpha$ is associated its Nernst potential $E_{m,\alpha}$, representing the value on which thermodynamic equilibrium is achieved and the flow from inside to outisde the cell is balanced with the flow from outside to inside
+	
+	\item A new level of complexity is considered: in order to better describe what happens at a biological level, the ionic channel have a \textit{state}, i.e. an associated probability value which tells the percentage of their opening. Indeed, the behaviour of ionic exchange between the cytoplasm and the exterior of a cell, strongly depends on the closing and opening of the ionic channel. With the HH model, the attempt is to mathematrically describe the status of the channel along time
+	
+	
+\end{itemize}	
+
+
+In the original form of the paper, a change of variable is performed: let's define the equilibrium potential of the whole cell as $E_m$, and define for every ion $\alpha$ the quantities
+
+\begin{equation}
+v_\alpha := E_{m,\alpha} - E_m \hspace{2cm}  v := \psi_m - E_m
+\end{equation}
+
+In this way, the form of the current density of ion $\alpha$ becomes
+
+
+\begin{equation}
+J_\alpha^{cond} = g_{m,\alpha}(v-v_\alpha)
+\end{equation}
+
+and the current conservation equation, expressed for the new variable $v = v(t)$, is
+
+\begin{equation}	
+\begin{cases}
+J^{tot} = J_{cap}^{tm} + J_{cond}^{tm} = c_m \frac{\partial v}{\partial t} + g_{Na}(v - v_{Na}) + g_{K}(v - v_{K}) +g_{L}(v - v_{L})  \\
+v(0) = 0
+\end{cases}	\end{equation}
+
+
+Having assumed the membrane potential at equilibrium at time $t=0$.\\
+For the whole ewuilibrium potential $E_m$, the choice can be on the \textbf{Goldman potential}[REF?]
+
+
+\begin{equation}
+E_m= V_{TH} \ln \left[\frac{P_{Na} C_{Na}^{out} + P_{K} C_K^{out} + P_{Cl} C_{Cl}^{in}}{P_{Na} C_{Na}^{in} + P_{K} C_K^{in} + P_{Cl} C_{Cl}^{out}}\right]
+\end{equation}
+
+where $P_\alpha$ and $C_\alpha$ stand respecitevly for the permeability and concentration of ion $\alpha$.\\
+As for the modeling of conductances, let's introduce the \textbf{gating variables} $n,m,h$ for the three types of ions considered $K^+,Na^-,Cl^-$. They represent the probability of opening of the ionic channel. For example, if the cell is in a situation for which $C_{Na}^{out} > C_{Na}^{in}$, the opening of $Na^+$ channel will result in a current flow from outside to inside, and corresponing rise of the potential $\psi_m$. When the membrane potential reaches the value of equilibrium $E_{Na}$, the sodium channel will close. For this reason, the gating variables are expressed as solution of ordinary differential equation of the type
+
+\begin{equation}
+\frac{dy}{dt} = \gamma (1-y) - \delta y \hspace{1 cm} \gamma,\delta >0  \hspace{1 cm} y = m,n,h
+\end{equation}
+
+so that there is a balance between a production rate $\gamma$ and a consumption $\delta$. The solution of an ODE in this form is
+
+\begin{equation}
+y(t) = y_\infty \left[1 - \exp\left(\frac{-t}{\tau}\right)\right]
+\end{equation}
+
+where
+
+\begin{equation}
+y_\infty = \frac{\gamma}{\gamma + \delta} \hspace{1.5cm} \tau = \frac{1}{\gamma + \delta}
+\end{equation}
+
+For the potassium conductance, the chosen dependence on its gating variable (in agreement qith experimental data) is $ g_K = \bar{g}_K n^4$. For the sodium variable, it has been observed that also a second process was involved, so that the proposed form is  $ g_{Na} = \bar{g}_{Na} m^3h$. The values $\bar{g}_K$ and $\bar{g}_K{Na}$ are constant and derived experimentally (è vera sta cosa?).\\
+To summarize the HH model consists in the following sytem of nonlinear ordinary differential equations:
+
+\begin{equation}
+\begin{cases}
+J^{tot} = c_m \frac{d v}{d t} + J_{Na} + J_K +J_L  & \text{(Current conservation)}\\
+J_\alpha = g_\alpha (v-v_\alpha) \hspace{1 cm}  \alpha = Na,K,Cl & \text{(Modeling currents)}\\
+\frac{dn}{dt} = \gamma_n(1-n) - \delta_n n & \text{(ODE for gating variable n)} \\
+\frac{dm}{dt} = \gamma_m(1-m) - \delta_m m & \text{(ODE for gating variable m)}\\
+\frac{dh}{dt} = \gamma_h(1-h) - \delta_h h & \text{(ODE for gating variable h)}\\
+g_K = \bar{g}_K n^4 & \text{(Modeling conductance for K)}\\
+g_{Na} = \bar{g}_{Na} m^3h  & \text{(Modeling conductance for Na)}
+
+\end{cases}
+\end{equation}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=1.1]{gk.png} 
+	\end{center} 
+	\caption{\textit{Example of behaviour of the potassium conductance $g_k$: a step increase is followed by a decrease. The dots are experimental data}}
+	
+\end{figure}
+
+
+\subsection{Cable model}
+
+\begin{figure}[H]
+	\begin{center}
+		\hspace*{-0.7cm}
+		\includegraphics[scale=0.7]{cable.png} 
+	\end{center} 
+	\caption{\textit{Schematic representation of the cable model}}
+	
+\end{figure}
+
+
+The models studied so far described the evolution of the membrane potential along time for a single cell. In order to go further, we should keep into account as well the \textit{communication} between two cells, i.e. the propagation of the action potential from one neuron to another. Biologically, this is done through the \textit{axon} connecting the two units. The axon is still parti of the neuron, and in every point we may assume a communication with the oustide environment thorugh electrical circuits as decribed in previous sections.\\
+The main assumptions for the cable model are the followings:
+
+\begin{itemize}
+	
+	\item The bilogical cable, i.e. the axon, has length $L$ and radius $a$ (thus basis surface $S=\pi a^2$), with $\frac{a}{L} << 1$, allowing to represent the cable as a $1D$ object and fix an ascissa $ x \in [0,L]$
+	
+	\item We will assume the potential outside the cell as constant, as well as the concentrations inside and outside the cell for every ion $\alpha$: 
+	$$ \psi^{out}(x,t) = const  \hspace{1cm} C_\alpha^{in}(x,t)  = const \hspace{1cm} C_\alpha^{out}(x,t)  = const$$
+	
+	\item The \textbf{resistivity} of the axon $\rho_{ax}$ is constant. The resitivity is the reciprocal of the \textit{conducitivity} $\sigma$, and its relkated to the \textit{resistance} $R_{ax}$ by $ R_{ax} = \frac{\rho_{ax} L}{S}$
+	
+	
+\end{itemize}
+
+
+If we consider an element of length $dx$ of the cable, its contribution to resistance is $dR(x) = \frac{\rho_{ax} dx}{\pi a^2}$. If a current $I_{in}$ enters the element, the consequent potential formed across the element is $ d\psi_m(x,t) = dR(x)I_{in}(x,t) = \frac{\rho_{ax} dx}{\pi a^2} I_{in}(x,t)$. Therefore, letting $dx \rightarrow 0$, this implies that
+
+\begin{equation}
+I_{in}(x,t) = -\frac{\pi a^2}{\rho_{ax}}\frac{\partial \psi_m(x,t)}{\partial x}
+\end{equation}
+
+Next, in order to retrieve a current balance along the axon, let's consider again an infinitesimal element $dx$, in which a current a current $I_{in}(x,t)$ is entering the element, a current $I_{in}(x+dx,t)$ is leaving the element, and finally a transmembrane current $I_{TM}(x+\frac{dx}{2},t)$ flowing from the axon to the outside cellular envornment, with a capacitive and a conduction contributions [ee Figure].\\
+A Kirchhoff law applied to the node at $x+\frac{dx}{2}$ reads
+
+\begin{equation}
+- I_{in}(x,t) + I_{cap}(x+\frac{dx}{2},t) + I_{cond}(x+\frac{dx}{2},t) + I_{in}(x+dx,t) = 0
+\end{equation}
+
+The capactive and conductive contributions to the transmembrane current read
+\begin{equation}
+I_{cap}(x+\frac{dx}{2},t) = J_{cap}(x+\frac{dx}{2},t) 2 \pi a dx = c_m \frac{\partial \psi_m(x,t)}{\partial t} 2 \pi a dx 
+\end{equation}
+
+\begin{equation}
+I_{cond}(x+\frac{dx}{2},t) = J_{cond}(x+\frac{dx}{2},t) 2 \pi a dx 
+\end{equation}
+
+With $J_{cond}$ to be modeled, for example with LR,GHK or HH. Dividing equation (28)  for $2 \pi a dx $ and letting $dx \rightarrow 0$ gives the equation
+
+\begin{equation}
+\begin{cases}
+\frac{\partial \psi_m(x,t)}{\partial t} + \frac{1}{2 \pi a }\frac{\partial I_{in}(x,t)}{\partial x} + J_{cond}(x,t) = 0 \\
+I_{in}(x,t) = -\frac{\pi a^2}{\rho_{ax}}\frac{\partial \psi_m(x,t)}{\partial x}
+\end{cases}
+\end{equation}
+
+The resulting equation is a \textit{parabolic partial differential equation}, in which the unknown membrane potential $\psi_m(x,t) $ varies along the axon and along time, and it appears under first derivative in time and second in space. In order for (31) to be well-posed, the system has to be completed with an initial condition $ \psi_m (x,0) = \psi_m^0(x)$ and apprpriate boundary conditions. The nature of the cable equation will be linear or nonlinear depending on the chosen model for $J_{cond}$.\\
+As for boundary conditions, a common choice is to consider \textit{Robin boundary conditions}. Defining the potential at $x=0$ as $\bar{V}_{in}(t)$ and model the terminal of the axon through a resistance $R_{out}$, the resulting boundary conditions are
+
+\begin{equation}
+\begin{cases}
+\psi_m(0,t) = \bar{V}_{in}(t) \\
+-I_{in}(L,t) +\frac{1}{R_{out}}\psi_m(L,t) =0
+\end{cases}
+\end{equation}
+
+\begin{figure}[H]
+	\begin{center}
+		
+		\includegraphics[scale=0.5]{curr_bal.png} 
+	\end{center} 
+	\caption{\textit{Current balance in an element $dx$ of the axon}}
+	
+\end{figure}
+
+\subsection{Numerical solution of the cable equation}
+
+
+\begin{figure}[H]
+	\begin{center}
+		
+		\includegraphics[scale=0.7]{basis.png} 
+	\end{center} 
+	\caption{\textit{Lagrangian basis functions}}
+	
+\end{figure}
+
+
+The cable equation is a one dimensional \textit{advection-diffusion-reaction} PDE. A well posed problem of this type, for a general unknwons $ u(x,t)$ and $\textbf{J} = J(x,t)\textbf{e}$, can always be written under the following form of \textbf{conservation law}:
+
+
+\begin{equation}
+\begin{cases}
+\frac{\partial u}{\partial t} +\frac{\partial J}{\partial x} = \mathcal{P} & \forall (x,t) \in [0,L] \times [0,T] \hspace{1cm} \text{(Conservation law)} \\
+J = u v - \mu \frac{\partial u}{\partial x} & \forall (x,t) \in [0,L] \times [0,T] \hspace{1cm} \text{(Flux law)}\\
+u(x,0) = u^0(x) & \forall x \in [0,L] \hspace{1cm}  \text{(Initial condition)} \\
+\gamma \textbf{J} \cdot \textbf{n} = \alpha u - \beta &  \forall (x,t) \in \partial \Omega \times [0,T] \hspace{1cm} \text{(Boundary conditions)}
+\end{cases}
+\end{equation}
+
+Here, $\textbf{J}$ J represents a \textit{flux} taking into account advection and diffusion, while $\mathcal{P}$ takes into account the reaction (i.e. net production rate). The boundary coefficients $\alpha, \beta, \gamma$, depending on their values, can give rise to the main types of boundary conditions (Dirichlet, Neumann, Robin).\\
+In order to numerically solve equation (33), the following two main steps need to be performed:
+
+\begin{enumerate}
+	\item \textbf{Time semidiscretization}. The time derivative is apporximated with a finite-difference scheme. In the present case, the \textbf{Backward Euler method (BE)} is chosen, being unconditionally stable [Quarteroni-Sacco]. Dividng the interval $[0,T]$ in $N_T$ subintervals of the form $[t^k, t^{k+1}]$ with $ k=0, \dots N_T-1$, and setting $\Delta t = \frac{T}{N_T} $, the semidiscretization of (33) using BE reads
+	
+	\begin{equation}
+	\begin{cases}
+	\frac{u^{k+1} - u^k}{\Delta t} +\frac{\partial J^{k+1}}{\partial x} = \mathcal{P}^{k+1}  \\
+	J^{k+1} = u^{k+1} v^{k+1} - \mu \frac{\partial u^{k+1}}{\partial x} 
+	\end{cases}
+	\end{equation}
+	
+	where, for a scalar quantity $\phi(x,t)$, it has been used the notation $ \phi(x,t^k) = \phi^k$. The first equation of (34) can be rewritten as
+	
+	\begin{equation}
+	\sigma ^{k+1} u^{k+1} +\frac{\partial J^{k+1}}{\partial x} = f^{k+1} 
+	\end{equation}
+	
+	\item \textbf{Spatial discretization}. A Galerkin-FEM strategy is adopted to solve the equation (34). From standard theory [Quarteroni], setting $V = H_0^1(\Omega)$, the variational problem can be rewritten in its \textit{variational form}
+	
+	\begin{equation}
+	\text{Find $u \in V$ s.t.} \hspace{0.5cm} B(u,\varphi) = F(\varphi) \hspace{0.5cm} \forall \varphi \in V
+	\end{equation}
+	
+	in which we have defined the forms
+	\begin{equation}
+	B(u,\varphi) = \int_{\Omega}\left[\left(\mu \frac{\partial u}{\partial x} - uv\right) \frac{\partial \varphi}{\partial x} + \sigma u \varphi \right]  dx
+	\end{equation}
+	
+	\begin{equation}
+	F(\varphi) = \int_{\Omega} \left[f \varphi\right] dx
+	\end{equation}
+	Lax-Milgram theorem [Quarteroni] ensurance existence, uniqueness and stability for the solution of (36).\\
+	With the \textbf{Finite element method (FEM)}, the infinite dimensional setting of (36) is approximated in a finite space $V_h$ s.t . $dim(V_h) = N_h < \infty$. For the present case, the chosen space is the linear combination of piecewise linear polinomials. Partitioning the interval $[0,L]$ in $M_h$ subintervals of length $ h = \frac{L}{M-h}$ and calling $\tau_h$ the collection of subintervals, we can define the space
+	$$ V_h := \left\{ w_h\in C^0(\Omega) \hspace{0.5 cm} s.t. \hspace{0.5 cm} w_h|_{K_i} \in \mathbb{P}^1(K_i) \hspace{0.3 cm} \forall K_i \in \tau_h, \hspace{0.3 cm} w_h(0)=w_h(L)=0 \right\}$$
+	
+	where $ \mathbb{P}^1(K_i)$ is the collection of linear polinomials defined on the interval $K_i$. The space $V_h$ is therefore a finite approximation of the space $H_0^1$. The \textit{Lagrangian basis} $ \left\{ \varphi _j \right\}_{j=1}^{N_h}$, where $ \varphi_j(x_i) = \delta_{ij}$, is a basis for $V_h$, which means that every element $w_h \in V_h$ can be written as
+	
+	\begin{equation}
+	w_h = \sum_{j=1}^{N_h} w_j \varphi_j(x)
+	\end{equation}
+	
+	The FEM discrete formulation becomes
+	
+	\begin{equation}
+	\text{Find $u_h \sum_{j=1}^{N_h} u_j \varphi_j(x) \in V_h$ s.t.} \hspace{0.5cm} B(u_h,\varphi_i) = F(\varphi_i) \hspace{0.5cm} \forall i = 1, \dots N_h
+	\end{equation}
+	Resulting in an \textit{algebraic system}
+	
+	\begin{equation}
+	B \textbf{u} = \textbf{F}
+	\end{equation}
+	where $\textbf{u} = [u_j]_{j=1}^{N_h}$, $B_{ij} = B(\varphi_j,\varphi_i)$ and $F_i = F(\varphi_i)$.The following theorem guarantees the linear convergence of the FEM solution in the $H^1$ norm and quadratic convergence in the $L^2$ norm [Quarteroni]:
+	\begin{theorem}[Convergence]
+		Let $u \in H^2(\Omega) \cap H_0^1(\Omega)$. Then there exist two contsants $c_1,c_2 >0$ independent from $h$ such that
+		$$||u-u_h||_{H_0^1} < c_1h||u||_{H^2}$$
+		
+		$$||u-u_h||_{L^2} < c_2h^2||u||_{H^2}$$
+	\end{theorem}
+\end{enumerate}
+
+Back to the case of the cable equation(ref eq.), the modeling of the conductive current $J^{cond}$ will result in a different algebraic system for (41). If a linear resistor model is adopted, the PDE, and consequently the algebraic system, will be linear and of easy resolution. On the opposite side, if a nonlinear model is adopted, the nolinearity will involve also the algebraic system. Many methods to solve nonlinear PDEs and algebraic systems are available, such as the \textit{newton method} or the \textit{Alternative lagging method} [Sacco]. In all these cases, stability and convergence are proven.(forse qui si  può dire di più? cosa?)
 
 \end{document}
+
+
 
 
 

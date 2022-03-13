@@ -34,7 +34,7 @@ load('test_zone.mat')
 load('sniff.mat')
 
 mm_norm = 0; % 1 for using min-max normalization
-z_norm =0;
+z_norm =1;
 dataset=1;
 selection=0; % 1 for neuron selection option
 

@@ -32,15 +32,15 @@ for i = 2:size(data,1)-1
     
 end
 
+mm= min(size(pn,2),size(np,2));
 
-
-for k = 1:size(pn,2)-1 
+for k = 1:mm
     
-    mad_treshold(k) = (m + d2(np(k)))/3; % /3 to have it smaller
+    mad_treshold(k) = (m + d2(np(k)))/1.5; % /3 to have it smaller
     
 end
 
-for p =1:size(pn,2)-1
+for p =1:mm
     times(p) = d1(pn(p));
 end
     

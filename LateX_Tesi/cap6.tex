@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{multirow}
 \usepackage{float}
 \usepackage{lipsum}
 \usepackage{scrextend}
@@ -58,99 +59,569 @@
 	
 	
 	
-\section{Mathematical modeling of neuron's electric activity}
+\section{Mathematical modeling in cellular electrophysiology}
 
-In Section 1.1, the concept of \textit{excitability} of neurons has been introduced: neurons are able to generate and transmit \textbf{electrical impulses} as reaction to external stimuli. These impulses are a direct consequence of rapid changes in intracellular end extracellular \textit{ionic concentrations} of main elements such as $Na^+, Cl^-, K^+, Ca^{2+}$. The change in such concentrations determines a change in the potential crossed across the cell's membrane, and the formation of an \textbf{action potential}. \\
-In this chapter, mathematical models to describe the behaviour of such quantities are presented. After having introduced the main assumptions of the model, the equivalent circuit formulation for cellular electryphyioslogy will be presented, along with different models to describe its electrical components. Finally, the main model to describe the propagation of the action potential between different neurons will be under study, namely the \textbf{cable equation model}. These models consist \textbf{ordinary differential equations (ODEs)} or \textbf{partial differential equations (PDEs)}, to be numerically solved through appropriate technqiues.
+In Section 1.1, the concept of \textit{excitability} of neurons has been introduced: neurons are able to generate and transmit \textbf{electrical impulses} as a response to external stimuli. These impulses are a direct consequence of rapid changes in intracellular end extracellular \textit{ionic concentrations} of main elements such as $Na^+, Cl^-, K^+, Ca^{2+}$. The change of such concentration values determines a change in the electric potential difference formed across the cell's membrane, and thus the formation of an \textbf{action potential}. \\
+In this chapter, mathematical models to describe cellular electric activity are presented. After introducing the main assumptions of the models, the equivalent circuit formulations for cellular electrophyioslogy will be presented, along with different ways to describe its electrical components. Finally, the main model to describe the propagation of the action potential between two neurons will be considered, namely the \textbf{cable equation model}. All these models consist in either \textbf{ordinary differential equations (ODEs)} or \textbf{partial differential equations (PDEs)}, to be numerically solved through appropriate technques, briefly discussed in the final part of the chapter.
 
-\subsection{Electrical activity in neurons}
+\subsection{Electric activity in neurons}
+
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.77]{intra.png} 
+		\includegraphics[scale=0.77]{first.png} 
 	\end{center} 
-	\caption{\textit{Schematic model of a cellular membrane}}
+	\caption{\textit{Schematic model of a cell with a focus on a local point $\textbf{x}$ of the membrane}}
 	
 \end{figure}
 
-From a biological point of view, the different ionic concentrations, assumed inside and outisde the neuron, give rise to a \textit{passive transport} of ions, which moves accordingly to the \textit{electrochemical gradient} (i.e. movement of positive charges from high to low potentials). The passage of ion species across the membrane can be allowed or denied by \textbf{ionic channels}, each of one designed  for a specific ion. The passive trasnport is not the only mechanism of ionic transport. Indeed, thanks to special \textbf{ionic pumps}, the cell is able to perform an \textit{active} transport, moving ions against the electrochemical gradient. In order to do this, the cell needs to consume energy, in form of \textit{ATP}.\\
-Let us consider a geometrical setting representing the relevant components of a neuron for its electrical activity: an intracellular region $ \Omega_{in}$ and an extracellular region $\Omega_{out}$. The two regions are separated by the cell's membrane, presenting internal and external surfaces $\Sigma_{in}$ and $\Sigma_{out}$. Finally, define the normal versors to  $\Sigma_{in}$ and $\Sigma_{out}$ as  $\textbf{n}_{in}$  and  $\textbf{n}_{out} = - \textbf{n}_{in}$.\\
 
-Under this setting, we define the \textbf{total ionic current density} of ion $\alpha$ as
+
+
+In order to mathematically describe the main electric functionalities of a cell, first one need  to understand the set of phenomenons which characterize this complex component of our body, such as the processes leading to its condition of \textit{dynamical equilibirium}, called the \textbf{cellular homeostasis}. The cellular homeostasis is achieved through the equilibrium of several forces acting on the cell, which can be of fluid, mechanical, chemical or electric nature, although the focus in this work will regard only the elctrical part.\\
+The \textit{intracellular} environment of a cell consists mainly in a water solution contaning vital nutrients and elements in ionic form such as  $Na^+, Cl^-, K^+, Ca^{2+}$, making the solution behaving like a charged fluid. The intracellular environment is separated by the extracellular one by the \textbf{membrane} of the cell (see Figure). The membrane is formed by a bi-layer of lipids (of thickness considerably smaller than the cell's radius) which does not allow passage of substances through it. The passage of some ions is still allowed through specific sites called \textbf{ionic channels}, each of one allowing, under certain conditions, the passage of a single ionic species. The movement of one ion solution from the intracellular to the extracellular environment, or viceversa, is caused by the different concentration of such quantity present assumed in the two, leading to a \textit{electrochemical gradient} which forces positive charges to move from high to low potentials, and thus forming a potential difference across the membrane. We call this quantity the \textbf{membrane potential} of the cell. The main role of the mathemaical models for cellular electrophysiology is to describe the evolution of such quantity over time and space.
+\\
+
+The particular biology of the cell makes it at the same time a \textit{dielectric} and a \textit{conductor}: the lipid layers of the membrane isolate the inside of the cell to the external environment, and cause the accumulation of charges around the internal and external surface of the membrane, in a way that they annhilate themselves. This effect is typical of dielectric materials such as capacitors, and it will cause a \textit{capacitive} current across the membrane, although no effective passage of ions is present. On the other side, when a ionic channel is open, there is a passage of ions which makes the cell behaving like a conductor. Both of these contributes need to be taken into account in the modeling, as done in the next Section.
+\\
+
+In order to start modeling these electrical phenomenons, let us consider a geometrical setting representing the relevant components of a cell in its electrical activity, with the following assumptions:
+
+\begin{enumerate}
+	\item The cell is modeled as a sphere of radius $R_c$ and surface $ S_c = 4\pi R_c^2$
+	
+	\item The intracellular environment $\Omega_{in}$ is separated by the extracellular region $\Omega_{out}$ by the membrane, presenting internal surface $\Sigma_{in}$ and external $\Sigma_{out}$. Define the outward unit normal vectors to these surfaces as $\textbf{n}_{in}$  and  $\textbf{n}_{out} = - \textbf{n}_{in}$
+	
+	\item The thickness of the membrane $t_m$ is such that $ \eta_c := \frac{t_m}{R_c} << 1$. 
+	
+	\item The dielectric behaviour of the membrane is summarized by a \textbf{membrane capacitance}  $ c_m = \frac{\varepsilon_m}{t_m} $, where $\varepsilon_m$ is the dielectric constant of the membrane.
+\end{enumerate}
+
+Considering now two points $ \textbf{x}' \in \Omega_{in}$ and $ \textbf{x}'' \in \Omega_{out}$ and a time interval $ [0,T]$, assumption (3) allow us to neglect the thickness of the membrane and therefore assume that $\Sigma_{in} \sim \Sigma_{out}  \sim \Sigma $. In such way, we can define the electric potentials $ \psi^{in} (\textbf{x},t) = \psi(\textbf{x}',t) $ and  $ \psi^{out} (\textbf{x},t) = \psi(\textbf{x}'',t) $, with $\textbf{x} \in \Sigma$, assuming them uniform respectively in $\Omega_{in}$ and $\Omega_{out}$ and dependent only on time and on the local point of the membrane considered. The \textbf{membrane potential} is then defined as
 
 \begin{equation}
-J_{\alpha,i}^{TOT} =	\textbf{J}_{\alpha,i}^{TOT} \cdot \textbf{n}_{i} = J^{cond}_{\alpha,i} + J^{cap}_{\alpha,i} \hspace{2cm} i= in,out
+\psi_m (\textbf{x},t) = \psi^{in} (\textbf{x},t) -  \psi^{out} (\textbf{x},t) \hspace{0.5 cm}  t \in [0,T], \hspace{0.5 cm} \textbf{x} \in \Sigma
 \end{equation}
-	
-	
-The total current density is formed by two contributions:
+
+
+
+Under this setting, we define the \textbf{total ionic current density} for the  ion $\alpha$ as
+
+\begin{equation}
+J_{\alpha,i}^{TOT}(\textbf{x},t) =	\textbf{J}_{\alpha,i}^{TOT}(\textbf{x},t) \cdot \textbf{n}_{i} = J^{cond}_{\alpha,i}(\textbf{x},t) + J^{cap}_{i}(\textbf{x},t) \hspace{1cm} i= in,out
+\end{equation}	
+
+so that the two contributions of the total current density are the following:
 
 \begin{itemize}
 	
-	\item \textbf{Conduction current} $J^{cond}_{\alpha}$: the current formed by the conudction of ions along the ionic channels. We assume no loss of current inside the channel, so that $J^{cond}_{\alpha, in} = J^{cond}_{\alpha, out}$
+	\item \textbf{Conduction current} $J^{cond}_{\alpha}$: the current formed by the conduction of ions along the ionic channels. We assume no loss of current inside the channel, so that $J^{cond}_{\alpha, in} = J^{cond}_{\alpha, out}$
 	
-	\item \textbf{Capacitive current} $J^{cap}_{\alpha}$: the current formed by the charge accumulation in $\Sigma_{in}$ and $\Sigma_{out}$. The charge accumulation makes the membrane behave like a \textit{capacitor}. Thus, we assume 
+	\item \textbf{Capacitive current} $J^{cap}$: the current formed by the charge accumulation in $\Sigma_{in}$ and $\Sigma_{out}$. The charge accumulation makes the membrane behave like a \textit{capacitor}. Thus, we assume 
 	\begin{equation}
-		J^{cap}_{\alpha,i} = \frac{\partial \sigma_{\alpha,i}}{\partial t}  \hspace{2cm} i= in,out
+	J^{cap}_{i} = \frac{\partial \sigma_{i}}{\partial t}  \hspace{1cm} i= in,out
 	\end{equation}
 	
-	where $\sigma_{\alpha,i}$ is the \textbf{surface charge density}. Also in this case we require \textit{wall's neutrality}
+	where $\sigma_{i}$ is the \textbf{surface charge density} and, by standard theory [Mazzoldi], it is related to the membrane capacitance by the relation 
+	\begin{equation}
+	\sigma_{i}(\textbf{x},t) = c_m \psi_m(\textbf{x},t)  \hspace{0.5cm}  i= in,out , \hspace{0.5 cm}  t \in [0,T] , \hspace{0.5 cm} \textbf{x} \in \Sigma
+	\end{equation}  
+	which gives an expression for the capacitve current density:
+	\begin{equation}
+	J^{cap}_{i}(\textbf{x},t) = c_m \frac{\partial \psi_m(\textbf{x},t)}{\partial t}  \hspace{1cm} t \in [0,T], \textbf{x} \in \Sigma
+	\end{equation}
+	
+	Also in this case we require \textit{wall's neutrality}
 	
 	\begin{equation}
-\sigma_{\alpha,in} = \sigma_{\alpha,out}
+	\sigma_{in}(\textbf{x},t) = \sigma_{out}(\textbf{x},t)
 	\end{equation}
 \end{itemize}	
-	
-The neutrality conditions on conduction and capacitive current implies current conservation 
 
-	\begin{equation}
-	J_{\alpha,in}^{TOT} = J_{\alpha,out}^{TOT}
-	\end{equation}
-	
-Considering two points $ \textbf{x}' \in \Omega_{in}$ and $ \textbf{x}'' \in \Omega_{out}$ and a time interval $ [0,T]$, we can consider the electric potentials $ \psi^{in} (t) = \psi(\textbf{x}',t) $ and  $ \psi^{out} (t) = \psi(\textbf{x}'',t) $, assuming the potentials constant respectively in $\Omega_{in}$ and $\Omega_{out}$. The \textbf{membrane potential} is then defined as
+The neutrality conditions on conduction and capacitive current imply current conservation 
 
 \begin{equation}
-	\psi_m (t) = \psi^{in} (t) -  \psi^{out} (t) \hspace{1 cm}  t \in [0,T]
+J_{\alpha,in}^{TOT}(\textbf{x},t) = J_{\alpha,out}^{TOT}(\textbf{x},t)
 \end{equation}
-	
-	
-	The existence of the membrane potential is consequence of the Faraday's equation (known as well as Maxwell's third equation)
-	
-	\begin{equation}
-		\nabla \wedge \textbf{E} = -\frac{\partial \textbf{B}}{\partial t}
-	\end{equation}
-	
-	where $\textbf{E}$ and $\textbf{B}$ are the elctric and magnetic field, respectively. In the microscopic cellular environment, it happens in practice that $ \left| \frac{\partial \textbf{B}}{\partial t} \right| << \left| \nabla \wedge \textbf{E}\right|$, being the magnetic contribution negligible qith respect tot he electric one. This implies from (2) that $\nabla \wedge \textbf{E} = 0 \implies \exists \psi s.t. \textbf{E} = -\nabla \psi$.\\
-If $R_c$ and $t_m$ are, respectively, the cell's radius and the membrane's thickness, in practice we have that their ratio $ \eta_c := \frac{t_m}{R_c} << 1$. This implies that from a modeling point of view we can assume $t_m \sim 0 $, i.e. we can neglect the thickness of the membrane and assume $\Sigma_{in} \sim \Sigma_{out} \sim \Sigma$. In practice, for example, realistic values of such quantities can be $ R_c \sim 10^{-6} m$, $ t_m \sim 10^{-9} m$ and thus $\eta_c \sim 10^{-3}$.\\
-If $\epsilon_m$ is the membrane's \textit{dielectric constant}, we can define the \textbf{specific capacitance} of the membrane as $ c_m = \frac{\epsilon_m}{t_m}$. Assuming then that the surface charge densities have the form $\sigma_{in}(\textbf{x}',t) = c_m \psi_m (\textbf{x},t)) $ and  $\sigma_{out}(\textbf{x}'',t) = -c_m \psi_m (\textbf{x},t) $, where $\textbf{x} \in \Sigma$. The capacitive current density (2) assumes the form
 
-\begin{equation}
-	J^{cap}_{\alpha,i}(\textbf{x},t) = c_m \frac{\partial \psi_m(\textbf{x},t)}{\partial t}  \hspace{1cm} t \in [0,T], \textbf{x} \in \Sigma
-\end{equation}
-	
-	
-\subsection{ODE local models}
-	
-	
+
+
+
+
+
+
+
+\begin{figure}[H]
+	\begin{minipage}{\linewidth}
+		\centering
+		\begin{minipage}{0.45\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{membrane.jpg}
+				
+			\end{figure}
+		\end{minipage}
+		\hspace{0.05\linewidth}
+		\begin{minipage}{0.45\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{intra.png}
+				
+			\end{figure}
+		\end{minipage}
+		
+	\end{minipage}
+	\caption{\textit{Left: schematic representation of the cellular membrane.
+			Right: mathematical description of the cellular membrane}}
+\end{figure}
+
+
+
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.95]{ode_circuit.png} 
-	\end{center} 
-	\caption{\textit{Equivalent circuit of the total current density as in eq. (1)}}
-	
+		\begin{tabular}{ |c|c|c|c| } 
+			\hline
+			\textbf{Electric quantity} & \textbf{Name} & \textbf{Unit measure} \\
+			\hline
+			$t_m$ & Membrane thickness & $m$ \\ 
+			\hline
+			$R_c$ & Cell radius & $m$ \\
+			\hline
+			$\psi_m$ & Membrane potential & $V$ \\
+			\hline
+			$J$ & Current density & $A/m^2$ \\
+			\hline
+			$I$ & Current & $A$ \\
+			\hline
+			$\sigma$ & Surface charge density & $C/m^2$ \\
+			\hline
+			$c_m$ & Specific membrane capacitance & $F/m^2$ \\
+			\hline
+			$C_m$ & Membrane capacitance & $F$ \\
+			\hline
+			$g_m$ & Specific membrane conductance & $S/m^2$ \\
+			\hline
+			$G_m$ & Membrane conductance & $S$ \\
+			
+			\hline
+		\end{tabular}
+		
+	\end{center}
+	\caption{Main electrical quantities in cellular electrophysiology}
 \end{figure}
 	
-	Let us now consider a specific $\textbf{x} \in \Sigma$. Then, equation (1) expresses a balance law for the current densities $J_{\alpha,i}^{TOT}, i= in,out$, which can be divided in two contributed (capactive and conductive), where the capacitive current assumes the form $J^{cap}_{\alpha,i}(t) = c_m \frac{\partial \psi_m(t)}{\partial t}$.\\
-	As for the conductive current, we consider a general form 
+	
+\subsection{ODE local and global models}
+	
+	\begin{figure}[H]
+		\begin{minipage}{\linewidth}
+			\centering
+			\begin{minipage}{0.45\linewidth}
+				\begin{figure}[H]
+					\includegraphics[width=\linewidth]{ode_circuit.png}
+					
+				\end{figure}
+			\end{minipage}
+			\hspace{0.05\linewidth}
+			\begin{minipage}{0.48\linewidth}
+				\begin{figure}[H]
+					\includegraphics[width=\linewidth]{global_circuit.png}
+					
+				\end{figure}
+			\end{minipage}
+			
+		\end{minipage}
+		\caption{\textit{Left: equivalent circuit for a fixed point $\textbf{x} \in \Sigma$ (local model)  \\
+				Right: equivalent circuit for the whole membrane  $\Sigma$ (global model)}}
+	\end{figure}
+
+	
+	Considering  a specific $\textbf{x} \in \Sigma$, equation (1) expresses a balance law for the current densities $J_{\alpha,i}^{TOT}$, with $ i= in,out$, which can be divided in two contributions (capactive and conduction), where the capacitive current assumes the form $J^{cap}_{\alpha,i}(\textbf{x},t) = c_m \frac{\partial \psi_m(\textbf{x},t)}{\partial t}$.\\
+	The conduction current takes the general form 
+	
+	\begin{equation}
+		J^{cond}_{\alpha,i}(\textbf{x},t) = g_m(\textbf{x},t,\psi_m) [\psi_m(\textbf{x},t) - E_{c,\alpha}]
+	\end{equation}
+	
+	where $g_m$ is the \textbf{specific conductance}, depending on $\psi_m$, and $E_{c,\alpha}$ is the \textbf{Nernst potential}, i.e. the equilibrium potential for ion $\alpha$ formed across the membrane.\\
+Such expressions for the current densities can be syntethized in a \textit{circuital form} of equation (1), in which their two contribution (capacitive and conduction) are modeled respectively through a specific capacitance and a specific conductance (see Figure). Then, an application of the Kirchhoff law of current gives the current balance expressed in (7).\\
+The resulting equation constitutes an \textbf{ordinary differential equation (ODE)} in the unknown $\psi_m$. This model is a \textit{local} model, since the focus has been on a specific point of the membrane $\textbf{x}$.
+\\
+	If instead of a specific $\textbf{x} \in \Sigma$, the aim is to write equation (1) as a current balance across the whole cell's membrane $\Sigma$, the resulting differential equation, which in this case expresses a \textit{global} whole cell model, is obtained by integration of (1) over the surface $\Sigma$,  which yields the conservation of the total current 
+	
+	\begin{equation}
+		I_{\alpha}^{TOT} = \int_{\Sigma} \textbf{J}_{\alpha}^{TOT} \cdot \textbf{n}_{out} dS 
+	\end{equation} 
+In this case, we need to define the whole cell membane conductance $ G_m$ and capacitance $ C_m $, so that the current balance takes the form
+
+\begin{equation}
+	I_{\alpha}^{TOT}(t) = I_{\alpha,in}^{TOT}(t) =I_{\alpha,out}^{TOT}(t) = I_{\alpha}^{cap}(t) + I_{\alpha}^{cond}(t)
+\end{equation}
+	
+where $  I_{\alpha}^{cap}(t) = C_m \frac{d \psi_m(t)}{d t}$ and $ I_{\alpha}^{cond}(t) = G_m(t,\psi_m) [\psi_m(t) - E_{c,\alpha}]$.\\
+While the (specific) capacitance is an intrinsic value of the cell, the conduction current, and  in particular the (specific) conductance $G_m$, need to be modeled. In the next sections, three main models used in literature for this purpose will be presented: the \textbf{linear resistor model (LRM)}, the \textbf{Goldman-Hodgkin-Katz (GHK)} model and finally the \textbf{Hodgkin-Huxley (HH)} model.\\
+
+
+	
+	
+\subsection{LRM and GHK models}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.77]{LRM.png} 
+	\end{center} 
+	\caption{\textit{Characteristic curve for the linear resistor model}}
+	
+\end{figure}
+
+The \textbf{linear resistor model (LRM)} makes the simplest assumptions 
+
+\begin{equation}
+	G_{m,\alpha} = G_{m,\alpha}^0 = const \hspace{1.5 cm} E_{c,\alpha} := E_{m,\alpha}^0 = const \hspace{1cm} \forall \alpha
+\end{equation}
+
+Therefore, the conductance is assumed constant, as well as the equilibrium value of the potential $E_m^0 $, called the \textbf{Nernst potential}.
+The resulting expression for the conduction current is
+\begin{equation}
+	I_G(t) = G_{m,\alpha}^0 [\psi_m -  E_{m,\alpha}^0]
+\end{equation}
+
+This law defines a straight line in the plane $I_G$ vs $\psi_m$, such that there exists a unique value of membrane potential for which $I_G=0$. This value is exactly the Nernst potential $E_m^0$ and thus it represents a \textit{thermodynamic equilibrium} in which the ion flow from outisde to inside of the cell is balanced with by ion flow from inside to outside, so that the net current is null.\\
+Considering local ODE models, the procedure is the same applied to the specific electrical quantities:
+
+\begin{equation}
+g_{m,\alpha} = g_{m,\alpha}^0 = const \hspace{1.5 cm} E_{c,\alpha} := E_{m,\alpha}^0 =const 
+\end{equation}
+
+resulting in a current density
+\begin{equation}
+J_G(t) = g_{m,\alpha}^0 [\psi_m -  E_{m,\alpha}^0]
+\end{equation}
+
+
+In order to determine an expression for the Nernst potential $E_{m,\alpha}^0$, we need to investigate the causes of equilibrium at a deeper level, namely in the process of ion flow in the channels of the membrane. Micorscopic theory assumes that ion particles in the channel are subjected to two different contributions: diffusion process caused by the chemical gradient, and a transport caused by the presence of an \textit{electrical field} $\textbf{E}(\textbf{x},t)$ [Sacco-Guidoboni]. This phenomenological perspective leads to the \textbf{drift-diffusion (DD)} model for the ionic current density [REF?], which reads
+
+\begin{equation}
+	\textbf{J}_{\alpha}^{TOT} = \textbf{J}_{\alpha}^{DIFF} + \textbf{J}_{\alpha}^{DRIFT} = -Fz_{\alpha}D_{\alpha}\nabla C_{\alpha} + F|z_{\alpha}| C_{\alpha}\mu_{\alpha}\textbf{E}
+\end{equation}
+where the following quantities have been defined:
+\begin{itemize}
+	
+	\item $F$: the \textbf{Faraday constant}, such that $F = q N_{av}$, being $q$ the elementary charge and $N_{av}$ the Avogadro's constant
+	
+	\item $z_{\alpha}$ is the \textbf{ion number}, positive for cations and negative for anions
+	
+	\item $\mu_{\alpha}$ is the \textbf{ion electrical mobility}
+	
+	\item $C_{\alpha}$ is the molar density of ion $\alpha$
+	
+	\item $D_{\alpha}$ is the \textbf{ion diffusivity}. this value can be retrieved from the \textit{Einstein-Smoluchowki} relation [Md. Akhtarul Islam] $D_{\alpha} = V_{TH}\frac{\mu_{\alpha}}{|z_{\alpha}|}$, where $ V_{TH} \sim 26 mV$ is the \textit{thermal voltage}
+\end{itemize}
+
+Assuming a one dimensional gemotry, noting that $ E -\frac{\partial \psi}{\partial x}$ and using the Einstein-Smoluchowki relationship, we can prove that the thermodynamic equilibrium, for which $\textbf{J}_{\alpha}^{TOT} = 0$ and thus the drift current density balances the diffusion current density, is obtained at the value of potential
+
+\begin{equation}
+	E_{m,\alpha}^0 = \frac{V_{TH}}{z_{\alpha}}\ln\left(\frac{C_{\alpha}^{OUT}}{C_{\alpha}^{IN}}\right)
+\end{equation}
+
+which provides the expression for the Nernst potential.
+\\
+
+With the \textbf{Goldman-Hodgkin-Katz (GHK)} model, the modeling of the conduction current becomes nonlinear. Here, the following assumptions are adopted: 
+
+\begin{itemize}
+	
+	\item The electric field in the ionic channels assumes a constant value of $ E = \frac{\psi_m}{t_m}$, i.e. the ratio between the membrane potential and the membrane thickness
+	
+	\item The geometrical setting is one dimensional
+	
+	\item The conduction current $\textbf{J}_{\alpha}^{cond}$ varies only in time, i.e. is constant in space and $ \frac{\partial J_{\alpha}^{cond} }{\partial x} = 0$. This means that there is no production or consumtpion of ions along the channel
+	
+\end{itemize}
+
+Applying these hypothesis to the (DD) model (REF EQ),
+it can be seen that the in order to satisfy the hypothesis, the current density must assume the form
+
+\begin{equation}
+	J_{\alpha}^{GHK}(\psi_m,t) = -qz_{\alpha}P_{\alpha}\left[n_{\alpha}^{out} \mathcal{B}(\beta_m) - n_{\alpha}^{in} \mathcal{B}(-\beta_m) \right]
+\end{equation}
+
+where $P_{\alpha} = \frac{D_{\alpha}}{t_m}$ is the \textbf{membrane permeability}, $ \beta_m := \frac{z_{\alpha} \psi_m}{V_th}$ and $ \mathcal{B}(x) = \frac{x}{e^x -1}$ is the \textbf{inverse Bernoulli function}.\\
+It can be proven [Sacco-Guidoboni] that this expression can be written in the form of (eq. nonlinear resistor) by setting:
+
+\begin{equation}
+	g_{\alpha}(\psi_m,t) = P_{\alpha}\frac{q z_{\alpha}^2N_{av}C_{\alpha}^{in}(t)}{V_{TH}} 
+\end{equation}
+
+\begin{equation}
+E_{eq}(\psi_m,t) = P_{\alpha}\frac{V_{TH}}{z_{\alpha}} \left(\frac{C_{\alpha}^{out}(t)}{C_{\alpha}^{in}(t)} - 1\right)\mathcal{B}(\beta_m)
+	\end{equation}
 	
 	
 	
+	\subsection{Hodgkin-Huxley model}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.9]{HH.png} 
+		\end{center} 
+		\caption{\textit{Equivalent circuit for the Hodgkin-Huxley model}}
+		
+	\end{figure}
+
+
+In 1963, Hodgkin and Huxley published in a paper a revolutionary work, which awarded them the Nobel prize, on mathematical modeling for the electrophyisiogical activity of cells, with the focus on the neurons of the giant squid [Hodgkin-Huxley]. The main structure of the model follows the principles discussed so far, in which an equivalent circuit represents the ion flow across the cell membrane. The main assumptions and particularities of the model can be resumed as follows:
+
+\begin{itemize}
+	
+	\item The total current density $J^{tot}$ can be split in two contributions: a capacitive transmembrane current $J_{cap}^{tm} = c_m \frac{\partial \psi_m}{\partial t}$, where the capacitance is assumed to be a constant quantity, and, for every ion considered, a conduction transmembrane current  $J_{cond}^{tm}$ to be modeled. The main ions considered are \textit{potassium} ($K^+$) and \textit{sodium} ($Na^+$). The remainaning contribution is mostly due to \textit{chlorine} ($Cl^-$) and it is summarized in a \textit{leakage} current $J_L^{tm}$
+	
+	\item With every ion $\alpha$ is associated its Nernst potential $E_{m,\alpha}$, representing the value for which thermodynamic equilibrium is achieved
+	
+	\item In order to better describe what happens at a biological level of the cell membrane, the ionic channel have a \textit{state}, i.e. an associated probability value which tells the percentage of their opening. Indeed, the behaviour of ionic exchange between the cytoplasm and theextracellular environment, strongly depends on the closing and opening of the ionic channel. With the HH model, the attempt is to mathematrically describe the opening status of the channel along time
 	
 	
+\end{itemize}	
+
+
+In the original form of the paper, a change of variable is performed: let us define the equilibrium potential of the whole cell as $E_m$, and define for every ion $\alpha$ the quantities
+
+\begin{equation}
+	v_\alpha := E_{m,\alpha} - E_m \hspace{2cm}  v := \psi_m - E_m
+\end{equation}
+	
+	In this way, the form of the current density of ion $\alpha$ becomes
 	
 	
+	\begin{equation}
+	J_\alpha^{cond} = g_{m,\alpha}(v-v_\alpha)
+	\end{equation}
+	
+	and the current conservation equation, expressed for the new variable $v = v(t)$, is
+	
+	\begin{equation}	
+	\begin{cases}
+	J^{tot} = J_{cap}^{tm} + J_{cond}^{tm} = c_m \frac{\partial v}{\partial t} + g_{Na}(v - v_{Na}) + g_{K}(v - v_{K}) +g_{L}(v - v_{L})  \\
+	v(0) = 0
+	\end{cases}	\end{equation}
 	
 	
+	having assumed the membrane potential at equilibrium at time $t=0$.\\
+	For the whole equilibrium potential $E_m$, the \textbf{Goldman potential} can be used [Ermantraut-Terman]
 	
 	
+	\begin{equation}
+	E_m= V_{TH} \ln \left[\frac{P_{Na} C_{Na}^{out} + P_{K} C_K^{out} + P_{Cl} C_{Cl}^{in}}{P_{Na} C_{Na}^{in} + P_{K} C_K^{in} + P_{Cl} C_{Cl}^{out}}\right]
+	\end{equation}
+	
+	where $P_\alpha$ and $C_\alpha$  denote the permeability and concentration of ion $\alpha$, respectively.\\
+	As for the modeling of conductances, let us introduce the \textbf{gating variables} $n,m,h$ for the three types of ions considered $K^+,Na^-,Cl^-$. They represent the probability of opening of the ionic channel. For example, if the cell is in a situation in which $C_{Na}^{out} > C_{Na}^{in}$, the opening of $Na^+$ channel will result in a current flow from outside to inside, and corresponing rise of the potential $\psi_m$. When the membrane potential reaches the value of equilibrium $E_{Na}$, the sodium channel will close. For this reason, the gating variables are expressed as the solution of ordinary differential equation of the type
+	
+		\begin{equation}
+	\frac{dy}{dt} = \gamma (1-y) - \delta y \hspace{1 cm} \gamma,\delta >0  \hspace{1 cm} y = m,n,h
+	\end{equation}
+	
+	so that there is a balance between a production rate $\gamma$ and a consumption $\delta$. The solution of an ODE in this form is
+	
+	\begin{equation}
+	y(t) = y_\infty \left[1 - \exp\left(\frac{-t}{\tau}\right)\right]
+	\end{equation}
+	
+	where
+	
+	\begin{equation}
+	y_\infty = \frac{\gamma}{\gamma + \delta} \hspace{1.5cm} \tau = \frac{1}{\gamma + \delta}
+	\end{equation}
+	
+	For the potassium conductance, the chosen dependence on its gating variable (in agreement with experimental data) is $ g_K = \bar{g}_K n^4$. For the sodium variable, it has been observed that also a second process was involved, so that the proposed form is  $ g_{Na} = \bar{g}_{Na} m^3h$. The values $\bar{g}_K$ and $\bar{g}_{Na}$ are constant and determined to fitting of experimental data.\\
+	To summarize, the HH model consists in the following sytem of nonlinear ordinary differential equations:
+	
+	\begin{equation}
+		\begin{cases}
+		J^{tot} = c_m \frac{d v}{d t} + J_{Na} + J_K +J_L  & \text{(Current conservation)}\\
+		J_\alpha = g_\alpha (v-v_\alpha) \hspace{1 cm}  \alpha = Na,K,Cl & \text{(Modeling currents)}\\
+		\frac{dn}{dt} = \gamma_n(1-n) - \delta_n n & \text{(ODE for gating variable n)} \\
+		\frac{dm}{dt} = \gamma_m(1-m) - \delta_m m & \text{(ODE for gating variable m)}\\
+		\frac{dh}{dt} = \gamma_h(1-h) - \delta_h h & \text{(ODE for gating variable h)}\\
+		 g_K = \bar{g}_K n^4 & \text{(Modeling conductance for K)}\\
+		 g_{Na} = \bar{g}_{Na} m^3h  & \text{(Modeling conductance for Na)}
+		
+		\end{cases}
+	\end{equation}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=1.1]{gk.png} 
+		\end{center} 
+		\caption{\textit{Example of behaviour of the potassium conductance $g_K$: a step increase is followed by a decrease. The dots are experimental data}}
+		
+	\end{figure}
+
+
+\subsection{Cable model}
+
+\begin{figure}[H]
+	\begin{center}
+		\hspace*{-0.7cm}
+		\includegraphics[scale=0.7]{cable.png} 
+	\end{center} 
+	\caption{\textit{Schematic representation of the cable model}}
+	
+\end{figure}
+
+
+The models studied so far described the dynamic evolution of the membrane potential  for a single cell. In order to go further, we should keep into account as well the \textit{communication} between two cells, i.e. the propagation of the action potential from one neuron to another. Biologically, this propagation is mediated by the \textit{axon} connecting the two units. The axon is still parti of the neuron, and in every point we may assume a communication with the oustide environment through electrical circuits as described in the previous sections.\\
+The main assumptions for the cable model are the following:
+
+\begin{itemize}
+	
+	\item The biological cable, i.e. the axon, has length $L$ and radius $a$ (thus a cross-section area of $S=\pi a^2$), with $\frac{a}{L} << 1$, allowing to represent the cable as a $1D$ object and to fix a longitudinal axis $ x \in [0,L]$
+	
+	\item The electric potential outside the cell is constant, as well as the concentrations inside and outside the cell for every ion $\alpha$: 
+	$$ \psi^{out}(x,t) = const  \hspace{1cm} C_\alpha^{in}(x,t)  = const \hspace{1cm} C_\alpha^{out}(x,t)  = const$$
+	
+	\item The \textbf{resistivity} of the axon $\rho_{ax}$ is constant. The resitivity is the reciprocal of the \textit{conductivity} $\sigma$, and is related to the \textit{resistance} $R_{ax}$ by $ R_{ax} = \frac{\rho_{ax} L}{S}$
+	
+	
+\end{itemize}
+
+
+If we consider an element of length $dx$ of the cable, its contribution to resistance is $dR(x) = \frac{\rho_{ax} dx}{\pi a^2}$. If a current $I_{in}$ enters the element, the consequent potential difference across the element is $ d\psi_m(x,t) = - \left(\psi_m(x+dx,t) - \psi_m(x,t)\right) = dR(x)I_{in}(x,t) = \frac{\rho_{ax} dx}{\pi a^2} I_{in}(x,t)$. Therefore, letting $dx \rightarrow 0$, this implies that
+
+\begin{equation}
+	I_{in}(x,t) = -\frac{\pi a^2}{\rho_{ax}}\frac{\partial \psi_m(x,t)}{\partial x}
+\end{equation}
+
+Next, in order to retrieve a current balance along the axon, we need to consider again an infinitesimal element $dx$, in which a current $I_{in}(x,t)$ is entering the element, a current $I_{in}(x+dx,t)$ is leaving the element, and a transmembrane current $I_{TM}(x+\frac{dx}{2},t)$ is flowing from the axon to the extracellular environment, with a capacitive and a conduction contributions [see Figure].\\
+The application of Kirchhoff current law at the node  $x+\frac{dx}{2}$ gives
+
+\begin{equation}
+- I_{in}(x,t) + I_{cap}(x+\frac{dx}{2},t) + I_{cond}(x+\frac{dx}{2},t) + I_{in}(x+dx,t) = 0
+\end{equation}
+
+The capactive and conductive contributions to the transmembrane current are
+\begin{equation}
+  I_{cap}(x+\frac{dx}{2},t) = J_{cap}(x+\frac{dx}{2},t) 2 \pi a dx = c_m \frac{\partial \psi_m(x,t)}{\partial t} 2 \pi a dx 
+\end{equation}
+
+\begin{equation}
+I_{cond}(x+\frac{dx}{2},t) = J_{cond}(x+\frac{dx}{2},t) 2 \pi a dx 
+\end{equation}
+
+Where $J_{cond}$ can be mathematically described using any of the LR,GHK or HH models. Dividing equation (28)  by $2 \pi a dx $ and letting $dx \rightarrow 0$ gives rise to the equation system
+
+\begin{equation}
+\begin{cases}
+\frac{\partial \psi_m(x,t)}{\partial t} + \frac{1}{2 \pi a }\frac{\partial I_{in}(x,t)}{\partial x} + J_{cond}(x,t) = 0 \\
+I_{in}(x,t) = -\frac{\pi a^2}{\rho_{ax}}\frac{\partial \psi_m(x,t)}{\partial x}
+\end{cases}
+\end{equation}
+
+The resulting equation is a \textit{parabolic partial differential equation}, in which the unknown membrane potential $\psi_m(x,t) $ varies along the axon and along time, and it appears under first derivative in time and second in space. In order for (31) to be well-posed, the system has to be completed with an initial condition $ \psi_m (x,0) = \psi_m^0(x)$ and appropriate boundary conditions. The nature of the cable equation will be linear or nonlinear depending on the chosen model for $J_{cond}$.\\
+As for the boundary conditions, a common choice is to consider \textit{Robin boundary conditions}. Defining the potential at $x=0$ as $\bar{V}_{in}(t)$ and modeling the right-hand terminal of the axon through a resistance $R_{out}$, the resulting boundary conditions are
+
+\begin{equation}
+\begin{cases}
+\psi_m(0,t) = \bar{V}_{in}(t) \\
+-I_{in}(L,t) +\frac{1}{R_{out}}\psi_m(L,t) =0
+\end{cases}
+\end{equation}
+
+\begin{figure}[H]
+	\begin{center}
+		
+		\includegraphics[scale=0.5]{curr_bal.png} 
+	\end{center} 
+	\caption{\textit{Current balance in an element $dx$ of the axon}}
+	
+\end{figure}
+
+\subsection{Numerical solution of the cable equation}
+
+
+\begin{figure}[H]
+	\begin{center}
+		
+		\includegraphics[scale=0.7]{basis.png} 
+	\end{center} 
+	\caption{\textit{Lagrangian basis functions}}
+	
+\end{figure}
+
+
+The cable equation is a one dimensional \textit{diffusion-reaction} PDE. A well posed problem of this type, for  general unknwons $ u(x,t)$ and $\textbf{J} = J(x,t)\textbf{e}$, can always be written under the following form of \textbf{conservation law}:
+
+
+\begin{equation}
+\begin{cases}
+\frac{\partial u}{\partial t} +\frac{\partial J}{\partial x} = \mathcal{P} & \forall (x,t) \in [0,L] \times [0,T] \hspace{1cm} \text{(Conservation law)} \\
+J = \mu \frac{\partial u}{\partial x} & \forall (x,t) \in [0,L] \times [0,T] \hspace{1cm} \text{(Flux law)}\\
+u(x,0) = u^0(x) & \forall x \in [0,L] \hspace{1cm}  \text{(Initial condition)} \\
+\gamma \textbf{J} \cdot \textbf{n} = \alpha u - \beta &  \forall (x,t) \in \partial \Omega \times [0,T] \hspace{1cm} \text{(Boundary conditions)}
+\end{cases}
+\end{equation}
+
+Here, $\textbf{J}$  represents a \textit{flux} taking into account the diffusion, while $\mathcal{P}$ takes into account the  net production rate. The boundary coefficients $\alpha, \beta, \gamma$, depending on their values, can give rise to the main types of boundary conditions (Dirichlet, Neumann, Robin).\\
+In order to numerically solve equation (33), the following two main steps need to be performed:
+
+\begin{enumerate}
+	\item \textbf{Time semidiscretization}. The time derivative is apporximated with a finite-difference scheme. In the present case, the \textbf{Backward Euler method (BE)} is chosen, because of its unconditional stability [Quarteroni-Sacco]. Dividing the interval $[0,T]$ in $N_T$ subintervals of the form $[t^k, t^{k+1}]$ with $ k=0, \dots N_T-1$, and setting $\Delta t = \frac{T}{N_T} $, the semidiscretization of (33) using BE reads
+	
+	\begin{equation}
+	\begin{cases}
+	\frac{u^{k+1} - u^k}{\Delta t} +\frac{\partial J^{k+1}}{\partial x} = \mathcal{P}^{k+1}  \\
+	J^{k+1} =  \mu \frac{\partial u^{k+1}}{\partial x} 
+	\end{cases}
+	\end{equation}
+	 
+	where, for a scalar quantity $\phi(x,t)$, it has been used the notation $ \phi^k := \phi(x,t^k) $. The first equation of (34) can be rewritten as
+	
+	\begin{equation}
+	\sigma ^{k+1} u^{k+1} +\frac{\partial J^{k+1}}{\partial x} = f^{k+1} 
+	\end{equation}
+	
+	\item \textbf{Spatial discretization}. A Galerkin-FEM strategy is adopted to solve (34). From standard theory [Quarteroni], setting $V = H_0^1(\Omega)$, the variational problem can be rewritten in its \textit{variational form}
+	
+	\begin{equation}
+	\text{Find $u \in V$ s.t.} \hspace{0.5cm} B(u,\varphi) = F(\varphi) \hspace{0.5cm} \forall \varphi \in V
+	\end{equation}
+	
+	in which we have defined the forms
+	\begin{equation}
+	B(u,\varphi) = \int_{\Omega}\left[\mu \frac{\partial u}{\partial x}  \frac{\partial \varphi}{\partial x} + \sigma u \varphi \right]  dx
+	\end{equation}
+	
+	\begin{equation}
+F(\varphi) = \int_{\Omega} \left[f \varphi\right] dx
+	\end{equation}
+ Lax-Milgram theorem [Quarteroni] ensures existence, uniqueness and stability for the solution of (36).\\
+ With the \textbf{Finite element method (FEM)}, the infinite dimensional setting of (36) is approximated by the introduction of a finite dimensional space $V_h$ s.t . $dim(V_h) = N_h < \infty$. For the present case, the chosen space is the linear combination of piecewise linear polinomials. Partitioning the interval $[0,L]$ in $M_h$ subintervals of length $ h = \frac{L}{M_h}$ and indicating with $\tau_h$ the collection of subintervals, we define the space
+ $$ V_h := \left\{ w_h\in C^0(\Omega) \hspace{0.5 cm} s.t. \hspace{0.5 cm} w_h|_{K_i} \in \mathbb{P}^1(K_i) \hspace{0.3 cm} \forall K_i \in \tau_h, \hspace{0.3 cm} w_h(0)=w_h(L)=0 \right\}$$
+ 
+ where $ \mathbb{P}^1(K_i)$ is the set of linear polinomials defined on the interval $K_i$. The space $V_h$ is therefore a finite approximation of the space $H_0^1$. The \textit{Lagrangian basis} $ \left\{ \varphi _j \right\}_{j=1}^{N_h}$, where $ \varphi_j(x_i) = \delta_{ij}$, is a basis for $V_h$, which means that every element $w_h \in V_h$ can be written as
+ 
+\begin{equation}
+ w_h = \sum_{j=1}^{N_h} w_j \varphi_j(x)
+\end{equation}
+
+In light of this, the FEM discrete formulation becomes
+
+	\begin{equation}
+\text{Find $u_h = \sum_{j=1}^{N_h} u_j \varphi_j(x) \in V_h$ s.t.} \hspace{0.5cm} B(u_h,\varphi_i) = F(\varphi_i) \hspace{0.5cm} \forall i = 1, \dots N_h
+\end{equation}
+resulting in the \textit{algebraic system}
+
+\begin{equation}
+B \textbf{u} = \textbf{F}
+\end{equation}
+where $\textbf{u} = [u_j]_{j=1}^{N_h}$, $B_{ij} = B(\varphi_j,\varphi_i)$ and $F_i = F(\varphi_i)$. The following theorem guarantees the convergence of the FEM solution to the exact solution of (ref 36) [Quarteroni]:
+\begin{theorem}[Convergence]
+	Let $u \in H^2(\Omega) \cap H_0^1(\Omega)$. Then there exist two constants $c_1,c_2 >0$, independent of $h$, such that
+	$$||u-u_h||_{H_0^1} \le c_1h||u||_{H^2}$$
+	
+	$$||u-u_h||_{L^2} \le c_2h^2||u||_{H^2}$$
+\end{theorem}
+\end{enumerate}
+
+The above error estimates express the property that $u_h$ converges to $u$ with order $1$, with respect to h, in the $H^1$ norm, and with order $2$ in the $L^2$ norm.\\
+The application of this discretization procedure to the cable equation (ref eq.) will results in a different algebraic system (41) depending on the adopted modeling of  $J^{cond}$. If a linear resistor model is adopted, the PDE, and consequently the algebraic system, will be linear and of easy resolution. On the opposite side, if a nonlinear model is adopted, the nonlinearity will reflect also on the algebraic formulation. To this purpose, functional iterations can be adopted to iteratively solve the obtained nonlinear system, such as in the \textit{Newton method} or the \textit{Alternative lagging method} described in [Sacco-Guidoboni].
+
 \end{document}

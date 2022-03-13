@@ -13,6 +13,8 @@ function [stress_cage, stress_hab, stress_test, ...
  t_adapting(stress_cage, stress_hab, stress_test, ...
     neutral_cage, neutral_hab, neutral_test, obs_cage, obs_hab, obs_test) 
 
+
+
 %cage data
 
 neutral_cage(end,:) = [];
@@ -45,6 +47,7 @@ stress_hab = stress_hab(k1_stress_hab:k2_stress_hab,:);
 hab_times = stress_hab(:,1);
 
 % test data
+
 
 test_min = min([neutral_test(end,1),obs_test(end,1),stress_test(end,1)]); 
 

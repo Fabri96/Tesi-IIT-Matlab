@@ -13,9 +13,19 @@
 \contentsline {section}{\numberline {3}Interbrain data analysis: one-to-one task}{27}{section.3}%
 \contentsline {section}{\numberline {4}Interbrain data analysis: emotion discrimination task}{28}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Emotion discrimination task}{28}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Activity of amygdala in altruistic decision making}{29}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Social decision making in mammals}{29}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Description of the altruism task}{30}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Behavioural results in the altruism task}{31}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}The role of social hierarchy in altruism display}{33}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}The role of BLA neurons in selfish and prosocial choices}{35}{subsection.5.5}%
+\contentsline {subsection}{\numberline {4.2}Normalizing the dataset}{30}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Behavioural analyses of the task}{32}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Cross-correlation analysis for the mean activity}{34}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Activity of amygdala in altruistic decision making}{38}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Social decision making in mammals}{38}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Description of the altruism task}{39}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Behavioural results in the altruism task}{40}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}The role of social hierarchy in altruism display}{42}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}The role of BLA neurons in selfish and prosocial choices}{44}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Mathematical modeling for electrophysiology}{47}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Electrical activity in neurons}{47}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}ODE local and global models}{49}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}LRM and GHK models}{50}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Hodgkin-Huxley model}{52}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Cable model}{55}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Numerical solution of the cable equation}{57}{subsection.6.6}%

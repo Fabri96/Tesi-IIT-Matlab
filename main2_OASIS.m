@@ -14,7 +14,15 @@ addpath('zone analysis','normalizations','overall activity','statistics',...
 
 addpath('SAVED DATA\DATA_SECOND\');
 
-clearvars -except corr  L2_errors Inf_errors hab_act1 test_act1 hab_act2 test_act2 hab_act3 test_act3 hab_act4 test_act4
+clearvars -except corr  L2_errors stress_hab_act1 stress_hab_act1 ...
+    stress_cage_act1 stress_test_act1 neutral_test_act1 neutral_hab_act1 ...
+ neutral_cage_act1   obs_test_act1 obs_hab_act1 obs_cage_act1 ...
+ avg_test_stress1 avg_test_neut1 avg_sniff_stress1 avg_sniff_neut1 avg_interm1...
+ stress_close1 stress_sniff1 stress_far1 neutral_close1 neutral_sniff1 ...
+ neutral_far1 t_obs_stress1 t_obs_neut1 t_interm1 t_obs_stress1_hab ...
+ t_obs_neut1_hab t_interm1_hab c_first lags_first c2_first lags2_first ...
+ c3_first lags3_first c4_first lags4_first c5_first lags5_first ...
+c6_first lags6_first
 close all
 
 
@@ -36,7 +44,7 @@ dataset=2;
 sd_norm=1;
 mm_norm=0;
 
-fs=0.04;
+fs=0.05;
 % pairings = neutral_data_cage2(1:2,20:35);
 
 % [neutral_data2] = neutral_fixing(neutral_data_cage2, neutral_data_habtest2,pairings);
@@ -48,7 +56,7 @@ neutral_data2 = [neutral_oasis_cage2(:,1:end-1) ; neutral_oasis_habtest2(2:end,:
 [stress, stress_cage, stress_hab, stress_test, ...
     neutral, neutral_cage, neutral_hab, neutral_test,...
     obs, obs_cage, obs_hab, obs_test,sniff] = ...
-    accept_and_split(stress_oasis2, neutral_data2, obs_oasis2,sniff2,2) ;
+    accept_and_split(stress_oasis2, neutral_data2, obs_oasis2,sniff2,dataset) ;
 
 
 [stress_cage, stress_hab, stress_test, ...
@@ -56,17 +64,12 @@ neutral_data2 = [neutral_oasis_cage2(:,1:end-1) ; neutral_oasis_habtest2(2:end,:
  t_adapting(stress_cage, stress_hab, stress_test, ...
     neutral_cage, neutral_hab, neutral_test, obs_cage, obs_hab, obs_test);
 
-%   neutral_test = neutral_test(:,[1:3 7:end]);
-% 
-% neutral_hab = neutral_hab(:,[1:3 7:end]);
-% 
-% stress_test(:,[10 21])=[];
-% 
-% obs_test(:,[6 11 16 10])=[];
-% 
-% stress_hab(:,[10 21])=[];
-% 
-% obs_hab(:,[6 11 16 10])=[];
+
+obs_test(:,[ 10 11 16 18]) = [];
+
+neutral_test(:,2) = [];
+
+stress_test(:,21)=[];
 %% NEURON SELECTION OPTION
 %  obs_test(:,[5 13 ])=[];
 % neutral_test(:,[2:9 13])=[];
@@ -81,6 +84,10 @@ neutral_test = sd_normalization(neutral_test);
 obs_hab = sd_normalization(obs_hab);
 stress_hab = sd_normalization(stress_hab);
 neutral_hab = sd_normalization(neutral_hab);
+
+obs_cage = sd_normalization(obs_cage);
+stress_cage = sd_normalization(stress_cage);
+neutral_cage = sd_normalization(neutral_cage);
 end
 
 %% MIN-MAX NORMALIZATION
@@ -115,6 +122,12 @@ neutral_activity_hab = mice_activity(neutral_hab);
 
 stress_activity_hab = mice_activity(stress_hab);
 % stress_activity_hab=z_score_normalization(stress_activity_hab);
+
+obs_activity_cage = mice_activity(obs_cage);
+
+neutral_activity_cage = mice_activity(neutral_cage);
+
+stress_activity_cage = mice_activity(stress_cage);
 
 ad_test_zone = adapt_zone(test_zone2, obs_activity_test);
 

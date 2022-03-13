@@ -12,13 +12,15 @@ close all
 
 
 initial = 0; % Consider onl first part 
-lag_selection =0;
+lag_selection =1;
 
- maxlag= 4/fs;
+mark=0;
+
+ maxlag= 200/fs;
 nn=4;
 nn2=4;
 
-if(dataset == 1 || dataset == 3)
+if(dataset == 1 || dataset == 3 || dataset==5)
 
 
 % ad_hab_zone = adapt_zone(hab_zone,obs_activity_hab);
@@ -174,7 +176,7 @@ end
 
 if(dataset ==4)
 
-ad_hab_zone = adapt_zone(hab_zone,obs_activity_hab);
+
 
     %%%%% Let's extract mice activities during the different phases of the test
 
@@ -252,23 +254,6 @@ end
 
 
 
-
-
-
-
-
-
-% bar(1,y(2),'b')
-% 
-% hold on
-% bar(-1,y(1),'r')
-% 
-% legend('Pearson correlation during test ','Pearson correlation during hab ')
-% 
-% 
-% ylabel('Pearson correlation')
-% title('Pearson correlation between observer and stressed')
-
 if(lag_selection ==1)
 [c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,maxlag,'coeff');
 
@@ -289,16 +274,27 @@ else
 end
 if(initial==1)
 
-    [c,lags] = xcov(obs_activity_test_stress(1:round(end/nn)),stress_activity_test2(1:round(end/nn)),'normalized');
+    [c,lags] = xcov(obs_activity_test_stress(1:round(end/nn)),stress_activity_test2(1:round(end/nn)),maxlag,'normalized');
 
-    [c2,lags2] = xcov(obs_activity_hab_stress(1:round(end/nn)),stress_activity_hab2(1:round(end/nn)),'normalized');
+    [c2,lags2] = xcov(obs_activity_hab_stress(1:round(end/nn)),stress_activity_hab2(1:round(end/nn)),maxlag,'normalized');
 
-    [c3,lags3] = xcov(obs_activity_test_neutral(1:round(end/nn2)),neutral_activity_test2(1:round(end/nn2)),'normalized');
+    [c3,lags3] = xcov(obs_activity_test_neutral(1:round(end/nn2)),neutral_activity_test2(1:round(end/nn2)),maxlag,'normalized');
 
-    [c4,lags4] = xcov(obs_activity_hab_neutral(1:round(end/nn2)),neutral_activity_hab2(1:round(end/nn2)),'normalized');
+    [c4,lags4] = xcov(obs_activity_hab_neutral(1:round(end/nn2)),neutral_activity_hab2(1:round(end/nn2)),maxlag,'normalized');
 
 end
 
+if(mark==1)
+
+    [c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,'normalized');
+
+    [c2,lags2] = xcov(obs_activity_hab(:,2),stress_activity_hab(:,2),6000,'normalized');
+
+    [c3,lags3] = xcov(obs_activity_test_neutral,neutral_activity_test2,'normalized');
+
+    [c4,lags4] = xcov(obs_activity_hab(:,2),neutral_activity_hab(:,2),6000,'normalized');
+
+end
 
  subplot(1,2,1)
 % rand_test1 = phaseRandomize(obs_activity_test_stress');
@@ -306,152 +302,175 @@ end
 % [c_r ,lags_r]=xcorr(rand_test1,rand_test2,'normalized');
 
 %  stem(lags,c,'b')
-plot(lags,c,'b-o',MarkerSize=2)
+
+[c_cage_stress,lags_cage_stress] = xcov(obs_activity_cage(:,2),stress_activity_cage(:,2),maxlag,'normalized');
+
+[c_cage_neutral,lags_cage_neutral] = xcov(obs_activity_cage(:,2),neutral_activity_cage(:,2),maxlag,'normalized');
+
+%% PLOTS
+
+plot(lags*fs,c,'b-o',MarkerSize=2)
  hold on
 %  stem(lags2,c2,'r')
-plot(lags2,c2,'r-o',MarkerSize=2)
- legend('CC during test','CC during habituation')
-xlabel('lags')
+plot(lags2*fs,c2,'r-o',MarkerSize=2)
+hold on
+plot(lags_cage_stress*fs,c_cage_stress,'g-o',MarkerSize=2)
+ legend('CC during test','CC during habituation','CC during homecage')
+xlabel('lags (s)')
 ylabel('cross-correlation')
 
 
-title('Cross-correlations between observer and stressed')
+title('CC between observer and stressed')
 set(gca,'FontSize',15)
 ylim([-0.3 1])
+grid
+% xlim([-200 200])
+if(initial==1)
+xlim([-100 100])
+end
 subplot(1,2,2)
 
 % stem(lags3,c3,'b')
-plot(lags3,c3,'b-o',MarkerSize=2)
+plot(lags3*fs,c3,'b-o',MarkerSize=2)
 hold on
 % stem(lags4,c4,'r')
-plot(lags4,c4,'r-o',MarkerSize=2)
-
-legend('CC during test','CC during habituation')
-xlabel('lags')
+plot(lags4*fs,c4,'r-o',MarkerSize=2)
+hold on
+plot(lags_cage_neutral*fs,c_cage_neutral,'g-o',MarkerSize=2)
+legend('CC during test','CC during habituation','CC during homecage')
+xlabel('lags (s)')
 ylabel('cross-correlation')
+grid
+% xlim([-200 200])
+if(initial==1)
+xlim([-100 100])
+end
 
-
-title('Cross-correlations between observer and neutral')
+title('CC between observer and neutral')
 set(gca,'FontSize',15)
 ylim([-0.3 1])
 
-% y = [abs(corr(obs_activity_hab_neutral,neutral_activity_hab2)) 
-%     abs(corr(obs_activity_test_neutral ,neutral_activity_test2))];
-% 
-% 
-% 
-% subplot(1,2,1)
-% 
-% 
-% 
-% bar(1,y(2),'b')
-% 
-% hold on
-% bar(-1,y(1),'r')
-% 
-% legend('Pearson correlation during test ','Pearson correlation during hab ')
-% 
-% 
-% ylabel('Pearson correlation')
-% title('Pearson correlation between observer and neutral')
-
-
- 
 
 
 
 
-
-
-% figure
-
-
-
-
-% subplot(1,2,1)
-% 
-% [c5,lags5] = xcorr(obs_stress_interm_test,stress_interm_test,'normalized');
-% 
-% [c6,lags6] = xcorr(obs_stress_interm_hab,stress_interm_hab,'normalized');
-
-
-%  stem(lags5,c5,'b')
-%  hold on
-%  stem(lags6,c6,'r')
-% legend('CC during test','CC during habituation')
-% xlabel('lags')
-% ylabel('cross-correlation')
-% 
-% 
-% title('Cross-correlations between observer and stressed when in intermediate zones')
-% set(gca,'FontSize',15)
-% ylim([-inf 1])
-% 
-% subplot(1,2,2)
-% 
-% [c7,lags7] = xcorr(obs_stress_opposite_test,stress_opposite_test,'normalized');
-% 
-% [c8,lags8] = xcorr(obs_stress_opposite_hab,stress_opposite_hab,'normalized');
-% 
-% 
-% 
-% 
-%  stem(lags7,c7,'b')
-%  hold on
-%  stem(lags8,c8,'r')
-% legend('CC during test','CC during habituation')
-% xlabel('lags')
-% ylabel('cross-correlation')
-% 
-% 
-% title('Cross-correlations between observer and stressed when in opposite zones')
-% set(gca,'FontSize',15)
-% ylim([-inf 1])
-
-
-% figure
-% 
-% subplot(1,2,1)
-% 
-% [c9,lags9] = xcorr(obs_neutral_intermediate_test,neutral_intermediate_test,'normalized');
-% 
-% [c10,lags10] = xcorr(obs_neutral_intermediate_hab,neutral_intermediate_hab,'normalized');
+figure
 
 
 
 
-%  stem(lags9,c9,'b')
-%  hold on
-%  stem(lags10,c10,'r')
-% legend('CC during test','CC during habituation')
-% xlabel('lags')
-% ylabel('cross-correlation')
+subplot(1,2,1)
+
+[c5,lags5] = xcov(obs_stress_interm_test,stress_interm_test,'normalized');
+
+[c6,lags6] = xcov(obs_stress_interm_hab,stress_interm_hab,'normalized');
+
+
+plot(lags5*fs,c5,'b-o',MarkerSize=2)
+hold on
+% stem(lags4,c4,'r')
+plot(lags6*fs,c6,'r-o',MarkerSize=2)
+hold on
+plot(lags_cage_stress*fs,c_cage_stress,'g-o',MarkerSize=2)
+legend('CC during test','CC during habituation','CC during homecage')
+xlabel('lags (s)')
+ylabel('cross-correlation')
+grid
+xlim([-200 200])
+if(initial==1)
+xlim([-100 100])
+end
+
+title('CC between observer and stressed when in intermediate')
+set(gca,'FontSize',15)
+ylim([-0.3 1])
+
+subplot(1,2,2)
+% 
+[c7,lags7] = xcov(obs_stress_opposite_test,stress_opposite_test,'normalized');
+
+[c8,lags8] = xcov(obs_stress_opposite_hab,stress_opposite_hab,'normalized');
 % 
 % 
-% title('Cross-correlations between observer and neutral when in intermediate zones')
-% set(gca,'FontSize',15)
-% ylim([-inf 1])
 % 
-% subplot(1,2,2)
 % 
-% [c11,lags11] = xcorr(obs_neutral_opposite_test,neutral_opposite_test,'normalized');
-% 
-% [c12,lags12] = xcorr(obs_neutral_opposite_hab,neutral_opposite_hab,'normalized');
+plot(lags7*fs,c7,'b-o',MarkerSize=2)
+hold on
+% stem(lags4,c4,'r')
+plot(lags8*fs,c8,'r-o',MarkerSize=2)
+hold on
+plot(lags_cage_stress*fs,c_cage_stress,'g-o',MarkerSize=2)
+legend('CC during test','CC during habituation','CC during homecage')
+xlabel('lags (s)')
+ylabel('cross-correlation')
+grid
+xlim([-200 200])
+if(initial==1)
+xlim([-100 100])
+end
+
+title('CC between observer and stressed when in opposite')
+set(gca,'FontSize',15)
+ylim([-0.3 1])
+
+
+figure
+
+subplot(1,2,1)
+
+[c9,lags9] = xcov(obs_neutral_intermediate_test,neutral_intermediate_test,'normalized');
+
+[c10,lags10] = xcov(obs_neutral_intermediate_hab,neutral_intermediate_hab,'normalized');
 
 
 
 
-%  stem(lags11,c11,'b')
-%  hold on
-%  stem(lags12,c12,'r')
-% legend('CC during test','CC during habituation')
-% xlabel('lags')
-% ylabel('cross-correlation')
+plot(lags9*fs,c9,'b-o',MarkerSize=2)
+hold on
+% stem(lags4,c4,'r')
+plot(lags10*fs,c10,'r-o',MarkerSize=2)
+hold on
+plot(lags_cage_neutral*fs,c_cage_neutral,'g-o',MarkerSize=2)
+legend('CC during test','CC during habituation','CC during homecage')
+xlabel('lags (s)')
+ylabel('cross-correlation')
+grid
+xlim([-200 200])
+if(initial==1)
+xlim([-100 100])
+end
+
+title('CC between observer and neutral when in intermediate')
+set(gca,'FontSize',15)
+ylim([-0.3 1])
 % 
+subplot(1,2,2)
 % 
-% title('Cross-correlations between observer and neutral when in opposite zones')
-% set(gca,'FontSize',15)
-% ylim([-inf 1])
+[c11,lags11] = xcov(obs_neutral_opposite_test,neutral_opposite_test,'normalized');
+
+[c12,lags12] = xcov(obs_neutral_opposite_hab,neutral_opposite_hab,'normalized');
+
+
+
+
+plot(lags11*fs,c11,'b-o',MarkerSize=2)
+hold on
+% stem(lags4,c4,'r')
+plot(lags12*fs,c12,'r-o',MarkerSize=2)
+hold on
+plot(lags_cage_neutral*fs,c_cage_neutral,'g-o',MarkerSize=2)
+legend('CC during test','CC during habituation','CC during homecage')
+xlabel('lags (s)')
+ylabel('cross-correlation')
+grid
+xlim([-200 200])
+if(initial==1)
+xlim([-100 100])
+end
+
+title('CC between observer and neutral when in opposite')
+set(gca,'FontSize',15)
+ylim([-0.3 1])
 
 
 % figure

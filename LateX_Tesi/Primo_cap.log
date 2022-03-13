@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  22 FEB 2022 10:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  12 MAR 2022 18:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -771,7 +771,7 @@ LaTeX Info: Redefining \nameref on input line 61.
 \@outlinefile=\write4
 \openout4 = `Primo_cap.out'.
 
-<Logo_IIT.png, id=87, 345.29pt x 147.55125pt>
+<Logo_IIT.png, id=127, 345.29pt x 147.55125pt>
 File: Logo_IIT.png Graphic file (type png)
 <use Logo_IIT.png>
 Package pdftex.def Info: Logo_IIT.png  used on input line 77.
@@ -788,7 +788,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Logo_Politecnico_Milano.jpg, id=88, 1303.87125pt x 1013.7875pt>
+<Logo_Politecnico_Milano.jpg, id=128, 1303.87125pt x 1013.7875pt>
 File: Logo_Politecnico_Milano.jpg Graphic file (type jpg)
 <use Logo_Politecnico_Milano.jpg>
 Package pdftex.def Info: Logo_Politecnico_Milano.jpg  used on input line 84.
@@ -796,11 +796,6 @@ Package pdftex.def Info: Logo_Politecnico_Milano.jpg  used on input line 84.
 
 Overfull \hbox (15.0pt too wide) in paragraph at lines 73--89
 []$[]$ 
- []
-
-
-Overfull \hbox (7.19101pt too wide) in paragraph at lines 94--95
-\OT1/cmr/bx/n/20.74 cal-cium ac-tiv-ity in so-mato-statin in-
  []
 
 [1
@@ -816,387 +811,563 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 	\newpage
+l.129 	\newpage
                 [1]
-<neuron.png, id=128, 954.56625pt x 591.20876pt>
+<neuron.png, id=178, 954.56625pt x 591.20876pt>
 File: neuron.png Graphic file (type png)
 <use neuron.png>
-Package pdftex.def Info: neuron.png  used on input line 141.
+Package pdftex.def Info: neuron.png  used on input line 142.
 (pdftex.def)             Requested size: 238.64098pt x 147.80182pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--156
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
 
  []
 
 [2 <./neuron.png (PNG copy)>]
-<AP1.png, id=135, 2569.6pt x 1868.9825pt>
+<AP1.png, id=185, 2569.6pt x 1868.9825pt>
 File: AP1.png Graphic file (type png)
 <use AP1.png>
-Package pdftex.def Info: AP1.png  used on input line 166.
+Package pdftex.def Info: AP1.png  used on input line 167.
 (pdftex.def)             Requested size: 155.24895pt x 112.9041pt.
-<AP2.png, id=137, 853.1875pt x 685.56125pt>
+<AP2.png, id=187, 853.1875pt x 685.56125pt>
 File: AP2.png Graphic file (type png)
 <use AP2.png>
-Package pdftex.def Info: AP2.png  used on input line 173.
+Package pdftex.def Info: AP2.png  used on input line 174.
 (pdftex.def)             Requested size: 155.24895pt x 124.74513pt.
-<synapse.jpg, id=138, 82.38185pt x 88.92482pt>
+<synapse.jpg, id=188, 82.38185pt x 88.92482pt>
 File: synapse.jpg Graphic file (type jpg)
 <use synapse.jpg>
-Package pdftex.def Info: synapse.jpg  used on input line 187.
+Package pdftex.def Info: synapse.jpg  used on input line 188.
 (pdftex.def)             Requested size: 131.81111pt x 142.27988pt.
  [3 <./AP1.png> <./AP2.png>]
-<Ca_conc.png, id=147, 421.575pt x 316.18124pt>
+<Ca_conc.png, id=197, 421.575pt x 316.18124pt>
 File: Ca_conc.png Graphic file (type png)
 <use Ca_conc.png>
-Package pdftex.def Info: Ca_conc.png  used on input line 200.
+Package pdftex.def Info: Ca_conc.png  used on input line 201.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Overfull \hbox (2.69502pt too wide) in paragraph at lines 206--208
+Overfull \hbox (2.69502pt too wide) in paragraph at lines 207--209
 []\OT1/cmr/m/n/10 Having de-fined the mean-ing of neu-ronal ac-tiv-ity, we can 
 ask our-selves whether
  []
 
 [4 <./synapse.jpg> <./Ca_conc.png (PNG copy)>]
-<brain.png, id=154, 609.02531pt x 326.72063pt>
+<brain.png, id=204, 609.02531pt x 326.72063pt>
 File: brain.png Graphic file (type png)
 <use brain.png>
-Package pdftex.def Info: brain.png  used on input line 224.
+Package pdftex.def Info: brain.png  used on input line 225.
 (pdftex.def)             Requested size: 334.96495pt x 179.69688pt.
  [5 <./brain.png>]
-<mice_task.png, id=162, 369.0588pt x 268.3626pt>
+<mice_task.png, id=212, 369.0588pt x 268.3626pt>
 File: mice_task.png Graphic file (type png)
 <use mice_task.png>
-Package pdftex.def Info: mice_task.png  used on input line 245.
+Package pdftex.def Info: mice_task.png  used on input line 246.
 (pdftex.def)             Requested size: 221.43698pt x 161.0188pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 [6] [7 <./mice_task.png>]
-<scheggia.png, id=178, 281.55188pt x 173.14688pt>
+<scheggia.png, id=228, 281.55188pt x 173.14688pt>
 File: scheggia.png Graphic file (type png)
 <use scheggia.png>
-Package pdftex.def Info: scheggia.png  used on input line 281.
+Package pdftex.def Info: scheggia.png  used on input line 282.
 (pdftex.def)             Requested size: 278.7372pt x 171.41594pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--292
+Underfull \hbox (badness 10000) in paragraph at lines 289--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--296
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
 
  []
 
 [8 <./scheggia.png>]
-<Inscopix.jpg, id=184, 336.2964pt x 401.3394pt>
+<Inscopix.jpg, id=234, 336.2964pt x 401.3394pt>
 File: Inscopix.jpg Graphic file (type jpg)
 <use Inscopix.jpg>
-Package pdftex.def Info: Inscopix.jpg  used on input line 307.
+Package pdftex.def Info: Inscopix.jpg  used on input line 308.
 (pdftex.def)             Requested size: 117.70549pt x 140.47089pt.
  [9 <./Inscopix.jpg>]
-<Inscopix2.png, id=190, 381.67593pt x 339.51843pt>
+<Inscopix2.png, id=240, 381.67593pt x 339.51843pt>
 File: Inscopix2.png Graphic file (type png)
 <use Inscopix2.png>
-Package pdftex.def Info: Inscopix2.png  used on input line 320.
+Package pdftex.def Info: Inscopix2.png  used on input line 321.
 (pdftex.def)             Requested size: 267.17133pt x 237.66127pt.
  [10 <./Inscopix2.png>] [11]
-<fiberphotometry.png, id=213, 733.99219pt x 165.61874pt>
+<fiberphotometry.png, id=263, 733.99219pt x 165.61874pt>
 File: fiberphotometry.png Graphic file (type png)
 <use fiberphotometry.png>
-Package pdftex.def Info: fiberphotometry.png  used on input line 361.
+Package pdftex.def Info: fiberphotometry.png  used on input line 362.
 (pdftex.def)             Requested size: 366.9952pt x 82.80916pt.
 
-Overfull \hbox (21.9952pt too wide) in paragraph at lines 361--362
+Overfull \hbox (21.9952pt too wide) in paragraph at lines 362--363
  [] 
  []
 
-<synch.png, id=214, 292.84406pt x 99.37125pt>
+<synch.png, id=264, 292.84406pt x 99.37125pt>
 File: synch.png Graphic file (type png)
 <use synch.png>
-Package pdftex.def Info: synch.png  used on input line 397.
+Package pdftex.def Info: synch.png  used on input line 398.
 (pdftex.def)             Requested size: 207.0021pt x 70.24475pt.
-<Intebrain.png, id=215, 261.22594pt x 157.33781pt>
+<Intebrain.png, id=265, 261.22594pt x 157.33781pt>
 File: Intebrain.png Graphic file (type png)
 <use Intebrain.png>
-Package pdftex.def Info: Intebrain.png  used on input line 404.
+Package pdftex.def Info: Intebrain.png  used on input line 405.
 (pdftex.def)             Requested size: 207.0021pt x 124.67963pt.
 [12 <./fiberphotometry.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 425--428
+Underfull \hbox (badness 10000) in paragraph at lines 426--429
 
  []
 
 [13 <./synch.png> <./Intebrain.png>]
-<novembre.png, id=229, 536.0025pt x 216.81pt>
+<novembre.png, id=279, 536.0025pt x 216.81pt>
 File: novembre.png Graphic file (type png)
 <use novembre.png>
-Package pdftex.def Info: novembre.png  used on input line 431.
+Package pdftex.def Info: novembre.png  used on input line 432.
 (pdftex.def)             Requested size: 375.19919pt x 151.76596pt.
 
-Overfull \hbox (30.19919pt too wide) in paragraph at lines 431--432
+Overfull \hbox (30.19919pt too wide) in paragraph at lines 432--433
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--438
+Underfull \hbox (badness 10000) in paragraph at lines 437--439
 
  []
 
 [14 <./novembre.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
  []
 
-<kingsbury.png, id=235, 465.23813pt x 188.95593pt>
+<kingsbury.png, id=285, 465.23813pt x 188.95593pt>
 File: kingsbury.png Graphic file (type png)
 <use kingsbury.png>
-Package pdftex.def Info: kingsbury.png  used on input line 443.
+Package pdftex.def Info: kingsbury.png  used on input line 444.
 (pdftex.def)             Requested size: 325.66446pt x 132.26823pt.
 [15 <./kingsbury.png>]
-<kingsbury2.png, id=241, 131.74219pt x 183.68625pt>
+<kingsbury2.png, id=291, 131.74219pt x 183.68625pt>
 File: kingsbury2.png Graphic file (type png)
 <use kingsbury2.png>
-Package pdftex.def Info: kingsbury2.png  used on input line 463.
+Package pdftex.def Info: kingsbury2.png  used on input line 464.
 (pdftex.def)             Requested size: 137.9979pt x 192.41936pt.
-<kingsbury3.png, id=242, 188.20313pt x 178.41656pt>
+<kingsbury3.png, id=292, 188.20313pt x 178.41656pt>
 File: kingsbury3.png Graphic file (type png)
 <use kingsbury3.png>
-Package pdftex.def Info: kingsbury3.png  used on input line 470.
+Package pdftex.def Info: kingsbury3.png  used on input line 471.
 (pdftex.def)             Requested size: 172.5pt x 163.54083pt.
  [16 <./kingsbury2.png> <./kingsbury3.png>]
-<pearson.png, id=249, 465.23813pt x 187.45032pt>
+<pearson.png, id=299, 465.23813pt x 187.45032pt>
 File: pearson.png Graphic file (type png)
 <use pearson.png>
-Package pdftex.def Info: pearson.png  used on input line 495.
+Package pdftex.def Info: pearson.png  used on input line 496.
 (pdftex.def)             Requested size: 348.92773pt x 140.58737pt.
 
-Overfull \hbox (3.92773pt too wide) in paragraph at lines 495--496
+Overfull \hbox (3.92773pt too wide) in paragraph at lines 496--497
  [] 
  []
 
 [17 <./pearson.png>] [18]
-<autocorr.png, id=265, 421.575pt x 316.18124pt>
+<autocorr.png, id=315, 421.575pt x 316.18124pt>
 File: autocorr.png Graphic file (type png)
 <use autocorr.png>
-Package pdftex.def Info: autocorr.png  used on input line 552.
+Package pdftex.def Info: autocorr.png  used on input line 553.
 (pdftex.def)             Requested size: 316.18047pt x 237.13535pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--561
+Underfull \hbox (badness 10000) in paragraph at lines 560--562
 
  []
 
 [19 <./autocorr.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 573--576
+Underfull \hbox (badness 10000) in paragraph at lines 574--577
 
  []
 
-<thresholds.png, id=273, 1028.34187pt x 490.08093pt>
+<thresholds.png, id=323, 1028.34187pt x 490.08093pt>
 File: thresholds.png Graphic file (type png)
 <use thresholds.png>
-Package pdftex.def Info: thresholds.png  used on input line 582.
+Package pdftex.def Info: thresholds.png  used on input line 583.
 (pdftex.def)             Requested size: 514.16968pt x 245.03987pt.
 
-Overfull \hbox (86.03363pt too wide) in paragraph at lines 581--583
+Overfull \hbox (86.03363pt too wide) in paragraph at lines 582--584
  |  [] 
  []
 
 [20 <./thresholds.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 607--608
+Underfull \hbox (badness 10000) in paragraph at lines 608--609
 
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 611.
+put line 612.
 [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 662.
+(hyperref)                removing `math shift' on input line 663.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 662.
+(hyperref)                removing `superscript' on input line 663.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 662.
+(hyperref)                removing `math shift' on input line 663.
 
-<cos_sim.jpg, id=291, 1204.5pt x 632.3625pt>
+<cos_sim.jpg, id=341, 1204.5pt x 632.3625pt>
 File: cos_sim.jpg Graphic file (type jpg)
 <use cos_sim.jpg>
-Package pdftex.def Info: cos_sim.jpg  used on input line 667.
+Package pdftex.def Info: cos_sim.jpg  used on input line 668.
 (pdftex.def)             Requested size: 240.89574pt x 126.47026pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--675
+Underfull \hbox (badness 10000) in paragraph at lines 674--676
 
  []
 
 [22 <./cos_sim.jpg>]
-<GC.png, id=299, 542.025pt x 275.52937pt>
+<GC.png, id=349, 542.025pt x 275.52937pt>
 File: GC.png Graphic file (type png)
 <use GC.png>
-Package pdftex.def Info: GC.png  used on input line 708.
+Package pdftex.def Info: GC.png  used on input line 709.
 (pdftex.def)             Requested size: 325.2175pt x 165.3189pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--719
+Underfull \hbox (badness 10000) in paragraph at lines 715--720
 
  []
 
 [23 <./GC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 753--754
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
 [24]
-Overfull \hbox (23.22874pt too wide) in paragraph at lines 755--756
+Overfull \hbox (23.22874pt too wide) in paragraph at lines 756--757
 []\OT1/cmr/m/n/10 Standard VAR the-ory [Hamilton-Lutkephol] re-quires the con-d
 i-tion $[][] \OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 A[]\OMS/cmsy/m/n/10 jj[] \OML/
 cmm/m/it/10 <
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 756--759
+Underfull \hbox (badness 10000) in paragraph at lines 757--760
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
-80.
+81.
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 780.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 781.
 
-Overfull \hbox (47.3188pt too wide) in paragraph at lines 780--781
+Overfull \hbox (47.3188pt too wide) in paragraph at lines 781--782
 []\OT1/cmr/m/n/10 Therefore, a statis-tic test check-ing the null hy-poth-e-sis
  \OMS/cmsy/m/n/10 f$\OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 Y [
 ] X$\OMS/cmsy/m/n/10 g
  []
 
 [25] [26] [27]
-<arena.png, id=340, 347.79938pt x 128.73094pt>
-File: arena.png Graphic file (type png)
-<use arena.png>
-Package pdftex.def Info: arena.png  used on input line 826.
-(pdftex.def)             Requested size: 313.01654pt x 115.85675pt.
- [28 <./arena.png>]
-Overfull \hbox (6.54622pt too wide) in paragraph at lines 857--857
+<emotion_discrimination.png, id=390, 304.13625pt x 174.6525pt>
+File: emotion_discrimination.png Graphic file (type png)
+<use emotion_discrimination.png>
+Package pdftex.def Info: emotion_discrimination.png  used on input line 827.
+(pdftex.def)             Requested size: 273.72008pt x 157.18579pt.
+ [28 <./emotion_discrimination.png>]
+<normalizations.png, id=400, 1028.34187pt x 490.08093pt>
+File: normalizations.png Graphic file (type png)
+<use normalizations.png>
+Package pdftex.def Info: normalizations.png  used on input line 871.
+(pdftex.def)             Requested size: 462.74957pt x 220.53438pt.
+
+Overfull \hbox (60.22084pt too wide) in paragraph at lines 870--872
+ |  [] 
+ []
+
+[29] [30 <./normalizations.png (PNG copy)>]
+<times.png, id=413, 1028.34187pt x 490.08093pt>
+File: times.png Graphic file (type png)
+<use times.png>
+Package pdftex.def Info: times.png  used on input line 915.
+(pdftex.def)             Requested size: 431.90065pt x 205.83258pt.
+
+Overfull \hbox (49.28918pt too wide) in paragraph at lines 914--917
+ []|  [] 
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 927--929
+
+ []
+
+[32 <./times.png (PNG copy)>]
+<activity_barplot.png, id=426, 1028.34187pt x 490.08093pt>
+File: activity_barplot.png Graphic file (type png)
+<use activity_barplot.png>
+Package pdftex.def Info: activity_barplot.png  used on input line 939.
+(pdftex.def)             Requested size: 431.90065pt x 205.83258pt.
+
+Overfull \hbox (43.59828pt too wide) in paragraph at lines 938--940
+ |  [] 
+ []
+
+<activities.png, id=427, 962.09438pt x 490.08093pt>
+File: activities.png Graphic file (type png)
+<use activities.png>
+Package pdftex.def Info: activities.png  used on input line 950.
+(pdftex.def)             Requested size: 384.83093pt x 196.0289pt.
+
+Overfull \hbox (39.83093pt too wide) in paragraph at lines 950--951
+ [] 
+ []
+
+[33 <./activity_barplot.png (PNG copy)>]
+<average_cc.png, id=433, 1028.34187pt x 490.08093pt>
+File: average_cc.png Graphic file (type png)
+<use average_cc.png>
+Package pdftex.def Info: average_cc.png  used on input line 963.
+(pdftex.def)             Requested size: 411.32947pt x 196.0289pt.
+
+Overfull \hbox (28.718pt too wide) in paragraph at lines 962--964
+ |  [] 
+ []
+
+[34 <./activities.png> <./average_cc.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 978--980
+
+ []
+
+[35]
+<cc_distant.png, id=447, 1028.34187pt x 490.08093pt>
+File: cc_distant.png Graphic file (type png)
+<use cc_distant.png>
+Package pdftex.def Info: cc_distant.png  used on input line 997.
+(pdftex.def)             Requested size: 411.32947pt x 196.0289pt.
+
+Overfull \hbox (28.718pt too wide) in paragraph at lines 996--998
+ |  [] 
+ []
+
+<average_cc_initial.png, id=448, 1028.34187pt x 490.08093pt>
+File: average_cc_initial.png Graphic file (type png)
+<use average_cc_initial.png>
+Package pdftex.def Info: average_cc_initial.png  used on input line 1007.
+(pdftex.def)             Requested size: 411.32947pt x 196.0289pt.
+
+Overfull \hbox (28.718pt too wide) in paragraph at lines 1006--1008
+ |  [] 
+ []
+
+[36 <./cc_distant.png (PNG copy)>]
+<cc_average.png, id=455, 1028.34187pt x 490.08093pt>
+File: cc_average.png Graphic file (type png)
+<use cc_average.png>
+Package pdftex.def Info: cc_average.png  used on input line 1017.
+(pdftex.def)             Requested size: 411.32947pt x 196.0289pt.
+
+Overfull \hbox (28.718pt too wide) in paragraph at lines 1016--1018
+ |  [] 
+ []
+
+[37 <./average_cc_initial.png (PNG copy)> <./cc_average.png (PNG copy)>]
+Overfull \hbox (6.54622pt too wide) in paragraph at lines 1027--1027
 []\OT1/cmr/bx/n/14.4 Activity of amyg-dala in al-tru-is-tic de-ci-sion mak-
  []
 
-[29]
-<altruism.png, id=354, 231.11343pt x 146.04562pt>
+[38]
+<altruism.png, id=466, 231.11343pt x 146.04562pt>
 File: altruism.png Graphic file (type png)
 <use altruism.png>
-Package pdftex.def Info: altruism.png  used on input line 877.
+Package pdftex.def Info: altruism.png  used on input line 1047.
 (pdftex.def)             Requested size: 254.22556pt x 160.65065pt.
- [30 <./altruism.png>]
-<altr_self.png, id=362, 231.86626pt x 248.42813pt>
+ [39 <./altruism.png>]
+<altr_self.png, id=473, 231.86626pt x 248.42813pt>
 File: altr_self.png Graphic file (type png)
 <use altr_self.png>
-Package pdftex.def Info: altr_self.png  used on input line 911.
+Package pdftex.def Info: altr_self.png  used on input line 1081.
 (pdftex.def)             Requested size: 158.70232pt x 170.03957pt.
-<norecip.png, id=363, 216.81pt x 242.40562pt>
+<norecip.png, id=474, 216.81pt x 242.40562pt>
 File: norecip.png Graphic file (type png)
 <use norecip.png>
-Package pdftex.def Info: norecip.png  used on input line 918.
+Package pdftex.def Info: norecip.png  used on input line 1088.
 (pdftex.def)             Requested size: 158.70232pt x 177.44656pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--935
+Underfull \hbox (badness 10000) in paragraph at lines 1099--1105
 
  []
 
-[31 <./altr_self.png> <./norecip.png>]
-<number_pokes.png, id=369, 354.57469pt x 297.36093pt>
+[40 <./altr_self.png> <./norecip.png>]
+<number_pokes.png, id=480, 354.57469pt x 297.36093pt>
 File: number_pokes.png Graphic file (type png)
 <use number_pokes.png>
-Package pdftex.def Info: number_pokes.png  used on input line 942.
+Package pdftex.def Info: number_pokes.png  used on input line 1112.
 (pdftex.def)             Requested size: 212.74644pt x 178.41792pt.
- [32]
-<familiar.png, id=374, 509.65407pt x 256.70906pt>
+ [41]
+<familiar.png, id=485, 509.65407pt x 256.70906pt>
 File: familiar.png Graphic file (type png)
 <use familiar.png>
-Package pdftex.def Info: familiar.png  used on input line 952.
+Package pdftex.def Info: familiar.png  used on input line 1122.
 (pdftex.def)             Requested size: 305.7948pt x 154.02661pt.
- [33 <./number_pokes.png> <./familiar.png>]
-Overfull \hbox (0.27824pt too wide) in paragraph at lines 979--980
+ [42 <./number_pokes.png> <./familiar.png>]
+Overfull \hbox (0.27824pt too wide) in paragraph at lines 1149--1150
 []\OT1/cmr/m/n/10 No sig-nif-i-cant dif-fer-ences have been de-tected be-tween 
 the dom-i-nance scores
  []
 
 
-Overfull \hbox (4.7555pt too wide) in paragraph at lines 988--988
+Overfull \hbox (4.7555pt too wide) in paragraph at lines 1158--1158
 []\OT1/cmr/bx/n/12 The role of BLA neu-rons in self-ish and proso-cial choices 
 
  []
 
-<psth.png, id=381, 445.665pt x 260.47313pt>
+<psth.png, id=493, 445.665pt x 260.47313pt>
 File: psth.png Graphic file (type png)
 <use psth.png>
-Package pdftex.def Info: psth.png  used on input line 992.
+Package pdftex.def Info: psth.png  used on input line 1162.
 (pdftex.def)             Requested size: 343.1631pt x 200.56493pt.
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1012
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
 
  []
 
-[35 <./psth.png>]
-<silencing.png, id=401, 416.30531pt x 252.945pt>
+[44 <./psth.png>]
+<silencing.png, id=513, 416.30531pt x 252.945pt>
 File: silencing.png Graphic file (type png)
 <use silencing.png>
-Package pdftex.def Info: silencing.png  used on input line 1035.
+Package pdftex.def Info: silencing.png  used on input line 1205.
 (pdftex.def)             Requested size: 320.55608pt x 194.76825pt.
- [36]
-<sil_dom.png, id=407, 335.00156pt x 269.50688pt>
+ [45]
+<sil_dom.png, id=518, 335.00156pt x 269.50688pt>
 File: sil_dom.png Graphic file (type png)
 <use sil_dom.png>
-Package pdftex.def Info: sil_dom.png  used on input line 1044.
+Package pdftex.def Info: sil_dom.png  used on input line 1214.
 (pdftex.def)             Requested size: 257.95198pt x 207.52092pt.
- [37 <./silencing.png> <./sil_dom.png>] (Primo_cap.aux)
+ [46 <./silencing.png> <./sil_dom.png>]
+<intra.png, id=525, 266.49562pt x 174.6525pt>
+File: intra.png Graphic file (type png)
+<use intra.png>
+Package pdftex.def Info: intra.png  used on input line 1229.
+(pdftex.def)             Requested size: 205.20226pt x 134.48283pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1235--1237
+
+ []
+
+[47 <./intra.png>] [48]
+<ode_circuit.png, id=544, 264.99pt x 247.67531pt>
+File: ode_circuit.png Graphic file (type png)
+<use ode_circuit.png>
+Package pdftex.def Info: ode_circuit.png  used on input line 1298.
+(pdftex.def)             Requested size: 155.24895pt x 145.10677pt.
+<global_circuit.png, id=545, 306.39468pt x 295.85532pt>
+File: global_circuit.png Graphic file (type png)
+<use global_circuit.png>
+Package pdftex.def Info: global_circuit.png  used on input line 1305.
+(pdftex.def)             Requested size: 165.59853pt x 159.90395pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1326
+
+ []
+
+[49 <./ode_circuit.png> <./global_circuit.png>]
+<LRM.png, id=556, 303.38344pt x 216.05719pt>
+File: LRM.png Graphic file (type png)
+<use LRM.png>
+Package pdftex.def Info: LRM.png  used on input line 1344.
+(pdftex.def)             Requested size: 233.60596pt x 166.36453pt.
+ [50 <./LRM.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1402
+
+ []
+
+[51]
+<HH.png, id=574, 295.1025pt x 219.06844pt>
+File: HH.png Graphic file (type png)
+<use HH.png>
+Package pdftex.def Info: HH.png  used on input line 1440.
+(pdftex.def)             Requested size: 265.58978pt x 197.15976pt.
+ [52 <./HH.png>] [53]
+<gk.png, id=592, 228.10219pt x 112.92188pt>
+File: gk.png Graphic file (type png)
+<use gk.png>
+Package pdftex.def Info: gk.png  used on input line 1528.
+(pdftex.def)             Requested size: 250.91315pt x 124.21443pt.
+<cable.png, id=593, 630.10406pt x 250.68657pt>
+File: cable.png Graphic file (type png)
+<use cable.png>
+Package pdftex.def Info: cable.png  used on input line 1540.
+(pdftex.def)             Requested size: 441.06984pt x 175.47939pt.
+
+Overfull \hbox (78.37521pt too wide) in paragraph at lines 1539--1541
+ |  [] 
+ []
+
+[54 <./gk.png>] [55 <./cable.png>]
+<curr_bal.png, id=611, 529.98pt x 305.64188pt>
+File: curr_bal.png Graphic file (type png)
+<use curr_bal.png>
+Package pdftex.def Info: curr_bal.png  used on input line 1607.
+(pdftex.def)             Requested size: 264.98933pt x 152.82056pt.
+<basis.png, id=612, 399.74344pt x 238.64156pt>
+File: basis.png Graphic file (type png)
+<use basis.png>
+Package pdftex.def Info: basis.png  used on input line 1619.
+(pdftex.def)             Requested size: 279.81848pt x 167.04794pt.
+ [56 <./curr_bal.png>] [57 <./basis.png>]
+Overfull \hbox (25.31595pt too wide) detected at line 1673
+\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 := []
+ []
+
+[58] [59] (Primo_cap.aux)
 Package rerunfilecheck Info: File `Primo_cap.out' has not changed.
-(rerunfilecheck)             Checksum: DDB9B6B1F86C4F8C930872EA39DE15D5;5040.
+(rerunfilecheck)             Checksum: 335C4F3CB3FF2B6219B105F8F1E7163E;7166.
 Package logreq Info: Writing requests to 'Primo_cap.run.xml'.
 \openout1 = `Primo_cap.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19961 strings out of 478550
- 353739 string characters out of 2839425
- 1157730 words of memory out of 3000000
- 37734 multiletter control sequences out of 15000+600000
- 479983 words of font info for 68 fonts, out of 8000000 for 9000
+ 20199 strings out of 478550
+ 357218 string characters out of 2839425
+ 1157696 words of memory out of 3000000
+ 37854 multiletter control sequences out of 15000+600000
+ 481758 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,13n,106p,1395b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,13n,106p,1596b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Fabrizio\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\tcrm1000.pk><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmbx10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Fabrizio/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Fabri
-zio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Fabrizi
+o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 ><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Fabrizio/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fabriz
-io/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr5.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Fabrizio/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Fabrizio/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
-rs/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmti10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Primo_cap.pdf (38 pages, 3206929 bytes).
+ts/cm/cmcsc10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Fabrizio/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Fab
+rizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pf
+b><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Fabrizio/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Fabrizio
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Fabrizio/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Fabrizio/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Us
+ers/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb>
+Output written on Primo_cap.pdf (60 pages, 3772083 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 142 named destinations out of 1000 (max. 500000)
- 334 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 792 PDF objects out of 1000 (max. 8388607)
+ 242 named destinations out of 1000 (max. 500000)
+ 499 words of extra memory for PDF output out of 10000 (max. 10000000)
 

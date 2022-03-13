@@ -24,11 +24,12 @@ synch_window = round(1/fs);
 
 
 for i = 1:size(pks_mat,1)
-    [~,loc1] = findpeaks(obs_test_stress(:,i+1),...
+    [dd1,loc1] = findpeaks(obs_test_stress(:,i+1),...
     'MinPeakHeight',mean(obs_test_stress(:,i+1))+std(obs_test_stress(:,i+1)));
     for j = 1:size(pks_mat,2)
-        [~,loc2] = findpeaks(stress_test2(:,j+1),...
-    'MinPeakHeight',mean(stress_test2(:,j+1))+std(stress_test2(:,j+1)));
+        [dd2,loc2] = findpeaks(stress_test2(:,j+1),...
+    'MinPeakHeight',mean(stress_test2(:,j+1))+std(stress_test2(:,j+1)),...
+    'MinPeakDistance',6);
         
         pks_mat(i,j) = synch_pks(loc1,loc2,synch_window);
        
@@ -36,3 +37,9 @@ for i = 1:size(pks_mat,1)
     end
 end
 
+loc1
+loc2
+
+dd1
+
+dd2

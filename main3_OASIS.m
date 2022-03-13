@@ -2,7 +2,8 @@ addpath('zone analysis','normalizations','overall activity','statistics',...
     'activity detection','ROI analysis','cross-correlation analysis');
 
 addpath('SAVED DATA\DATA_THIRD\');
- clear all
+ clearvars -except corr  L2_errors  hab_act1 ...
+    test_act1 hab_act2 test_act2 hab_act3 test_act3 hab_act4 test_act4
 
 load('hab_zone.mat')
 
@@ -26,7 +27,7 @@ selection=0; % 1 for neuron selection option
 [stress, stress_cage, stress_hab, stress_test, ...
     neutral, neutral_cage, neutral_hab, neutral_test,...
     obs, obs_cage, obs_hab, obs_test,sniff] =...
-    accept_and_split(stress_OASIS3, neutral_OASIS3, obs_OASIS3,sniff,1);
+    accept_and_split(stress_OASIS3, neutral_OASIS3, obs_OASIS3,sniff,dataset);
 
 [stress_cage, stress_hab, stress_test, ...
     neutral_cage, neutral_hab, neutral_test, obs_cage, obs_hab, obs_test] = ...
@@ -44,6 +45,10 @@ neutral_test = sd_normalization(neutral_test);
 obs_hab = sd_normalization(obs_hab);
 stress_hab = sd_normalization(stress_hab);
 neutral_hab = sd_normalization(neutral_hab);
+
+obs_cage = sd_normalization(obs_cage);
+stress_cage = sd_normalization(stress_cage);
+neutral_cage = sd_normalization(neutral_cage);
 end
 
 
@@ -58,6 +63,13 @@ obs_activity_hab = mice_activity(obs_hab);
 neutral_activity_hab = mice_activity(neutral_hab);
 
 stress_activity_hab = mice_activity(stress_hab);
+
+obs_activity_cage = mice_activity(obs_cage);
+
+neutral_activity_cage = mice_activity(neutral_cage);
+
+stress_activity_cage = mice_activity(stress_cage);
+
 ad_test_zone = adapt_zone(test_zone, obs_activity_test);
 
 % plot3(ad_test_zone(:,2), ad_test_zone(:,3),ad_test_zone(:,7))

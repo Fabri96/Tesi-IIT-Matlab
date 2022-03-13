@@ -20,7 +20,7 @@ function [stress, stress_cage, stress_hab, stress_test, ...
     neutral, neutral_cage, neutral_hab, neutral_test,...
     obs, obs_cage, obs_hab, obs_test,sniff] = ...
     accept_and_split(stress_data, neutral_data, obs_data,sniff,dataset) 
-
+dataset
 stress=stress_data(2:end,1); % first column (times)
 
 for j = 2:size(stress_data,2)  % add column if the correspondent neuron is accepted
@@ -109,6 +109,7 @@ end
 
 if(dataset == 4)
 
+    
 %   sniff_adapting %adapt times based on A keybord references
   
   k2_obs = 25104;
@@ -124,6 +125,26 @@ k1_neutral = 6077;
 k1_stress = 6096;
 
 end
+
+
+if(dataset == 5)
+
+%   sniff_adapting %adapt times based on A keybord references
+  
+  k2_obs = 24219;
+
+k2_neutral = 24127;
+
+k2_stress = 24227;
+
+k1_obs = 6201;
+
+k1_neutral = 6109;
+
+k1_stress = 6210;
+
+end
+
 
 stress_cage = stress(1:k1_stress-1,:);
 stress_hab  = stress(k1_stress:k2_stress-1,:);

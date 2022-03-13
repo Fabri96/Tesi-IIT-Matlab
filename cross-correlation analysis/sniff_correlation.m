@@ -26,7 +26,10 @@ end
 s = sniff(stress_sniff,1);
 
 s2 = sniff(neutral_sniff,1);
-
+if(dataset==4)
+s =  s + obs_activity_test(1,1) ;  
+s2 = s2 + obs_activity_test(1,1) ; 
+end
 obs_activity_test_stress_sniff = interp1(obs_activity_test(:,1),obs_activity_test(:,2), s);
 
 obs_activity_test_neutral_sniff = interp1(obs_activity_test(:,1),obs_activity_test(:,2), s2);
@@ -63,9 +66,9 @@ xlabel('lags')
 ylabel('cross-correlation')
 ylim([-0.3 1])
 
-title('Cross-correlations between observer and stressed during sniffing')
-set(gca,'FontSize',11)
-
+title('CC between observer and stressed during sniffing')
+set(gca,'FontSize',15)
+grid
 subplot(1,2,2)
 
 
@@ -76,6 +79,7 @@ xlabel('lags')
 ylabel('cross-correlation')
 
 
-title('Cross-correlations between observer and neutral during sniffing')
-set(gca,'FontSize',11)
+title('CC between observer and neutral during sniffing')
+set(gca,'FontSize',15)
+grid
 ylim([-0.3 1])

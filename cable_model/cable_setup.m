@@ -5,9 +5,9 @@ disp('Import data and create pattern list');
 
 main;
 close all
-step=5;
-roi_analysis;
-patterns = pattern_list(neurons_activated_stress,stress_roi_data);
+% step=5;
+% roi_analysis;
+% patterns = pattern_list(neurons_activated_stress,stress_roi_data);
 
 %% Consider single pair of neurons (C30 and C31)
 disp('Consider single pair of neurons');
