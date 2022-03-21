@@ -20,10 +20,10 @@ global imodel
 % tend = my_pair1{1}.interval(2)-my_pair1{1}.interval(1);
 % V_1=0.04;
 % V_2=-0.02;
-L=1000e-6;
-V_1=0.04;
-V_2=V_1;
-tend = 0.5;
+% L=1000e-6;
+% V_1=0.04;
+% V_2=V_1;
+% tend = 0.5;
 % cable_setup;
 % Physical constants
 constants;

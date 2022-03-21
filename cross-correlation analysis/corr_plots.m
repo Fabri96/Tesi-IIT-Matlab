@@ -16,7 +16,7 @@ lag_selection =1;
 
 mark=0;
 
- maxlag= 200/fs;
+ maxlag= round(200/fs);
 nn=4;
 nn2=4;
 
@@ -98,9 +98,9 @@ neutral_intermediate_hab = interp1(neutral_activity_hab(:,1),neutral_activity_ha
 
 end
 
-if(dataset ==2)
+if(dataset ==2 ||dataset==6 )
 
-ad_hab_zone = adapt_zone(hab_zone2,obs_activity_hab);
+% ad_hab_zone = adapt_zone(hab_zone2,obs_activity_hab);
 
     %%%%% Let's extract mice activities during the different phases of the test
 
@@ -257,11 +257,11 @@ end
 if(lag_selection ==1)
 [c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,maxlag,'coeff');
 
-[c2,lags2] = xcov(obs_activity_hab_stress,stress_activity_hab2,maxlag,'coeff');
+[c2,lags2] = xcov(obs_activity_hab(:,2),stress_activity_hab(:,2),maxlag,'coeff');
 
 [c3,lags3] = xcov(obs_activity_test_neutral,neutral_activity_test2,maxlag,'normalized');
 
-[c4,lags4] = xcov(obs_activity_hab_neutral,neutral_activity_hab2,maxlag,'normalized');
+[c4,lags4] = xcov(obs_activity_hab(:,2),neutral_activity_hab(:,2),maxlag,'normalized');
 
 else
     [c,lags] = xcov(obs_activity_test_stress,stress_activity_test2,'coeff');
@@ -292,7 +292,7 @@ if(mark==1)
 
     [c3,lags3] = xcov(obs_activity_test_neutral,neutral_activity_test2,'normalized');
 
-    [c4,lags4] = xcov(obs_activity_hab(:,2),neutral_activity_hab(:,2),6000,'normalized');
+    [c4,lags4] = xcov(obs_activity_hab_neutral,neutral_activity_hab2,6000,'normalized');
 
 end
 

@@ -19,8 +19,8 @@ load('obs_OASIS.mat')
 load('neutral_OASIS.mat')
 
 
-mm_norm = 0; % 1 for using min-max normalization
-sd_norm =1;
+mm_norm = 1; % 1 for using min-max normalization
+sd_norm =0;
 dataset=1;
 selection=0; % 1 for neuron selection option
 
@@ -39,6 +39,22 @@ selection=0; % 1 for neuron selection option
 % obs_test(:,[ 2 3 9]) = [];
 % 
 % neutral_test(:,10) = [];
+
+if(mm_norm == 1)
+    
+obs_test = min_max_normalization(obs_test);
+stress_test = min_max_normalization(stress_test);
+neutral_test = min_max_normalization(neutral_test);
+
+
+obs_hab = min_max_normalization(obs_hab);
+stress_hab = min_max_normalization(stress_hab);
+neutral_hab = min_max_normalization(neutral_hab);
+
+obs_cage = min_max_normalization(obs_cage);
+stress_cage = min_max_normalization(stress_cage);
+neutral_cage = min_max_normalization(neutral_cage);
+end
 
 
 if(sd_norm == 1)

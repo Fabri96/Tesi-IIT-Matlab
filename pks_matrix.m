@@ -37,9 +37,3 @@ for i = 1:size(pks_mat,1)
     end
 end
 
-loc1
-loc2
-
-dd1
-
-dd2

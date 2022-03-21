@@ -13,8 +13,37 @@ end
 if(dataset==4)
     fs=0.1264;
 end
-
 close all
+
+initial =0;
+N=1.5;
+if(initial==1)
+    if(dataset == 1 || dataset == 3)
+
+    pks_mat_obs_stress = pks_matrix(obs_test(1:round(end/N),:),stress_test(1:round(end/N),:),right,fs);
+
+    pks_mat_obs_neutral = pks_matrix(obs_test(1:round(end/N),:),neutral_test(1:round(end/N),:),left,fs);
+
+    pks_mat_obs_stress_hab = pks_matrix(obs_hab,stress_hab,right2,fs);
+
+    pks_mat_obs_neutral_hab = pks_matrix(obs_hab,neutral_hab,left2,fs);
+
+end
+
+if(dataset == 2|| dataset == 4)
+
+    pks_mat_obs_stress = pks_matrix(obs_test(1:round(end/N),:),stress_test(1:round(end/N),:),left,fs);
+
+    pks_mat_obs_neutral = pks_matrix(obs_test(1:round(end/N),:),neutral_test(1:round(end/N),:),right,fs);
+
+    pks_mat_obs_stress_hab = pks_matrix(obs_hab,stress_hab,left2,fs);
+
+    pks_mat_obs_neutral_hab = pks_matrix(obs_hab,neutral_hab,right2,fs);
+    
+end
+end
+
+if(initial~=1)
 if(dataset == 1 || dataset == 3)
 
     pks_mat_obs_stress = pks_matrix(obs_test,stress_test,right,fs);
@@ -38,7 +67,7 @@ if(dataset == 2|| dataset == 4)
     pks_mat_obs_neutral_hab = pks_matrix(obs_hab,neutral_hab,right2,fs);
     
 end
-
+end
 % figure
 % subplot(1,2,1)
 % 

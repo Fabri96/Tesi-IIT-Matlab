@@ -145,6 +145,24 @@ k1_stress = 6210;
 
 end
 
+if(dataset == 6)
+
+%   sniff_adapting %adapt times based on A keybord references
+  
+  k2_obs = 24352;
+
+k2_neutral = 24424;
+
+k2_stress = 24258;
+
+k1_obs = 6335;
+
+k1_neutral = 6409;
+
+k1_stress = 6242;
+
+end
+
 
 stress_cage = stress(1:k1_stress-1,:);
 stress_hab  = stress(k1_stress:k2_stress-1,:);

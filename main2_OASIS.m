@@ -22,7 +22,7 @@ clearvars -except corr  L2_errors stress_hab_act1 stress_hab_act1 ...
  neutral_far1 t_obs_stress1 t_obs_neut1 t_interm1 t_obs_stress1_hab ...
  t_obs_neut1_hab t_interm1_hab c_first lags_first c2_first lags2_first ...
  c3_first lags3_first c4_first lags4_first c5_first lags5_first ...
-c6_first lags6_first
+c6_first lags6_first m1_first m2_first m3_first m4_first
 close all
 
 
@@ -41,8 +41,8 @@ load('test_zone2.mat')
 
 load('sniff2.mat')
 dataset=2;
-sd_norm=1;
-mm_norm=0;
+sd_norm=0;
+mm_norm=1;
 
 fs=0.05;
 % pairings = neutral_data_cage2(1:2,20:35);
@@ -70,6 +70,12 @@ obs_test(:,[ 10 11 16 18]) = [];
 neutral_test(:,2) = [];
 
 stress_test(:,21)=[];
+
+obs_hab(:,[ 10 11 16 18]) = [];
+
+neutral_hab(:,2) = [];
+
+stress_hab(:,21)=[];
 %% NEURON SELECTION OPTION
 %  obs_test(:,[5 13 ])=[];
 % neutral_test(:,[2:9 13])=[];
@@ -102,7 +108,12 @@ neutral_test = min_max_normalization(neutral_test);
 obs_hab = min_max_normalization(obs_hab);
 stress_hab = min_max_normalization(stress_hab);
 neutral_hab = min_max_normalization(neutral_hab);
+
+obs_cage = min_max_normalization(obs_cage);
+stress_cage = min_max_normalization(stress_cage);
+neutral_cage = min_max_normalization(neutral_cage);
 end
+
 
 obs_activity_test = mice_activity(obs_test);
 % obs_activity_test=z_score_normalization(obs_activity_test);

@@ -14,7 +14,7 @@ right = [];
 
 nostim = [];
 
-if(dataset ~=5)
+if(dataset ~=5 || dataset ~=6)
 for i = 1: size(zone_adapted,1)
     
     if (zone_adapted(i,4) == 1)
@@ -39,7 +39,7 @@ end
 
 end
 
-if(dataset==5)
+if(dataset==5 || dataset==6)
 for i = 1: size(zone_adapted,1)
     
     if (zone_adapted(i,4) == 1)

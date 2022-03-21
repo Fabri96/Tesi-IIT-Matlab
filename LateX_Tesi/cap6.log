@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  6 MAR 2022 11:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  15 MAR 2022 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -563,6 +563,8 @@ c.sty
 Package: titlepic 2017/03/14 1.2 Package to display a picture on the title page
 
 )
+\c@remark=\count420
+
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperre
 f.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
@@ -588,8 +590,8 @@ sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen155
-\Hy@linkcounter=\count420
-\Hy@pagecounter=\count421
+\Hy@linkcounter=\count421
+\Hy@pagecounter=\count422
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.
 def
@@ -610,7 +612,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 mds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count422
+\Hy@SavedSpaceFactor=\count423
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc.d
 ef
@@ -625,7 +627,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count423
+\c@Hy@tempcnt=\count424
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen156
 
@@ -638,7 +640,7 @@ intcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count424
+\Fld@menulength=\count425
 \Field@Width=\dimen157
 \Fld@charsize=\dimen158
 Package hyperref Info: Hyper figures OFF on input line 6076.
@@ -656,9 +658,9 @@ x.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count425
-\c@Item=\count426
-\c@Hfootnote=\count427
+\Hy@abspage=\count426
+\c@Item=\count427
+\c@Hfootnote=\count428
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -672,8 +674,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count428
-\c@bookmark@seq@number=\count429
+\Fld@listcount=\count429
+\c@bookmark@seq@number=\count430
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\r
 erunfilecheck.sty
@@ -688,44 +690,44 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip79
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 40.
-\@quotelevel=\count430
-\@quotereset=\count431
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
+\@quotelevel=\count431
+\@quotereset=\count432
  (cap6.aux)
 \openout1 = `cap6.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
 -pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count432
+\scratchcounter=\count433
 \scratchdimen=\dimen159
 \scratchbox=\box57
-\nofMPsegments=\count433
-\nofMParguments=\count434
+\nofMPsegments=\count434
+\nofMParguments=\count435
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count435
+\MPscratchCnt=\count436
 \MPscratchDim=\dimen160
-\MPnumerator=\count436
-\makeMPintoPDFobject=\count437
+\MPnumerator=\count437
+\makeMPintoPDFobject=\count438
 \everyMPtoPDFconversion=\toks29
 )
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\eps
@@ -753,10 +755,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'cap6.bbl' found.
  (cap6.bbl)
-Package biblatex Info: Reference section=0 on input line 58.
-Package biblatex Info: Reference segment=0 on input line 58.
-\c@lstlisting=\count438
-Package hyperref Info: Link coloring ON on input line 58.
+Package biblatex Info: Reference section=0 on input line 59.
+Package biblatex Info: Reference segment=0 on input line 59.
+\c@lstlisting=\count439
+Package hyperref Info: Link coloring ON on input line 59.
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
 .sty
@@ -770,39 +772,39 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 \gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count439
+\c@section@level=\count440
 )
-LaTeX Info: Redefining \ref on input line 58.
-LaTeX Info: Redefining \pageref on input line 58.
-LaTeX Info: Redefining \nameref on input line 58.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
  (cap6.out) (cap6.out)
 \@outlinefile=\write4
 \openout4 = `cap6.out'.
 
 
-Overfull \hbox (6.39789pt too wide) in paragraph at lines 62--62
+Overfull \hbox (6.39789pt too wide) in paragraph at lines 63--63
 []\OT1/cmr/bx/n/14.4 Mathematical mod-el-ing in cel-lu-lar elec-tro-phys-
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
 
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
 
 
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<first.png, id=31, 322.95656pt x 194.97844pt>
+<first.png, id=35, 322.95656pt x 194.97844pt>
 File: first.png Graphic file (type png)
 <use first.png>
-Package pdftex.def Info: first.png  used on input line 72.
+Package pdftex.def Info: first.png  used on input line 73.
 (pdftex.def)             Requested size: 248.6773pt x 150.13385pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+Underfull \hbox (badness 10000) in paragraph at lines 82--85
 
  []
 
@@ -810,114 +812,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
 {C:/Users/Fabrizio/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map} <./fir
 st.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
-[2]
-<membrane.jpg, id=61, 515.67656pt x 271.76532pt>
+[2] [3]
+<membrane.jpg, id=80, 515.67656pt x 271.76532pt>
 File: membrane.jpg Graphic file (type jpg)
 <use membrane.jpg>
-Package pdftex.def Info: membrane.jpg  used on input line 159.
+Package pdftex.def Info: membrane.jpg  used on input line 188.
 (pdftex.def)             Requested size: 155.24895pt x 81.81635pt.
-<intra.png, id=62, 266.49562pt x 174.6525pt>
+<intra.png, id=81, 266.49562pt x 174.6525pt>
 File: intra.png Graphic file (type png)
 <use intra.png>
-Package pdftex.def Info: intra.png  used on input line 166.
+Package pdftex.def Info: intra.png  used on input line 195.
 (pdftex.def)             Requested size: 155.24895pt x 101.74889pt.
- [3 <./membrane.jpg> <./intra.png>]
-<ode_circuit.png, id=76, 264.99pt x 247.67531pt>
+<ode_circuit.png, id=82, 264.99pt x 247.67531pt>
 File: ode_circuit.png Graphic file (type png)
 <use ode_circuit.png>
-Package pdftex.def Info: ode_circuit.png  used on input line 219.
+Package pdftex.def Info: ode_circuit.png  used on input line 248.
 (pdftex.def)             Requested size: 155.24895pt x 145.10677pt.
-<global_circuit.png, id=77, 306.39468pt x 295.85532pt>
+<global_circuit.png, id=83, 306.39468pt x 295.85532pt>
 File: global_circuit.png Graphic file (type png)
 <use global_circuit.png>
-Package pdftex.def Info: global_circuit.png  used on input line 226.
+Package pdftex.def Info: global_circuit.png  used on input line 255.
 (pdftex.def)             Requested size: 165.59853pt x 159.90395pt.
- [4 <./ode_circuit.png> <./global_circuit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 259--261
+ [4 <./membrane.jpg> <./intra.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
 
  []
 
-<LRM.png, id=88, 303.38344pt x 216.05719pt>
+[5 <./ode_circuit.png> <./global_circuit.png>]
+<LRM.png, id=101, 303.38344pt x 216.05719pt>
 File: LRM.png Graphic file (type png)
 <use LRM.png>
-Package pdftex.def Info: LRM.png  used on input line 269.
+Package pdftex.def Info: LRM.png  used on input line 298.
 (pdftex.def)             Requested size: 233.60596pt x 166.36453pt.
-[5 <./LRM.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 325--327
 
+Overfull \hbox (3.38434pt too wide) detected at line 308
+[][]\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; t;  []\OT1/cmr/m/
+n/10 ([]\OML/cmm/m/it/10 ; t\OT1/cmr/m/n/10 )) = \OML/cmm/m/it/10 g[] \OT1/cmr/
+m/n/10 = \OML/cmm/m/it/10 const E[]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; t\OT1/
+cmr/m/n/10 ) := \OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 const \
+OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 
  []
 
-[6]
-<HH.png, id=108, 295.1025pt x 219.06844pt>
+[6 <./LRM.png>]
+Overfull \hbox (1.6025pt too wide) in paragraph at lines 352--353
+\OT1/cmr/m/n/10 duc-tion cur-rent be-comes non-lin-ear. Here, the fol-low-ing a
+s-sump-tions are adopted: 
+ []
+
+<HH.png, id=111, 295.1025pt x 219.06844pt>
 File: HH.png Graphic file (type png)
 <use HH.png>
-Package pdftex.def Info: HH.png  used on input line 364.
+Package pdftex.def Info: HH.png  used on input line 387.
 (pdftex.def)             Requested size: 265.58978pt x 197.15976pt.
- [7 <./HH.png>] [8]
-<gk.png, id=127, 228.10219pt x 112.92188pt>
+[7] [8 <./HH.png>] [9]
+<gk.png, id=140, 228.10219pt x 112.92188pt>
 File: gk.png Graphic file (type png)
 <use gk.png>
-Package pdftex.def Info: gk.png  used on input line 452.
+Package pdftex.def Info: gk.png  used on input line 475.
 (pdftex.def)             Requested size: 250.91315pt x 124.21443pt.
- [9]
-<cable.png, id=136, 630.10406pt x 250.68657pt>
+<cable.png, id=141, 630.10406pt x 250.68657pt>
 File: cable.png Graphic file (type png)
 <use cable.png>
-Package pdftex.def Info: cable.png  used on input line 464.
+Package pdftex.def Info: cable.png  used on input line 487.
 (pdftex.def)             Requested size: 441.06984pt x 175.47939pt.
 
-Overfull \hbox (78.37521pt too wide) in paragraph at lines 463--465
+Overfull \hbox (78.37521pt too wide) in paragraph at lines 486--488
  |  [] 
  []
 
 [10 <./gk.png> <./cable.png>]
-Overfull \hbox (6.9341pt too wide) in paragraph at lines 487--488
+Overfull \hbox (6.9341pt too wide) in paragraph at lines 510--511
 \OT1/cmr/m/n/10 ten-tial dif-fer-ence across the el-e-ment is $\OML/cmm/m/it/10
  d []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; t\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10
    [] \OT1/cmr/m/n/10 =
  []
 
-<curr_bal.png, id=144, 529.98pt x 305.64188pt>
+[11]
+<curr_bal.png, id=160, 529.98pt x 305.64188pt>
 File: curr_bal.png Graphic file (type png)
 <use curr_bal.png>
-Package pdftex.def Info: curr_bal.png  used on input line 531.
+Package pdftex.def Info: curr_bal.png  used on input line 554.
 (pdftex.def)             Requested size: 264.98933pt x 152.82056pt.
-[11]
-<basis.png, id=155, 399.74344pt x 238.64156pt>
+<basis.png, id=161, 399.74344pt x 238.64156pt>
 File: basis.png Graphic file (type png)
 <use basis.png>
-Package pdftex.def Info: basis.png  used on input line 543.
+Package pdftex.def Info: basis.png  used on input line 566.
 (pdftex.def)             Requested size: 279.81848pt x 167.04794pt.
- [12 <./curr_bal.png> <./basis.png>]
-Overfull \hbox (2.90878pt too wide) in paragraph at lines 566--567
+
+Overfull \hbox (7.92255pt too wide) in paragraph at lines 573--574
+\OT1/cmr/m/n/10 The ca-ble equa-tion model is an ex-am-ple of the fol-low-ing o
+ne-dimensional \OT1/cmr/m/it/10 diffusion-
+ []
+
+[12 <./curr_bal.png> <./basis.png>]
+Overfull \hbox (2.90878pt too wide) in paragraph at lines 589--590
 \OT1/cmr/bx/n/10 method (BE) \OT1/cmr/m/n/10 is cho-sen, be-cause of its un-con
 -di-tional sta-bil-ity [Quarteroni-
  []
 
-
-Overfull \hbox (25.31595pt too wide) detected at line 597
+[13]
+Overfull \hbox (25.31595pt too wide) detected at line 620
 \OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 := []
  []
 
-[13] [14] (cap6.aux)
+[14] (cap6.aux)
 Package rerunfilecheck Info: File `cap6.out' has not changed.
-(rerunfilecheck)             Checksum: 1CC0B9896A6FEBCF82FA0B9BA529B59D;1430.
+(rerunfilecheck)             Checksum: 05CD16597DC2E116B51B979024FE50DE;1553.
 Package logreq Info: Writing requests to 'cap6.run.xml'.
 \openout1 = `cap6.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19738 strings out of 478550
- 350796 string characters out of 2839425
- 1158181 words of memory out of 3000000
- 37604 multiletter control sequences out of 15000+600000
+ 19749 strings out of 478550
+ 350904 string characters out of 2839425
+ 1159223 words of memory out of 3000000
+ 37612 multiletter control sequences out of 15000+600000
  475551 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,106p,1300b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,12n,106p,1294b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Fabrizio\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\tcrm1000.pk><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmbx10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
@@ -938,9 +954,9 @@ grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Fabrizio/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/U
 sers/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb>
-Output written on cap6.pdf (14 pages, 420470 bytes).
+Output written on cap6.pdf (14 pages, 422177 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 82 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
+ 120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

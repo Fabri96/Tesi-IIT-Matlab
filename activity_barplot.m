@@ -1,6 +1,6 @@
 % main2;
 
-main_OASIS;
+main3_OASIS;
 corr_plots;
 sniff_correlation;
 close all
@@ -28,7 +28,7 @@ avg_sniff_stress1 = mean(obs_activity_test_stress_sniff);
 avg_sniff_neut1 = mean(obs_stress_interm_test);
 
 
-main2_OASIS;
+main4_OASIS;
 corr_plots;
 sniff_correlation;
 close all

@@ -83,7 +83,7 @@ plot(lags_first*fs1,avg_stress_cage,'g-o',MarkerSize=2)
 xlabel('lags (s)')
 ylabel('cross-correlation')
 
-title('CC between observer and stressed (beginning)')
+title('CC between observer and stressed (min-max norm)')
 set(gca,'FontSize',15)
 ylim([-0.3 1])
 grid
@@ -100,7 +100,7 @@ plot(lags_first*fs1,avg_neutral_cage,'g-o',MarkerSize=2)
 xlabel('lags (s)')
 ylabel('cross-correlation')
 
-title('CC between observer and neutral (beginning)')
+title('CC between observer and neutral (min-max norm)')
 set(gca,'FontSize',15)
 ylim([-0.3 1])
 grid

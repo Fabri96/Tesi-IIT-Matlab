@@ -30,7 +30,7 @@ sniff=[];
     obs, obs_cage, obs_hab, obs_test,sniff] =...
     accept_and_split(stress_OASIS5, neutral_OASIS5, obs_OASIS5,sniff,dataset);
 
-
+% 
 neutral_test(:,1) = neutral_test(:,1)+ 4.5;
 obs_test(:,1) = obs_test(:,1) + 2.37;
 
@@ -96,10 +96,10 @@ zone_plot(ad_test_zone,dataset);
 
 fs=ad_test_zone(16,1)-ad_test_zone(15,1);
 
+
 [ left, right ,intermediate] = detect_areas(ad_test_zone);
 
 [ left2, right2 ,intermediate2] = detect_areas(ad_hab_zone);
-
 
 % observer activity when he is close to stressed
 obs_activity_test_stress = interp1(obs_activity_test(:,1),obs_activity_test(:,2), right);
