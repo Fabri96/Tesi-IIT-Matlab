@@ -9,6 +9,7 @@
 \usepackage{float}
 \usepackage{lipsum}
 \usepackage{scrextend}
+\usepackage{longtable}
 \usepackage{biblatex}
 \addbibresource{bibliography.bib}
 \usepackage{listings}
@@ -50,7 +51,8 @@
 
 \newcommand{\myName}{Fabrizio Bernardi}
 \newcommand{\myTitle}{Data analysis and modeling of calcium activity in   mice somatostatin interneurons}
-\newcommand{\myDegree}{Programme: \protect\\ \textit{Mathematical Engineering}}
+\newcommand{\myDegree}{Programme: \protect\\ \textit{Mathematical Engineering} \\
+Academic years: 2021-2022}
 \newcommand{\myCycle}{XXXI cycle}
 \newcommand{\myDepartment}{Department of Mathematics}
 \newcommand{\myUni}{Politecnico di Milano}
@@ -81,6 +83,7 @@
 	\clearpage
 	
 	\begin{titlepage}
+		\pagestyle{empty}
 			\begin{minipage}{\linewidth}
 			\centering
 			\begin{minipage}{0.45\linewidth}
@@ -135,42 +138,175 @@
 		\end{addmargin}
 	\end{titlepage}
 	
-	
+	\pagenumbering{roman}
 	
 	\chapter*{Ringraziamenti}
 	
 	da scrivere
 
-
+	
 	
 	\chapter*{Abstract}
 	
-	da scrivere
+The increasing develop, thorugh years, of sophisticated mathematical tools allowed us to describe highly complex phenomena. As consequence, mathematics has started to increase its presence in areas characterized by complex and often unknwons mechanisms.  A perfect example of this is given by the study of the brain. By today, we still know so few about this fascinating organ, such as about the functioning of the microscopic processes which allow neurons to communicate among each other, exchanging electric impulses and forming brain circuits adhibhited to specific tasks.\\
+In order to measure and quantify the activity displayed in a specific area of the brain, and by a specific population of neurons, several techniques are available. The most important for this work consists in the \textit{calcium imaging} techniques, which allow to estimate the concentration of the calcium, present in ionic form of $Ca^{2+}$, inside neurons. Indeed, a peak in such quantity represents a state of \textit{activity} for the corresponding neuron or brain region. Once collected such type of data, the observed neural activity can be correlated to a displayed behaviour of the individual, allowing to explain macroscopic effects from the underlying microscopic neural causes.\\
+This approach opens several possibile analyses, for which mathematical tools reveal to be extremely useful; for example, in the research of \textit{correlations} between neural activity and behaviour, or the identification of \textit{patterns} in the activity of neurons, allowing to identify and label neuronal circuits. From data we can also try to build \textit{predictive models}, in which we want to explain and predict through equations these complex phenomena.
 	
+	
+	\chapter*{Sommario}
+		
+Lo sviluppo crescente, negli anni, di strumenti matematici sofisticati, ci ha permesso di poter descrivere fenomeni estremamente complessi. Come conseguenza di ciò, la matematica ha visto un aumento della sua presenza in molte aree caratterizzate da meccanismi complessi e spesso sconosciuti. Un esempio perfetto di ciò è dato dallo studio del cervello. Ad oggi, sappiamo ancora così poco su questo organo affascinante, coì come sul funzionamento dei processi microscopici che permettono ai neuroni di comunicare tra loro, scambiandosi impulsi elettrici e formando circuiti cerebrali adibiti a specifici compiti.\\
+In modo da misurare e quantificare l'attività manifestata in una specifica area del cervello e da una specifica popolazione di neuroni, diverse tecniche sono disponibili. La più importante ai fini del presente lavoro consiste nelle tecniche di \textit{calcium imaging}, le quali permettono di stimare la concentrazione del calcio, presente in forma ionica come  $Ca^{2+}$, all'interno dei neuroni. Un picco osservato di questa quantità, infatti, corrisponde a uno stato di \textit{attività} per il corrispondente neurone o regione cerebrale. Una volta raccolti dati di questo tipo, l'attività neurale osservata può essere correlata con un comportamento manifestato dall'individuo, permettendo quindi di spiegare effetti macroscopici a partire da cause microscopiche di tipo neuronale.\\
+Questo approccio apre la strada a diverse analisi, per le quali gli strumenti matematici si rivelano estremamente utili; per esempio, la ricerca di \textit{ correlazioni} tra attività neurale e comportamento, l'identificazione di \textit{pattern} nell'attività dei neuroni, che permette identificare e caratterizzare circuiti di neuroni. Da questa tipologia di dati è possiible anche creare \textit{modelli predittivi}, nei quali si vuole spiegare e predirre, utilizzando equazioni, questi fenomeni complessi.	
+		
 	\chapter*{Introduction}
+
+	The present thesis work is the result of a collaboration between Politecnico di Milano and the Italian Institute of Technology (IIT). In particular, the collaboration involved the research group of \textit{Genetics of Cognition (GECO)}, held by Dr. Francesco Papaleo. The GECO group performs \textit{in vivo} studies on mice, analyzing their behaviour and performing underlying recordings of their neural activity.\\
+	During these months of work, we have been able to connect the biological competences of the researchers, which allowed to perform experiments and collect data, with the mathematical skills which made it possible to work on them. As result, data analyses have been performed on several experiments, such as  the attempt to mathematically model the  calcium activity observed from the data.\\
+	The  thesis is organized in three main parts: an introduction to the main concepts and tools used throughout the work (Chapters 1-2), the results obtained in the data analyses of experiments performed on mice (Chapters 3-4), and the formulation and application of the \textit{Cable-Calcium} model (Chapters 5-6). In details:
 	
-	da scrivere
+	\begin{itemize}
+		\item \textbf{Chapter 1}. In the first chapter, the main concepts of neurobiology, useful for the following of the presentation, are introduced. Previous results from in vivo studies performed on mice, with subsequent focus on the recorded underlying nerual activity, are presented as well. 
+		
+		\item \textbf{Chapter 2}. The second chapter presents the mathematical tools necessary for the \textit{interbrain analyisis}, one of the central topic of the work, in which we wonder whether the neural activities of two mice tend to synchronize as result of a specific shown behaviour. 
+		
+		\item \textbf{Chapter 3}. In this chapter, the results of the interbrain analysis for the \textit{emotion discrimination task} are presented. 
+		
+		\item \textbf{Chapter 4}. In the fourth chapter, a different task is analyzed, namely the \textit{altruism task}, in which mice are put in a situation making them able to perform altruist or selfish choices towards a consepcific mouse, while having their neural activity recorded. The data analysis has the goal to look for correlation between the manifestation of a prosocial behaviour in one subject, and an underlying activation of the neural activity.
+		
+		\item \textbf{Chapter 5}. With the fifth chapter, the focus switch on the mathematical modeling for cellular electrophysiology. The main equations and models to represent a mathematical equivalent of electric activity of cells are presented, such as the numerical techniques implied to solve such equations.
+		
+		\item \textbf{Chapter 6}: Using the tools introduced in the previous chapter, chapter 6 proposes a new model to describe the communication between two neurons, based on the given data of calcium activity: the \textit{Cable-Calcium} model.
+		
+		
+	\end{itemize}
 	
 
 
 
 	
+	\chapter*{List of acronyms}
+
+\noindent
+\textbf{ACC} Anterior cingulate cortex \\
+
+\noindent
+\textbf{ANOVA} Analysis of variance \\
+
+\noindent
+\textbf{AP} Action potential \\
+
+\noindent
+\textbf{AUC} Area under the curve \\
+
+\noindent
+\textbf{BE} Backward Euler method \\
+
+\noindent
+\textbf{BLA} Basolateral amygdala \\
+
+\noindent
+\textbf{CC} Cross-correlation \\
+
+\noindent
+\textbf{CNO} Clozapine N-oxide \\
+
+\noindent
+\textbf{DD} Drift-Diffusion model \\
+
+\noindent
+\textbf{DPS} Decision preference score \\
+
+\noindent
+\textbf{DREADD} Inhibitory designer receptors exclusively activated by designer drugs \\
+
+\noindent
+\textbf{DS} David's score \\
+
+\noindent
+\textbf{EEG} Electroencephalography \\
+
+\noindent
+\textbf{FEM} Finite element method \\
+
+\noindent
+\textbf{FMR} Foundation of Biomedical Research \\
+
+\noindent
+\textbf{GECI} Genetically encoded calcium indicators \\
+
+\noindent
+\textbf{GHK} Goldman-Hodgkin-Katz model \\
+
+\noindent
+\textbf{HH} Hodgkin-Huxley model \\
+
+\noindent
+\textbf{LRM} Linear resistor model \\
+
+\noindent
+\textbf{MAD} Median absolute deviation \\
+
+\noindent
+\textbf{MBS} Multi brain stimulation \\
+
+\noindent
+\textbf{mPFC} Medial prefrontal cortex \\
+
+\noindent
+\textbf{MSE} Mean square error \\
+
+\noindent
+\textbf{NDS} Normalized David's score \\
+
+\noindent
+\textbf{NS} Nervous system \\
+
+\noindent
+\textbf{ODE} Ordinary differential equation \\
+
+\noindent
+\textbf{OXT} Oxytocin \\
+
+\noindent
+\textbf{PDE} Partial differential equation \\
+
+\noindent
+\textbf{PFC} Prefrontal cortex \\
+
+\noindent
+\textbf{PSTH} Peristimulus time histogram \\
+
+\noindent
+\textbf{PV+} Parvalbumin interneurons \\
+
+\noindent
+\textbf{ROI} Region of interest \\
+
+\noindent
+\textbf{SOM+} Somatosting interneurons \\
+
+
+
+
+
+
+
+\listoffigures
+
+\listoftables
+
+\tableofcontents
 	
 
-
-
-
-	\tableofcontents
-	
-
-	
+	\pagenumbering{arabic}
 	
 	\newpage
 	
 	\chapter{Neurobiology of behaviour} \label{section 1.1}
 	
 	
-	In this first chapter, the biological and experimental foundations of this work will be presented. After a brief review of the main notions of neurobiology, such as the structure of a neuron, the propagation of an action potential in neuronal circuits and the intracellular calcium dynamics, there will be a closer focus on the areas of the brain that are involved in the following discussions.\\
+	In this first chapter, the biological and experimental foundations of this work will be presented. After a brief review of the main notions of neurobiology, such as the structure of a neuron, the propagation of an action potential in neuronal circuits and the intracellular calcium dynamics, the work will focus on the areas of the brain that are involved in the following discussions.\\
 	Next, the experimental setup for such studies is presented, through the description of the behavioral tasks performed on mice and the experimental techniques for calcium imaging, from which it will be possible to extract the data analyzed in Chapter 3.\\
 	Finally, a quite modern and, for this work, extremely relevant topic is introduced: the synchronization among neural signals.
 	
@@ -192,11 +328,11 @@
 	the brain, allowing the NS to collect information and to react to stimuli,
 	elaborating decisions based on them. \\
 	The neuron is composed of a central body called \textit{soma}, of the \textit{dendrites}, cellular extensions which collect stimuli from near areas, and of the \textit{axon}, the biological cable connecting one neuron to another, in order to propagate information (Figure \ref{neuron}). 
-	Another type of cells present in the NS are the \textbf{glial cells} (like astrocytes), which perform functions of protection, sustainment and nutrition for the neurons. Although glial cells are not the main focus of this work, their contribution should not be neglected, as it has been shown to be relevant in many important processes of the nervous system \cite{1} %Semyanov]. \\
+	Another type of cells present in the NS are the \textbf{glial cells} (like astrocytes), which perform functions of protection, sustainment and nutrition for the neurons. Although glial cells are not the main focus of this work, their contribution to the NS should not be neglected, as it has been shown to be relevant in many important processes of the nervous system \cite{1} %Semyanov]. \\
 	
 		
 	
-	Neurons are \textbf{excitable} and \textbf{conductive}, i.e. they can generate an electrical impulse and transmit it to other neurons, forming neuronal microcircuits, often associated with a specific area and/or task of the brain. \\
+	Neurons are \textbf{excitable} and \textbf{conductive} cells, i.e. they can generate an electrical impulse and transmit it to other neurons, forming neuronal microcircuits, often associated with a specific area and/or task of the brain. \\
 	Inside every neuron, in the cytoplasm, there is a coexistence of different ionic species (mostly $Na^+, Cl^-, K^+, Ca^{2+}$) which, in equilibrium conditions, assume a certain concentration, concurring to determine a difference between the electric potential assumed inside and outside the cell: we call this quantity the \textbf{membrane potential} of the cell (indeed it is the potential drop formed across the cell's membrane).  In reaction to an external stimulus, the ionic concentrations change rapidly their values, provoking a heavy change in the membrane potential. As a consequence, the excitation of a neuron happens, as well as the formation of an \textbf{action potential}, which will propagate to other neurons across the axon (Figure \ref{membrane}). 
 \begin{figure}[H]
 	\begin{minipage}{\linewidth}
@@ -220,28 +356,28 @@
 Right: example of action potential formation in reaction to a stimulus. \cite{43}}}\label{membrane}
 \end{figure}
 
-At the end of the axon, the link between a neuron and its neighbour, and the relative passage of the electrical impulse, happens thanks to a chemical \textbf{synapse} (Figure \ref{synapse}), a particular structure located in the terminal of the axon. Here, special molecules called \textit{neurotransmitters} are syntethized, and the arrival of an action potential allows such molecules to travel towards the \textit{intersynaptic space}, where they can bind to receptors located in the post-synaptic cell. The response of the post-synaptic cell, then, can be either excitatory or inhibitory, based on whether the impulse is preserved in the circuit or supressed.\\
-The synapses (and thus their corresponding neuron) can be classified in four main groups, depending on the type of neurotransmitter which they release:  glutamatergic, GABAergic, cholinergic,  adrenergic. The most relevant for this work will be the one of GABAergic synapses, consisting of inhibitory neurotransmitters which reduce the excitability of the neurons.
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=0.2]{synapse.jpg} 
-	\end{center} 
-	\caption{\textit{Schematic representation of a chemical synapse.}}\label{synapse}
-	
-\end{figure}
+At the end of the axon, the link between a neuron and its neighbour, and the relative passage of the electrical impulse, occurs thanks to a chemical \textbf{synapse} (Figure \ref{synapse}), a particular structure located in the terminal of the axon. Here, special molecules called \textit{neurotransmitters} are syntethized, and the arrival of an action potential allows such molecules to travel towards the \textit{intersynaptic space}, where they can bind to receptors located in the post-synaptic cell. The response of the post-synaptic cell, then, can be either excitatory or inhibitory, based on whether the impulse is preserved in the circuit or supressed.\\
+The synapses (and thus their corresponding neuron) can be classified in four main groups, depending on the type of neurotransmitter which they release:  glutamatergic, GABAergic, cholinergic,  adrenergic. The most relevant for this work will be the one of GABAergic synapses, consisting of inhibitory neurotransmitters which reduce the excitability of the neurons.\\
 
-
-
-In neurobiology, the conditions under which a neuron can be considered \textbf{active} are not unique and matter of debate; in the context of neural activity, the literature usually means either the already discussed electrical activity, or the \textbf{calcium activity}. The intracellular dynamic of this particular element, in ionic form of $Ca^{2+}$, is known to be essential for the main cellular processes, and is strictly related to the formation of an action potential and subsequent propagation of the electrical impulse.\\
+In neurobiology, the conditions under which a neuron can be considered \textbf{active} are not unique and matter of debate. When discussing \textbf{neural activity}, the literature usually means either the already discussed electrical activity, or the \textbf{calcium activity}. The intracellular dynamic of this particular element, in ionic form of $Ca^{2+}$, is known to be essential for the main cellular processes, and is strictly related to the formation of an action potential and subsequent propagation of the electrical impulse.\\
  Indeed, we can usually observe  \textit{strong instabilities} in the intracellular calcium concentration (Figure \ref{oscillations}), which often show fast oscillations and changes, through the formation of sudden peaks: we will define the neuron as \textit{active} in correspondence to these peaks.
+ 
+ 
+ \begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.2]{synapse.jpg} 
+ 	\end{center} 
+ 	\caption{\textit{Schematic representation of a chemical synapse \cite{44}.}}\label{synapse}
+ 	
+ \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=.50]{Ca_conc.png} 
 	\end{center} 
 	\caption{\textit{Example of $Ca^{2+}$ concentration recorded in a neuron, as function of time.}} \label{oscillations}
-		
-	\end{figure}
+	
+\end{figure}
 	
 	Having defined the meaning of neural activity, we can ask ourselves whether this activity could be related to aspects like behaviour, emotion, body language, mood: in other words, to investigate whether there is a connection between the activation of some specific neurons, and what animals do.\\
 	This topic has fascinated neuroscientists for decades, and from what it has been discovered so far, it seems evident that \textbf{different brain circuits are responsible for different behaviours} (although these distinctions may not always be that marked, unique and easy to detect).
@@ -263,9 +399,9 @@ In neurobiology, the conditions under which a neuron can be considered \textbf{a
 	
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=.55]{brain.png} 
+			\includegraphics[scale=.75]{brain.png} 
 		\end{center} 
-		\caption{\textit{Main areas of the brain involved in behaviour and emotion recognition.}}
+		\caption{\textit{Main areas of the brain involved in behaviour and emotion recognition \cite{45}.}}
 		
 	\end{figure}
 
@@ -273,9 +409,9 @@ In neurobiology, the conditions under which a neuron can be considered \textbf{a
 
 \section{In vivo studies on mice}
 
-According to the \textit{Foundation of Biomedical Research (FMR)}, approximately $95\% $ of all lab animals are mice or rats, as in the case of this current work. Although very often the final goal of the research is an application useful for humans, the reasons why mice are the first choice for experiments are numerous. First of all, mice are mammals quite similar to humans when it concerns genetics, at the point that scientists have been able to reproduce genes in mice similar to the ones implied in human diseases ("\textit{transgenic mice}" \cite{7)}; %[Harari,Abramovich 2014]);
+According to the \textit{Foundation of Biomedical Research (FMR)}, approximately $95\% $ of all lab animals are mice or rats, as in the case of this current work. Although very often the final goal of the research is an application useful for humans, the reasons why mice are the first choice for experiments are numerous. First of all, mice are mammals quite similar to humans when it concerns genetics, at the point that scientists have been able to reproduce genes in mice similar to the ones implied in human diseases ("\textit{transgenic mice}" \cite{7}; %[Harari,Abramovich 2014]);
  rodents, indeed, are also easy to manipulate from a genetic point of view. Another reason is definitely the fact that mice are small, easy to control, quite cheap to buy and usually docile. Finally, being the most used animal in research, the largest information and literature which can be found is about them, their anatomy, their typical behaviours, and by today large populations of rodents have been created and used exclusively for experimental purposes, being almost all identical and therefore setting a uniform standard for study and validation of results. \\
-Through a  \textbf{behavioral task}, one or more mice are put in a particular situation designed to study their reactions, such as a shown behaviour or movement, and, in this context, the goal is to find a relationship with their correspondent neural activity. Therefore, the overall experiment consists in the following steps:
+In the experiments, through a  \textbf{behavioral task}, one or more mice are put in a particular situation designed to study their reactions, such as a shown behaviour or movement, and, in this context, the goal is to find a relationship with their correspondent neural activity. Therefore, the overall experiment consists in the following steps:
 \begin{enumerate}
 	\item Preparation of the arena and equipment for the task 
 	\item Preparation of the mice for the experiment, both in terms of behavioral conditioning, and for neural activity measurements
@@ -295,7 +431,7 @@ In this work, the behavioural task which has been studied is a particular realiz
 Previous works on this setup \cite{8} %[Scheggia-Managò]
  were performed using both positively and negatively affected demonstrators. The cellular target consisted in a specific subpopulation of neurons, which is thought to be involved in processes like \textit{affective state discrimination}: the \textbf{somatostatin (SOM+)} interneurons in the medial prefrontal cortex.\\
 These neurons, expressing the somatostatin neurotransmitter, form a small
-subgroup, distinct from others like pyramidal neurons or parvalbumin interneurons, but unlike these former ones, they seem to be directly implicated in the affective state discrimination of a conspecific mouse. The data analysis on the task showed some remarkable results:
+subgroup, distinct from others like pyramidal neurons or parvalbumin interneurons (PV+). Pyramidal neurons, called in this way because of the shape of their soma, are the most common units of \textit{excitatory} type present in the PFC, and are mainly involved in \textit{cognition} processes such as object recognition. On the other side, also PV+ neurons, expressing the \textit{parvalbumin} neurotransmitter,  are  very common in the PFC. However, only SOM+ neurons seem to be directly implicated in the affective state discrimination of a conspecific mouse. The data analysis on the task showed some remarkable results:
 
  \begin{itemize}
  	
@@ -331,7 +467,7 @@ subgroup, distinct from others like pyramidal neurons or parvalbumin interneuron
 
 Other examples of emotion discrimination in mice related to SOM+ interneurons can be found in \cite{9}, %[Mariotti et al 2018],
  with a focus on their effect on cortical astrocytes: the main result shown in the study consist in a \textbf{crucial role of somatostatin} in the stimulation of responses by astrocytes.\\
-As a first result, it has been shown that the stimulation of SOM+ interneurons (via 10-pulses light stimulation of calcium indicators), increases the $Ca^{2+}$ response from astrocytes. Also in this case, a comparison with parvalbumin (PV+) interneurons show the \textit{critical sensitivity of astrocytes only to SOM+ interneurons, but not PV+}. Overall, this study reveals that a sustained activity in the SOM+ interneuron circuits is complemented by
+As a first result, it has been shown that the stimulation of SOM+ interneurons (via 10-pulses light stimulation of calcium indicators), increases the $Ca^{2+}$ response from astrocytes. Also in this case, a comparison with PV+ interneurons show the \textit{critical sensitivity of astrocytes only to SOM+ interneurons, but not PV+}. Overall, this study reveals that a sustained activity in the SOM+ interneuron circuits is complemented by
 a sustained activity in the astrocytic network, thus confirming the importance of astrocytes and their link to inhibitory neuronal circuits. 
 \\
 
@@ -546,9 +682,9 @@ Finally, when observing the presence of correlation between two signals, a diffe
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=.80]{pearson.png} 
+		\includegraphics[scale=.75]{pearson.png} 
 	\end{center} 
-	\caption{\textit{Geometrical interpretation of the Pearson correlation: such coefficient gives a measure of how well the pairs obtained from the two samples distribute linearly along the diagonal of an ellipse covering the scatterplot. }}
+	\caption{\textit{Geometrical interpretation of the Pearson correlation: such coefficient gives a measure of how well the pairs obtained from the two samples distribute linearly along the diagonal of an ellipse covering the scatterplot. \cite{46}}}
 	
 \end{figure}
 
@@ -729,7 +865,7 @@ The peak correlation index gives a representation of how well two signals (neuro
 \begin{figure}[H]
 	\begin{center}
 		\hspace*{-1cm}
-		\includegraphics[scale=.65]{GC.png} 
+		\includegraphics[scale=.6]{GC.png} 
 	\end{center} 
 	\caption{\textit{Example of signal X Granger-predicting signal Y }} 
 	
@@ -851,7 +987,7 @@ All the results refer to two versions of the emotion discrimination task: a stan
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=.98]{emotion_discrimination.png} 
+		\includegraphics[scale=.65]{emotion_discrimination.png} 
 	\end{center} 
 	\caption{\textit{Scheme of the emotion discrimination task.}}
 	
@@ -927,7 +1063,7 @@ The main object of the analysis is given by the calcium signals recorded in ever
 \end{enumerate}
 
 
-All the different normalizations do not modify the shape of the signals, but their \textit{scale}. As for this work, the choice went on a modificcation on the $z$-score normalization, defined as \textbf{$z$-score on baseline}, in which signals are aligned and then divided by their standard deviations. Therefore, the proposed approach belongs to the $z$-score case, but the alignment is not performed on the mean of each signal, but on their baseline activities. The reason for this is that two signals coming from neurons, when subtracted by their own mean, can still exhibit different baselines. Therefore, with the chosen normalization the alignment is done on such baselines, which are set to $0$ for every neuron, and operations on signals such as sum or direct comparison, can become meaningful.
+All the different normalizations do not modify the shape of the signals, but their \textit{scale}. As for this work, we chose a modification of the $z$-score normalization, defined as \textbf{$z$-score on baseline}, in which signals are aligned and then divided by their standard deviations. Therefore, the proposed approach belongs to the $z$-score case, but the alignment is not performed on the mean of each signal, but on their baseline activities. The reason for this is that two signals coming from neurons, when subtracted by their own mean, can still exhibit different baselines. Therefore, with the chosen normalization the alignment is done on such baselines, which are set to $0$ for every neuron, and operations on signals such as sum or direct comparison, can become meaningful.
 
 
 
@@ -1006,7 +1142,8 @@ As first step, following the approach of \cite{16}, every mouse has been gifted 
 The above subdivision allows us to analyze the correlation among the activities of two mice when they are actually close to each other. In this context, a cross-correlation analysis on the mean activity has been performed, comparing what happens during the homecage, habituation and test. During homecage and habituation phases, the three mice are kept separate. Therefore, inspecting the correlation among the activites during these phases is a useful \textit{control}, i.e. a case of comparison in order to see what to expect when correlation should not be present.
 \\
 
-After computing the mean of all the $\frac{\Delta F}{F}$ signals in each neuron for every mouse, and applying the above classification $1.-3.$, the cross correlation between observer and stressed and between observer and neutral mean activies has been computed, as described in (ref chap 2). As shown in Figure \ref*{cc}, analyzing the average cross correlation between the two experiments, one can notice the presence of a peak around $ lag=0 $ for the pair observer-neutral in the test phase. This tendency is not present in the control cases of habituation and homecage, making it a proper feature of the test. On the other side, the cross correlation between observer and stressed does not show any particular difference with respect to the homecage and habituation phases. A further verification has been given by observing the cross correlation between the observer and one demonstrator considering the periods when the observer was visiting the opposite demonstrator. As a result, the cross correlation between observer and neutral is inhibited considering the instants when the observer was visiting the stressed, and the cross correlation between observer and stressed remains non significant when the observer is visiting the neutral (Figure \ref{distant}).\\ Overall, these results may show the presence of a synchronization between neural activities of the observer and the neutral demontrsator, but not between the observer and the stressed one, and this effect is present only during the test and during the proximity of the two mice.
+After computing the mean of all the $\frac{\Delta F}{F}$ signals in each neuron for every mouse, and applying the above classification $1.-3.$, the cross correlation between observer and stressed and between observer and neutral mean activies has been computed, as described in (ref chap 2). As shown in Figure \ref*{cc}, analyzing the average cross correlation between the two experiments, one can notice the presence of a peak around $ lag=0 $ for the pair observer-neutral in the test phase. This tendency is not present in the control cases of habituation and homecage, making it a proper feature of the test. On the other side, the cross correlation between observer and stressed does not show any particular difference with respect to the homecage and habituation phases. A further verification has been given by observing the cross correlation between the observer and one demonstrator considering the periods when the observer was visiting the opposite demonstrator. As a result, the cross correlation between observer and neutral is inhibited considering the instants when the observer was visiting the stressed, and the cross correlation between observer and stressed remains non significant when the observer is visiting the neutral (Figure \ref{distant}).\\
+ Overall, these results may show the presence of a synchronization between neural activities of the observer and the neutral demonstrator, but not between the observer and the stressed one, and this effect is present only during the test and during the proximity of the two mice.
 
 \begin{figure}[H]
 	
@@ -1019,7 +1156,7 @@ After computing the mean of all the $\frac{\Delta F}{F}$ signals in each neuron 
 \end{figure}
 
 
-Next, two particular cases have been considered: the sniffing interactions and the restriction to the first part of test (first 2 minutes of the test). The sniffing is known to be one of the most direct interactions that two mice can display between each other, and therefore is of a particular interest for what could happen at synchronization level. The restriction to the first two minutes of the test is of interest based on previous results \cite{16}, which show that the first period of interactions among mice is the one which determines some most relevant neural tendencies, such as the display of synchronization.\\
+Then, two particular cases have been considered: the sniffing interactions and the restriction to the first part of test (first 2 minutes of the test). The sniffing is known to be one of the most direct interactions that two mice can display between each other, and therefore is of a particular interest for what could happen at synchronization level. The restriction to the first two minutes of the test is of interest based on previous results \cite{16}, which show that the first period of interactions among mice is the one which determines some most relevant neural tendencies, such as the display of synchronization.\\
 The obtained results allowed us to draw the following conclusions (Figure \ref{initial}):
 
 \begin{itemize}
@@ -1060,8 +1197,8 @@ A summary of the cross-correlation results can be seen in Figure \ref{cc_average
 \begin{figure}[H]
 	
 	\begin{center}
-		\hspace*{-1.4cm}
-		\includegraphics[scale=.5]{avg_pks.png} 
+		\hspace*{-1cm}
+		\includegraphics[scale=.45]{avg_pks.png} 
 	\end{center} 
 	\caption{\textit{Evolution of the average peak synchronization index from the habituation to the test, for the cases observer-stressed and observer-neutral.}} \label{avg_pks}
 	
@@ -1084,7 +1221,7 @@ The obtained results are showed in Figure \ref{avg_pks}. Consistent with the cro
 
 \section{Granger causality analysis}
 
-Granger analysis has been performed in accordance to Section 2.5, to investigate whether the activity of one mouse is Granger-predicting the activity in another. This analysis consists in two statistical tests with null hypothesis
+Granger analysis has been performed in accordance to Section 2.5, to investigate whether the activity of one mouse is Granger-predicting the activity of another one. This analysis consists in two statistical tests with null hypothesis
 $$ H_0:  Y \hspace{0.2cm} \text{does not G-predicts} \hspace{0.2 cm} X $$
 where in this case $X$ and $Y$ represent the mean activities of the observer and one demonstrator, respectively. In the two analyzed datasets, the results of the tests, in terms of $p$-values, are summarized in Table \ref{Granger table}. Some considerations are in order:
 
@@ -1098,7 +1235,7 @@ where in this case $X$ and $Y$ represent the mean activities of the observer and
 
 
 
-\begin{figure}[H]
+\begin{table}[H]
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c| } 
 			\hline
@@ -1114,8 +1251,8 @@ where in this case $X$ and $Y$ represent the mean activities of the observer and
 		\end{tabular}
 		
 	\end{center}
-	\caption{Results of the Granger analysis.} \label{Granger table}
-\end{figure}
+	\caption{\textit{Results of the Granger analysis.}} \label{Granger table}
+\end{table}
 
 
 
@@ -1150,7 +1287,7 @@ Two more datasets of the emotion discrimination task have been analyzed. This ti
 		\label{activity_barplot_self}
 	\end{figure}
 	
-	\item The cross-correlation peak, observed in the previous case between observer and neutral, now is not present. For both analyzed datasets of self-experience type, no correlation seems to emerge between any pair of mice, not even considering the first two minutes of the task (Figure \ref{average_cc_self})
+	\item The cross-correlation peak, observed in the standard case between observer and neutral as shown in Figure \ref{cc_average}, now is not present. For both analyzed datasets of self-experience type, no correlation seems to emerge between any pair of mice, not even considering the first two minutes of the task (Figure \ref{average_cc_self})
 	
 	\begin{figure}[H]
 		
@@ -1167,8 +1304,8 @@ Two more datasets of the emotion discrimination task have been analyzed. This ti
 	\begin{figure}[H]
 		
 		\begin{center}
-			\hspace*{-1.4cm}
-			\includegraphics[scale=.5]{avg_pks_self.png} 
+			\hspace*{-1cm}
+			\includegraphics[scale=.45]{avg_pks_self.png} 
 		\end{center} 
 		\caption{\textit{Evolution of the average peak synchronization index from the habituation to the test, for the  observer-stressed pairs and observer-neutral, in the self-experience task.}}
 		\label{avg_pks_self}
@@ -1205,7 +1342,10 @@ The analyses on the available data (two experiments performed in the standard co
 In this chapter, a new aspect of the behavioural analysis from in vivo tasks on mice will be investigated: the ability of mice to display selfish or prosocial choices towards other individuals.\\
 Through the \textit{altruism task}, two mice are put in a situation in which they can choose whether to perform an altruistic or selfish choice, while having their neural activity recorded. In this context, however, the employed technique for calcium imaging is not microendoscopic calcium imaging, but \textit{Fiberphotometry} (discussed in Section \ref{section 1.4}), from which an overall signal for the calcium activity is obtained.\\
 As for the area of the brain under investigation, in this case the focus is on the \textbf{basolateral amygdala (BLA)}, which has been shown to be connected with prosocial choices in rodents (as anticipated in Section \ref{section 1.1}).\\
-After describing the results of the altruism task in terms of behaviour, the focus will concern with the analysis of the calcium tracks from fiberphotometry, and in particular their relative change with respect to a baseline activity, when making prosocial or selfish choices.
+While, in the first sections, the task and its main behavioural results are presented, the present contribution to the altruism task is addressed in Section \ref{section 4.5}, and it concerns with the analysis of the calcium tracks recorded via fiberphotometry. In particular, the main focus is on their relative change with respect to a baseline activity, when making prosocial or selfish choices, with the final going of investigating whether the BLA is undergoing an \textit{activation state}.
+
+
+ 
 
 
 \section{Social decision making in mammals}
@@ -1283,7 +1423,7 @@ Finally, to further determine the ability of the dictator mice to \textit{learn}
 \\
 
 Once, in normal conditions, the altruistic preference has been established, one may ask under which conditions such preference is maintained. To this purpose, the task was repeated changing the rules of food delivering. Now, two nose pokes were necessary for the food delivery in the altruistic poke, while only one in the selfish one. Even with this additional effort, male and female mice which previously showed altruistic preferences, increased the number of altruistic over selfish preferences also in this case. Increasing the necessary number of pokes to $4$, male dictators kept their altruistic preferences, while female dictators did not show anymore a significant difference. Finally, requiring $6$ nose-pokes for altruistic delivery still kept male mice in their altruistic preference, while made female ones prefer the selfish one, and only from $8$ pokes, also males stopped to be altruistic. Overall, these results showed that \textit{male mice tend to share food with their cagemates partners, even at costly conditions} (Figure \ref{number_pokes}).\\
-Finally, mice were tested in two more conditions: absence of rewards for both dictator and absence of reward for dictator, but not for the recipient mouse. While, in the first case, no preference between the two pokes was expressed by the dictator, in the second case there was an altruistic preference. This means that the dictator can choose an altruistic decision even if there is no direct benefit for itself.
+Finally, mice were tested in two more conditions: absence of rewards for both dictator and recipient mouse, and absence of reward for dictator, but not for the recipient mouse. While, in the first case, no preference between the two pokes was expressed by the dictator, in the second case there was an altruistic preference. This means that the dictator can choose an altruistic decision even if there is no direct benefit for itself.
 
 
 \begin{figure}[H]
@@ -1335,7 +1475,7 @@ The analysis of 9 pairs of mice ($N=18$) yielded the main following results:
 Next, the study tested the hypothesis that \textit{an increase in altruism is related to an increase in affective state matching between individuals}. To do so, the recipient has been subject to a manipulation of its emotional state, in this case a fear conditioning paradigm through mild shocks. In the meantime, the dictator mouse (here assuming the role of \textit{observer}) was allowed to see the recipient through a transparent separating wall.\\
 The main result was that altruistic mice displayed an increased freezing behaviour during this phase, compared to selfish ones. Since these latter are the dominant ones, this result lead to the conclusion that \textit{dominant mice tend to show more empathic-like behaviours}, from altruism to emotional contagion.
 
-\section{The role of BLA neurons in selfish and prosocial choices}
+\section{The role of BLA neurons in selfish and prosocial choices} \label{section 4.5}
 
 \begin{figure}[H]
 	\begin{center}
@@ -1345,7 +1485,7 @@ The main result was that altruistic mice displayed an increased freezing behavio
 	\label{psth}
 \end{figure}
 
-The fiberphotometry analysis of the calcium activity in the BLA allowed to establish a connection between the type of choice adopted by dictator mice and their corresponding neural activity. In order to analyze the relative change of such activities during altruistic or selfish pokes, the raw data from the photometry have been subject to a \textbf{peristimulus time histogram (PSTH)} analysis. Such analysis goes through the following steps:
+The fiberphotometry analysis of the calcium activity in the BLA allowed us to establish a connection between the type of choice adopted by dictator mice and their corresponding neural activity. In order to analyze the relative change of such activities during altruistic or selfish pokes, the raw data from the photometry have been subjected to a \textbf{peristimulus time histogram (PSTH)} analysis. Such analysis goes through the following steps:
 
 \begin{enumerate}
 	
@@ -1423,7 +1563,17 @@ In this chapter, mathematical models to describe cellular electric activity are 
 In order to mathematically describe the main electric functionalities of a cell, we first need to understand the set of phenomena which characterize this complex component of our body, such as the processes leading to its condition of \textit{dynamical equilibirium}, called the \textbf{cellular homeostasis}. The cellular homeostasis is achieved through the equilibrium of several forces acting on the cell, which can be of fluid, mechanical, chemical or electric nature, although the focus in this work will regard only the elctrical part.\\
 The \textit{intracellular} environment of a cell consists mainly in a water solution contaning vital nutrients and elements in ionic form such as  $Na^+, Cl^-, K^+, Ca^{2+}$, making the solution behaving like a charged fluid. The intracellular environment is separated by the extracellular one by the \textbf{membrane} of the cell (see Figure \ref{first}). The membrane is formed by a bilayer of lipids (of thickness considerably smaller than the cell's radius) which does not allow passage of substances through it. The passage of some ions is still allowed through specific sites called \textbf{ionic channels}, each of one allowing, under certain conditions, the passage of a single ionic species. The movement of one ionic species from the intracellular to the extracellular environment, or viceversa, is caused by the different concentration of such quantity in the two regions, leading to an \textit{electrochemical gradient} which forces positive charges to move from high to low potentials, and thus forming a potential difference across the membrane. We call this quantity the \textbf{membrane potential} of the cell. The main role of the mathematical models for cellular electrophysiology is to describe the evolution of such quantity over time and space.
 \\
-
+\begin{figure}[H]
+	
+	
+	\centering
+	\includegraphics[scale=0.6]{membrane.jpg}
+	
+	
+	
+	\caption{\textit {Schematic representation of the cellular membrane}}
+	
+\end{figure}
 The particular biology of the cell makes it at the same time a \textit{dielectric} and a \textit{conductor}: the lipid layers of the membrane isolate the intracellular environment from the external environment, and cause the accumulation of charges of opposite sign around the internal and external surfaces of the membrane. This effect is typical of dielectric materials such as capacitors, and it will cause a \textit{capacitive} current across the membrane. This current is not associated with motion of ions, but to the time rate of change of the surface charge on each side of the membrane. On the other side, when an ionic channel is open, there is a passage of ions which makes the cell behaving like a conductor. Both of these contributes need to be taken into account in the modeling of the cell, as done in the next Section.
 \\
 
@@ -1523,31 +1673,20 @@ In the next sections, we are going to use Eq. (\ref*{Jtot}) in the construction 
 
 
 
-\begin{figure}[H]
-	\begin{minipage}{\linewidth}
+
+
+
+\begin{figure}[H]	
+	
 		\centering
-		\begin{minipage}{0.45\linewidth}
-			\begin{figure}[H]
-				\includegraphics[width=\linewidth]{membrane.jpg}
-				
-			\end{figure}
-		\end{minipage}
-		\hspace{0.05\linewidth}
-		\begin{minipage}{0.45\linewidth}
-			\begin{figure}[H]
-				\includegraphics[width=\linewidth]{intra.png}
-				
-			\end{figure}
-		\end{minipage}
-		
-	\end{minipage}
-	\caption{\textit{Left: schematic representation of the cellular membrane.
-			Right: mathematical description of the cellular membrane}}
+		\includegraphics[scale=0.65]{intra.png}
+	
+	\caption{\textit {Mathematical representation of the cellular membrane}}
+	 
 \end{figure}
 
 
-
-\begin{figure}[H]
+\begin{table}[H]
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c| } 
 			\hline
@@ -1577,8 +1716,8 @@ In the next sections, we are going to use Eq. (\ref*{Jtot}) in the construction 
 		\end{tabular}
 		
 	\end{center}
-	\caption{Main electrical quantities in cellular electrophysiology}
-\end{figure}
+	\caption{\textit{Main electrical quantities in cellular electrophysiology}}
+\end{table}
 
 
 \section{ODE local and global models}
@@ -1630,7 +1769,7 @@ While the (specific) capacitance is an intrinsic value of the cell, the conducti
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.7]{LRM.png} 
+		\includegraphics[scale=0.65]{LRM.png} 
 	\end{center} 
 	\caption{\textit{Characteristic curve for the linear resistor model}} \label{LRM}
 	
@@ -1722,7 +1861,7 @@ E_{c,\alpha}(\psi_m,t) = P_{\alpha}\frac{V_{TH}}{z_{\alpha}} \left(\frac{C_{\alp
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[scale=0.7]{HH.png} 
+		\includegraphics[scale=0.65]{HH.png} 
 	\end{center} 
 	\caption{\textit{Equivalent circuit for the Hodgkin-Huxley model}} \label{HH}
 	
@@ -1994,7 +2133,296 @@ The application of this discretization procedure to the cable equation (\ref{bal
 
 \chapter{Modeling calcium patterns}
 
+In this final chapter, the mathematical tools discussed in Chapter 5 are put in practice, through a model which attempts to unify the given data of calcium peaks in neurons, with the electrophysiological process of propagation of action potentials.\\
+Indeed, the \textbf{Cable-Calcium} model considers a pair of neurons in which simultaneous calcium peaks have been recorded, and use such data to simulate, via cable model \ref{balance pde}, the propagation of an action potential from one cell to another. The goal is, given a calcium peak in the first neuron, to obtain a truthful estimation of the peak in the second.\\ 
+In the first part of the chapter, we discuss the connection between the intracellular calcium concentration and the corresponding action potential, in order to being able to use the cable model to simulate the propagation of the impulse from the first neuron to the second one. Once the link between calcium and action potential have been estimated, and the parameters of the cable model appropriately tuned, the cable simulation can start. The predicted value of action potential will give rise to a corresponding value of calcium, to be confronted with the acquired data. In the final part of the chapter, the model will be considered under the different ways to model the conduction current discussed in the previous chapter, confronting the results and commenting the performance of the model in the different cases.
+
+
+
+
+\section{The Cable-Calcium model}
+
+\begin{figure}[H]
+	\begin{center}
+		
+		\includegraphics[scale=0.65]{cable_ca.png} 
+	\end{center} 
+	\caption{\textit{Schematic representation of the cable-calcium model}}
+	\label{cabel_ca}
+\end{figure}
+
+Let us consider a neuronal pair in which, from the recorded data of calcium activity, we have been able to identify two peaks of calcium occurred in a short time window (for the present case, chosen up to $0.5$ $s$). The main goal of the 
+\textbf{Cable-Calcium} model is to being able to predict the amplitude of the peak in the second neuron,, say neuron B, given the peak occurred in the first neuron, say neuron A, up to half second before.\\
+From a biological point of view, we know that the presence of calcium peaks usually reflects the formation of action potentials in a cell, which then propogates through the axon to another cell. We discussed in Section \ref{5.6} how to mathematically model this process via Cable equation. Therefore, the Cable-Calcium model, schematized in Figure \ref{cabel_ca}, consists in the following parts:
+
+\begin{enumerate}
+	
+	\item Estimate the relation which connects the amplitude of a calcium peak (in terms of $\frac{\Delta F}{F})$ with the amplitude of the corresponding action potential. Use such relation to compute the action potential corresponding to the calcium peak recorded in neuron A \label{step1}
+	
+	\item The computed action potential will constitute a boundary condition at the beginning of the axon connecting A and B, for a cable model which simulate its propagation in such axon.
+	
+	\item The FE solution of the cable model, considered at the end of the axon, correspond to the action potential occurred in neuron B. Using the inverse of the relationship estimated in step \ref{step1}, such value will identify a calcium value at neuron B. \label{step3}
+	
+	\item In order to evaluate the goodness of the Cable-calcium model, the value of calcium in neuron B obtained in step \ref{step3}  has to be compared with the actual value collected.
+	
+\end{enumerate}
+
+
+Given the calcium recordings, the cable model can be summarized as following:
+
+\begin{equation}
+	\begin{cases} 
+	\frac{\partial \psi_m(x,t)}{\partial t} + \frac{1}{2 \pi a }\frac{\partial I_{in}(x,t)}{\partial x} + J_{cond}(x,t) = 0 \\
+	I_{in}(x,t) = -\frac{\pi a^2}{\rho_{ax}}\frac{\partial \psi_m(x,t)}{\partial x}\\
+	\psi_m(0,t) = \phi^{-1}([Ca_A^{2+}](t)) & \text{in} \hspace{0.07 cm} \left\{ x = 0\right\} \times (0,T) \\
+	\psi_m(L,t) = \phi^{-1}([Ca_B^{2+}](t)) & \text{in} \hspace{0.07 cm} \left\{ x = L\right\} \times (0,T) \\
+	\psi_m(x,0)=0  & \text{in} \hspace{0.07 cm}  (0,L) \times \left\{ t = 0\right\}
+	\end{cases}
+\end{equation}	
+
+where the boundary conditions at the beginning and at the end of the axon (i.e. in correspondence of neuron A and neuron B) are retrieved using the  function $\phi^{-1}$, which takes a  calcium peak  and gives out an action potential.
+
+\begin{remark}\label{remark cc}
+	Eq. (\ref{balance pde}) expresses a \textbf{dissipative} model: in the setting discussed so far, the action potential propagating along the axon can only diminuish in space and time, because of the current dissipation caused by the equivalent circuit assumed locally in every point $\textbf{x} \in [0,L]$. This means that the cable model considers the neuronal pair as isolated, meaning that the only considered process is the propagation of the potential from neuron A to neuron B. In reality, clearly this is not the general case: the neurons are present in a \textbf{network} and the formation of an action potential (or alternatively of a calcium peak) is the result of the interaction of more units. Moreover, it is also legit to assume that external contribution are added to the dissipative one in the transmission of the impulse, such as interaction with astrocytes or new stimuli captured by dendrites. For these reasons, observing the data, it is possible to find calcium peaks in neuron B which are higher than the ones in neuron A, meaning that the observed peak is the result of processes more complex than the simpler one explained in the cable model. Finally, it is also worth to notice that observing simultaneous peaks does not necessarely means that the two neurons are actually biologically linked, since they could be both gìhave been triggered by external neurons not present in the ROI caputred by the miniscope.
+\end{remark}
+
+
+As consequence of Remark \ref{remark cc}, the data considered in the model have been restricted to the neuronal pairs in which it could be clearly identified a \textit{pattern} of calcium firing (when neuron A shows a peak, neuron B does it as well), in which the same order if mantained (neuron A shows a peak always before neuron B), and the dissipative model can be justified (the peak in neuron B is lower than the one in neuron A). In this way, we may assume that the pair is well isolated, and appropriate to be considered for the cable model.
+
+\section{The Ca-AP relation}
+
+
+\begin{figure}[H]
+	\begin{minipage}{\linewidth}
+		\centering
+		\begin{minipage}{0.45\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{phi.png}
+				
+			\end{figure}
+		\end{minipage}
+		\hspace{0.05\linewidth}
+		\begin{minipage}{0.45\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=\linewidth]{phi_inv.png}
+				
+			\end{figure}
+		\end{minipage}
+		
+	\end{minipage}
+	\caption{\textit{Plot of $\phi = \phi (x,p)$ for different values of $p \in [2,20]$}}
+	\label{phi}
+\end{figure}
+
+Finding a relation between calcium and action potential is a very difficult task. From biological point of view, although we know that the presence of a calcium peak is usually related to the formation of an action potential, the microscopic mechanisms which regulates this connection are still largely unknown. This is mostly due to the fact that the dynamic of the intracellular calcium is rhe result of complex mechanism inside the cell, given a balance of fluxes between the cytoplasm and organules like \textit{mythocondria}, but mostly between cytoplasm and \textbf{calcium buffers} present in the cell \cite{43}. Although we know that these processes are trigerred by action potentials, very few has been discovered so far about it.\\
+The best approach to estimate the relationship between the two quantity would probably be a data-driven relation estimate on simultaneous measurements of the two, for example estimating the fucntion $\phi$ via an Artifical Neural Network. Unfortunately, the literature doesn't seem to present information about simultaneous recording of calcium and action potential for our specific needs, namely SOM+ interneurons in the ACC. For this reason, we went for a different approach: the estimation of the function $\phi$ as parameter-dependent from an educated guess on its shape, tuning the parameter training the model on the available data.\\
+In order to simplify the task, we limited to consider only the \textit{amplitude} of the peaks, considering every calcium peak a single value given by its maximum, and associating a corresponding peak of action potential. Such value will be the boundary condition at $x=0$ in Eq. \ref{balance pde}, given as constant impulse in ac ertain time window (here set at $250$ $ms$ in accordance with experimental evidence).\\
+
+Next, data have been appropriately normalized in the interval $[0,1]$, via \textit{min-max normalization} discussed in Section \ref{section}. The maximum and minimum values for the signal have been directly computed for the calcium oscillations, while for the action potential it has been set
+
+\begin{equation}
+\psi_m ^{min}= -67 \hspace{0.2cm} mV \hspace{2cm}	\psi_m ^{max} = 20 \hspace{0.2cm} mV
+\end{equation}
+ 
+So that the non-activity state, assumed at the equilibrium potential $\psi_m = 67$ $mV$, is associated to the value $0$, and the maximum peak, which in practice usually approaches values of $20$ $mV$, is associated to the value $1$.\\
+In this setting the functions $ \phi : [0,1] \rightarrow [0,1] $, taking a normalized value of action potential as input, and giving a normalized value of calcium as output, and $ \phi^{-1} : [0,1] \rightarrow [0,1] $, , taking a normalized value of calcium as input, and giving a normalized value of action potential as output, have been built on the following assumptions:
+
+\begin{enumerate}
+	\item $\phi$ is  an \textit{increasing} function (so that higher peaks of action potential correspond to higher peaks of calcium)
+	
+	\item $\phi (\psi_m ^{min}) = 0 $, $\phi (\psi_m ^{max}) = 1 $
+	
+	\item $\phi$ has a \textit{sigmoidal-like} shape \label{sigm}
+\end{enumerate}
+
+Assumption \ref{sigm} relies on the biological property of  action potentials for which they tend to assume an ON/OFF behaviour, based on a certain treshold value.\\
+The chosen function  $\phi$ to satisfy hypothesis 1.-3. is
+
+\begin{equation}
+	\phi(x,p) = \frac{x^p}{k + x^p}
+\end{equation}
+
+Where it has been set $k=0.01$ and $p \in \mathbb{N}$ is a parameter to be optimally tuned. Its inverse is
+
+\begin{equation}
+\phi^{-1}(x,p) = \sqrt[p]{\frac{kx}{1-x}}
+\end{equation}
+
+These two functions, over different values of $p$, are showed in Figure \ref{phi}.
+
+
+\section{Setting the cable parameters}
+
+Once that the function connecting the two qauntity has been established, many parameters used in the cable model have to be tuned. The chosen values as the results od experimental evidences or previous results in the literature. The main choices are displayed in Table \ref{param}.\\
+Some parameters comes directly from the experimental calcium data, and have to be set appropriately in every call to the FE library:
+
+\begin{itemize}
+	\item The length of the axon $L$ is retrieved from the distance between the two considered neurons in the ROI
+	
+	\item The final time of the simulation $T$ is taken as $t_B - t_A$, being $t_A$ and $t_B$ the times in which the calcium peak happened in neurons A and B, respectively.
+	
+\end{itemize}
+
+
+
+
+As for the boundary conditions, the choice has been the following:
+
+\begin{equation}
+	\begin{cases}
+	\psi_m(0,t) = \phi^{-1}([Ca_A^{2+}])(\psi_m^{max} - \psi_m^{min}) + \psi_m^{min} & \text{in} \hspace{0.07 cm} \left\{ x = 0\right\} \times (0,T) \\
+	-I_{in}(L,t) +\frac{1}{R_{out}}\psi_m(L,t) =0 & \text{in} \hspace{0.07 cm} \left\{ x = L\right\} \times (0,T)
+	\end{cases} \label{bc}
+\end{equation}
+
+The first of \ref{bc} expresses the already mentioned imposition that the action potential in neuron A is retrived from the recorded calcium peak thanks to the function $\phi^{-1}$.. For the second choice, the \textit{Robin} boundary condition, discussed in Section, has been adopted with $R_{out} \rightarrow \infty$, so that the current at neuron B is null. This choice wants to reflect the \textit{inhibitory behaviour} of the neuronal population under observation (recalling that SOM+ interneurons are inhibitory GABA cells, as mentioned in Section).
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| } 
+			\hline
+			\textbf{Parameter} & \textbf{Name} & \textbf{Chosen value} \\
+			\hline
+			$t_m$ & Membrane thickness & $10^{-9}$ $ m$ \\ 
+			\hline
+			$\rho_{ax}$ & Axon resistivity & $10$ $\Omega$ $ m$ \\
+			\hline
+			$K_{in}/K_{out}$ & Ion number densitiy (Potassium) & $140/5$ $m^{-3}$ \\
+			\hline
+			$Na_{in}/Na_{out}$ & Ion number densitiy (Sodium) & $10/145$ $m^{-3}$ \\
+			\hline
+			$Cl_{in}/Cl_{out}$ & Ion number densitiy (Chlorine) & $4/110$ $m^{-3}$ \\
+			\hline
+			$C_m$ & Membrane capacitance & $0.07$ $F$ \\
+			\hline
+			$g_m$ & Specific membrane conductance & Model dependent \\
+			\hline
+			$M_h$ & Number of FE element in space & $200$ \\
+			\hline
+			$N_T$ & Number of FE element in time & $200$ \\
+			
+			
+			\hline
+		\end{tabular}
+		
+	\end{center}
+	\caption{\textit{Main parameters of the Cable-Calcium model}. \cite{47}} \label{param}
+\end{table}
+
+\section{Workflow of the Cable-Calcium model}
+
+
+The Cable-calcium model follows three main steps:
+
+\begin{enumerate}
+	\item \textbf{Data preparation}. The data of the neuronal pairs are collected, keeping the record of time and peak amplitude for the calcium peak in one neuron, and of the distance between neurons characterizing the pairs
+	
+	\item \textbf{Training}. Half of the dataset is used to train the model: for every value of the parameter $p$ in an appropriate  interval, for all the pairs considered, a  FE simulation for all the pairs is launched, imposing the boundary condition $\psi_m(0,t)$ using that  $\psi_m(0,t) = \phi^{-1}([Ca^{2+}_A])$. The predicted value of AP at the end of the axon will produce the predicted calcium peak in neuron B as $\phi(\psi_m(L,T))$. Such value will be compared to the recorded data of $[Ca^{2+}_B]$. Computing the \textbf{mean squared error (MSE)} between calcium prediction and calcium recordings in neuron B for every $p$, we are finally able to determine the value of $p$ which minimizes such error
+	
+	\item \textbf{Testing}. The optimal value of $p$ is used on the other half of the dataset, in order to evaluate the goodness of the model, as predictive tool, on new data
+	
+\end{enumerate}
+
+
+The MSE between two sequences $\textbf{x} = \{x_i\}_{i=1}^N$ and $\textbf{y} = \{y_i\}_{i=1}^N$ is computed as
+
+\begin{equation}
+	MSE(\textbf{x},\textbf{y}) = \frac{1}{N}\sum_{i=1}^{N}(x_i-y_i)^2
+\end{equation}
+
+The three steps of the model has been performed with the three different ways to model the conduction current, discusses in Section:  the \textbf{linear resistor model (LRM)}, the \textbf{Goldman-Hodgkin-Katz (GHK)} model and finally the \textbf{Hodgkin-Huxley (HH)} model. The dataset for the training consisted in $11$ recorded pairs, while the one for the testing in $8$. Such pairs have been selected in order to satisfy the hypothesis discussed in Remark \ref{remark cc}.
+
+\section{Results of the Cable-Calcium model}
+
+
+\begin{figure}[H]
+	\begin{center}
+		\hspace*{-1.5 cm}
+		\includegraphics[scale=0.52]{MSE.png} 
+	\end{center} 
+	\caption{\textit{Mean squared error over the neuronal pairs computed for different values of $p$. Left: in LRM model. Center: in GHK model. Right: in HH model. }}
+	\label{mse}
+\end{figure}
+
+The training of the model in three choices of LRM, GHK and HH resulted in the results showed in figure \ref{mse}. In all the cases, rangin $p$ in the interval $[2,20]$ made it possible to identify a global minimum for the MSE. Every model resulted in a different optimal value of $p$ and clearly produced a different error. Such errors result in estimates on the calcium value assumed in B shown in Figure, to be confronted with the measured data. Figure \ref{training_LRM}, considering as example the LRM case, shows that the choice of $p$ is fundamental in order to obtain significant prediction on the measured peaks in neuron B.\\ Confronting the prediction oibtained in every model using the best $p$ obtained in the training, it is immediately evident that, overall, the three models produce similar results  (Figure \ref{training}).
+\begin{figure}[H]
+	\begin{center}
+		\hspace*{-1.5 cm}
+		\includegraphics[scale=0.5]{training_LRM.png} 
+	\end{center} 
+	\caption{\textit{Predictions of calcium peaks in neuron B over the different neuronal pairs in the training dataset, for the LRM case, over different values of $p$.}}
+	\label{training_LRM}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\hspace*{-1.5 cm}
+		\includegraphics[scale=0.5]{training.png} 
+	\end{center} 
+	\caption{\textit{Predictions of calcium peaks in neuron B over the different neuronal pairs in the training dataset, for every different model. Every model corresponds to the choice of the value of $p$ which minimizes the MSE over the neuronal pairs.}}
+	\label{training}
+\end{figure}
+
+
+Once the training process is completed, we can evaluate the performance of the model on the test data, using the value of $p$ which minimzes the MSE over the training data.\\
+The results of the predictions in the different neuronal pairs are showed in Figure \ref{test}. We can observe that, as expected, the prediction is not as good as in the training cause. Once again, the difference in the several choices of model is generally small, with the exception of some isolated pairs.\\
+Table \ref{results} resumes all the principal results obtained in training and testing of the model.
+
+
+\begin{table} [H]
+	\centering
+	\begin{tabular}{ |c|c|c|c| } 
+		
+		\hline
+		\textbf{Model} & \textbf{LRM} & \textbf{GHK} & \textbf{HH} \\
+		\hline
+		\textbf{Best $p$ (training)}  & $p=3$ & $p=6$ & $p=5$ \\
+		\hline
+		\textbf{MSE at best $p$ (training)}  & $0.0130$ & $0.0126$ & $0.0122$  \\
+		\hline
+		\textbf{MSE at best $p$ (test)}  & $0.0203$ & $0.0182$ & $0.0179$  \\
+		\hline
+		
+		
+	\end{tabular} \caption{\textit{Main results of the Cable-Calcium model}.\label{results}}
+\end{table}
+
+
+	
+
+
+\begin{figure}[H]
+	\begin{center}
+		\hspace*{-1.5 cm}
+		\includegraphics[scale=0.5]{test_model.png} 
+	\end{center} 
+	\caption{\textit{Predictions of calcium peaks in neuron B over the different neuronal pairs in the test dataset, for every different model. Every model corresponds to the choice of the value of $p$ which minimizes the MSE over the neuronal pairs.}}
+	\label{test}
+\end{figure}
+
+\section{Conclusions on the Cable-Calcium model}
+
+Thorugh the Cable-Calcium model, we attempted to predict the calcium peak triggered in one neuron, as consequence of the peak in another neuron. Analyzing the results in Table \ref{results}, one can notice several aspects.\\
+Qualitatively, the three models perform in a similar way in predicting the calcium peaks, but small differences can be appreciated: for more complex nonlinearities assumed by the model, correspond smaller errors in the prediction (from the LRM to the HH case).\\
+The similar behaviour of the prediction among the three model suggest the fact that the relevant contribution to the prediction is actually given by the parameter optimization. Indeed, training all the three model using the same target data, it is likely that the differences on the overall results between the models are flattened by a different choice of the optimal $p$ performed in each case, which allow to ultimately retrieve a similar performance.\\
+Clearly, this model constitutes a first attempt to model a very complex phenomenon, as the several hypothesis assumed to simplify it testify. It follows that next work based on this model, could aim to relax one by the one the simplification of the model, making it always more realistic. In particolar, we propose the following suggestions for future improvements:
+
+
+\begin{itemize}
+	\item The relationship $\phi$ could be improved, both in term of guess on its shape, or in terms of parameters. For example, one could think about letting vary also the parameter $k$ as well.
+	
+	\item The high differences in the prediction results obtained for different values of $p$, showed in Figure \ref{training_LRM}, suggest that this model could be improvable enlarging the interval considered for the oparameter to vary. For example, one could think to let $p$ assume also decimal values. It is worth to notice however, that this could be time-consuming, since for every value of $p$ and for every neuronal pair, a FE simulation is launched, consuming a considerable amount of time (especially in the Hodgkin-Huxley case)
+	
+	\item External effects of excitatory type could be included
+	
+	\item Extensions to more neurons could be considered, with the ultimate goal to predict the calcium patterns in a \textit{network} of neurons, instead that in only one pair. This is clearly the most difficult step, since it is hard to corroborate experimentally (one should register in the ROI all the neurons involved in the network, a priori unknwons and/or not all capturable by a single minoscope lens)
+	
+\end{itemize}  
+
 \chapter{Conclusions}
+
+
+
 
 
 \begin{thebibliography}{50}
@@ -2147,14 +2575,19 @@ The application of this discretization procedure to the cable equation (\ref{bal
 	\textit{https://studymat.in/structure-of-a-neuron/}
 	
 	\bibitem{43}
-	\textit{https://studymat.in/structure-of-a-neuron/}
+	\textit{J. keener, J. Sneyd, Mathematical Physiology: Cellular Physiology (2008)}
 	
 	\bibitem{44}
-	\textit{https://studymat.in/structure-of-a-neuron/}
+	\textit{CNX OpenStax / Wikimedia Commons}
 	
+	\bibitem{45}
+	\textit{M. Minen, O. De dhaem, Migraine and its psychiatric comorbidities (2016)}
+	
+	\bibitem{46}
+	\textit{B. Ermentrout, D. terman, Foundations of
+		Mathematical Neuroscience}
 	
 \end{thebibliography}
-
 
 
 

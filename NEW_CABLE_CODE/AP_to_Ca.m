@@ -8,7 +8,7 @@ function A_Ca= AP_to_Ca(A_AP,phi,p,k)
 
 psi_min = -67;
 
-psi_max = 25;
+psi_max = 20;
 
 A_AP = (A_AP-psi_min)/(psi_max-psi_min);
 

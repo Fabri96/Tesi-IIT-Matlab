@@ -30,7 +30,7 @@ solution_map;
 % Computing transmembrane current densities 
 current_densities;
 % Plotting the results
-% plot_solutions;
+%  plot_solutions;
 % Limiting solution (for R_out ----> +infty)
 %psi_m_limit = sum(g_ions.*E_ions)/sum(g_ions)
 %
