@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {4.2}Description of the altruism task}{54}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Behavioural results in the altruism task}{55}{section.4.3}%
 \contentsline {section}{\numberline {4.4}The role of social hierarchy in altruism display}{58}{section.4.4}%
-\contentsline {section}{\numberline {4.5}The role of BLA neurons in selfish and prosocial choices}{60}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Analysis of calcium activity in the BLA}{60}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Mathematical modeling in cellular electrophysiology}{64}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Electric activity in neurons}{65}{section.5.1}%
 \contentsline {section}{\numberline {5.2}ODE local and global models}{70}{section.5.2}%
@@ -40,4 +40,3 @@
 \contentsline {section}{\numberline {6.4}Workflow of the Cable-Calcium model}{89}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Results of the Cable-Calcium model}{90}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Conclusions on the Cable-Calcium model}{93}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Conclusions}{95}{chapter.7}%

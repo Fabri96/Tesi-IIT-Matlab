@@ -53,10 +53,9 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces \textit {Current balance in an element $dx$ of the axon}}}{79}{figure.5.8}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces \textit {Lagrangian basis functions}}}{79}{figure.5.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \textit {Schematic representation of the cable-calcium model}}}{84}{figure.6.1}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces \textit {Plot of $\phi = \phi (x,p)$ for different values of $p \in [2,20]$}}}{86}{figure.6.2}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces \textit {Mean squared error over the neuronal pairs computed for different values of $p$. Left: in LRM model. Center: in GHK model. Right: in HH model. }}}{90}{figure.6.3}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces \textit {Predictions of calcium peaks in neuron B over the different neuronal pairs in the training dataset, for the LRM case, over different values of $p$.}}}{91}{figure.6.4}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces \textit {Predictions of calcium peaks in neuron B over the different neuronal pairs in the training dataset, for every different model. Every model corresponds to the choice of the value of $p$ which minimizes the MSE over the neuronal pairs.}}}{92}{figure.6.5}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces \textit {Predictions of calcium peaks in neuron B over the different neuronal pairs in the test dataset, for every different model. Every model corresponds to the choice of the value of $p$ which minimizes the MSE over the neuronal pairs.}}}{93}{figure.6.6}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \textit {Schematic representation of the cable-calcium model.}}}{84}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \textit {Plot of $\phi = \phi (x,p)$ for different values of $p \in [2,20]$.}}}{86}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \textit {Mean squared error for the predictions on the training pairs, computed for different values of $p$. Left: in LRM model. Center: in GHK model. Right: in HH model. }}}{90}{figure.6.3}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \textit {Predictions of calcium peaks in neuron B over the different neuronal pairs in the training dataset, using different values of $p$, for the LRM case.}}}{91}{figure.6.4}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \textit {Predictions of calcium peaks in neuron B over the different neuronal pairs in the training dataset, for every different model. Every model corresponds to the choice of the value of $p$ which minimizes the MSE for all neuronal pairs.}}}{92}{figure.6.5}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \textit {Predictions of calcium peaks in neuron B over the different neuronal pairs in the test dataset, for every different model. Every model corresponds to the choice of the value of $p$ which minimizes the MSE over the training data.}}}{93}{figure.6.6}%
