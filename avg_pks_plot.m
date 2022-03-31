@@ -19,12 +19,13 @@ m4_second = m4;
 
 
 aa= categorical({'Habituation','Test'});
-
+aa2 = categorical({'Habituation','Test'});
 figure
 plot(aa,[(m1_first+m1_second)/2 (m2_first+m2_second)/2],'r--o',LineWidth=2,MarkerSize=15)
-
-
 hold on
+plot
+
+
 
 plot(aa,[(m3_first+m3_second)/2 (m4_first+m4_second)/2],'b--o',LineWidth=2,MarkerSize=15)
 

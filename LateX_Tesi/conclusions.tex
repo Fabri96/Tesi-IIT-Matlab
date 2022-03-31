@@ -1,0 +1,101 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+%\usepackage{fourier-otf}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{float}
+\usepackage{lipsum}
+\usepackage{scrextend}
+\usepackage{longtable}
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{acro}
+%\usepackage[square,sort,comma,numbers]{natbib}
+\newtheorem{theorem}{Theorem}[section]
+\usepackage{color}
+\usepackage{makeidx}
+\usepackage{titlepic}
+%\usepackage{acronym}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\newtheorem{remark}{Remark}
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color
+	basicstyle=\footnotesize,        % size of fonts used for the code
+	breaklines=true,                 % automatic line breaking only at whitespace
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	keywordstyle=\color{blue},       % keyword style
+	stringstyle=\color{mymauve},     % string literal style
+}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true,    % Colours links instead of ugly boxes
+	urlcolor     = black,    % Colour for external hyperlinks
+	linkcolor    = black,    % Colour of internal links
+	citecolor    = black      % Colour of citations
+}
+%\title{First chapter}
+
+%\author{F.Bernardi}
+
+%\protect\\ 
+
+\newcommand{\myName}{Fabrizio Bernardi (944476)
+}
+\newcommand{\myTitle}{Data analysis and modeling of \\ calcium activity in   mice somatostatin interneurons}
+\newcommand{\myDegree}{Programme: \protect\\ \textit{Mathematical Engineering} \\
+	Academic years: 2020-2021}
+\newcommand{\myCycle}{XXXI cycle}
+\newcommand{\myDepartment}{Department of Mathematics}
+\newcommand{\myUni}{Politecnico di Milano}
+\newcommand{\myYear}{2022}
+\newcommand{\myTime}{01 Jan \myYear}
+
+\pdfbookmark{Cover}{cover}
+
+
+
+
+
+\begin{document}
+
+
+\chapter*{Conclusions and future perspectives}
+
+This work has been one of the first attempts to unify the mathematical tools for data analysis and modeling, to the complex world of neuroscience, with a specific focus on the neural activity displayed in mice during behavioural tasks.\\
+The experiments recorded  the activity in terms of \textit{intracellular calcium concentration}, which, depending on the case, could refer to single neurons such as to whole brain regions. Through the chapters, introductions on the main notions and tools for the analysis of such signals have been provided, followed by the main results on two different research projects, having the common denominator of neural activity recordings: the \textit{Interbrain analysis} for the \textit{emotion discrimination task}, and the \textit{activation analysis} for the \textit{altruism task}. Finally, the \textit{Cable-Calcium} model provided a way to predict the calcium patterns across neuronal pairs, exploiting previous mathematical models for cellular electrophysiology.\\
+
+In the  emotion discrimination task, the goal was to look for \textit{synchronization} between the neural activities of interacting mice. In particular, three mice have been adopted: observer, neutral demonstrator, stressed demonstrator. This subdivision aimed to inspect whether the difference in the \textit{emotional state} of the demonstrators could result in a difference in the activity synchronization. From the analyzed data, this seems to be the case: both in terms of cross-correlation, computed on the mean activity of the SOM+ neurons recorded in the ACC, both in terms of peak synchronization among the single pairs of neurons, evidence of synchronization emerged only during the interaction among  observer and  neutral mice, but not among  observer and  stressed mice. Moreover, repeating the task after stressing also the observer, no synchronization has been identified, in all the interacting mice.
+This could suggest that the stress condition for one mouse is a factor of inhibition for the synchronization. \\
+
+As for the altruism task, a behavioural task performed on a pair of mice established that mice are able to display altruistic behaviours towards conspecifics. Indeed, in the altruism task the \textit{dictator} mouse can choose whether to deliver food only to itself or both to itself and a conspecific mouse, which it can see but not directly interact with. The experiments show how male mice tend to perform altruistic preferences, and such process is directly caused by the presence of the conspecific mouse, and in particular  by the fact that the two subjects are able to see each other. The activity of the BLA has been recorded during the task, showing, for mice that preferred altruistic choices, a strong activation during the altruistic behaviours, but not during selfish behaviours. No relevant activations have been recorded for selfish mice, under any type of choice. Therefore, there is evidence of a central role of the amygdala in the display of prosocial behaviours, which shows activation when altruistic mice display altruistic behaviours.\\
+
+In the last part of the work, a model to predict the calcium peaks in one neuron, as result of the peaks occurred in a neighbour one, is proposed. The model tries to establish a relation between the calcium peak and a correspondent peak of action potential. Then, such value of action potential is used in the cable model, which simulates its propagation towards the axon. The value of action potential obtained from the simulation at the end of the axon, is then transformed in a value of calcium peak, and compared with the recorded datum. This approach has been repeated, on a training dataset, for three different cases, corresponding to different ways to model the transmembrane currents along the axon, and tested on a test dataset. Overall, the three different results performed in a similar way, and the model reveals to be a good prediction tool, even if it has been built under restrictive assumptions and it is open to improvements.\\
+
+This work is intended to be the first step on a hopefully longer collaboration with the GECO team in the IIT, which is able to provide data of high quality, leading to several possible analyses. As future steps, we can propose the following suggestions:
+
+\begin{itemize}
+	\item Corroborate the results obtained in the Interbrain data analysis with new experiments to be performed
+	
+	\item Perform the Interbrain data analysis with new configurations of emotional states. For example, \textit{relief} or \textit{fear} conditioning could be considered as well
+	
+	
+	\item Looking for new tools to inspect synchronization among neural activities, with the hope to confirm the results obtained under always more points of view
+	
+	\item Perform new analyses in the altruism task. Beside the overall activity recorded via Fiberphotometry (Section \ref{fiberphotometry}), one could think to record also the activity of single neurons via microendoscopic calcium imaging (Section \ref{inscopix}). Moreover, the Interbrain analysis could be mixed with the altruism one, inspecting whether the display of altruism is correlated with an underlying synchronization of neural activities
+	
+	\item Improve the Cable-Calcium model as suggested in Section \ref{section cablec conclusions}
+\end{itemize}
+
+
+
+\end{document}

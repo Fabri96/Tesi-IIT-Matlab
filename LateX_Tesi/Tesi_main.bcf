@@ -2408,7 +2408,7 @@
     <bcf:citekey order="68">40</bcf:citekey>
     <bcf:citekey order="69">35</bcf:citekey>
     <bcf:citekey order="70">43</bcf:citekey>
-    <bcf:citekey order="71">47</bcf:citekey>
+    <bcf:citekey order="71">38</bcf:citekey>
     <bcf:citekey order="72">42</bcf:citekey>
     <bcf:citekey order="73">1</bcf:citekey>
     <bcf:citekey order="74">43</bcf:citekey>
@@ -2455,7 +2455,6 @@
     <bcf:citekey order="115">38</bcf:citekey>
     <bcf:citekey order="116">39</bcf:citekey>
     <bcf:citekey order="117">40</bcf:citekey>
-    <bcf:citekey order="118">47</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

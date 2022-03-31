@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  28 MAR 2022 19:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  31 MAR 2022 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -903,7 +903,7 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 69.
-<Logo_IIT.png, id=167, 1003.75pt x 428.60126pt>
+<Logo_IIT.png, id=171, 1003.75pt x 428.60126pt>
 File: Logo_IIT.png Graphic file (type png)
 <use Logo_IIT.png>
 Package pdftex.def Info: Logo_IIT.png  used on input line 85.
@@ -920,7 +920,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
 (C:\Users\Fabrizio\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Logo_Politecnico_Milano.jpg, id=169, 1303.87125pt x 1013.7875pt>
+<Logo_Politecnico_Milano.jpg, id=173, 1303.87125pt x 1013.7875pt>
 File: Logo_Politecnico_Milano.jpg Graphic file (type jpg)
 <use Logo_Politecnico_Milano.jpg>
 Package pdftex.def Info: Logo_Politecnico_Milano.jpg  used on input line 92.
@@ -1143,21 +1143,15 @@ b-server and stressed when
 \tf@toc=\write7
 \openout7 = `Tesi_main.toc'.
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.298 	\newpage
-                [1]
+ [14]
 Chapter 1.
-<neuron.png, id=483, 954.56625pt x 591.20876pt>
+<neuron.png, id=490, 954.56625pt x 591.20876pt>
 File: neuron.png Graphic file (type png)
 <use neuron.png>
 Package pdftex.def Info: neuron.png  used on input line 311.
 (pdftex.def)             Requested size: 238.64098pt x 147.80182pt.
 
-LaTeX Warning: Citation '42' on page 2 undefined on input line 313.
+LaTeX Warning: Citation '42' on page 1 undefined on input line 313.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 317--318
@@ -1165,12 +1159,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--318
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.318 
-       [2
+       [1
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
@@ -1180,51 +1174,57 @@ has been already used, duplicate ignored
 l.318 
        <./neuron.png (PNG copy)>]
 
-LaTeX Warning: Citation '1' on page 3 undefined on input line 325.
+LaTeX Warning: Citation '1' on page 2 undefined on input line 325.
 
-<AP1.png, id=489, 2569.6pt x 1868.9825pt>
+<AP1.png, id=496, 2569.6pt x 1868.9825pt>
 File: AP1.png Graphic file (type png)
 <use AP1.png>
 Package pdftex.def Info: AP1.png  used on input line 336.
 (pdftex.def)             Requested size: 195.12767pt x 141.90726pt.
-<AP2.png, id=490, 853.1875pt x 685.56125pt>
+<AP2.png, id=497, 853.1875pt x 685.56125pt>
 File: AP2.png Graphic file (type png)
 <use AP2.png>
 Package pdftex.def Info: AP2.png  used on input line 343.
 (pdftex.def)             Requested size: 195.12767pt x 156.78659pt.
 
-LaTeX Warning: Citation '43' on page 3 undefined on input line 350.
+LaTeX Warning: Citation '43' on page 2 undefined on input line 350.
 
 
-LaTeX Warning: Citation '43' on page 3 undefined on input line 350.
+LaTeX Warning: Citation '43' on page 2 undefined on input line 350.
 
-[3]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.352 
+       [2]
 Underfull \hbox (badness 10000) in paragraph at lines 353--355
 
  []
 
-[4
+[3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.358 
        <./AP1.png> <./AP2.png>]
-<synapse.jpg, id=505, 1003.75pt x 913.4125pt>
+<synapse.jpg, id=510, 1003.75pt x 913.4125pt>
 File: synapse.jpg Graphic file (type jpg)
 <use synapse.jpg>
 Package pdftex.def Info: synapse.jpg  used on input line 362.
 (pdftex.def)             Requested size: 200.74644pt x 182.67926pt.
 
 
-LaTeX Warning: Citation '44' on page 5 undefined on input line 364.
+LaTeX Warning: Citation '44' on page 4 undefined on input line 364.
 
-<Ca_conc.png, id=506, 421.575pt x 316.18124pt>
+<Ca_conc.png, id=511, 421.575pt x 316.18124pt>
 File: Ca_conc.png Graphic file (type png)
 <use Ca_conc.png>
 Package pdftex.def Info: Ca_conc.png  used on input line 370.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
-[5
+[4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1238,32 +1238,32 @@ has been already used, duplicate ignored
 l.378 
        <./synapse.jpg> <./Ca_conc.png (PNG copy)>]
 
-LaTeX Warning: Citation '2' on page 6 undefined on input line 380.
+LaTeX Warning: Citation '2' on page 5 undefined on input line 380.
 
 
-LaTeX Warning: Citation '3' on page 6 undefined on input line 383.
+LaTeX Warning: Citation '3' on page 5 undefined on input line 383.
 
 
-LaTeX Warning: Citation '4' on page 6 undefined on input line 385.
+LaTeX Warning: Citation '4' on page 5 undefined on input line 385.
 
 
-LaTeX Warning: Citation '5' on page 6 undefined on input line 386.
+LaTeX Warning: Citation '5' on page 5 undefined on input line 386.
 
 
-LaTeX Warning: Citation '6' on page 6 undefined on input line 389.
+LaTeX Warning: Citation '6' on page 5 undefined on input line 389.
 
-<brain.png, id=511, 329.73187pt x 255.95625pt>
+<brain.png, id=516, 329.73187pt x 255.95625pt>
 File: brain.png Graphic file (type png)
 <use brain.png>
 Package pdftex.def Info: brain.png  used on input line 396.
 (pdftex.def)             Requested size: 247.29828pt x 191.9667pt.
 
-LaTeX Warning: Citation '45' on page 6 undefined on input line 398.
+LaTeX Warning: Citation '45' on page 5 undefined on input line 398.
 
 
-LaTeX Warning: Citation '45' on page 6 undefined on input line 398.
+LaTeX Warning: Citation '45' on page 5 undefined on input line 398.
 
-[6
+[5] [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1273,7 +1273,7 @@ l.402 \newpage
 
 LaTeX Warning: Citation '7' on page 7 undefined on input line 406.
 
-<mice_task.png, id=517, 369.0588pt x 268.3626pt>
+<mice_task.png, id=526, 369.0588pt x 268.3626pt>
 File: mice_task.png Graphic file (type png)
 <use mice_task.png>
 Package pdftex.def Info: mice_task.png  used on input line 418.
@@ -1294,12 +1294,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.434  	
-         <./mice_task.png>]
+l.430 
+       <./mice_task.png>]
 
 LaTeX Warning: Citation '41' on page 9 undefined on input line 444.
 
-<scheggia.png, id=532, 631.60968pt x 325.96782pt>
+<scheggia.png, id=542, 631.60968pt x 325.96782pt>
 File: scheggia.png Graphic file (type png)
 <use scheggia.png>
 Package pdftex.def Info: scheggia.png  used on input line 456.
@@ -1328,38 +1328,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.476 
+l.473 
        <./scheggia.png>]
-<Inscopix.jpg, id=542, 336.2964pt x 401.3394pt>
+<Inscopix.jpg, id=552, 336.2964pt x 401.3394pt>
 File: Inscopix.jpg Graphic file (type jpg)
 <use Inscopix.jpg>
 Package pdftex.def Info: Inscopix.jpg  used on input line 484.
 (pdftex.def)             Requested size: 117.70549pt x 140.47089pt.
+ [11]
 
+LaTeX Warning: Citation '11' on page 12 undefined on input line 491.
 
-LaTeX Warning: Citation '11' on page 11 undefined on input line 491.
-
-[11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.495 
-       <./Inscopix.jpg>]
-<Inscopix2.png, id=548, 381.67593pt x 339.51843pt>
+<Inscopix2.png, id=558, 381.67593pt x 339.51843pt>
 File: Inscopix2.png Graphic file (type png)
 <use Inscopix2.png>
 Package pdftex.def Info: Inscopix2.png  used on input line 498.
 (pdftex.def)             Requested size: 305.34116pt x 271.6151pt.
- [12
+[12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.503 
+       <./Inscopix.jpg>] [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.512 	$
-        $ M_f^{band} = GB(M_f,\sigma_{high}) - GB(M_f,\sigma_{low})$$ <./Inscop
-ix2.png>] [13] [14]
-<fiberphotometry.png, id=573, 395.97937pt x 309.40594pt>
+l.517 	
+        <./Inscopix2.png>] [14]
+<fiberphotometry.png, id=583, 395.97937pt x 309.40594pt>
 File: fiberphotometry.png Graphic file (type png)
 <use fiberphotometry.png>
 Package pdftex.def Info: fiberphotometry.png  used on input line 539.
@@ -1373,18 +1371,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.554 	\item T
-              he procedure operated in mice are less invasive, and the subje...
- <./fiberphotometry.png>]
+l.553 	
+        <./fiberphotometry.png>]
 
 LaTeX Warning: Citation '12' on page 16 undefined on input line 564.
 
-<synch.png, id=579, 654.19406pt x 226.59656pt>
+<synch.png, id=591, 654.19406pt x 226.59656pt>
 File: synch.png Graphic file (type png)
 <use synch.png>
 Package pdftex.def Info: synch.png  used on input line 578.
 (pdftex.def)             Requested size: 260.17464pt x 90.11836pt.
-<Intebrain.png, id=580, 438.8897pt x 280.04625pt>
+<Intebrain.png, id=592, 438.8897pt x 280.04625pt>
 File: Intebrain.png Graphic file (type png)
 <use Intebrain.png>
 Package pdftex.def Info: Intebrain.png  used on input line 585.
@@ -1408,14 +1405,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 606--610
  []
 
 [17]
-<novembre.png, id=593, 577.40718pt x 232.61906pt>
+<novembre.png, id=604, 577.40718pt x 232.61906pt>
 File: novembre.png Graphic file (type png)
 <use novembre.png>
 Package pdftex.def Info: novembre.png  used on input line 613.
 (pdftex.def)             Requested size: 404.18228pt x 162.83221pt.
 
 
-LaTeX Warning: Citation '14' on page 18 undefined on input line 619.
+LaTeX Warning: Citation '14' on page 18 undefined on input line 618.
 
 
 LaTeX Warning: Citation '15' on page 18 undefined on input line 619.
@@ -1440,7 +1437,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.12})
                                                   \__shipout_drop_firstpage_...
 l.625 
        <./novembre.png>]
-<kingsbury.png, id=599, 959.83594pt x 363.60844pt>
+<kingsbury.png, id=611, 959.83594pt x 363.60844pt>
 File: kingsbury.png Graphic file (type png)
 <use kingsbury.png>
 Package pdftex.def Info: kingsbury.png  used on input line 628.
@@ -1452,12 +1449,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.13})
                                                   \__shipout_drop_firstpage_...
 l.636 
        <./kingsbury.png>]
-<kingsbury2.png, id=604, 258.21469pt x 377.91188pt>
+<kingsbury2.png, id=617, 258.21469pt x 377.91188pt>
 File: kingsbury2.png Graphic file (type png)
 <use kingsbury2.png>
 Package pdftex.def Info: kingsbury2.png  used on input line 648.
 (pdftex.def)             Requested size: 151.76964pt x 222.12993pt.
-<kingsbury3.png, id=605, 376.40625pt x 345.54094pt>
+<kingsbury3.png, id=618, 376.40625pt x 345.54094pt>
 File: kingsbury3.png Graphic file (type png)
 <use kingsbury3.png>
 Package pdftex.def Info: kingsbury3.png  used on input line 655.
@@ -1470,7 +1467,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.14})
 l.665 \newpage
                <./kingsbury2.png> <./kingsbury3.png>]
 Chapter 2.
-<pearson.png, id=611, 549.55313pt x 213.04594pt>
+<pearson.png, id=624, 549.55313pt x 213.04594pt>
 File: pearson.png Graphic file (type png)
 <use pearson.png>
 Package pdftex.def Info: pearson.png  used on input line 680.
@@ -1494,7 +1491,7 @@ l.693 \end{equation}
 LaTeX Warning: Citation '17' on page 23 undefined on input line 705.
 
 [23]
-<autocorr.png, id=633, 421.575pt x 316.18124pt>
+<autocorr.png, id=647, 421.575pt x 316.18124pt>
 File: autocorr.png Graphic file (type png)
 <use autocorr.png>
 Package pdftex.def Info: autocorr.png  used on input line 741.
@@ -1515,7 +1512,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 764--767
 
  []
 
-<thresholds.png, id=641, 1028.34187pt x 490.08093pt>
+<thresholds.png, id=655, 1028.34187pt x 490.08093pt>
 File: thresholds.png Graphic file (type png)
 <use thresholds.png>
 Package pdftex.def Info: thresholds.png  used on input line 773.
@@ -1547,7 +1544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 814--815
 LaTeX Warning: Citation '18' on page 27 undefined on input line 841.
 
 [27]
-<GC.png, id=666, 609.02531pt x 321.45094pt>
+<GC.png, id=681, 609.02531pt x 321.45094pt>
 File: GC.png Graphic file (type png)
 <use GC.png>
 Package pdftex.def Info: GC.png  used on input line 863.
@@ -1612,9 +1609,15 @@ LaTeX Warning: Citation '22' on page 30 undefined on input line 946.
 
 LaTeX Warning: Citation '23' on page 30 undefined on input line 954.
 
-[30] [31]
+[30]
+Overfull \hbox (0.36055pt too wide) in paragraph at lines 962--963
+[]\OT1/cmr/m/n/12 Estimatation of the au-to-co-vari-ance se-quence $ []$ and th
+e VAR co-ef-fi-cients $(\OML/cmm/m/it/12 A[]; \OT1/cmr/m/n/12 )$
+ []
+
+[31]
 Chapter 3.
-<emotion_discrimination.png, id=707, 487.06969pt x 292.84406pt>
+<emotion_discrimination.png, id=725, 487.06969pt x 292.84406pt>
 File: emotion_discrimination.png Graphic file (type png)
 <use emotion_discrimination.png>
 Package pdftex.def Info: emotion_discrimination.png  used on input line 985.
@@ -1628,7 +1631,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1007 \begin{itemize}
                        <./emotion_discrimination.png>]
-<normalizations.png, id=722, 1028.34187pt x 490.08093pt>
+<normalizations.png, id=743, 1028.34187pt x 490.08093pt>
 File: normalizations.png Graphic file (type png)
 <use normalizations.png>
 Package pdftex.def Info: normalizations.png  used on input line 1029.
@@ -1645,7 +1648,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1040 	
          <./normalizations.png (PNG copy)>]
-<times.png, id=734, 1028.34187pt x 490.08093pt>
+<times.png, id=755, 1028.34187pt x 490.08093pt>
 File: times.png Graphic file (type png)
 <use times.png>
 Package pdftex.def Info: times.png  used on input line 1074.
@@ -1671,7 +1674,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1088 	
          <./times.png (PNG copy)>]
-<activity_barplot.png, id=749, 1028.34187pt x 490.08093pt>
+<activity_barplot.png, id=771, 1028.34187pt x 490.08093pt>
 File: activity_barplot.png Graphic file (type png)
 <use activity_barplot.png>
 Package pdftex.def Info: activity_barplot.png  used on input line 1098.
@@ -1681,7 +1684,7 @@ Overfull \hbox (23.8591pt too wide) in paragraph at lines 1097--1099
  |  [] 
  []
 
-<activities.png, id=750, 962.09438pt x 490.08093pt>
+<activities.png, id=772, 962.09438pt x 490.08093pt>
 File: activities.png Graphic file (type png)
 <use activities.png>
 Package pdftex.def Info: activities.png  used on input line 1109.
@@ -1693,7 +1696,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1114 
         <./activity_barplot.png (PNG copy)>]
-<average_cc.png, id=755, 1028.34187pt x 490.08093pt>
+<average_cc.png, id=777, 1028.34187pt x 490.08093pt>
 File: average_cc.png Graphic file (type png)
 <use average_cc.png>
 Package pdftex.def Info: average_cc.png  used on input line 1122.
@@ -1725,7 +1728,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1139 
         <./average_cc.png (PNG copy)>]
-<cc_distant.png, id=769, 1028.34187pt x 490.08093pt>
+<cc_distant.png, id=794, 1028.34187pt x 490.08093pt>
 File: cc_distant.png Graphic file (type png)
 <use cc_distant.png>
 Package pdftex.def Info: cc_distant.png  used on input line 1147.
@@ -1746,7 +1749,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1165 
         <./cc_distant.png (PNG copy)>]
-<average_cc_initial.png, id=780, 1028.34187pt x 490.08093pt>
+<average_cc_initial.png, id=805, 1028.34187pt x 490.08093pt>
 File: average_cc_initial.png Graphic file (type png)
 <use average_cc_initial.png>
 Package pdftex.def Info: average_cc_initial.png  used on input line 1172.
@@ -1756,7 +1759,7 @@ Overfull \hbox (43.32709pt too wide) in paragraph at lines 1171--1173
  |  [] 
  []
 
-<cc_average.png, id=781, 1028.34187pt x 490.08093pt>
+<cc_average.png, id=806, 1028.34187pt x 490.08093pt>
 File: cc_average.png Graphic file (type png)
 <use cc_average.png>
 Package pdftex.def Info: cc_average.png  used on input line 1182.
@@ -1773,7 +1776,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1187 
         <./average_cc_initial.png (PNG copy)>]
-<avg_pks.png, id=786, 1028.34187pt x 490.08093pt>
+<avg_pks.png, id=811, 1028.34187pt x 490.08093pt>
 File: avg_pks.png Graphic file (type png)
 <use avg_pks.png>
 Package pdftex.def Info: avg_pks.png  used on input line 1196.
@@ -1799,14 +1802,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1211 	
-         <./avg_pks.png (PNG copy)>]
-Overfull \hbox (9.14162pt too wide) in paragraph at lines 1214--1215
-[]\OT1/cmr/m/n/12 The ob-tained re-sults are showed in Fig-ure [][]3.10[][]. Co
-n-sis-tent with the cross-correlation
- []
-
-[46]
-<times_self.png, id=807, 1028.34187pt x 490.08093pt>
+         <./avg_pks.png (PNG copy)>] [46]
+<times_self.png, id=833, 1028.34187pt x 490.08093pt>
 File: times_self.png Graphic file (type png)
 <use times_self.png>
 Package pdftex.def Info: times_self.png  used on input line 1261.
@@ -1832,7 +1829,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
                                                   \__shipout_drop_firstpage_...
 l.1272 	
          <./times_self.png (PNG copy)>]
-<activity_barplot_self.png, id=814, 1028.34187pt x 490.08093pt>
+<activity_barplot_self.png, id=840, 1028.34187pt x 490.08093pt>
 File: activity_barplot_self.png Graphic file (type png)
 <use activity_barplot_self.png>
 Package pdftex.def Info: activity_barplot_self.png  used on input line 1279.
@@ -1842,7 +1839,7 @@ Overfull \hbox (28.44637pt too wide) in paragraph at lines 1278--1280
  |  [] 
  []
 
-<average_cc_self.png, id=817, 1028.34187pt x 490.08093pt>
+<average_cc_self.png, id=843, 1028.34187pt x 490.08093pt>
 File: average_cc_self.png Graphic file (type png)
 <use average_cc_self.png>
 Package pdftex.def Info: average_cc_self.png  used on input line 1291.
@@ -1859,7 +1856,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
                                                   \__shipout_drop_firstpage_...
 l.1296 	
          <./activity_barplot_self.png (PNG copy)>]
-<avg_pks_self.png, id=823, 1028.34187pt x 490.08093pt>
+<avg_pks_self.png, id=849, 1028.34187pt x 490.08093pt>
 File: avg_pks_self.png Graphic file (type png)
 <use avg_pks_self.png>
 Package pdftex.def Info: avg_pks_self.png  used on input line 1303.
@@ -1909,7 +1906,7 @@ LaTeX Warning: Citation '30' on page 52 undefined on input line 1355.
 [52
 
 ]
-<altruism.png, id=844, 576.1525pt x 366.36874pt>
+<altruism.png, id=870, 576.1525pt x 366.36874pt>
 File: altruism.png Graphic file (type png)
 <use altruism.png>
 Package pdftex.def Info: altruism.png  used on input line 1361.
@@ -1921,12 +1918,12 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1376 	
          <./altruism.png>]
-<altr_self.png, id=855, 349.305pt x 397.485pt>
+<altr_self.png, id=882, 349.305pt x 397.485pt>
 File: altr_self.png Graphic file (type png)
 <use altr_self.png>
 Package pdftex.def Info: altr_self.png  used on input line 1395.
 (pdftex.def)             Requested size: 199.4681pt x 226.98123pt.
-<norecip.png, id=856, 281.55188pt x 331.99031pt>
+<norecip.png, id=883, 281.55188pt x 331.99031pt>
 File: norecip.png Graphic file (type png)
 <use norecip.png>
 Package pdftex.def Info: norecip.png  used on input line 1402.
@@ -1943,22 +1940,17 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1419 
         <./altr_self.png> <./norecip.png>] [56]
-<number_pokes.png, id=867, 436.63126pt x 373.395pt>
+<number_pokes.png, id=894, 436.63126pt x 373.395pt>
 File: number_pokes.png Graphic file (type png)
 <use number_pokes.png>
 Package pdftex.def Info: number_pokes.png  used on input line 1426.
 (pdftex.def)             Requested size: 240.14793pt x 205.36787pt.
-<familiar.png, id=868, 795.72281pt x 389.20406pt>
+<familiar.png, id=895, 795.72281pt x 389.20406pt>
 File: familiar.png Graphic file (type png)
 <use familiar.png>
 Package pdftex.def Info: familiar.png  used on input line 1436.
-(pdftex.def)             Requested size: 437.6489pt x 214.0629pt.
-
-Overfull \hbox (4.0289pt too wide) in paragraph at lines 1436--1437
- [] 
- []
-
-[57
+(pdftex.def)             Requested size: 397.86043pt x 194.60155pt.
+ [57
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1978,7 +1970,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.1454 \end{equation}
                       <./familiar.png>]
-<psth.png, id=879, 785.93625pt x 455.45157pt>
+<psth.png, id=907, 785.93625pt x 455.45157pt>
 File: psth.png Graphic file (type png)
 <use psth.png>
 Package pdftex.def Info: psth.png  used on input line 1477.
@@ -2001,12 +1993,12 @@ LaTeX Warning: Citation '33' on page 61 undefined on input line 1512.
 LaTeX Warning: Citation '34' on page 61 undefined on input line 1514.
 
 [61]
-<silencing.png, id=904, 657.95813pt x 395.97937pt>
+<silencing.png, id=932, 657.95813pt x 395.97937pt>
 File: silencing.png Graphic file (type png)
 <use silencing.png>
 Package pdftex.def Info: silencing.png  used on input line 1522.
 (pdftex.def)             Requested size: 394.77792pt x 237.58945pt.
-<sil_dom.png, id=905, 480.29437pt x 388.45125pt>
+<sil_dom.png, id=933, 480.29437pt x 388.45125pt>
 File: sil_dom.png Graphic file (type png)
 <use sil_dom.png>
 Package pdftex.def Info: sil_dom.png  used on input line 1531.
@@ -2025,7 +2017,7 @@ has been already used, duplicate ignored
 l.1537 \newpage
                 <./sil_dom.png>]
 Chapter 5.
-<first.png, id=915, 521.69907pt x 322.95656pt>
+<first.png, id=944, 521.69907pt x 322.95656pt>
 File: first.png Graphic file (type png)
 <use first.png>
 Package pdftex.def Info: first.png  used on input line 1549.
@@ -2033,11 +2025,11 @@ Package pdftex.def Info: first.png  used on input line 1549.
 [64
 
 ]
-<membrane.jpg, id=922, 515.67656pt x 271.76532pt>
-File: membrane.jpg Graphic file (type jpg)
-<use membrane.jpg>
-Package pdftex.def Info: membrane.jpg  used on input line 1565.
-(pdftex.def)             Requested size: 309.40831pt x 163.06044pt.
+<membrane.png, id=951, 639.89063pt x 241.65282pt>
+File: membrane.png Graphic file (type png)
+<use membrane.png>
+Package pdftex.def Info: membrane.png  used on input line 1565.
+(pdftex.def)             Requested size: 351.94092pt x 132.90945pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1558--1571
 
@@ -2059,147 +2051,152 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1586 	
-         <./membrane.jpg>] [67]
-<intra.png, id=948, 456.20438pt x 267.24844pt>
+l.1587 \end{enumerate}
+                       <./membrane.png>]
+<intra.png, id=965, 456.20438pt x 267.24844pt>
 File: intra.png Graphic file (type png)
 <use intra.png>
-Package pdftex.def Info: intra.png  used on input line 1677.
+Package pdftex.def Info: intra.png  used on input line 1599.
 (pdftex.def)             Requested size: 296.52931pt x 173.70943pt.
- [68]
-<ode_circuit.png, id=957, 421.575pt x 360.59718pt>
-File: ode_circuit.png Graphic file (type png)
-<use ode_circuit.png>
-Package pdftex.def Info: ode_circuit.png  used on input line 1726.
-(pdftex.def)             Requested size: 252.94695pt x 216.35997pt.
- [69
+ [67
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1733 
-       
+l.1626 	\end{align}
+                    <./intra.png>] [68]
+<ode_circuit.png, id=989, 421.575pt x 360.59718pt>
+File: ode_circuit.png Graphic file (type png)
+<use ode_circuit.png>
+Package pdftex.def Info: ode_circuit.png  used on input line 1727.
+(pdftex.def)             Requested size: 252.94695pt x 216.35997pt.
+ [69
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1733 
-        <./intra.png>] [70
+l.1734 
+       ] [70
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1747 
+l.1748 
         <./ode_circuit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1757--1759
+Underfull \hbox (badness 10000) in paragraph at lines 1758--1760
 
  []
 
-<LRM.png, id=974, 456.20438pt x 319.1925pt>
+<LRM.png, id=1005, 456.20438pt x 319.1925pt>
 File: LRM.png Graphic file (type png)
 <use LRM.png>
-Package pdftex.def Info: LRM.png  used on input line 1767.
+Package pdftex.def Info: LRM.png  used on input line 1768.
 (pdftex.def)             Requested size: 296.52931pt x 207.47266pt.
-[71
+[71]
+
+LaTeX Warning: Citation '35' on page 72 undefined on input line 1789.
+
+[72
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1775 \begin{equation}
-                        <./LRM.png>]
+l.1799 	\item $
+               F$ is the \textbf{Faraday constant}, such that $F = q N_{av}$...
+ <./LRM.png>]
 
-LaTeX Warning: Citation '35' on page 72 undefined on input line 1788.
+LaTeX Warning: Citation '36' on page 73 undefined on input line 1807.
 
 
-LaTeX Warning: Citation '36' on page 72 undefined on input line 1806.
+LaTeX Warning: Citation '35' on page 73 undefined on input line 1844.
 
-[72]
-
-LaTeX Warning: Citation '35' on page 73 undefined on input line 1843.
-
-<HH.png, id=994, 481.04718pt x 342.5297pt>
+[73]
+<HH.png, id=1031, 481.04718pt x 342.5297pt>
 File: HH.png Graphic file (type png)
 <use HH.png>
-Package pdftex.def Info: HH.png  used on input line 1859.
+Package pdftex.def Info: HH.png  used on input line 1860.
 (pdftex.def)             Requested size: 312.67696pt x 222.64166pt.
-[73]
 
-LaTeX Warning: Citation '37' on page 74 undefined on input line 1866.
+
+LaTeX Warning: Citation '37' on page 74 undefined on input line 1867.
 
 [74
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1876 	
-         <./HH.png>]
+l.1872 	\item T
+               he total current density $J^{tot}$ can be split in two contri...
+ <./HH.png>]
 
-LaTeX Warning: Citation '38' on page 75 undefined on input line 1905.
+LaTeX Warning: Citation '38' on page 75 undefined on input line 1906.
 
 [75]
-<cable.png, id=1018, 762.59906pt x 284.56313pt>
+<cable.png, id=1050, 762.59906pt x 284.56313pt>
 File: cable.png Graphic file (type png)
 <use cable.png>
-Package pdftex.def Info: cable.png  used on input line 1960.
-(pdftex.def)             Requested size: 495.68352pt x 184.96384pt.
+Package pdftex.def Info: cable.png  used on input line 1961.
+(pdftex.def)             Requested size: 480.43996pt x 179.27571pt.
 
-Overfull \hbox (44.75777pt too wide) in paragraph at lines 1959--1961
+Overfull \hbox (29.5142pt too wide) in paragraph at lines 1960--1962
  |  [] 
  []
 
-[76
+[76] [77
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1969 
-        <./cable.png>] [77]
-<curr_bal.png, id=1035, 529.98pt x 305.64188pt>
+l.1985 ...le, its contribution to resistance is $$
+                                                  dR(x) = \frac{\rho_{ax} dx...
+ <./cable.png>]
+<curr_bal.png, id=1066, 529.98pt x 305.64188pt>
 File: curr_bal.png Graphic file (type png)
 <use curr_bal.png>
-Package pdftex.def Info: curr_bal.png  used on input line 2029.
+Package pdftex.def Info: curr_bal.png  used on input line 2002.
 (pdftex.def)             Requested size: 317.99043pt x 183.38652pt.
- [78]
-<basis.png, id=1045, 399.74344pt x 238.64156pt>
-File: basis.png Graphic file (type png)
-<use basis.png>
-Package pdftex.def Info: basis.png  used on input line 2041.
-(pdftex.def)             Requested size: 279.81848pt x 167.04794pt.
- [79
+ [78
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.8}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2058 \end{equation}
-                     
+l.2011 \end{equation}
+                      <./curr_bal.png>]
+<basis.png, id=1076, 399.74344pt x 238.64156pt>
+File: basis.png Graphic file (type png)
+<use basis.png>
+Package pdftex.def Info: basis.png  used on input line 2044.
+(pdftex.def)             Requested size: 279.81848pt x 167.04794pt.
+ [79]
+
+LaTeX Warning: Citation '39' on page 80 undefined on input line 2067.
+
+[80
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2058 \end{equation}
-                      <./curr_bal.png> <./basis.png>]
+l.2075 	\end{equation}
+                       <./basis.png>]
 
-LaTeX Warning: Citation '39' on page 80 undefined on input line 2064.
-
-
-LaTeX Warning: Citation '40' on page 80 undefined on input line 2080.
+LaTeX Warning: Citation '40' on page 81 undefined on input line 2083.
 
 
-LaTeX Warning: Citation '40' on page 80 undefined on input line 2095.
+LaTeX Warning: Citation '40' on page 81 undefined on input line 2098.
 
-[80]
+[81]
 
-LaTeX Warning: Citation '40' on page 81 undefined on input line 2115.
+LaTeX Warning: Citation '40' on page 82 undefined on input line 2118.
 
 
-LaTeX Warning: Citation '35' on page 81 undefined on input line 2125.
+LaTeX Warning: Citation '35' on page 82 undefined on input line 2128.
 
-[81] [82]
+[82]
 Chapter 6.
-<cable_ca.png, id=1089, 667.74469pt x 359.84438pt>
+<cable_ca.png, id=1125, 667.74469pt x 359.84438pt>
 File: cable_ca.png Graphic file (type png)
 <use cable_ca.png>
-Package pdftex.def Info: cable_ca.png  used on input line 2143.
+Package pdftex.def Info: cable_ca.png  used on input line 2146.
 (pdftex.def)             Requested size: 434.0289pt x 233.89607pt.
 [83
 
@@ -2208,61 +2205,61 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2158 	
+l.2161 	
          <./cable_ca.png>] [85]
-<phi.png, id=1115, 456.95718pt x 490.08093pt>
-File: phi.png Graphic file (type png)
-<use phi.png>
-Package pdftex.def Info: phi.png  used on input line 2195.
-(pdftex.def)             Requested size: 195.12767pt x 209.27248pt.
-<phi_inv.png, id=1116, 447.92343pt x 490.08093pt>
-File: phi_inv.png Graphic file (type png)
-<use phi_inv.png>
-Package pdftex.def Info: phi_inv.png  used on input line 2202.
-(pdftex.def)             Requested size: 195.12767pt x 213.49008pt.
+
+LaTeX Warning: Citation '43' on page 86 undefined on input line 2196.
 
 
-LaTeX Warning: Citation '43' on page 86 undefined on input line 2212.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2212--2215
+Underfull \hbox (badness 10000) in paragraph at lines 2196--2199
 
  []
 
-[86
+[86]
+<phi.png, id=1163, 456.95718pt x 490.08093pt>
+File: phi.png Graphic file (type png)
+<use phi.png>
+Package pdftex.def Info: phi.png  used on input line 2237.
+(pdftex.def)             Requested size: 195.12767pt x 209.27248pt.
+<phi_inv.png, id=1164, 447.92343pt x 490.08093pt>
+File: phi_inv.png Graphic file (type png)
+<use phi_inv.png>
+Package pdftex.def Info: phi_inv.png  used on input line 2244.
+(pdftex.def)             Requested size: 195.12767pt x 213.49008pt.
+ [87] [88
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2215 
-        <./phi.png> <./phi_inv.png>] [87]
+l.2280 
+        <./phi.png> <./phi_inv.png>]
 
-LaTeX Warning: Citation '47' on page 88 undefined on input line 2304.
+LaTeX Warning: Citation '38' on page 89 undefined on input line 2310.
 
-[88] [89
+[89
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2329 
-       ]
-<MSE.png, id=1155, 1028.34187pt x 490.08093pt>
+l.2325 	\end{equation}
+                      ]
+<MSE.png, id=1192, 1028.34187pt x 490.08093pt>
 File: MSE.png Graphic file (type png)
 <use MSE.png>
-Package pdftex.def Info: MSE.png  used on input line 2336.
+Package pdftex.def Info: MSE.png  used on input line 2342.
 (pdftex.def)             Requested size: 514.16968pt x 245.03987pt.
 
-Overfull \hbox (37.63618pt too wide) in paragraph at lines 2335--2337
+Overfull \hbox (37.63618pt too wide) in paragraph at lines 2341--2343
  |  [] 
  []
 
-<training_LRM.png, id=1159, 1028.34187pt x 490.08093pt>
+<training_LRM.png, id=1196, 1028.34187pt x 490.08093pt>
 File: training_LRM.png Graphic file (type png)
 <use training_LRM.png>
-Package pdftex.def Info: training_LRM.png  used on input line 2346.
+Package pdftex.def Info: training_LRM.png  used on input line 2352.
 (pdftex.def)             Requested size: 514.16968pt x 245.03987pt.
 
-Overfull \hbox (40.48164pt too wide) in paragraph at lines 2345--2347
+Overfull \hbox (40.48164pt too wide) in paragraph at lines 2351--2353
  |  [] 
  []
 
@@ -2271,15 +2268,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2350 \end{figure}
+l.2356 \end{figure}
                     <./MSE.png (PNG copy)>]
-<training.png, id=1164, 1028.34187pt x 490.08093pt>
+<training.png, id=1203, 1028.34187pt x 490.08093pt>
 File: training.png Graphic file (type png)
 <use training.png>
-Package pdftex.def Info: training.png  used on input line 2355.
+Package pdftex.def Info: training.png  used on input line 2361.
 (pdftex.def)             Requested size: 514.16968pt x 245.03987pt.
 
-Overfull \hbox (40.48164pt too wide) in paragraph at lines 2354--2356
+Overfull \hbox (40.48164pt too wide) in paragraph at lines 2360--2362
  |  [] 
  []
 
@@ -2288,15 +2285,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2360 
+l.2366 
         <./training_LRM.png (PNG copy)>]
-<test_model.png, id=1171, 1028.34187pt x 490.08093pt>
+<test_model.png, id=1210, 1028.34187pt x 490.08093pt>
 File: test_model.png Graphic file (type png)
 <use test_model.png>
-Package pdftex.def Info: test_model.png  used on input line 2392.
+Package pdftex.def Info: test_model.png  used on input line 2398.
 (pdftex.def)             Requested size: 514.16968pt x 245.03987pt.
 
-Overfull \hbox (40.48164pt too wide) in paragraph at lines 2391--2393
+Overfull \hbox (40.48164pt too wide) in paragraph at lines 2397--2399
  |  [] 
  []
 
@@ -2305,38 +2302,41 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2397 
+l.2403 
        
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.2}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2397 
+l.2403 
         <./training.png (PNG copy)>] [93
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2404 
-        <./test_model.png (PNG copy)>] [94]
-Underfull \hbox (badness 10000) in paragraph at lines 2419--2421
+l.2413 	\item T
+               he relationship $\phi$ could be improved, both in term of its...
+ <./test_model.png (PNG copy)>] [94]
+Chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2425--2427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2422--2424
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2425--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2428--2430
 
  []
 
 [95
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2427--2428
+Underfull \hbox (badness 10000) in paragraph at lines 2431--2432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2433--2434
 
  []
 
@@ -2347,7 +2347,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2427--2428
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Tesi_main.out' has not changed.
-(rerunfilecheck)             Checksum: B25434FAB2E96ACCF085A31894DFE275;8946.
+(rerunfilecheck)             Checksum: A37931F028A8A0C7322F9B759624DCB4;9457.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                Tesi_main
@@ -2358,38 +2358,37 @@ Package logreq Info: Writing requests to 'Tesi_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25081 strings out of 478550
- 476025 string characters out of 2839425
- 1282257 words of memory out of 3000000
- 42531 multiletter control sequences out of 15000+600000
- 481111 words of font info for 69 fonts, out of 8000000 for 9000
+ 25090 strings out of 478550
+ 476144 string characters out of 2839425
+ 1283299 words of memory out of 3000000
+ 42540 multiletter control sequences out of 15000+600000
+ 481112 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,13n,106p,1507b,1356s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,13n,106p,1505b,1356s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Fabrizio\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\tcrm1200.pk><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmbx12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Fabrizio/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Fabri
-zio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pf
-b><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Fabrizio/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Fabri
-zio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+ 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Fabrizio/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Fab
+rizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Fabrizio/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fabri
+zio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 <C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr17.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Fabrizio/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Fabrizio/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
+s/cm/cmr17.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Fabrizio/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Fabrizio/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
 sers/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmti12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Tesi_main.pdf (115 pages, 5252279 bytes).
+cmti12.pfb><C:/Users/Fabrizio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on Tesi_main.pdf (116 pages, 5342172 bytes).
 PDF statistics:
- 1426 PDF objects out of 1440 (max. 8388607)
+ 1459 PDF objects out of 1728 (max. 8388607)
  406 named destinations out of 1000 (max. 500000)
- 634 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 642 words of extra memory for PDF output out of 10000 (max. 10000000)
 

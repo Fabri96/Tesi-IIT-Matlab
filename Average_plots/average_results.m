@@ -323,15 +323,24 @@ aa= categorical({'Cage','Habituation','Test','Test (initial)','Test (sniffing)'}
 
 bar(aa(1),mean([corr.obs_stress_cage.first,corr.obs_stress_cage.second]) ,'c')
 hold on
+% plot(categorical({'Cage'}),corr.obs_stress_cage.first,'ro','MarkerSize',10)
+% plot(categorical({'Cage'}),corr.obs_stress_cage.second,'ro','MarkerSize',10)
 bar(aa(2),mean([corr.obs_stress_hab.first,corr.obs_stress_hab.second]) ,'r')
-
+% plot(categorical({'Habituation'}),corr.obs_stress_hab.first,'ro','MarkerSize',10)
+% plot(categorical({'Habituation'}),corr.obs_stress_hab.second,'ro','MarkerSize',10)
 hold on
 
 bar(aa(3),mean([corr.obs_stress_test.first,corr.obs_stress_test.second]) ,'b')
+% plot(categorical({'Test'}),corr.obs_stress_test.first,'ro','MarkerSize',10)
+% plot(categorical({'Test'}),corr.obs_stress_test.second,'ro','MarkerSize',10)
 
 bar(aa(4),mean([corr.obs_stress_initial.first,corr.obs_stress_initial.second]) ,'green')
+% plot(categorical({'Test (initial)'}),corr.obs_stress_initial.first,'ro','MarkerSize',10)
+% plot(categorical({'Test (initial)'}),corr.obs_stress_initial.second,'ro','MarkerSize',10)
 
 bar(aa(5),mean([corr.obs_stress_sniff.first,corr.obs_stress_sniff.second]),'m')
+% plot(categorical({'Test (sniffing)'}),corr.obs_stress_sniff.first,'ro','MarkerSize',10)
+% plot(categorical({'Test (sniffing)'}),corr.obs_stress_sniff.second,'ro','MarkerSize',10)
 
 legend('Cage','Habituation','Test','Test (initial)','Test (sniffing)')
 title('Average CC between observer and stressed ')
