@@ -19,6 +19,8 @@ zone(:,1) = zone(:,1) + activity(1,1); % now times start at same value
 
 zone = zone(2:end,:);
 
+    
+
 minimum = min(zone(end,1), activity(end,1));
 
 

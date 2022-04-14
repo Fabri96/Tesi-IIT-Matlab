@@ -18,11 +18,12 @@ load('obs_OASIS.mat')
 
 load('neutral_OASIS.mat')
 
-
-mm_norm = 1; % 1 for using min-max normalization
-sd_norm =0;
-dataset=1;
-selection=0; % 1 for neuron selection option
+full_norm = 0;
+mm_norm = 0; % 1 for using min-max normalization
+sd_norm = 0;
+cage_norm = 1;
+dataset = 1;
+selection = 0; % 1 for neuron selection option
 
 
 [stress, stress_cage, stress_hab, stress_test, ...
@@ -56,6 +57,23 @@ stress_cage = min_max_normalization(stress_cage);
 neutral_cage = min_max_normalization(neutral_cage);
 end
 
+%% CAGE NORMALIZATION
+
+if(cage_norm == 1)
+    
+obs_test = cage_normalization(obs_test,obs_cage);
+stress_test = cage_normalization(stress_test,stress_cage);
+neutral_test = cage_normalization(neutral_test,neutral_cage);
+
+
+obs_hab = cage_normalization(obs_hab,obs_cage);
+stress_hab = cage_normalization(stress_hab,stress_cage);
+neutral_hab = cage_normalization(neutral_hab,neutral_cage);
+
+obs_cage = cage_normalization(obs_cage,obs_cage);
+stress_cage = cage_normalization(stress_cage,stress_cage);
+neutral_cage = cage_normalization(neutral_cage,neutral_cage);
+end
 
 if(sd_norm == 1)
     
@@ -73,6 +91,16 @@ stress_cage = sd_normalization(stress_cage);
 neutral_cage = sd_normalization(neutral_cage);
 end
 
+if(full_norm ==1)
+
+[obs_test, obs_hab, obs_cage]  = ...
+    full_normalization(obs_test,obs_hab,obs_cage);
+[stress_test, stress_hab, stress_cage] = ...
+    full_normalization(stress_test,stress_hab,stress_cage);
+[neutral_test, neutral_hab, neutral_cage] = ...
+    full_normalization(neutral_test,neutral_hab,neutral_cage);
+
+end
 
 obs_activity_test = mice_activity(obs_test);
 
